@@ -24,12 +24,24 @@
 			\noindent \color{cyan!75!blue} \footnotesize $\blacksquare$ 
 				\color{black!90}\small \ \ {#1} \hfill 
 				\color{cyan!75!blue} \footnotesize $\blacksquare$ \color{black!90}\small \ \ {#2}}
+	% Font Awesome Icon settings
+		\newcommand{\fablueset}[1]{\textcolor{cyan!80!blue}{\large{{#1}}}}
 	% Main style			
 		\fancypagestyle{main}{
 			\headheight = 22pt		
-			\fancyhf{} \lhead{\LARGE{\textcolor{cyan!30!blue}{\textbf{Macro and Markets Dashboard:}} 
-				United States}} \rhead{\footnotesize \textcolor{cyan!80!blue}{\textbf{Updated:}} \today}
-			\lfoot{\textcolor{cyan!30!blue}{\textbf{Contact:}} Brian W. Dew} \cfoot{} \rfoot{}}
+			\fancyhf{} 
+				\lhead{\LARGE{\textcolor{cyan!30!blue}{\textbf{Macro and Markets Dashboard:}} 
+				United States}} 
+				\rhead{\footnotesize \textcolor{cyan!80!blue}{\textbf{Updated:}} \today}
+				\lfoot{\textcolor{cyan!30!blue}{\textbf{Made by:}} Brian W Dew \ 
+					\href{https://www.linkedin.com/in/brian-dew-5788a386}{\fablueset{\faLinkedinSquare}} \
+					$\vert$  \ brianwdew@gmail.com \ \href{mailto:brianwdew@gmail.com}
+						{\fablueset{\faEnvelope}} \ 
+					$\vert$ \ @bd\_econ \href{https://twitter.com/bd_econ}{\fablueset{\faTwitter}}}
+				\cfoot{} 
+				\rfoot{\textcolor{cyan!30!blue}{\textbf{Code:}} 
+					\href{https://github.com/bdecon/Python/tree/master/Macro_Dash}
+					{\fablueset{\faGithub}} /bdecon/Python/Macro\_Dash}}
 	% Custom section titles
 		\titleformat{\section}{\large \bfseries \color{black!60}}{}{0cm}
 			{\color{cyan!80!blue} }
@@ -198,7 +210,8 @@
 			            y expr=-\coordindex, 
 			            x index=4 
 			        ] {\eps};
-			  \draw[thick, black!25] ({rel axis cs:0,0.02}-|{axis cs:0,0.02}) -- ({rel axis cs:0,1}-|{axis cs:0,0});
+			  \draw[thick, black!25] 
+			  	({rel axis cs:0,0.02}-|{axis cs:0,0.02}) -- ({rel axis cs:0,1}-|{axis cs:0,0});
 			  \draw[very thin, black!10] 
 			  	({rel axis cs:5,0.02}-|{axis cs:5,0.02}) -- ({rel axis cs:5,1}-|{axis cs:5,0});
 			  \addplot[xbar stacked, bar shift=0pt, fill=orange!70!yellow, draw=orange!70!yellow] table [
@@ -240,5 +253,7 @@
 		\cf[S\&P Dow Jones Indices:
 			\href{https://us.spindices.com/documents/additional-material/sp-500-eps-est.xlsx}
 			{S\&P 500 growth forecasts (.xls)}]
-				{Retrieved from FRED, Quandl, and University of Michigan}
+				{Retrieved from \href{https://fred.stlouisfed.org/}{FRED}, 
+				\href{http://www.cboe.com}{CBOE}, \href{https://www.quandl.com}{Quandl}, and 
+				\href{http://www.sca.isr.umich.edu/}{University of Michigan}}
 \end{document}
