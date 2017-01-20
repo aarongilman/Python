@@ -59,7 +59,7 @@
 		\newcommand{\lineplotsettings}{yticklabel style={text width=3em},
 			ymajorgrids, width=9.5cm, xtick={
 			{2006-01-01},{2008-01-01},{2010-01-01},{2012-01-01},{2014-01-01},{2016-01-01}},
-			minor xtick={{2007-01-01},{2009-01-01},{2011-01-01},{2013-01-01},{2015-01-01}},
+			minor xtick={{2007-01-01},{2009-01-01},{2011-01-01},{2013-01-01},{2015-01-01}, {2017-01-01}},
 			enlarge y limits={0.24}, enlarge x limits={0.03},}
 	% X-Bar plot settings
 		\newcommand{\xbarplotsettings}{xmajorgrids,
@@ -165,7 +165,7 @@
 		    	enlarge y limits={abs=0.35cm},
 		    	every node near coord/.append style={style={black!70}, 
 		    		font=\scriptsize\sffamily\sansmath},
-		    \bbar{x}{0}, legend style={at={(0.75,0.55)}}, legend cell align=left,
+		    \bbar{x}{0}, legend style={at={(0.77,0.32)}}, legend cell align=left,
 				yticklabels from table={\cpi}{Item}]
 		  \addplot[nodes near coords, nodes near coords align={horizontal}, fill=cyan!40, 
 		  	draw=cyan,yshift=-0.5pt,] table [y expr=-\coordindex,x index=1] {\cpi};
