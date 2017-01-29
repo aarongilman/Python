@@ -77,7 +77,7 @@
 %  BEGIN DOCUMENT
 \begin{document}
 \thispagestyle{main}
-\noindent \small Third quarter U.S. economic growth is strong and led primarily by increases in household consumption and a rebound in investment. The unemployment rate remains low and near to its long-run full-capacity level. Further economic growth may generate upward wage pressure. Inflation is likewise near to its two percent target in both the core CPI and the full index. Consumer confidence has surged in most measures, propelling stock market indices higher. The yield curve has flattened over the past month.
+\noindent \small Fourth quarter U.S. economic growth is moderate, with improvement in household consumption and investment offset by a widened export gap. The unemployment rate is low and near to its long-run full-capacity level. Inflation is now slightly above its two percent target in both the core CPI and the full index. Elevated consumer confidence and P/E ratios, with near long-term low equity market volatility, show an extraordinary level of optimism. Interest rates have returned some their recent gains, while the dollar remains firm.
 
 \section{Economic Growth and Employment}
 	% Title: GDP Growth	
@@ -147,13 +147,14 @@
 	% Consumer Price Index - All-items and Core CPI line plot
 		\indent \begin{tikzpicture}[trim axis right]
 			\begin{axis}[date coordinates in=x, xticklabel={\year}, \lineplotsettings \bbar{y}{0}]
-		  	\node[align=left, below, shift=({3cm,4.4cm}), fill=white, inner sep=1pt] 
-				{$^*$The core CPI excludes food and energy prices, 
-					\\ \quad which tend to be more volatile};			
-			\addplot[ultra thick, color=blue!70] table [x=DATE, y=CPIAUCSL, col sep=comma] {data/cpi.csv}
-				node[pos=0.255,pin=70:{All-items CPI}] {};	
-			\addplot[thick, color=black!50] table [x=DATE, y=CPILFESL, col sep=comma] {data/cpi.csv}
-				node[pos=0.93,pin=90:{Core CPI$^*$}] {};	 						 	
+		  	\node[align=left, below, shift=({5.2cm,4.2cm}), fill=white, inner sep=1pt] 
+				{5-year expected annual inflation rate: \\ \input{data/breakeven.txt}
+				(FRED: \href{https://fred.stlouisfed.org/series/T5YIFR}
+					{T5YIFR})};			
+			\addplot[ultra thick, color=blue!70] table [x=DATE, y=CPIAUCSL, col sep=comma] 
+				{data/cpi.csv} node[pos=0.252,pin=10:{All-items CPI}] {};	
+			\addplot[thick, color=black!50] table [x=DATE, y=CPILFESL, col sep=comma] 
+				{data/cpi.csv} node[pos=0.43,pin=275:{Core CPI (excl. food and energy)}] {};	 		
 			\node[below, shift=({2.9cm,-0.1cm})] {\color{black!80} \input{data/cpi.txt}};
 			\end{axis}
 		\end{tikzpicture} \hfill
