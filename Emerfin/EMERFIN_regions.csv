@@ -1,0 +1,37 @@
+Titles,,"Inflation, consumer prices (annual %)",GDP growth (annual %),"Unemployment, total (% of total labor force) (modeled ILO estimate)",Population growth (annual %)
+,Codes,FP.CPI.TOTL.ZG,NY.GDP.MKTP.KD.ZG,SL.UEM.TOTL.ZS,SP.POP.GROW
+Latin America & Caribbean,lac,http://api.worldbank.org/countries/lcn/indicators/FP.CPI.TOTL.ZG?MRV=25&format=json,http://api.worldbank.org/countries/lcn/indicators/NY.GDP.MKTP.KD.ZG?MRV=25&format=json,http://api.worldbank.org/countries/lcn/indicators/SL.UEM.TOTL.ZS?MRV=25&format=json,http://api.worldbank.org/countries/lcn/indicators/SP.POP.GROW?MRV=25&format=json
+Sub-Saharan Africa,ssf,http://api.worldbank.org/countries/ssf/indicators/FP.CPI.TOTL.ZG?MRV=25&format=json,http://api.worldbank.org/countries/ssf/indicators/NY.GDP.MKTP.KD.ZG?MRV=25&format=json,http://api.worldbank.org/countries/ssf/indicators/SL.UEM.TOTL.ZS?MRV=25&format=json,http://api.worldbank.org/countries/ssf/indicators/SP.POP.GROW?MRV=25&format=json
+Europe & Central Asia,ecs,http://api.worldbank.org/countries/ecs/indicators/FP.CPI.TOTL.ZG?MRV=25&format=json,http://api.worldbank.org/countries/ecs/indicators/NY.GDP.MKTP.KD.ZG?MRV=25&format=json,http://api.worldbank.org/countries/ecs/indicators/SL.UEM.TOTL.ZS?MRV=25&format=json,http://api.worldbank.org/countries/ecs/indicators/SP.POP.GROW?MRV=25&format=json
+South Asia,sas,http://api.worldbank.org/countries/sas/indicators/FP.CPI.TOTL.ZG?MRV=25&format=json,http://api.worldbank.org/countries/sas/indicators/NY.GDP.MKTP.KD.ZG?MRV=25&format=json,http://api.worldbank.org/countries/sas/indicators/SL.UEM.TOTL.ZS?MRV=25&format=json,http://api.worldbank.org/countries/sas/indicators/SP.POP.GROW?MRV=25&format=json
+East Asia & Pacific,eas,http://api.worldbank.org/countries/eas/indicators/FP.CPI.TOTL.ZG?MRV=25&format=json,http://api.worldbank.org/countries/eas/indicators/NY.GDP.MKTP.KD.ZG?MRV=25&format=json,http://api.worldbank.org/countries/eas/indicators/SL.UEM.TOTL.ZS?MRV=25&format=json,http://api.worldbank.org/countries/eas/indicators/SP.POP.GROW?MRV=25&format=json
+Middle East & North Africa,mea,http://api.worldbank.org/countries/mea/indicators/FP.CPI.TOTL.ZG?MRV=25&format=json,http://api.worldbank.org/countries/mea/indicators/NY.GDP.MKTP.KD.ZG?MRV=25&format=json,http://api.worldbank.org/countries/mea/indicators/SL.UEM.TOTL.ZS?MRV=25&format=json,http://api.worldbank.org/countries/mea/indicators/SP.POP.GROW?MRV=25&format=json
+OECD members,oed,http://api.worldbank.org/countries/oed/indicators/FP.CPI.TOTL.ZG?MRV=25&format=json,http://api.worldbank.org/countries/oed/indicators/NY.GDP.MKTP.KD.ZG?MRV=25&format=json,http://api.worldbank.org/countries/oed/indicators/SL.UEM.TOTL.ZS?MRV=25&format=json,http://api.worldbank.org/countries/oed/indicators/SP.POP.GROW?MRV=25&format=json
+,,,,,
+Source: IBRD,,,,,
+Map each country to a region from above.,,,,,
+,,,,,
+Notes:,,,,,
+South Asia is the following subset:,,,,,
+Afghanistan,,,,,
+Bangladesh,,,,,
+Bhutan,,,,,
+India,,,,,
+Maldives,,,,,
+Nepal,,,,,
+Pakistan,,,,,
+Sri Lanka,,,,,
+,,,,,
+OECD can be used for:,,,,,
+United States,,,,,
+Canada,,,,,
+Japan,,,,,
+Germany,,,,,
+France,,,,,
+Netherlands,,,,,
+United Kingdom,,,,,
+Sweden,,,,,
+Switzerland,,,,,
+Denmark,,,,,
+Belgium,,,,,
+Italy,,,,,
