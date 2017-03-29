@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.27)  1 FEB 2017 11:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.27)  29 MAR 2017 09:47
 entering extended mode
 **ExecDash.tex
 (ExecDash.tex
@@ -907,13 +907,13 @@ Underfull \hbox (badness 2503) in paragraph at lines 181--181
  []
 
 
-Underfull \hbox (badness 3009) in paragraph at lines 181--181
- [][][][]\OT1/qhv/m/n/8 Education
+Underfull \hbox (badness 4726) in paragraph at lines 181--181
+ [][][][]\OT1/qhv/m/n/8 Apparel
  []
 
 
-Underfull \hbox (badness 4726) in paragraph at lines 181--181
- [][][][]\OT1/qhv/m/n/8 Apparel
+Underfull \hbox (badness 3009) in paragraph at lines 181--181
+ [][][][]\OT1/qhv/m/n/8 Education
  []
 
 (data/cpi_mo2.txt) (data/cpi_mo1.txt)
@@ -935,8 +935,8 @@ Underfull \hbox (badness 4060) in paragraph at lines 235--235
  []
 
 
-Underfull \hbox (badness 6775) in paragraph at lines 235--235
- [][][][]\OT1/qhv/m/n/8 Utilities
+Underfull \hbox (badness 2951) in paragraph at lines 235--235
+ [][][][]\OT1/qhv/m/n/8 Real Es-tate
  []
 
 
@@ -945,8 +945,8 @@ Underfull \hbox (badness 4940) in paragraph at lines 235--235
  []
 
 
-Underfull \hbox (badness 2951) in paragraph at lines 235--235
- [][][][]\OT1/qhv/m/n/8 Real Es-tate
+Underfull \hbox (badness 6775) in paragraph at lines 235--235
+ [][][][]\OT1/qhv/m/n/8 Utilities
  []
 
 
@@ -963,7 +963,7 @@ LaTeX Font Info:    Font shape `OT1/qhv/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/qhv/b/n' tried instead on input line 260.
 LaTeX Font Info:    Font shape `OT1/qhv/bx/n' in size <8> not available
 (Font)              Font shape `OT1/qhv/b/n' tried instead on input line 260.
-LaTeX Font Info:    Font shape `OT1/qhv/bx/n' in size <10> not available
+LaTeX Font Info:    Font shape `OT1/qhv/bx/n' in size <9> not available
 (Font)              Font shape `OT1/qhv/b/n' tried instead on input line 260.
 LaTeX Font Info:    Try loading font information for U+fontawesometwo on input 
 line 260.
@@ -991,24 +991,24 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 260.
  ) 
 Here is how much of TeX's memory you used:
  29846 strings out of 493671
- 722037 string characters out of 3143865
- 1042502 words of memory out of 3000000
+ 722035 string characters out of 3143865
+ 1041678 words of memory out of 3000000
  32663 multiletter control sequences out of 15000+200000
  45622 words of font info for 70 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 69i,18n,107p,2266b,2285s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,18n,107p,2327b,2287s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontawesome/fontawesomethree.enc
 }{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontawesome/fontawesometwo.enc}{C
 :/Program Files/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-rm.enc}<C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/fontawesome/FontAwesome.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/sy
-mbols/msam7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/tex-gyre/qhvb.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/tex-gyre/qhvr.pfb>
-Output written on ExecDash.pdf (1 page, 141707 bytes).
+onts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/sym
+bols/msam7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/tex-gyre/qhvb.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/tex-gyre/qhvr.pfb>
+Output written on ExecDash.pdf (1 page, 141310 bytes).
 PDF statistics:
  89 PDF objects out of 1000 (max. 8388607)
  5 named destinations out of 1000 (max. 500000)
