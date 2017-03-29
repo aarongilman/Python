@@ -1,0 +1,163 @@
+Region,Country,Group,Combined,Chart_Title,Y_Label,Type,Source
+Africa,Algeria,6-Exchange Rates,M.DZ.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Angola,6-Exchange Rates,M.AO.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Benin,6-Exchange Rates,M.BJ.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Botswana,6-Exchange Rates,M.BW.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Burkina Faso,6-Exchange Rates,M.BF.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Burundi,6-Exchange Rates,M.BI.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Cameroon,6-Exchange Rates,M.CM.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Cape Verde,6-Exchange Rates,M.CV.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Central African Republic,6-Exchange Rates,M.CF.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Chad,6-Exchange Rates,M.TD.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Comoros,6-Exchange Rates,M.KM.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Congo,6-Exchange Rates,M.CG.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,"Congo, the Democratic Republic of the",6-Exchange Rates,M.CD.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Cote d`Ivoire,6-Exchange Rates,M.CI.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Djibouti,6-Exchange Rates,M.DJ.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Egypt,6-Exchange Rates,M.EG.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Equatorial Guinea,6-Exchange Rates,M.GQ.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Eritrea,6-Exchange Rates,M.ER.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Gabon,6-Exchange Rates,M.GA.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Gambia,6-Exchange Rates,M.GM.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Ghana,6-Exchange Rates,M.GH.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Guinea,6-Exchange Rates,M.GN.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Guinea-Bissau,6-Exchange Rates,M.GW.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Kenya,6-Exchange Rates,M.KE.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Lesotho,6-Exchange Rates,M.LS.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Liberia,6-Exchange Rates,M.LR.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Libya,6-Exchange Rates,M.LY.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Madagascar,6-Exchange Rates,M.MG.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Malawi,6-Exchange Rates,M.MW.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Mali,6-Exchange Rates,M.ML.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Mauritania,6-Exchange Rates,M.MR.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Mauritius,6-Exchange Rates,M.MU.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Morocco,6-Exchange Rates,M.MA.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Mozambique,6-Exchange Rates,M.MZ.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Niger,6-Exchange Rates,M.NE.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Nigeria,6-Exchange Rates,M.NG.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Rwanda,6-Exchange Rates,M.RW.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Sao Tome and Principe,6-Exchange Rates,M.ST.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Senegal,6-Exchange Rates,M.SN.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Seychelles,6-Exchange Rates,M.SC.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Sierra Leone,6-Exchange Rates,M.SL.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,South Africa,6-Exchange Rates,M.ZA.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,South Sudan,6-Exchange Rates,M.SS.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Sudan,6-Exchange Rates,M.SD.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Swaziland,6-Exchange Rates,M.SZ.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,"Tanzania, United Republic of",6-Exchange Rates,M.TZ.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Togo,6-Exchange Rates,M.TG.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Tunisia,6-Exchange Rates,M.TN.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Uganda,6-Exchange Rates,M.UG.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Africa,Zambia,6-Exchange Rates,M.ZM.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Anguilla,6-Exchange Rates,M.AI.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Antigua and Barbuda,6-Exchange Rates,M.AG.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Argentina,6-Exchange Rates,M.AR.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Aruba,6-Exchange Rates,M.AW.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Bahamas,6-Exchange Rates,M.BS.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Barbados,6-Exchange Rates,M.BB.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Belize,6-Exchange Rates,M.BZ.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Bolivia,6-Exchange Rates,M.BO.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Brazil,6-Exchange Rates,M.BR.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Canada,6-Exchange Rates,M.CA.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Chile,6-Exchange Rates,M.CL.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Colombia,6-Exchange Rates,M.CO.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Costa Rica,6-Exchange Rates,M.CR.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Dominica,6-Exchange Rates,M.DM.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Dominican Republic,6-Exchange Rates,M.DO.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,El Salvador,6-Exchange Rates,M.SV.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Grenada,6-Exchange Rates,M.GD.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Guatemala,6-Exchange Rates,M.GT.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Guyana,6-Exchange Rates,M.GY.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Haiti,6-Exchange Rates,M.HT.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Jamaica,6-Exchange Rates,M.JM.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Mexico,6-Exchange Rates,M.MX.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Montserrat,6-Exchange Rates,M.MS.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Nicaragua,6-Exchange Rates,M.NI.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Panama,6-Exchange Rates,M.PA.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Paraguay,6-Exchange Rates,M.PY.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Peru,6-Exchange Rates,M.PE.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Saint Kitts and Nevis,6-Exchange Rates,M.KN.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Saint Lucia,6-Exchange Rates,M.LC.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Saint Vincent and the Grenadines,6-Exchange Rates,M.VC.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Suriname,6-Exchange Rates,M.SR.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Trinidad and Tobago,6-Exchange Rates,M.TT.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,United States,6-Exchange Rates,M.US.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,Uruguay,6-Exchange Rates,M.UY.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Americas,"Venezuela, Bolivarian Republic",6-Exchange Rates,M.VE.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Afghanistan,6-Exchange Rates,M.AF.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Armenia,6-Exchange Rates,M.AM.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Australia,6-Exchange Rates,M.AU.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Azerbaijan,6-Exchange Rates,M.AZ.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Bahrain,6-Exchange Rates,M.BH.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Bangladesh,6-Exchange Rates,M.BD.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Bhutan,6-Exchange Rates,M.BT.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Brunei Darussalam,6-Exchange Rates,M.BN.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Cambodia,6-Exchange Rates,M.KH.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,China,6-Exchange Rates,M.CN.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Fiji,6-Exchange Rates,M.FJ.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Georgia,6-Exchange Rates,M.GE.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,"Hong Kong, China",6-Exchange Rates,M.HK.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,India,6-Exchange Rates,M.IN.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Indonesia,6-Exchange Rates,M.ID.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,"Iran, Islamic Republic of",6-Exchange Rates,M.IR.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Iraq,6-Exchange Rates,M.IQ.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Israel,6-Exchange Rates,M.IL.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Japan,6-Exchange Rates,M.JP.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Jordan,6-Exchange Rates,M.JO.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Kazakhstan,6-Exchange Rates,M.KZ.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Kiribati,6-Exchange Rates,M.KI.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,"Korea, Republic of",6-Exchange Rates,M.KR.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Kuwait,6-Exchange Rates,M.KW.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Kyrgyzstan,6-Exchange Rates,M.KG.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Lao People`s Democratic Republic,6-Exchange Rates,M.LA.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Lebanon,6-Exchange Rates,M.LB.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Macao,6-Exchange Rates,M.MO.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Malaysia,6-Exchange Rates,M.MY.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Maldives,6-Exchange Rates,M.MV.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,"Micronesia, Federated States of",6-Exchange Rates,M.FM.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Mongolia,6-Exchange Rates,M.MN.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Myanmar,6-Exchange Rates,M.MM.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Nepal,6-Exchange Rates,M.NP.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,New Zealand,6-Exchange Rates,M.NZ.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Oman,6-Exchange Rates,M.OM.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Pakistan,6-Exchange Rates,M.PK.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Papua New Guinea,6-Exchange Rates,M.PG.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Philippines,6-Exchange Rates,M.PH.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Qatar,6-Exchange Rates,M.QA.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Samoa,6-Exchange Rates,M.WS.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Saudi Arabia,6-Exchange Rates,M.SA.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Singapore,6-Exchange Rates,M.SG.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Solomon Islands,6-Exchange Rates,M.SB.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Sri Lanka,6-Exchange Rates,M.LK.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Syrian Arab Republic,6-Exchange Rates,M.SY.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Tajikistan,6-Exchange Rates,M.TJ.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Thailand,6-Exchange Rates,M.TH.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Tonga,6-Exchange Rates,M.TO.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Turkey,6-Exchange Rates,M.TR.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,United Arab Emirates,6-Exchange Rates,M.AE.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Vanuatu,6-Exchange Rates,M.VU.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Viet Nam,6-Exchange Rates,M.VN.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Asia,Yemen,6-Exchange Rates,M.YE.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Europe,Albania,6-Exchange Rates,M.AL.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Europe,Belarus,6-Exchange Rates,M.BY.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Europe,Bosnia and Herzegovina,6-Exchange Rates,M.BA.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Europe,Bulgaria,6-Exchange Rates,M.BG.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Europe,Croatia,6-Exchange Rates,M.HR.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Europe,Czech Republic,6-Exchange Rates,M.CZ.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Europe,Denmark,6-Exchange Rates,M.DK.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Europe,Hungary,6-Exchange Rates,M.HU.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Europe,Iceland,6-Exchange Rates,M.IS.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Europe,Lithuania,6-Exchange Rates,M.LT.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Europe,"Macedonia, The Former Yugoslav Republic of",6-Exchange Rates,M.MK.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Europe,"Moldova, Republic of",6-Exchange Rates,M.MD.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Europe,Montenegro,6-Exchange Rates,M.ME.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Europe,Norway,6-Exchange Rates,M.NO.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Europe,Poland,6-Exchange Rates,M.PL.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Europe,Romania,6-Exchange Rates,M.RO.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Europe,Russian Federation,6-Exchange Rates,M.RU.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Europe,San Marino,6-Exchange Rates,M.SM.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Europe,Serbia,6-Exchange Rates,M.RS.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Europe,Sweden,6-Exchange Rates,M.SE.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Europe,Switzerland,6-Exchange Rates,M.CH.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Europe,Ukraine,6-Exchange Rates,M.UA.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
+Europe,United Kingdom,6-Exchange Rates,M.GB.ENDA_XDC_USD_RATE,"National Currency per US Dollar, Period Average",Rate,line,IFS
