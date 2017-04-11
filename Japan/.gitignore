@@ -1,6 +1,7 @@
+config.py
 *.un
 *~
 *.aux
 *.log
 *.out
-config.py
+*.synctex.gz
