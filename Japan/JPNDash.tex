@@ -41,13 +41,14 @@
 					$\vert$ \ @bd\_econ \href{https://twitter.com/bd_econ}{\fablueset{\faTwitter}}}}
 				\cfoot{} 
 				\rfoot{\small{\textcolor{red!75!black}{\textbf{Code:}} 
-					\href{https://github.com/bdecon/Python/tree/master/Macro_Dash}
-					{\fablueset{\faGithub}} /bdecon/Python/Macro\_Dash}}}
+					\href{https://github.com/bdecon/Python/tree/master/Japan}
+					{\fablueset{\faGithub}} /bdecon/Python/Japan}}}
 	% Custom section titles
 		\titleformat{\section}{\large \bfseries \color{black!60}}{}{0cm}
 			{\color{red} }
 	% Custom chart footer
-		\newcommand{\cf}[2][]{\indent \color{black!90} \scriptsize{{#1} \hfill {#2}}} 
+		\newcommand{\cf}[2][]{\indent \color{black!90} \scriptsize{{Data source: #1} \hfill 
+			{Data source: #2}}} 
 	% Universal plot settings
 		\pgfplotsset{compat=1.13, max space between ticks=30pt,
 			xticklabel style={align=center}, yticklabel style={align=left},
@@ -81,9 +82,11 @@
 %  BEGIN DOCUMENT
 \begin{document}
 \thispagestyle{main}
-\noindent \small Summary text here
+%\noindent \small Summary text here
+\vspace{5mm}
+\section{Economic growth and employment}
+\vspace{2mm}
 
-\section{Economic Growth and Employment}
 	% Title: GDP Growth	
 		\ct[Real Gross Domestic Product (annual percent change)
 		]{Labor force participation and unemployment (percent)}\\
@@ -114,7 +117,7 @@
 				node[pos=0.48,pin=270:{Real GDP Growth}] {};	
 			\node[align=center, below, shift=({3.4cm,-0.25cm})] {
 				\input{data/gdp.txt}};
-			\legend{Contributions to ,GDP growth, Government, Investment, Net Exports, Consumption};			
+			\legend{Contributions to ,GDP growth, Government, Investment, Net Exports, Consumption};
 			\end{axis} 		
 		\end{tikzpicture}\hspace{1mm}
 	% Unemployment rate
@@ -164,15 +167,149 @@
 		\end{groupplot}
 		\end{tikzpicture} \\
 	% Footer: GDP and unemp 	
-		\cf[FRED: \href{https://research.stlouisfed.org/fred2/series/GDPC1}{GDPC1}; 
-				\href{https://research.stlouisfed.org/fred2/series/GCEC1}{GCEC1};
-				\href{https://research.stlouisfed.org/fred2/series/GPDIC1}{GPDIC1};
-				\href{https://research.stlouisfed.org/fred2/series/NETEXC}{NETEXC};
-				\href{https://research.stlouisfed.org/fred2/series/PCECC96}{PCECC96}]
-				{FRED: \href{https://research.stlouisfed.org/fred2/series/UNRATE}{UNRATE}; 
-				\href{https://research.stlouisfed.org/fred2/series/LNS14027659}{LNS14027659};
-				\href{https://research.stlouisfed.org/fred2/series/LNS14027662}{LNS14027662}}
-\section{Inflation and Prices}
+		\cf[\href{http://www.esri.cao.go.jp/en/sna/sokuhou/sokuhou_top.html}{Cabinet Office}]
+				{\href{http://www.stat.go.jp/data/roudou/longtime/zuhyou/lt01-a10.xls}
+				{Statistics Bureau}}
+
+\vspace{8mm}
+
+	% Title: Consumption and Investment
+		\ct[Household consumption expenditure, annual growth
+		]{Investment expenditure by sector, annual growth}\\
+	% Earnings per share
+		\indent \begin{tikzpicture}
+			\begin{axis}[date coordinates in=x, xticklabel={\year}, stack negative=separate,
+				legend style={text=black!70, fill=none, legend columns=1,draw=none, at={(0.4,0.48)},
+				/tikz/every even column/.append style={column sep=0cm}},
+				legend cell align=left, height=7.0cm,
+				\lineplotsettings
+				\bbar{y}{0}
+					]	
+			\addplot[ybar stacked, bar width=2.6pt, color=orange!70, 
+				fill=orange!70] table [y index = 1, x=date, y=services_ch, col sep=comma]
+				{data/cons.csv};	
+			\addplot[ybar stacked, bar width=2.6pt, color=green!50!black, 
+				fill=green!50!black] table [y index = 2, x=date, y=durable_ch, col sep=comma]
+				{data/cons.csv};	
+			\addplot[ybar stacked, bar width=2.6pt, draw=cyan!50, fill=cyan!50] 
+				table [y index = 3, x=date, y=semidur_ch, col sep=comma]
+				{data/cons.csv};	
+			\addplot[ybar stacked, bar width=2.6pt, color=blue!70!black, 
+				fill=blue!70!black] table [y index = 4, x=date, y=nondur_ch, col sep=comma]
+				{data/cons.csv};			
+			\addplot[thick, color=black] table [x=date, y=total_ch, col sep=comma] {data/cons.csv}
+				node[pos=0.26,pin=90:{Total change}] {};	
+			\node[align=left, below, shift=({3.0cm,0.1cm})] {
+				\input{data/cons.txt}};
+    		\node[align=left] (source) at (axis cs:2013-01-01,40) {%
+      			Consumption tax increase to 8\%};
+    		\node (destination) at (axis cs:2014-04-01,0) {};
+    		\draw[->] (source)--(destination);
+			\legend{Services, Durable goods, Semi-durable goods, Non-durable goods};			
+			\end{axis}
+			\end{tikzpicture}\hfill
+		% Investment
+			\begin{tikzpicture}[trim axis right]
+			\begin{axis}[date coordinates in=x, xticklabel={\year}, stack negative=separate,
+				legend style={text=black!70, fill=none, legend columns=3,draw=none, at={(0.7,0.95)},
+				/tikz/every even column/.append style={column sep=0.2cm}},
+				legend cell align=left, height=7.0cm,
+				\lineplotsettings
+				\bbar{y}{0}
+					]	
+			\addplot[ybar stacked, bar width=2.6pt, color=violet, 
+				fill=violet] table [y index = 1, x=date, y=bus_ch, col sep=comma]
+				{data/inv.csv};	
+			\addplot[ybar stacked, bar width=2.6pt, color=yellow!80!orange, 
+				fill=yellow!80!orange] table [y index = 2, x=date, y=res_ch, col sep=comma]
+				{data/inv.csv};	
+			\addplot[ybar stacked, bar width=2.6pt, draw=orange!50!red, fill=orange!50!red] 
+				table [y index = 3, x=date, y=pub_ch, col sep=comma]
+				{data/inv.csv};		
+			\addplot[thick, color=black] table [x=date, y=total_ch, col sep=comma] {data/inv.csv}
+				node[pos=0.4,pin=90:{Total change}] {};	
+			\node[align=left, below, shift=({2.7cm,0cm})] {
+				\input{data/inv.txt}};
+			\legend{Business, Residential, Public};			
+			\end{axis}
+			\end{tikzpicture}			
+	% Footer: Consumption and Investment	
+		\cf[\href{http://www.esri.cao.go.jp/en/sna/sokuhou/sokuhou_top.html}{Cabinet Office}]
+				{\href{http://www.esri.cao.go.jp/en/sna/sokuhou/sokuhou_top.html}{Cabinet Office}}
+
+\vspace{5mm}
+\section{Industrial and business conditions}
+\vspace{2mm}
+
+	% Title: Industrial production	
+		\ct[Industrial production by industry, index, 2010=100
+		]{TANKAN business conditions survey (manufacturing)}\\
+	% Industrial production
+		\indent \begin{tikzpicture}
+		  	\begin{axis}[            
+		  		stack negative=separate,
+		  		\xbarplotsettings 
+		  		width=6.4cm, \bbar{x}{0}, legend cell align = left,
+			    yticklabel style={
+			    	text width=4.2cm, align=left, style={black!70}, text height=1.5ex},
+			    axis y line=right, legend style={fill=none, at={(0.28,1)}},
+			    bar width=1.4ex, y=2.8ex,
+		  		enlarge y limits={abs=0.3cm},
+		  		enlarge x limits={0.05},
+			    nodes near coords=, nodes near coords align={horizontal},
+			    every node near coord/.append style={
+			                    font=\scriptsize\sffamily\sansmath, style={black!70}},
+				yticklabels from table={\ip}{industry}
+			  ]
+			  \addplot[xbar stacked, bar shift=0pt, fill=none, draw=none] table [
+			            y expr=-\coordindex, 
+			            x index=4 
+			        ] {\ip};
+			  \draw[thick, black!25] 
+			  	({rel axis cs:0,0.02}-|{axis cs:0,0.02}) -- ({rel axis cs:0,1}-|{axis cs:0,0});
+			  \draw[very thin, black!10] 
+			  	({rel axis cs:5,0.02}-|{axis cs:5,0.02}) -- ({rel axis cs:5,1}-|{axis cs:5,0});
+			  \addplot[xbar stacked, bar shift=0pt, fill=green!70!black, draw=green!70!black] table [
+			            y expr=-\coordindex, 
+			            x index=5 
+			        ] {\ip};
+			  \addplot[scatter, only marks, mark=square*, draw=blue!60, fill=white] table [
+			            y expr=-\coordindex, 
+			            x index=3 
+			        ] {\ip};			        
+			  \addplot[scatter, only marks, mark=diamond*, draw=red!60, fill=red!60] table [
+			            y expr=-\coordindex, 
+			            x index=2 
+			        ] {\ip};
+			  \addplot[scatter, only marks, mark=triangle*, draw=blue!60!cyan, fill=blue!60!cyan] 
+			  	table [y expr=-\coordindex, x index=1] {\ip};
+		  \input{data/ipleg.txt}
+			  \end{axis}
+			\end{tikzpicture}\hfill
+			% Tankan
+		\begin{tikzpicture}[trim axis right]
+			\begin{axis}[date coordinates in=x, xticklabel={\year}, \lineplotsettings \bbar{y}{0}]
+			\addplot[ultra thick, color=red!50] table [x=date, y=Small, col sep=comma] 
+				{data/tankan_bc.csv} node[pos=0.55,pin=270:{Small firms}] {};	
+			\addplot[thin, color=black!60] table [x=date, y=Medium, col sep=comma] 
+				{data/tankan_bc.csv} node[pos=0.88,pin=90:{Medium firms}] {};	 	
+			\addplot[thick, dashed, color=red!50!black] table [x=date, y=Large, col sep=comma] 
+				{data/tankan_bc.csv} node[pos=0.22,pin=60:{Large firms}] {};	 	
+			\node[below, shift=({1.5cm,-0.1cm})] {\color{black!80} \input{data/tankan_bc.txt}};
+			\node[align=left, below, shift=({3.7cm,4.5cm})] {\color{black!80} Above zero signals perceived improvement and below \\ zero signals perceived deterioration in business conditions.};
+			\end{axis}
+		\end{tikzpicture}\\
+	% Footer: Nikkei and TANKAN 	
+		\cf[\href{http://www.meti.go.jp/english/statistics/}{Ministry of Trade, Economy, 
+				and Industry}]
+			{\href{http://www.boj.or.jp/en/statistics/tk/index.htm/}{Bank of Japan}}
+
+\newpage
+\thispagestyle{main}
+
+\vspace{5mm}
+\section{Prices}
+\vspace{2mm}
 
 	% Title: CPI Components and CPI Growth	
 		\ct[Consumer price index (CPI) (annual percent change)
@@ -195,7 +332,7 @@
 		    	enlarge y limits={abs=0.35cm},
 		    	every node near coord/.append style={style={black!70}, 
 		    		font=\scriptsize\sffamily\sansmath},
-		    \bbar{x}{0}, legend style={at={(0.26,0.92)}}, legend cell align=left,
+		    \bbar{x}{0}, legend style={at={(0.23,0.88)}, fill=none}, legend cell align=left,
 				yticklabels from table={\cpi}{Item}]
 		  \addplot[nodes near coords, nodes near coords align={horizontal}, fill=purple!30, 
 		  	draw=purple!60,yshift=-0.5pt,] table [y expr=-\coordindex,x index=1] {\cpi};
@@ -206,22 +343,23 @@
     			scatter/@post marker code/.style={}] table [
 			            y expr=-\coordindex, x index=3] {\cpi};
 		  \legend{\scriptsize \input{data/cpi_mo1.txt},\scriptsize \input{data/cpi_mo2.txt},
-		  	\scriptsize 10-year average}
+		  	\scriptsize 10-year avg}
 		  \end{axis}
 		\end{tikzpicture} \\
 	% Footer: CPI 	
-		\cf[All-items: FRED: \href{https://research.stlouisfed.org/fred2/series/CPIAUCSL}
-				{CPIAUCSL}; Core: FRED: 
-				\href{https://research.stlouisfed.org/fred2/series/CPILFESL}{CPIFESL}
-		]{FRED: \href{https://research.stlouisfed.org/fred2/categories/9}{CPI Indexes}}
+		\cf[\href{http://www.e-stat.go.jp/SG1/estat/CsvdlE.do?sinfid=000031431696}
+				{Statistics Bureau}]
+			{\href{http://www.e-stat.go.jp/SG1/estat/CsvdlE.do?sinfid=000031431696}
+				{Statistics Bureau}}
 
-\vspace{8mm}
+\vspace{5mm}
+\section{Markets and interest rates}
+\vspace{2mm}
 
-	% Title: Nikkei and TANKAN
+	% Title: Nikkei and JGB yield curve
 		\ct[Nikkei 225 daily close price and daily percent change
-		]{TANKAN business conditions survey (manufacturing)}\\
-		
-	% Nikkei and TANKAN
+		]{Japanese government bond yield curve}\\
+	% Nikkei
 \indent \begin{tikzpicture}
 				\begin{groupplot}[
 		    group style={
@@ -265,78 +403,51 @@
 				node[right, pos=0.43, pin={[pin distance=0.15cm]150:{Daily percent change}}] {};	
 		\end{groupplot}
 		\end{tikzpicture}  \hfill
-			% Consumer Price Index - All-items and Core CPI line plot
-		\begin{tikzpicture}[trim axis right]
-			\begin{axis}[date coordinates in=x, xticklabel={\year}, \lineplotsettings \bbar{y}{0}]
-			\addplot[ultra thick, color=red!50] table [x=date, y=Small, col sep=comma] 
-				{data/tankan_bc.csv} node[pos=0.55,pin=270:{Small firms}] {};	
-			\addplot[thin, color=black!60] table [x=date, y=Medium, col sep=comma] 
-				{data/tankan_bc.csv} node[pos=0.88,pin=90:{Medium firms}] {};	 	
-			\addplot[thick, dashed, color=red!50!black] table [x=date, y=Large, col sep=comma] 
-				{data/tankan_bc.csv} node[pos=0.22,pin=60:{Large firms}] {};	 	
-			\node[below, shift=({1.5cm,-0.1cm})] {\color{black!80} \input{data/tankan_bc.txt}};
-			\node[align=left, below, shift=({3.7cm,4.5cm})] {\color{black!80} Above zero signals perceived improvement and below \\ zero signals perceived deterioration in business conditions.};
+			% JGBs
+				\begin{tikzpicture}[trim axis right]
+			\begin{axis}[
+				max space between ticks=50,	    
+				xtick=data,
+				xticklabels={1 yr, 2 yr, 5 yr, 10 yr, 20 yr, 30 yr, 40 yr},
+		    	enlarge y limits={0.2},
+		    	enlarge x limits={0.1},
+		    	yticklabel style={text width=3em},
+				ymajorgrids, width=9.5cm, 
+				enlarge y limits={0.24}, enlarge x limits={0.03},
+				\bbar{y}{0}
+					]
+			\addplot[thick, mark=*, mark options={fill=white},
+    			color=blue!65!black!30] 
+				table [x=number, y=prev1, col sep=comma] {data/jgb.csv}
+				node[pos=0.89,pin=270:{\color{black!80} Year ago}] {};
+			\addplot[thick, mark=*, mark options={fill=white},
+    			color=blue!65!black!60] 
+				table [x=number, y=prev5, col sep=comma] {data/jgb.csv}
+				node[pos=0.36,pin={[pin distance=3mm]100:{\color{black!80} Five years ago}}] {};			
+			\addplot[ultra thick, mark=*, mark options={fill=white},
+    			visualization depends on=\thisrow{alignment} \as \alignment,
+    			nodes near coords, % Place nodes near each coordinate
+    			every node near coord/.style={anchor=\alignment}, color=blue!60!black] 
+				table [x=number, y=curr, col sep=comma] {data/jgb.csv}
+				node[pos=0.7,pin=85:{\textbf{Most recent}}] {};		
+			\node[below, shift=({1.26cm,-0.2cm})] { \input{data/jgb_curr.txt}};							 	
 			\end{axis}
-		\end{tikzpicture}\\
+			\end{tikzpicture}\\
 	% Footer: Nikkei and TANKAN 	
-		\cf[All-items: FRED: \href{https://research.stlouisfed.org/fred2/series/CPIAUCSL}
-				{CPIAUCSL}; Core: FRED: 
-				\href{https://research.stlouisfed.org/fred2/series/CPILFESL}{CPIFESL}
-		]{FRED: \href{https://research.stlouisfed.org/fred2/categories/9}{CPI Indexes}}
+		\cf[\href{http://indexes.nikkei.co.jp/en/nkave/historical/nikkei_stock_average_daily_en.csv}
+				{Nikkei Indexes}]
+			{\href{http://www.mof.go.jp/english/jgbs/reference/interest_rate/jgbcme.csv}
+				{Ministry of Finance}}
 
+\vspace{5mm}
+\section{External sector and exchange rate}
+\vspace{2mm}
 
-\newpage
-\thispagestyle{main}
-
-\section{Markets, Interest Rates, and Other Indicators}
-
-	% Title: Industrial production	
-		\ct[Industrial production by industry, index, 2010=100
-		]{Current account balance, percent of GDP}\\
-	% Earnings per share
+	% Title: CAB and FX
+		\ct[Current account balance, percent of GDP]
+		{Foreign exchange, trade weighted and USD-JPY rates}\\
+	% CAB
 		\indent \begin{tikzpicture}
-		  	\begin{axis}[            
-		  		stack negative=separate,
-		  		\xbarplotsettings 
-		  		width=6.4cm, \bbar{x}{0}, legend cell align = left,
-			    yticklabel style={
-			    	text width=4.2cm, align=left, style={black!70}, text height=1.5ex},
-			    axis y line=right, legend style={fill=none, at={(0.28,1)}},
-			    bar width=1.4ex, y=2.8ex,
-		  		enlarge y limits={abs=0.3cm},
-		  		enlarge x limits={0.05},
-			    nodes near coords=, nodes near coords align={horizontal},
-			    every node near coord/.append style={
-			                    font=\scriptsize\sffamily\sansmath, style={black!70}},
-				yticklabels from table={\ip}{industry}
-			  ]
-			  \addplot[xbar stacked, bar shift=0pt, fill=none, draw=none] table [
-			            y expr=-\coordindex, 
-			            x index=4 
-			        ] {\ip};
-			  \draw[thick, black!25] 
-			  	({rel axis cs:0,0.02}-|{axis cs:0,0.02}) -- ({rel axis cs:0,1}-|{axis cs:0,0});
-			  \draw[very thin, black!10] 
-			  	({rel axis cs:5,0.02}-|{axis cs:5,0.02}) -- ({rel axis cs:5,1}-|{axis cs:5,0});
-			  \addplot[xbar stacked, bar shift=0pt, fill=green!70!black, draw=green!70!black] table [
-			            y expr=-\coordindex, 
-			            x index=5 
-			        ] {\ip};
-			  \addplot[scatter, only marks, mark=square*, draw=blue!60, fill=white] table [
-			            y expr=-\coordindex, 
-			            x index=3 
-			        ] {\ip};			        
-			  \addplot[scatter, only marks, mark=diamond*, draw=red!60, fill=red!60] table [
-			            y expr=-\coordindex, 
-			            x index=2 
-			        ] {\ip};
-			  \addplot[scatter, only marks, mark=triangle*, draw=blue!60!cyan, fill=blue!60!cyan] 
-			  	table [y expr=-\coordindex, x index=1] {\ip};
-		  \input{data/ipleg.txt}
-			  \end{axis}
-			\end{tikzpicture}\hspace{5mm}
-		% Current account balance
-			\begin{tikzpicture}[trim axis right]
 			\begin{axis}[date coordinates in=x, xticklabel={\year}, stack negative=separate,
 				legend style={text=black!70, legend columns=2,draw=none, at={(0.5,0.3)},
 				/tikz/every even column/.append style={column sep=0cm}},
@@ -363,95 +474,10 @@
 			%\node[align=center, below, shift=({3.2cm,4.25cm})] {
 			%	\input{data/cab.txt}};
 			\legend{Goods, Services ,Income, Transfers};			
-			\end{axis}
-			\end{tikzpicture}
-	% Footer: GDP and unemp 	
-		\cf[FRED: \href{https://research.stlouisfed.org/fred2/series/GDPC1}{GDPC1}; 
-				\href{https://research.stlouisfed.org/fred2/series/GCEC1}{GCEC1};
-				\href{https://research.stlouisfed.org/fred2/series/GPDIC1}{GPDIC1};
-				\href{https://research.stlouisfed.org/fred2/series/NETEXC}{NETEXC};
-				\href{https://research.stlouisfed.org/fred2/series/PCECC96}{PCECC96}]
-				{FRED: \href{https://research.stlouisfed.org/fred2/series/UNRATE}{UNRATE}; 
-				\href{https://research.stlouisfed.org/fred2/series/LNS14027659}{LNS14027659};
-				\href{https://research.stlouisfed.org/fred2/series/LNS14027662}{LNS14027662}}			
-\vspace{8mm}
-
-	% Title: Industrial production	
-		\ct[Household consumption expenditure, annual growth
-		]{Investment expenditure by sector, annual growth}\\
-	% Earnings per share
-		\indent \begin{tikzpicture}
-			\begin{axis}[date coordinates in=x, xticklabel={\year}, stack negative=separate,
-				legend style={text=black!70, fill=none, legend columns=1,draw=none, at={(0.4,0.48)},
-				/tikz/every even column/.append style={column sep=0cm}},
-				legend cell align=left, height=7.0cm,
-				\lineplotsettings
-				\bbar{y}{0}
-					]	
-			\addplot[ybar stacked, bar width=2.6pt, color=orange!70, 
-				fill=orange!70] table [y index = 1, x=date, y=services_ch, col sep=comma]
-				{data/cons.csv};	
-			\addplot[ybar stacked, bar width=2.6pt, color=green!50!black, 
-				fill=green!50!black] table [y index = 2, x=date, y=durable_ch, col sep=comma]
-				{data/cons.csv};	
-			\addplot[ybar stacked, bar width=2.6pt, draw=cyan!50, fill=cyan!50] 
-				table [y index = 3, x=date, y=semidur_ch, col sep=comma]
-				{data/cons.csv};	
-			\addplot[ybar stacked, bar width=2.6pt, color=blue!70!black, 
-				fill=blue!70!black] table [y index = 4, x=date, y=nondur_ch, col sep=comma]
-				{data/cons.csv};			
-			\addplot[thick, color=black] table [x=date, y=total_ch, col sep=comma] {data/cons.csv}
-				node[pos=0.26,pin=90:{Total change}] {};	
-			\node[align=left, below, shift=({3.0cm,0.1cm})] {
-				\input{data/cons.txt}};
-    		\node[align=left] (source) at (axis cs:2013-01-01,40) {%
-      			Consumption tax increase to 8\%};
-    		\node (destination) at (axis cs:2014-04-01,0) {};
-    		\draw[->] (source)--(destination);
-			\legend{Services, Durable goods, Semi-durable goods, Non-durable goods};			
-			\end{axis}
-			\end{tikzpicture}\hfill
-		% Current account balance
-			\begin{tikzpicture}[trim axis right]
-			\begin{axis}[date coordinates in=x, xticklabel={\year}, stack negative=separate,
-				legend style={text=black!70, fill=none, legend columns=3,draw=none, at={(0.7,0.95)},
-				/tikz/every even column/.append style={column sep=0.2cm}},
-				legend cell align=left, height=7.0cm,
-				\lineplotsettings
-				\bbar{y}{0}
-					]	
-			\addplot[ybar stacked, bar width=2.6pt, color=violet, 
-				fill=violet] table [y index = 1, x=date, y=bus_ch, col sep=comma]
-				{data/inv.csv};	
-			\addplot[ybar stacked, bar width=2.6pt, color=yellow!80!orange, 
-				fill=yellow!80!orange] table [y index = 2, x=date, y=res_ch, col sep=comma]
-				{data/inv.csv};	
-			\addplot[ybar stacked, bar width=2.6pt, draw=orange!50!red, fill=orange!50!red] 
-				table [y index = 3, x=date, y=pub_ch, col sep=comma]
-				{data/inv.csv};		
-			\addplot[thick, color=black] table [x=date, y=total_ch, col sep=comma] {data/inv.csv}
-				node[pos=0.4,pin=90:{Total change}] {};	
-			\node[align=left, below, shift=({2.7cm,0cm})] {
-				\input{data/inv.txt}};
-			\legend{Business, Residential, Public};			
-			\end{axis}
-			\end{tikzpicture}			
-	% Footer: GDP and unemp 	
-		\cf[FRED: \href{https://research.stlouisfed.org/fred2/series/GDPC1}{GDPC1}; 
-				\href{https://research.stlouisfed.org/fred2/series/GCEC1}{GCEC1};
-				\href{https://research.stlouisfed.org/fred2/series/GPDIC1}{GPDIC1};
-				\href{https://research.stlouisfed.org/fred2/series/NETEXC}{NETEXC};
-				\href{https://research.stlouisfed.org/fred2/series/PCECC96}{PCECC96}]
-				{FRED: \href{https://research.stlouisfed.org/fred2/series/UNRATE}{UNRATE}; 
-				\href{https://research.stlouisfed.org/fred2/series/LNS14027659}{LNS14027659};
-				\href{https://research.stlouisfed.org/fred2/series/LNS14027662}{LNS14027662}}
-				
-\vspace{8mm}
-
-	% Title: 	
-		\ct[Foreign exchange, trade weighted and USD-JPY rates
-		]{Japanese government bond yield curve}\\
-		\indent \begin{tikzpicture}
+			\end{axis} 
+			\end{tikzpicture} \hfill
+		% FX
+			\begin{tikzpicture} [trim axis right]
 			\begin{axis}[date coordinates in=x, xticklabel={\year}, \lineplotsettings 
 			xtick={
 				{2014-01-01},{2015-01-01},{2016-01-01},{2017-01-01}},
@@ -474,35 +500,12 @@
 			\node[below, shift=({2.7cm,-0.1cm})] {\color{black!80} \input{data/usdjpy.txt}};
 			\node[align=left, below, shift=({2.8cm,4.0cm})] {\color{black!80} Values indexed to 2014=1; \\ Effective rates are BOJ trade-weighted rates.};
 			\end{axis}
-		\end{tikzpicture}\hfill
-		\begin{tikzpicture}[trim axis right]
-			\begin{axis}[
-				max space between ticks=50,	    
-				xtick=data,
-				xticklabels={1 yr, 2 yr, 5 yr, 10 yr, 20 yr, 30 yr, 40 yr},
-		    	enlarge y limits={0.2},
-		    	enlarge x limits={0.1},
-		    	yticklabel style={text width=3em},
-				ymajorgrids, width=9.5cm, 
-				enlarge y limits={0.24}, enlarge x limits={0.03},
-				\bbar{y}{0}
-					]
-			\addplot[thick, mark=*, mark options={fill=white},
-    			color=blue!65!black!30] 
-				table [x=number, y=prev1, col sep=comma] {data/jgb.csv}
-				node[pos=0.89,pin=90:{\color{black!80} Year ago}] {};
-			\addplot[thick, mark=*, mark options={fill=white},
-    			color=blue!65!black!60] 
-				table [x=number, y=prev5, col sep=comma] {data/jgb.csv}
-				node[pos=0.36,pin={[pin distance=3mm]90:{\color{black!80} Five years ago}}] {};			
-			\addplot[ultra thick, mark=*, mark options={fill=white},
-    			visualization depends on=\thisrow{alignment} \as \alignment,
-    			nodes near coords, % Place nodes near each coordinate
-    			every node near coord/.style={anchor=\alignment}, color=blue!60!black] 
-				table [x=number, y=curr, col sep=comma] {data/jgb.csv}
-				node[pos=0.7,pin=280:{\textbf{Most recent}}] {};		
-			\node[below, shift=({1.26cm,-0.2cm})] { \input{data/jgb_curr.txt}};							 	
-			\end{axis}
+		
 			\end{tikzpicture}
+	% Footer: GDP and unemp 	
+		\cf[\href{http://www.mof.go.jp/international_policy/reference/balance_of_payments/bp_trend/bpnet/sbp/s-a/6s-a-1.csv}{Ministry of Finance}]
+				{\href{https://www.boj.or.jp/en/statistics/market/forex/jikko/index.htm/}{Bank of Japan}; 
+				\href{https://www.quandl.com/data/CURRFX/USDJPY}{Quandl}}			
+
 			
 \end{document}

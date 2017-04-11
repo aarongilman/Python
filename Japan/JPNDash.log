@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.27)  18 MAR 2017 19:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.27)  11 APR 2017 12:30
 entering extended mode
 **JPNDash.tex
 (JPNDash.tex
@@ -758,21 +758,21 @@ File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.0 (rcs-revision 1.9)
 PGFPlots: reading {data/cpi_comp.csv}
 PGFPlots: reading {data/ip.csv}
  (JPNDash.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Try loading font information for OT1+qhv on input line 82.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Try loading font information for OT1+qhv on input line 83.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tex-gyre\ot1qhv.fd"
 File: ot1qhv.fd 2009/09/25 v1.2 font definition file for OT1/qhv
@@ -829,7 +829,7 @@ Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.14} (current compat level: 1.13).
 
 \AtBeginShipoutBox=\box40
-Package hyperref Info: Link coloring ON on input line 82.
+Package hyperref Info: Link coloring ON on input line 83.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -838,33 +838,33 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count148
 )
-LaTeX Info: Redefining \ref on input line 82.
-LaTeX Info: Redefining \pageref on input line 82.
-LaTeX Info: Redefining \nameref on input line 82.
+LaTeX Info: Redefining \ref on input line 83.
+LaTeX Info: Redefining \pageref on input line 83.
+LaTeX Info: Redefining \nameref on input line 83.
 
 (JPNDash.out) (JPNDash.out)
 \@outlinefile=\write5
 LaTeX Font Info:    Font shape `OT1/qhv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/qhv/b/n' tried instead on input line 86.
-LaTeX Font Info:    Try loading font information for U+eur on input line 89.
+(Font)              Font shape `OT1/qhv/b/n' tried instead on input line 87.
+LaTeX Font Info:    Try loading font information for U+eur on input line 92.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueur.fd"
 File: ueur.fd 2013/01/14 v3.01 Euler Roman
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 89.
+LaTeX Font Info:    Try loading font information for U+msa on input line 92.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 89.
+LaTeX Font Info:    Try loading font information for U+msb on input line 92.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package pgfplots info on input line 98: dateplot: setting 'date ZERO={2006-01-0
-1}' for this axis.
-Package pgfplots info on input line 98: Using 'lua backend=false' for axis: x c
-oord trafo unsupported.
+Package pgfplots info on input line 101: dateplot: setting 'date ZERO={2006-01-
+01}' for this axis.
+Package pgfplots info on input line 101: Using 'lua backend=false' for axis: x 
+coord trafo unsupported.
 PGFPlots: reading {data/gdp.csv}
 PGFPlots: reading {data/gdp.csv}
 PGFPlots: reading {data/gdp.csv}
@@ -874,14 +874,14 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
  (data/gdp.txt)
-Package pgfplots info on input line 148: dateplot: setting 'date ZERO={2006-01-
+Package pgfplots info on input line 151: dateplot: setting 'date ZERO={2006-01-
 01}' for this axis.
-Package pgfplots info on input line 148: Using 'lua backend=false' for axis: x 
+Package pgfplots info on input line 151: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
 PGFPlots: reading {data/labor.csv}
 PGFPlots: reading {data/labor.csv}
 PGFPlots: reading {data/labor.csv}
-Package pgfplots info on input line 159: fill between: activating layered graph
+Package pgfplots info on input line 162: fill between: activating layered graph
 ics
 \pgf@layerbox@axis background=\box41
 \pgf@layerboxsaved@axis background=\box42
@@ -899,162 +899,19 @@ ics
 \pgf@layerboxsaved@axis descriptions=\box54
 \pgf@layerbox@axis foreground=\box55
 \pgf@layerboxsaved@axis foreground=\box56
-Package pgfplots info on input line 159: Setting layers 'axis background,axis g
+Package pgfplots info on input line 162: Setting layers 'axis background,axis g
 rid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axis
  foreground'...
-Package pgfplots info on input line 159: dateplot: setting 'date ZERO={2006-01-
+Package pgfplots info on input line 162: dateplot: setting 'date ZERO={2006-01-
 01}' for this axis.
-Package pgfplots info on input line 159: Using 'lua backend=false' for axis: x 
+Package pgfplots info on input line 162: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
 PGFPlots: reading {data/labor.csv}
 
 (data/labor.txt)
-Package pgfplots info on input line 182: dateplot: setting 'date ZERO={2006-01-
+Package pgfplots info on input line 187: dateplot: setting 'date ZERO={2006-01-
 01}' for this axis.
-Package pgfplots info on input line 182: Using 'lua backend=false' for axis: x 
-coord trafo unsupported.
-PGFPlots: reading {data/cpi.csv}
-PGFPlots: reading {data/cpi.csv}
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
- (data/cpi.txt)
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-
-Underfull \hbox (badness 3009) in paragraph at lines 210--210
- [][][][]\OT1/qhv/m/n/8 Education
- []
-
-
-Underfull \hbox (badness 4726) in paragraph at lines 210--210
- [][][][]\OT1/qhv/m/n/8 Apparel
- []
-
-
-Underfull \hbox (badness 2503) in paragraph at lines 210--210
- [][][][]\OT1/qhv/m/n/8 Recreation
- []
-
-LaTeX Font Info:    Font shape `OT1/qhv/bx/n' in size <8> not available
-(Font)              Font shape `OT1/qhv/b/n' tried instead on input line 210.
-
-Underfull \hbox (badness 3354) in paragraph at lines 210--210
- [][][][]\OT1/qhv/b/n/8 All-items
- []
-
-
-Underfull \hbox (badness 2495) in paragraph at lines 210--210
- [][][][]\OT1/qhv/m/n/8 Healthcare
- []
-
-
-Underfull \hbox (badness 4279) in paragraph at lines 210--210
- [][][][]\OT1/qhv/m/n/8 Housing
- []
-
-
-Underfull \hbox (badness 5274) in paragraph at lines 210--210
- [][][][]\OT1/qhv/m/n/8 Energy
- []
-
-(data/cpi_mo2.txt) (data/cpi_mo1.txt)
-Underfull \hbox (badness 10000) in paragraph at lines 222--223
-
- []
-
-Package pgfplots info on input line 251: dateplot: setting 'date ZERO={2006-01-
-01}' for this axis.
-Package pgfplots info on input line 251: Using 'lua backend=false' for axis: x 
-coord trafo unsupported.
-PGFPlots: reading {data/nikkei.csv}
-Package pgfplots info on input line 258: dateplot: setting 'date ZERO={2014-01-
-01}' for this axis.
-Package pgfplots info on input line 258: Using 'lua backend=false' for axis: x 
-coord trafo unsupported.
-PGFPlots: reading {data/nikkei.csv}
-(data/nikkei.txt) (data/nikkei2.txt)
-Package pgfplots info on input line 270: dateplot: setting 'date ZERO={2006-01-
-01}' for this axis.
-Package pgfplots info on input line 270: Using 'lua backend=false' for axis: x 
-coord trafo unsupported.
-PGFPlots: reading {data/tankan_bc.csv}
-PGFPlots: reading {data/tankan_bc.csv}
-PGFPlots: reading {data/tankan_bc.csv}
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
- (data/tankan_bc.txt)
-Overfull \hbox (3.52951pt too wide) in paragraph at lines 225--286
-[][]  [] 
- []
-
-LaTeX Font Info:    Font shape `OT1/qhv/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/qhv/b/n' tried instead on input line 288.
-LaTeX Font Info:    Font shape `OT1/qhv/bx/n' in size <9> not available
-(Font)              Font shape `OT1/qhv/b/n' tried instead on input line 288.
-LaTeX Font Info:    Try loading font information for U+fontawesometwo on input 
-line 288.
-("C:\Program Files\MiKTeX 2.9\tex\latex\fontawesome\ufontawesometwo.fd"
-File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
-)
-LaTeX Font Info:    Try loading font information for U+fontawesomethree on inpu
-t line 288.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\fontawesome\ufontawesomethree.fd"
-File: ufontawesomethree.fd 2016/05/22 Font definitions for U/fontawesomethree.
-)
-[1{C:/Users/BDew/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
-
-]
-NOTE: coordinate (,0.0e0) has been dropped because of a coordinate filter. (see
- also unbounded coords=jump). 
-NOTE: coordinate (,-1.0e0) has been dropped because of a coordinate filter. (se
-e also unbounded coords=jump). 
-NOTE: coordinate (,-2.0e0) has been dropped because of a coordinate filter. (se
-e also unbounded coords=jump). 
-NOTE: coordinate (,-3.0e0) has been dropped because of a coordinate filter. (se
-e also unbounded coords=jump). 
-NOTE: coordinate (,-4.0e0) has been dropped because of a coordinate filter. (se
-e also unbounded coords=jump). 
-NOTE: coordinate (,-5.0e0) has been dropped because of a coordinate filter. (se
-e also unbounded coords=jump). 
-NOTE: coordinate (,-6.0e0) has been dropped because of a coordinate filter. (se
-e also unbounded coords=jump). 
-NOTE: coordinate (,-7.0e0) has been dropped because of a coordinate filter. (se
-e also unbounded coords=jump). 
-NOTE: coordinate (,-8.0e0) has been dropped because of a coordinate filter. (se
-e also unbounded coords=jump). 
-NOTE: coordinate (,-9.0e0) has been dropped because of a coordinate filter. (se
-e also unbounded coords=jump). 
-NOTE: coordinate (,-1.0e1) has been dropped because of a coordinate filter. (se
-e also unbounded coords=jump). 
-
-Package pgfplots Warning: the current plot has no coordinates (or all have been
- filtered away) on input line 334.
-
- [warning /pgfplots/warning/plot without coordinates]
-(data/ipleg.txt)
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Package pgfplots info on input line 346: dateplot: setting 'date ZERO={2006-01-
-01}' for this axis.
-Package pgfplots info on input line 346: Using 'lua backend=false' for axis: x 
-coord trafo unsupported.
-PGFPlots: reading {data/external.csv}
-PGFPlots: reading {data/external.csv}
-PGFPlots: reading {data/external.csv}
-PGFPlots: reading {data/external.csv}
-PGFPlots: reading {data/external.csv}
-Missing character: There is no ; in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
- (data/cab.txt)
-Overfull \hbox (43.3117pt too wide) in paragraph at lines 295--378
-[][]  []
- []
-
-Package pgfplots info on input line 390: dateplot: setting 'date ZERO={2006-01-
-01}' for this axis.
-Package pgfplots info on input line 390: Using 'lua backend=false' for axis: x 
+Package pgfplots info on input line 187: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
 PGFPlots: reading {data/cons.csv}
 PGFPlots: reading {data/cons.csv}
@@ -1064,10 +921,10 @@ PGFPlots: reading {data/cons.csv}
 Missing character: There is no ; in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
-(data/cons.txt)
-Package pgfplots info on input line 422: dateplot: setting 'date ZERO={2006-01-
+ (data/cons.txt)
+Package pgfplots info on input line 219: dateplot: setting 'date ZERO={2006-01-
 01}' for this axis.
-Package pgfplots info on input line 422: Using 'lua backend=false' for axis: x 
+Package pgfplots info on input line 219: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
 PGFPlots: reading {data/inv.csv}
 PGFPlots: reading {data/inv.csv}
@@ -1077,15 +934,153 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
  (data/inv.txt)
-Overfull \hbox (35.56361pt too wide) in paragraph at lines 381--448
+Overfull \hbox (35.56361pt too wide) in paragraph at lines 178--239
 [][] []
  []
 
-Package pgfplots info on input line 467: dateplot: setting 'date ZERO={2014-01-
+NOTE: coordinate (,-2.0e0) has been dropped because of a coordinate filter. (se
+e also unbounded coords=jump). 
+NOTE: coordinate (,-7.0e0) has been dropped because of a coordinate filter. (se
+e also unbounded coords=jump). 
+(data/ipleg.txt)
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+LaTeX Font Info:    Font shape `OT1/qhv/bx/n' in size <8> not available
+(Font)              Font shape `OT1/qhv/b/n' tried instead on input line 287.
+Package pgfplots info on input line 291: dateplot: setting 'date ZERO={2006-01-
 01}' for this axis.
-Package pgfplots info on input line 467: Using 'lua backend=false' for axis: x 
+Package pgfplots info on input line 291: Using 'lua backend=false' for axis: x 
+coord trafo unsupported.
+PGFPlots: reading {data/tankan_bc.csv}
+PGFPlots: reading {data/tankan_bc.csv}
+PGFPlots: reading {data/tankan_bc.csv}
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+ (data/tankan_bc.txt)
+Overfull \hbox (3.57207pt too wide) in paragraph at lines 246--306
+[][] [] 
+ []
+
+LaTeX Font Info:    Font shape `OT1/qhv/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/qhv/b/n' tried instead on input line 307.
+LaTeX Font Info:    Font shape `OT1/qhv/bx/n' in size <9> not available
+(Font)              Font shape `OT1/qhv/b/n' tried instead on input line 307.
+LaTeX Font Info:    Try loading font information for U+fontawesometwo on input 
+line 307.
+("C:\Program Files\MiKTeX 2.9\tex\latex\fontawesome\ufontawesometwo.fd"
+File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
+)
+LaTeX Font Info:    Try loading font information for U+fontawesomethree on inpu
+t line 307.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\fontawesome\ufontawesomethree.fd"
+File: ufontawesomethree.fd 2016/05/22 Font definitions for U/fontawesomethree.
+)
+[1{C:/Users/BDew/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+]
+Package pgfplots info on input line 319: dateplot: setting 'date ZERO={2006-01-
+01}' for this axis.
+Package pgfplots info on input line 319: Using 'lua backend=false' for axis: x 
+coord trafo unsupported.
+PGFPlots: reading {data/cpi.csv}
+PGFPlots: reading {data/cpi.csv}
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+
+(data/cpi.txt)
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+
+Underfull \hbox (badness 5274) in paragraph at lines 347--347
+ [][][][]\OT1/qhv/m/n/8 Energy
+ []
+
+
+Underfull \hbox (badness 4726) in paragraph at lines 347--347
+ [][][][]\OT1/qhv/m/n/8 Apparel
+ []
+
+
+Underfull \hbox (badness 3009) in paragraph at lines 347--347
+ [][][][]\OT1/qhv/m/n/8 Education
+ []
+
+
+Underfull \hbox (badness 2495) in paragraph at lines 347--347
+ [][][][]\OT1/qhv/m/n/8 Healthcare
+ []
+
+
+Underfull \hbox (badness 2503) in paragraph at lines 347--347
+ [][][][]\OT1/qhv/m/n/8 Recreation
+ []
+
+
+Underfull \hbox (badness 3354) in paragraph at lines 347--347
+ [][][][]\OT1/qhv/b/n/8 All-items
+ []
+
+
+Underfull \hbox (badness 4279) in paragraph at lines 347--347
+ [][][][]\OT1/qhv/m/n/8 Housing
+ []
+
+(data/cpi_mo2.txt) (data/cpi_mo1.txt)
+Package pgfplots info on input line 389: dateplot: setting 'date ZERO={2006-01-
+01}' for this axis.
+Package pgfplots info on input line 389: Using 'lua backend=false' for axis: x 
+coord trafo unsupported.
+PGFPlots: reading {data/nikkei.csv}
+Package pgfplots info on input line 396: dateplot: setting 'date ZERO={2014-01-
+01}' for this axis.
+Package pgfplots info on input line 396: Using 'lua backend=false' for axis: x 
+coord trafo unsupported.
+PGFPlots: reading {data/nikkei.csv}
+ (data/nikkei.txt) (data/nikkei2.txt)
+PGFPlots: reading {data/jgb.csv}
+
+
+Package pgfplots Warning: Table 'data/jgb.csv' has an empty column name; replac
+ing it by '0'' on input line 422.
+
+ [warning /pgfplots/warning/empty column name]
+PGFPlots: reading {data/jgb.csv}
+
+Package pgfplots Warning: Table 'data/jgb.csv' has an empty column name; replac
+ing it by '0'' on input line 426.
+
+ [warning /pgfplots/warning/empty column name]
+PGFPlots: reading {data/jgb.csv}
+
+Package pgfplots Warning: Table 'data/jgb.csv' has an empty column name; replac
+ing it by '0'' on input line 432.
+
+ [warning /pgfplots/warning/empty column name]
+(data/jgb_curr.txt)
+Overfull \hbox (0.65744pt too wide) in paragraph at lines 361--441
+[][]  [] 
+ []
+
+Package pgfplots info on input line 457: dateplot: setting 'date ZERO={2006-01-
+01}' for this axis.
+Package pgfplots info on input line 457: Using 'lua backend=false' for axis: x 
+coord trafo unsupported.
+PGFPlots: reading {data/external.csv}
+PGFPlots: reading {data/external.csv}
+PGFPlots: reading {data/external.csv}
+PGFPlots: reading {data/external.csv}
+PGFPlots: reading {data/external.csv}
+Missing character: There is no ; in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+(data/cab.txt)
+Package pgfplots info on input line 493: dateplot: setting 'date ZERO={2014-01-
+01}' for this axis.
+Package pgfplots info on input line 493: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
 PGFPlots: reading {data/fx.csv}
+
 NOTE: coordinate (2014-05-31,) has been dropped because of a coordinate filter.
  (see also unbounded coords=jump). 
 NOTE: coordinate (2015-01-31,) has been dropped because of a coordinate filter.
@@ -2957,6 +2952,36 @@ NOTE: coordinate (2017-03-16,) has been dropped because of a coordinate filter.
  (see also unbounded coords=jump). 
 NOTE: coordinate (2017-03-17,) has been dropped because of a coordinate filter.
  (see also unbounded coords=jump). 
+NOTE: coordinate (2017-03-20,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-03-21,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-03-22,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-03-23,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-03-24,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-03-27,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-03-28,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-03-29,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-03-30,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-03-31,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-04-03,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-04-04,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-04-05,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-04-06,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-04-10,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
 PGFPlots: reading {data/fx.csv}
 NOTE: coordinate (2014-01-01,) has been dropped because of a coordinate filter.
  (see also unbounded coords=jump). 
@@ -4816,46 +4841,61 @@ NOTE: coordinate (2017-03-16,) has been dropped because of a coordinate filter.
  (see also unbounded coords=jump). 
 NOTE: coordinate (2017-03-17,) has been dropped because of a coordinate filter.
  (see also unbounded coords=jump). 
+NOTE: coordinate (2017-03-20,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-03-21,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-03-22,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-03-23,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-03-24,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-03-27,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-03-28,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-03-29,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-03-30,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-03-31,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-04-03,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-04-04,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-04-05,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-04-06,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
+NOTE: coordinate (2017-04-10,) has been dropped because of a coordinate filter.
+ (see also unbounded coords=jump). 
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 (data/usdjpy.txt)
-PGFPlots: reading {data/jgb.csv}
+Overfull \hbox (32.24158pt too wide) in paragraph at lines 448--509
+[][]  []
+ []
 
-
-Package pgfplots Warning: Table 'data/jgb.csv' has an empty column name; replac
-ing it by '0'' on input line 493.
-
- [warning /pgfplots/warning/empty column name]
-PGFPlots: reading {data/jgb.csv}
-
-Package pgfplots Warning: Table 'data/jgb.csv' has an empty column name; replac
-ing it by '0'' on input line 497.
-
- [warning /pgfplots/warning/empty column name]
-PGFPlots: reading {data/jgb.csv}
-
-Package pgfplots Warning: Table 'data/jgb.csv' has an empty column name; replac
-ing it by '0'' on input line 503.
-
- [warning /pgfplots/warning/empty column name]
-(data/jgb_curr.txt) [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 508.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 508.
+[2]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 511.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 511.
  (JPNDash.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 508.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 508.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 511.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 511.
 Package rerunfilecheck Info: File `JPNDash.out' has not changed.
-(rerunfilecheck)             Checksum: DE60ED1F8E2D66F4576B85F070F3A43A;209.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 508.
+(rerunfilecheck)             Checksum: 5F4D68A4F6D56EB6A256E7A221FA562F;319.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 511.
  ) 
 Here is how much of TeX's memory you used:
- 30881 strings out of 493671
- 744429 string characters out of 3143865
- 1402134 words of memory out of 3000000
- 33649 multiletter control sequences out of 15000+200000
+ 30892 strings out of 493671
+ 744605 string characters out of 3143865
+ 1375231 words of memory out of 3000000
+ 33658 multiletter control sequences out of 15000+200000
  44931 words of font info for 67 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 69i,18n,107p,738b,5626s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,18n,107p,738b,5690s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontawesome/fontawesomethree.enc
 }{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontawesome/fontawesometwo.enc}{C
 :/Program Files/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-rm.enc}<C:/Program Files/
@@ -4866,9 +4906,9 @@ onts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
 symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/tex-gyre/qhv
 b.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/tex-gyre/qhvr.pfb>
-Output written on JPNDash.pdf (2 pages, 183470 bytes).
+Output written on JPNDash.pdf (2 pages, 181021 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
- 6 named destinations out of 1000 (max. 500000)
- 37 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 99 PDF objects out of 1000 (max. 8388607)
+ 8 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

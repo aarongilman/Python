@@ -1,11 +1,11 @@
 Item,one,two,ten
-Food \& beverage,2.6,1.8,1.1
-Education,1.6,1.5,-0.3
-Apparel,0.7,1.1,0.5
-Recreation,0.5,0.9,-0.6
-\textbf{All-items},0.3,0.5,0.3
-Healthcare,0.8,0.5,0.0
-Transportation,-0.6,0.3,0.0
-Housing,-0.2,-0.1,-0.2
-Furniture \& utensils,-1.0,-0.1,-1.4
-Energy,-4.4,-0.8,0.7
+Energy,-0.8,1.5,0.7
+Apparel,1.1,1.2,0.5
+Education,1.5,1.0,-0.3
+Food \& beverage,1.8,0.8,1.1
+Furniture \& utensils,-0.1,0.6,-1.4
+Healthcare,0.5,0.5,0.0
+Recreation,0.9,0.4,-0.6
+Transportation,0.3,0.3,0.0
+\textbf{All-items},0.5,0.2,0.3
+Housing,-0.1,-0.2,-0.2

@@ -1,0 +1,6 @@
+*.un
+*~
+*.aux
+*.log
+*.out
+config.py
