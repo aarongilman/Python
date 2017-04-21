@@ -498,13 +498,14 @@
 			\addplot[ultra thick, dashed, color=blue!50!black] table [x=Date, y=NEER, col sep=comma] 
 				{data/fx.csv} node[pos=0.9,pin=90:{Nominal effective}] {};	 	
 			\node[below, shift=({2.7cm,-0.1cm})] {\color{black!80} \input{data/usdjpy.txt}};
-			\node[align=left, below, shift=({2.8cm,4.0cm})] {\color{black!80} Values indexed to 2014=1; \\ Effective rates are BOJ trade-weighted rates.};
+			\node[align=left, below, shift=({2.8cm,4.0cm})] {\color{black!80} Values indexed to 2014=1; \\ Effective rates are BIS broad-index rates.};
 			\end{axis}
 		
 			\end{tikzpicture}
 	% Footer: GDP and unemp 	
 		\cf[\href{http://www.mof.go.jp/international_policy/reference/balance_of_payments/bp_trend/bpnet/sbp/s-a/6s-a-1.csv}{Ministry of Finance}]
-				{\href{https://www.boj.or.jp/en/statistics/market/forex/jikko/index.htm/}{Bank of Japan}; 
+				{FRED: \href{https://fred.stlouisfed.org/series/RBJPBIS}{RBJPBIS},
+				\href{https://fred.stlouisfed.org/series/NBJPBIS}{NBJPBIS}; 
 				\href{https://www.quandl.com/data/CURRFX/USDJPY}{Quandl}}			
 
 			
