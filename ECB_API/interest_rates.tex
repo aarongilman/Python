@@ -1,0 +1,122 @@
+%	U.S. Economic Dashboard Example - December 29, 2016
+%	Brian W. Dew (brianwdew@gmail.com)
+	\PassOptionsToPackage{table}{xcolor}
+	\documentclass{report}
+%   Packages   %
+	\usepackage[right=0.8in, left=0.55in, top=0.7in, bottom=0.9in, headsep=0.15in]{geometry}
+	\usepackage{fancyhdr}	
+	\usepackage{titlesec}
+		\titlespacing\section{0pt}{11pt}{3pt}
+	\usepackage{pgfplots, pgfplotstable}
+	\usepackage[eulergreek]{sansmath}
+	\usepackage{xcolor}
+	\usepackage{amssymb}
+	\usepackage{fontawesome}
+	\usepackage[colorlinks, urlcolor=cyan!50!blue]{hyperref}
+	\usepackage{csvsimple}
+	\usetikzlibrary{pgfplots.dateplot, patterns, pgfplots.fillbetween} 
+%   Settings    %
+	% Sans serif font
+		\renewcommand*\sfdefault{qhv}
+		\renewcommand{\familydefault}{\sfdefault}
+	% Custom chart titles
+		\newcommand{\ct}[2][]{
+			\noindent \color{cyan!75!blue} \footnotesize $\blacksquare$ 
+				\color{black!90}\small \ \ {#1} \hfill 
+				\color{cyan!75!blue} \footnotesize $\blacksquare$ \color{black!90}\small \ \ {#2}}
+	% Font Awesome Icon settings
+		\newcommand{\fablueset}[1]{\textcolor{cyan!80!blue}{\large{{#1}}}}
+	% Main style			
+		\fancypagestyle{main}{
+			\headheight = 22pt		
+			\fancyhf{} 
+				\lhead{\LARGE{\textcolor{cyan!30!blue}{\textbf{Macro and Markets Dashboard:}} 
+				Euro Zone}} 
+				\rhead{\footnotesize \textcolor{cyan!80!blue}{\textbf{Updated:}} \today}
+				\lfoot{\small{\textcolor{cyan!30!blue}{\textbf{Made by:}} Brian W Dew \ 
+					\href{https://www.linkedin.com/in/brian-dew-5788a386}{\fablueset{\faLinkedinSquare}} \
+					$\vert$  \ brianwdew@gmail.com \ \href{mailto:brianwdew@gmail.com}
+						{\fablueset{\faEnvelope}} \ 
+					$\vert$ \ @bd\_econ \href{https://twitter.com/bd_econ}{\fablueset{\faTwitter}}}}
+				\cfoot{} 
+				\rfoot{\small{\textcolor{cyan!30!blue}{\textbf{Code:}} 
+					\href{https://github.com/bdecon/Python/tree/master/Macro_Dash}
+					{\fablueset{\faGithub}} /bdecon/Python/Macro\_Dash}}}
+	% Custom section titles
+		\titleformat{\section}{\large \bfseries \color{black!60}}{}{0cm}
+			{\color{cyan!80!blue} }
+	% Custom chart footer
+		\newcommand{\cf}[2][]{\indent \color{black!90} \scriptsize{{#1} \hfill {#2}}} 
+	% Universal plot settings
+		\pgfplotsset{compat=1.13, max space between ticks=30pt,
+			xticklabel style={align=center}, yticklabel style={align=left},
+			axis x line*=bottom, every tick/.style={black!20},  
+			every tick label/.append style={black!50,font=\sansmath\sffamily\footnotesize},
+			x axis line style={black!50}, axis y line=right, y axis line style={opacity=0},
+		    grid style={very thin, black!10}, height=6.8cm}
+		\tikzset{every node/.append style={font=\footnotesize}}
+	% Line plot settings
+		\newcommand{\lineplotsettings}{yticklabel style={text width=3em},
+			ymajorgrids, width=9.5cm, xtick={
+			{2006-01-01},{2008-01-01},{2010-01-01},{2012-01-01},{2014-01-01},{2016-01-01}},
+			minor xtick={{2007-01-01},{2009-01-01},{2011-01-01},{2013-01-01},{2015-01-01}, {2017-01-01}},
+			enlarge y limits={0.24}, enlarge x limits={0.03},}
+	% X-Bar plot settings
+		\newcommand{\xbarplotsettings}{xmajorgrids,
+		    xbar=0pt, y axis line style={opacity=0},   
+		    reverse legend, width=7.4cm, ymajorgrids=false, ytick=data,
+		    enlarge x limits={0.14}, tickwidth=0pt,
+			legend style={text=black!70, anchor=north, legend columns=1, draw=none},}
+	%Load bar plot data				
+		\pgfplotstableread[header=true, col sep=comma]{int.csv}\eps		
+	% Solid bars at significant x or y values
+		\newcommand{\bbar}[2]{extra #1 ticks = {{#2}},
+				extra #1 tick labels = ,
+			    extra #1 tick style  = {grid=major, grid style={thick,solid,black!25}},}
+%  BEGIN DOCUMENT
+\begin{document}
+\thispagestyle{main}
+	\indent \color{green!50!black} \footnotesize $\blacksquare$ 
+				\color{black!90}\small \ \ Yield on comparable 10-year government bonds 
+				
+		\begin{tikzpicture}
+		  	\begin{axis}[            
+		  		stack negative=separate,
+		  		\xbarplotsettings 
+		  		width=6.9cm, \bbar{x}{0}, legend cell align = left,
+			    yticklabel style={
+			    	text width=1.4cm, align=right, style={black!70}, text height=1.4ex},
+			    axis y line=left, legend style={at={(0.68,0.9)}, fill=none},
+			    bar width=1.4ex, y=2.7ex,
+		  		enlarge y limits={abs=0.3cm},
+		  		enlarge x limits={0.04},
+			    nodes near coords=, nodes near coords align={horizontal},
+			    every node near coord/.append style={
+			                    font=\scriptsize\sffamily\sansmath, style={black!70}},
+				yticklabels from table={\eps}{A}
+			  ]
+			  \addplot[xbar stacked, bar shift=0pt, fill=none, draw=none] table [
+			            y expr=-\coordindex, 
+			            x index=3 
+			        ] {\eps};
+			  \draw[thick, black!25] 
+			  	({rel axis cs:0,0.02}-|{axis cs:0,0.02}) -- ({rel axis cs:0,1}-|{axis cs:0,0});
+			  \addplot[xbar stacked, bar shift=0pt, fill=green!80!blue!20, draw=green!80!blue!20] table [
+			            y expr=-\coordindex, 
+			            x index=2 
+			        ] {\eps};
+			  \addplot[xbar stacked, bar shift=0pt, fill=green!80!blue!20, draw=green!80!blue!20] table [
+			            y expr=-\coordindex, 
+			            x index=4 
+			        ] {\eps};			        
+			  \addplot[scatter, only marks, nodes near coords, nodes near coords align={horizontal},
+			  	 mark=diamond*, draw=blue!90!black, fill=blue!90!black] table [
+			            y expr=-\coordindex, 
+			            x index=1 
+			        ] {\eps};
+		  \legend{\scriptsize 1-year range, \scriptsize March 2017}
+			  \end{axis}
+		\end{tikzpicture}
+	
+		\indent \color{black!90} \scriptsize{Data source: European Central Bank}
+\end{document}
