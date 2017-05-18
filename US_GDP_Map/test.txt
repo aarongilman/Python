@@ -1,0 +1,12 @@
+\tikzset{set state val/.style args={#1}{#1={fill=red!80!black!80}}}
+\tikzset{set state val/.list={}}
+\tikzset{set state val/.style args={#1}{#1={fill=yellow!70!green}}}
+\tikzset{set state val/.list={HI, LA, MT, OK, WV, WY}}
+\tikzset{set state val/.style args={#1}{#1={fill=green!80!blue}}}
+\tikzset{set state val/.list={AL, AZ, AR, CA, CT, DE, DC, FL, GA, ID, IL, IN, IA, KS, KY, ME, MD, MA, MI, SP, MN, MS, MO, NE, NH, NJ, NY, NC, ND, OH, OR, PA, RI, SC, TN, TX, VT, VA, WA, WI}}
+\tikzset{set state val/.style args={#1}{#1={fill=red!40!orange!80}}}
+\tikzset{set state val/.list={}}
+\tikzset{set state val/.style args={#1}{#1={fill=blue!50!green}}}
+\tikzset{set state val/.list={CO, NV, SD, UT}}
+\tikzset{set state val/.style args={#1}{#1={fill=orange!60!yellow}}}
+\tikzset{set state val/.list={AK, NM}}

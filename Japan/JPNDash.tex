@@ -294,7 +294,7 @@
 			\addplot[thin, color=black!60] table [x=date, y=Medium, col sep=comma] 
 				{data/tankan_bc.csv} node[pos=0.88,pin=90:{Medium firms}] {};	 	
 			\addplot[thick, dashed, color=red!50!black] table [x=date, y=Large, col sep=comma] 
-				{data/tankan_bc.csv} node[pos=0.22,pin=60:{Large firms}] {};	 	
+				{data/tankan_bc.csv} node[pos=0.21,pin=60:{Large firms}] {};	 	
 			\node[below, shift=({1.5cm,-0.1cm})] {\color{black!80} \input{data/tankan_bc.txt}};
 			\node[align=left, below, shift=({3.7cm,4.5cm})] {\color{black!80} Above zero signals perceived improvement and below \\ zero signals perceived deterioration in business conditions.};
 			\end{axis}
@@ -332,7 +332,7 @@
 		    	enlarge y limits={abs=0.35cm},
 		    	every node near coord/.append style={style={black!70}, 
 		    		font=\scriptsize\sffamily\sansmath},
-		    \bbar{x}{0}, legend style={at={(0.23,0.88)}, fill=none}, legend cell align=left,
+		    \bbar{x}{0}, legend style={at={(0.75,0.38)}, fill=none}, legend cell align=left,
 				yticklabels from table={\cpi}{Item}]
 		  \addplot[nodes near coords, nodes near coords align={horizontal}, fill=purple!30, 
 		  	draw=purple!60,yshift=-0.5pt,] table [y expr=-\coordindex,x index=1] {\cpi};

@@ -77,11 +77,11 @@
 %  BEGIN DOCUMENT
 \begin{document}
 \thispagestyle{main}
-\noindent \small Fourth quarter U.S. economic growth is moderate, with improvement in household consumption and investment offset by a widened export gap. The unemployment rate is low and nearing its long-run full-capacity level. Inflation is now slightly above two percent in both the core CPI and the full index. Elevated consumer confidence and P/E ratios, with near long-term low equity market volatility, show an extraordinary level of optimism. Low-risk interest rates are slowly climbing while the dollar retains a worrisome strength.
+\noindent \small First quarter U.S. economic growth slowed considerably from lower consumption spending, despite an improvement in exports. The unemployment rate is gradually nearing its long-run full-capacity level. Inflation is around two percent in both the core CPI and the full index, with no expected acceleration. Elevated consumer confidence and P/E ratios, with near long-term low equity market volatility, show an extraordinary level of optimism. The yield curve for government debt has flattened while the dollar remains strong.
 
 \section{Economic Growth and Employment}
 	% Title: GDP Growth	
-		\ct[Real Gross Domestic Product (annual percent change)
+		\ct[Real Gross Domestic Product (GDP)
 		]{Civilian unemployment rate (percent)}\\
 	% GDP Growth by Component
 		\indent \begin{tikzpicture}
@@ -94,6 +94,8 @@
 					]	
 			\addlegendimage{empty legend}
 			\addlegendimage{empty legend}
+			\node[align=left, below, shift=({3.8cm,4.3cm}), fill=white, inner sep=1pt] 
+				{(Quarterly percent change, seasonally-adjusted annual rate)};
 			\addplot[ybar stacked, bar width=2.6pt, color=blue!60!black!90, 
 				fill=blue!60!black!90] table [y index = 1, x=DATE, y=GCEC1, col sep=comma]
 				{data/gdp_comp.csv};	
@@ -107,7 +109,7 @@
 				fill=blue!40!green] table [y index = 4, x=DATE, y=PCECC96, col sep=comma]
 				{data/gdp_comp.csv};			
 			\addplot[thick, color=black] table [x=DATE, y=GDPC1, col sep=comma] {data/gdp_comp.csv}
-				node[pos=0.80,pin=100:{Real GDP Growth}] {};	
+				node[pos=0.55,pin=80:{Real GDP Growth}] {};	
 			\node[align=center, below, shift=({2.7cm,-0.25cm})] {
 				\input{data/gdp_comp.txt}};
 			\legend{Contributions to ,GDP growth, Government, Investment ,Net Exports, Consumption};			
@@ -117,7 +119,7 @@
 		\begin{tikzpicture}[trim axis right]
 		  	\begin{axis}[date coordinates in=x, xticklabel={\year}, \lineplotsettings \bbar{y}{0}]
 		  	\node[below, shift=({3.2cm,-0.3cm}), fill=white, inner sep=1pt] 
-				{\input{data/unemp.txt}};
+				{\input{data/unemp.txt} unemployed and looking for work};
 		  	\addplot[name path=F, thick, no markers, color=red] 
 				table [x=DATE, y=LNS14027662, col sep=comma] {data/unemp.csv}
 				node[pos=0.385,pin=270:{College degree}] {};
@@ -127,7 +129,7 @@
 			\addplot[fill=red!20]
 				fill between[of=F and G];
 			\addplot[ultra thick, color=black] table [x=DATE, y=UNRATE, col sep=comma] {data/unemp.csv}			
-				node[right, pos=0.33, pin={[pin distance=1.4cm]90:{Unemployed and looking for work}}] {};	
+				node[right, pos=0.33, pin={[pin distance=1.4cm]90:{Unemployed and looking for work (U3 rate)}}] {};	
 		  	\end{axis}
 		\end{tikzpicture} \\
 	% Footer: CPI 	
