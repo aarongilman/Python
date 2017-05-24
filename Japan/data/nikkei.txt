@@ -1,1 +1,1 @@
-One-month change: \color{green!80!blue}$\blacktriangle$\normalcolor 6.6\%; \\ One-year change: \color{green!80!blue}$\blacktriangle$\normalcolor 18.0\%
+One-month change: \color{green!80!blue}$\blacktriangle$\normalcolor 6.4\%; \\ One-year change: \color{green!80!blue}$\blacktriangle$\normalcolor 19.5\%
