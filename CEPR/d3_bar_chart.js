@@ -11,7 +11,11 @@ var tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
-      return "<strong>Average hourly earnings:</strong> <span style='color:orangered'>" + d.nominal_wage + "</span>";
+      return "<span style='text-decoration: underline'>" +
+        d.index + "</span>: <br><br> Change in purchasing power since 2000: <span style='color:orangered'>" +
+        d.cumulative_change +
+        "</span> <br><br> Average hourly earnings: <span style='color:orangered'>" +
+        d.nominal_wage + "</span> <br><br> ";
     })
 
   d3.json("ahe.json", function (data) {
@@ -40,16 +44,13 @@ var tip = d3.tip()
         .attr("x", function (d) { return x(Math.min(0, d.cumulative_change)); })
         .attr("y", function (d, i) { return i * y_spacing; })
         .attr("fill", "darkblue")
-        .on("mouseover", function() {
-        d3.select(this)
-          .attr("fill", "orangered");
-        })
-        .on("mouseout", function() {
-        d3.select(this)
-          .attr("fill", "darkblue");
-        })
-        .on('mouseover', tip.show)
-        .on('mouseout', tip.hide)
+        .on('mouseover', function(d){
+          tip.show(d);
+          d3.select(this).attr("fill", "orangered");})
+        .on('mouseout', function(d){
+          tip.hide(d);
+          d3.select(this).attr("fill", "darkblue");}
+        )
         .attr("transform", "translate(" + shift + ", 0)");
 
     canvas.selectAll("text.y_label")
