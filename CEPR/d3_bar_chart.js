@@ -7,6 +7,13 @@ var margin = {top: 8, right: 30, bottom: 3, left: 240},
     axis_loc = fig_height - 4
     bar_gap = 6;
 
+var tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .offset([-10, 0])
+    .html(function(d) {
+      return "<strong>Average hourly earnings:</strong> <span style='color:orangered'>" + d.nominal_wage + "</span>";
+    })
+
   d3.json("ahe.json", function (data) {
 
     var x = d3.scaleLinear()
@@ -20,6 +27,8 @@ var margin = {top: 8, right: 30, bottom: 3, left: 240},
       .attr("height", height + margin.top + margin.bottom)
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    canvas.call(tip)
 
     canvas.selectAll("rect.value_1")
       .data(data)
@@ -39,6 +48,8 @@ var margin = {top: 8, right: 30, bottom: 3, left: 240},
         d3.select(this)
           .attr("fill", "darkblue");
         })
+        .on('mouseover', tip.show)
+        .on('mouseout', tip.hide)
         .attr("transform", "translate(" + shift + ", 0)");
 
     canvas.selectAll("text.y_label")
@@ -66,7 +77,7 @@ var margin = {top: 8, right: 30, bottom: 3, left: 240},
             }
             else {return  x(Math.min(0, d.cumulative_change)) + Math.abs(x(d.cumulative_change) - x(0)) + shift + 2;}
         })
-        .attr("y", function (d, i) { return i * y_spacing + 15; });
+        .attr("y", function (d, i) { return i * y_spacing + 14; });
 
    canvas.append("g")
       .attr("transform", "translate(" + shift + "," + axis_loc + ")")
