@@ -92,7 +92,7 @@
 		]{Labor force participation and unemployment (percent)}\\
 	% GDP Growth by Component
 		\indent \begin{tikzpicture}
-			\begin{axis}[date coordinates in=x, xticklabel={\year}, stack negative=separate,
+			\begin{axis}[date coordinates in=x, xticklabel={\year}, stack negative=separate, date ZERO=2006-01-01,
 				legend style={text=black!70, legend columns=2,draw=none, at={(1,1)},
 				/tikz/every even column/.append style={column sep=-0.25cm}},
 				legend cell align=left, 
@@ -478,7 +478,7 @@
 			\end{tikzpicture} \hfill
 		% FX
 			\begin{tikzpicture} [trim axis right]
-			\begin{axis}[date coordinates in=x, xticklabel={\year}, \lineplotsettings 
+			\begin{axis}[date coordinates in=x, date ZERO=2014-01-01, xticklabel={\year}, \lineplotsettings 
 			xtick={
 				{2014-01-01},{2015-01-01},{2016-01-01},{2017-01-01}},
 		    minor xtick={
