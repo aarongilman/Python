@@ -62,7 +62,7 @@ var tip = d3.tip()
         .style("font-size", "12px")
         .attr("text-anchor", "end")
         .attr("y", function (d, i) { return i * y_spacing + 14; })
-        .attr("x", shift - 28)
+        .attr("x", shift - 30)
         .text(function (d) { return d.index; });
 
     canvas.selectAll("text.value_label")
