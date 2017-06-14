@@ -6,3 +6,4 @@ __pycache__/
 /Macro_Dash/Data/*
 /Japan/Data/*
 /CEPR/*
+*config.py
