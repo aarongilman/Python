@@ -1,1 +1,1 @@
-\legend{\scriptsize 5-year range, \scriptsize 1-year average, \scriptsize Mar 2017, \scriptsize Apr 2017 (Preliminary)}
+\legend{\scriptsize 5-year range, \scriptsize 1-year avg, \scriptsize Apr 2017}
