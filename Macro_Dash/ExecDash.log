@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.27)  14 JUN 2017 20:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.27)  17 JUN 2017 08:36
 entering extended mode
 **ExecDash.tex
 (ExecDash.tex
@@ -914,11 +914,6 @@ Underfull \hbox (badness 7133) in paragraph at lines 183--183
  [][][][]\OT1/qhv/m/n/8 Apparel
  []
 
-
-Underfull \hbox (badness 4832) in paragraph at lines 183--183
- [][][][]\OT1/qhv/m/n/8 Education
- []
-
 (data/cpi_mo2.txt) (data/cpi_mo1.txt)
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -993,13 +988,13 @@ Package rerunfilecheck Info: File `ExecDash.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 262.
  ) 
 Here is how much of TeX's memory you used:
- 29846 strings out of 493671
- 722031 string characters out of 3143865
- 1044189 words of memory out of 3000000
- 32663 multiletter control sequences out of 15000+200000
+ 29845 strings out of 493671
+ 722012 string characters out of 3143865
+ 1046195 words of memory out of 3000000
+ 32662 multiletter control sequences out of 15000+200000
  45622 words of font info for 70 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 69i,18n,107p,2329b,2285s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,18n,107p,2276b,2285s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontawesome/fontawesomethree.enc
 }{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontawesome/fontawesometwo.enc}{C
 :/Program Files/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-rm.enc}<C:/Program Files/
@@ -1011,7 +1006,7 @@ amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
 symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/sym
 bols/msam7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/tex-gyre/qhvb.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/tex-gyre/qhvr.pfb>
-Output written on ExecDash.pdf (1 page, 141918 bytes).
+Output written on ExecDash.pdf (1 page, 141898 bytes).
 PDF statistics:
  89 PDF objects out of 1000 (max. 8388607)
  5 named destinations out of 1000 (max. 500000)

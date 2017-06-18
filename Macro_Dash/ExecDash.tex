@@ -77,7 +77,7 @@
 %  BEGIN DOCUMENT
 \begin{document}
 \thispagestyle{main}
-\noindent \small First quarter U.S. economic growth slowed from lower consumption spending growth, despite an improvement in exports. The unemployment rate is gradually nearing its long-run full-capacity level. Inflation is around two percent in both the core CPI and the full index, with no expected acceleration. Elevated consumer confidence and P/E ratios, with near long-term low equity market volatility, show an extraordinary level of optimism. The yield curve for government debt has flattened while the dollar remains strong.
+\noindent \small First quarter U.S. economic growth slowed from lower consumption spending growth, despite an improvement in exports. The unemployment rate is gradually nearing its long-run full-capacity level. Inflation is below two percent in both the core CPI and the full index, with no expected acceleration. Elevated consumer confidence and P/E ratios, with near long-term low equity market volatility, show an extraordinary level of optimism. The yield curve for government debt has flattened while the dollar remains strong.
 
 \section{Economic Growth and Employment}
 	% Title: GDP Growth	
@@ -154,7 +154,7 @@
 				(FRED: \href{https://fred.stlouisfed.org/series/T5YIFR}
 					{T5YIFR})};			
 			\addplot[ultra thick, color=blue!70] table [x=DATE, y=CPIAUCSL, col sep=comma] 
-				{data/cpi.csv} node[pos=0.245,pin=10:{All-items CPI}] {};	
+				{data/cpi.csv} node[pos=0.24,pin=10:{All-items CPI}] {};	
 			\addplot[thick, color=black!50] table [x=DATE, y=CPILFESL, col sep=comma] 
 				{data/cpi.csv} node[pos=0.43,pin=275:{Core CPI (excl. food and energy)}] {};	 		
 			\node[below, shift=({2.9cm,-0.1cm})] {\color{black!80} \input{data/cpi.txt}};
