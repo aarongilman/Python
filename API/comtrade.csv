@@ -1,0 +1,49 @@
+Classification,Year,Period,Period Desc.,Aggregate Level,Is Leaf Code,Trade Flow Code,Trade Flow,Reporter Code,Reporter,Reporter ISO,Partner Code,Partner,Partner ISO,2nd Partner Code,2nd Partner,2nd Partner ISO,Customs Proc. Code,Customs,Mode of Transport Code,Mode of Transport,Commodity Code,Commodity,Qty Unit Code,Qty Unit,Qty,Alt Qty Unit Code,Alt Qty Unit,Alt Qty,Netweight (kg),Gross weight (kg),Trade Value (US$),CIF Trade Value (US$),FOB Trade Value (US$),Flag
+S3,1990,1990,1990,1,0,1,Import,842,USA,USA,0,World,WLD,,,,,,,,6,Manufactured goods classified chiefly by material,1,No Quantity,,,,,,,63142808971,,,0
+S3,1990,1990,1990,1,0,2,Export,842,USA,USA,0,World,WLD,,,,,,,,6,Manufactured goods classified chiefly by material,1,No Quantity,,,,,,,33698135878,,,0
+S3,1990,1990,1990,1,0,1,Import,842,USA,USA,124,Canada,CAN,,,,,,,,6,Manufactured goods classified chiefly by material,1,No Quantity,,,,,,,16248190457,,,0
+S3,1990,1990,1990,1,0,2,Export,842,USA,USA,124,Canada,CAN,,,,,,,,6,Manufactured goods classified chiefly by material,1,No Quantity,,,,,,,10096695335,,,0
+S3,1990,1990,1990,1,0,1,Import,842,USA,USA,484,Mexico,MEX,,,,,,,,6,Manufactured goods classified chiefly by material,1,No Quantity,,,,,,,2568321009,,,0
+S3,1990,1990,1990,1,0,2,Export,842,USA,USA,484,Mexico,MEX,,,,,,,,6,Manufactured goods classified chiefly by material,1,No Quantity,,,,,,,3570355563,,,0
+S3,1990,1990,1990,1,0,1,Import,842,USA,USA,0,World,WLD,,,,,,,,7,Machinery and transport equipment,1,No Quantity,,,,,,,2.14072E+11,,,0
+S3,1990,1990,1990,1,0,2,Export,842,USA,USA,0,World,WLD,,,,,,,,7,Machinery and transport equipment,1,No Quantity,,,,,,,1.826E+11,,,0
+S3,1990,1990,1990,1,0,1,Import,842,USA,USA,124,Canada,CAN,,,,,,,,7,Machinery and transport equipment,1,No Quantity,,,,,,,41176405443,,,0
+S3,1990,1990,1990,1,0,2,Export,842,USA,USA,124,Canada,CAN,,,,,,,,7,Machinery and transport equipment,1,No Quantity,,,,,,,45294207098,,,0
+S3,1990,1990,1990,1,0,1,Import,842,USA,USA,484,Mexico,MEX,,,,,,,,7,Machinery and transport equipment,1,No Quantity,,,,,,,13765301704,,,0
+S3,1990,1990,1990,1,0,2,Export,842,USA,USA,484,Mexico,MEX,,,,,,,,7,Machinery and transport equipment,1,No Quantity,,,,,,,13560561160,,,0
+S3,1990,1990,1990,2,0,1,Import,842,USA,USA,0,World,WLD,,,,,,,,78,ROAD VEHICLES,1,No Quantity,,,,,,,75130697840,,,0
+S3,1990,1990,1990,2,0,2,Export,842,USA,USA,0,World,WLD,,,,,,,,78,ROAD VEHICLES,1,No Quantity,,,,,,,30524223483,,,0
+S3,1990,1990,1990,2,0,1,Import,842,USA,USA,124,Canada,CAN,,,,,,,,78,ROAD VEHICLES,1,No Quantity,,,,,,,26364539334,,,0
+S3,1990,1990,1990,2,0,2,Export,842,USA,USA,124,Canada,CAN,,,,,,,,78,ROAD VEHICLES,1,No Quantity,,,,,,,17600676694,,,0
+S3,1990,1990,1990,2,0,1,Import,842,USA,USA,484,Mexico,MEX,,,,,,,,78,ROAD VEHICLES,1,No Quantity,,,,,,,3678482406,,,0
+S3,1990,1990,1990,2,0,2,Export,842,USA,USA,484,Mexico,MEX,,,,,,,,78,ROAD VEHICLES,1,No Quantity,,,,,,,3324048004,,,0
+S3,1990,1990,1990,1,0,1,Import,842,USA,USA,0,World,WLD,,,,,,,,8,Miscellaneous manufactured articles,1,No Quantity,,,,,,,85323480904,,,0
+S3,1990,1990,1990,1,0,2,Export,842,USA,USA,0,World,WLD,,,,,,,,8,Miscellaneous manufactured articles,1,No Quantity,,,,,,,43045546283,,,0
+S3,1990,1990,1990,1,0,1,Import,842,USA,USA,124,Canada,CAN,,,,,,,,8,Miscellaneous manufactured articles,1,No Quantity,,,,,,,3639720072,,,0
+S3,1990,1990,1990,1,0,2,Export,842,USA,USA,124,Canada,CAN,,,,,,,,8,Miscellaneous manufactured articles,1,No Quantity,,,,,,,7926903562,,,0
+S3,1990,1990,1990,1,0,1,Import,842,USA,USA,484,Mexico,MEX,,,,,,,,8,Miscellaneous manufactured articles,1,No Quantity,,,,,,,3078077022,,,0
+S3,1990,1990,1990,1,0,2,Export,842,USA,USA,484,Mexico,MEX,,,,,,,,8,Miscellaneous manufactured articles,1,No Quantity,,,,,,,2994003081,,,0
+S2,1985,1985,1985,1,0,1,Import,842,USA,USA,0,World,WLD,,,,,,,,6,Manufactured goods classified chiefly by materials,1,No Quantity,,,,,,,49774391296,,,0
+S2,1985,1985,1985,1,0,2,Export,842,USA,USA,0,World,WLD,,,,,,,,6,Manufactured goods classified chiefly by materials,1,No Quantity,,,,,,,14399410176,,,0
+S2,1985,1985,1985,1,0,1,Import,842,USA,USA,124,Canada,CAN,,,,,,,,6,Manufactured goods classified chiefly by materials,1,No Quantity,,,,,,,10882530304,,,0
+S2,1985,1985,1985,1,0,2,Export,842,USA,USA,124,Canada,CAN,,,,,,,,6,Manufactured goods classified chiefly by materials,1,No Quantity,,,,,,,3985409536,,,0
+S2,1985,1985,1985,1,0,1,Import,842,USA,USA,484,Mexico,MEX,,,,,,,,6,Manufactured goods classified chiefly by materials,1,No Quantity,,,,,,,1286944384,,,0
+S2,1985,1985,1985,1,0,2,Export,842,USA,USA,484,Mexico,MEX,,,,,,,,6,Manufactured goods classified chiefly by materials,1,No Quantity,,,,,,,1363597184,,,0
+S2,1985,1985,1985,1,0,1,Import,842,USA,USA,0,World,WLD,,,,,,,,7,Machinery and transport equipment,1,No Quantity,,,,,,,1.41837E+11,,,0
+S2,1985,1985,1985,1,0,2,Export,842,USA,USA,0,World,WLD,,,,,,,,7,Machinery and transport equipment,1,No Quantity,,,,,,,94302650368,,,0
+S2,1985,1985,1985,1,0,1,Import,842,USA,USA,124,Canada,CAN,,,,,,,,7,Machinery and transport equipment,1,No Quantity,,,,,,,29430032384,,,0
+S2,1985,1985,1985,1,0,2,Export,842,USA,USA,124,Canada,CAN,,,,,,,,7,Machinery and transport equipment,1,No Quantity,,,,,,,27033303040,,,0
+S2,1985,1985,1985,1,0,1,Import,842,USA,USA,484,Mexico,MEX,,,,,,,,7,Machinery and transport equipment,1,No Quantity,,,,,,,5561318912,,,0
+S2,1985,1985,1985,1,0,2,Export,842,USA,USA,484,Mexico,MEX,,,,,,,,7,Machinery and transport equipment,1,No Quantity,,,,,,,6284195840,,,0
+S2,1985,1985,1985,2,0,1,Import,842,USA,USA,0,World,WLD,,,,,,,,78,Road vehicles,1,No Quantity,,,,,,,59379486720,,,0
+S2,1985,1985,1985,2,0,2,Export,842,USA,USA,0,World,WLD,,,,,,,,78,Road vehicles,1,No Quantity,,,,,,,19405860864,,,0
+S2,1985,1985,1985,2,0,1,Import,842,USA,USA,124,Canada,CAN,,,,,,,,78,Road vehicles,1,No Quantity,,,,,,,20784171008,,,0
+S2,1985,1985,1985,2,0,2,Export,842,USA,USA,124,Canada,CAN,,,,,,,,78,Road vehicles,1,No Quantity,,,,,,,14574040064,,,0
+S2,1985,1985,1985,2,0,1,Import,842,USA,USA,484,Mexico,MEX,,,,,,,,78,Road vehicles,1,No Quantity,,,,,,,807062016,,,0
+S2,1985,1985,1985,2,0,2,Export,842,USA,USA,484,Mexico,MEX,,,,,,,,78,Road vehicles,1,No Quantity,,,,,,,1356323328,,,0
+S2,1985,1985,1985,1,0,1,Import,842,USA,USA,0,World,WLD,,,,,,,,8,Miscellaneous manufactured articles,1,No Quantity,,,,,,,51300323328,,,0
+S2,1985,1985,1985,1,0,2,Export,842,USA,USA,0,World,WLD,,,,,,,,8,Miscellaneous manufactured articles,1,No Quantity,,,,,,,15379057664,,,0
+S2,1985,1985,1985,1,0,1,Import,842,USA,USA,124,Canada,CAN,,,,,,,,8,Miscellaneous manufactured articles,1,No Quantity,,,,,,,2923389952,,,0
+S2,1985,1985,1985,1,0,2,Export,842,USA,USA,124,Canada,CAN,,,,,,,,8,Miscellaneous manufactured articles,1,No Quantity,,,,,,,2747681792,,,0
+S2,1985,1985,1985,1,0,1,Import,842,USA,USA,484,Mexico,MEX,,,,,,,,8,Miscellaneous manufactured articles,1,No Quantity,,,,,,,1181240832,,,0
+S2,1985,1985,1985,1,0,2,Export,842,USA,USA,484,Mexico,MEX,,,,,,,,8,Miscellaneous manufactured articles,1,No Quantity,,,,,,,893820032,,,0
