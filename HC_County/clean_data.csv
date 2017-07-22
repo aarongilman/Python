@@ -1,6 +1,6 @@
 fips_county,state,county_name,pop,gov_name,gov_party,issuer_name,issuer_number,INTPTLAT,INTPTLONG
-2013,AK,"Aleutians East Borough, Alaska",3296,Bill Walker,Independent,1.0,1,55.245044,-161.997477
-2016,AK,"Aleutians West Census Area, Alaska",5647,Bill Walker,Independent,1.0,1,51.959447,178.338813
+2013,AK,"Aleutians East Borough, Alaska",3296,Bill Walker,Independent,1.0,1,55.3397,-160.4972
+2016,AK,"Aleutians West Census Area, Alaska",5647,Bill Walker,Independent,1.0,1,53.8844,-166.5332
 2020,AK,"Anchorage Municipality, Alaska",298192,Bill Walker,Independent,1.0,1,61.17425,-149.284329
 2050,AK,"Bethel Census Area, Alaska",17968,Bill Walker,Independent,1.0,1,60.929141,-160.152625
 2060,AK,"Bristol Bay Borough, Alaska",898,Bill Walker,Independent,1.0,1,58.730158,-156.996632
@@ -738,7 +738,7 @@ fips_county,state,county_name,pop,gov_name,gov_party,issuer_name,issuer_number,I
 17091,IL,"Kankakee County, Illinois",110008,Bruce Rauner,Republican,2.0,2,41.13951,-87.861117
 17093,IL,"Kendall County, Illinois",124695,Bruce Rauner,Republican,1.0,1,41.58814,-88.430626
 17095,IL,"Knox County, Illinois",50938,Bruce Rauner,Republican,2.0,2,40.930941,-90.213761
-17097,IL,"Lake County, Illinois",703047,Bruce Rauner,Republican,1.0,1,42.326444,-87.436118
+17097,IL,"Lake County, Illinois",703047,Bruce Rauner,Republican,1.0,1,42.3636,-87.8448
 17099,IL,"LaSalle County, Illinois",110642,Bruce Rauner,Republican,2.0,2,41.343341,-88.885931
 17101,IL,"Lawrence County, Illinois",16377,Bruce Rauner,Republican,1.0,1,38.718954,-87.730221
 17103,IL,"Lee County, Illinois",34251,Bruce Rauner,Republican,2.0,2,41.747442,-89.299351
