@@ -11,6 +11,7 @@ Most used/useful jupyter notebooks with python examples by Brian Dew.
 * [IMF API Find Series](https://github.com/bdecon/Python/blob/master/IMF_API/IMF_API_Series_Info.ipynb)
 * [IMF API Metadata and Advanced](https://github.com/bdecon/Python/blob/master/IMF_API/IMF_API_Metadata_Advanced.ipynb)
 * [Census API Trade Data](https://github.com/bdecon/Python/blob/master/API/Census.ipynb)
+* [Fred API and Calculations](https://github.com/bdecon/Python/blob/master/API/FRED.ipynb)
 
 #### Analysis and Visualizations
 * [Unemployment Map by MSA](https://github.com/bdecon/Python/blob/master/Unemp_Map/Plotly_MSA_Map.ipynb)
