@@ -21,3 +21,4 @@ Most used/useful jupyter notebooks with python examples by Brian Dew.
 * [Network Analysis of Trade](https://github.com/bdecon/Python/blob/master/NetworkAnalysis/Website_example.ipynb)
 * [Executive Dashboard - USA](https://github.com/bdecon/Python/blob/master/Macro_Dash/ExecDash.ipynb)
 * [Health Insurance Providers by County](https://github.com/bdecon/Python/blob/master/HC_County/health_insurance_providers_by_state.ipynb)
+* [Restaurant Cycle - Plotly with Recession Bars](https://github.com/bdecon/Python/blob/master/Plotly/Restaurants.ipynb)
