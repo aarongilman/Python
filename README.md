@@ -1,11 +1,11 @@
 # Python
-Set of Python 2.7 examples for gathering and analyzing economic data. 
+Set of Python 2.7 examples for gathering and analyzing economic data.
 
 ## Best Notebooks
 Most used/useful jupyter notebooks with python examples by Brian Dew.
 
 #### APIs
-* [BLS API](https://github.com/bdecon/Python/blob/master/API/BLS_v2.ipynb)
+* [BLS API](https://github.com/bdecon/Python/blob/master/API/BLS_three_examples.ipynb)
 * [BEA API](https://github.com/bdecon/Python/blob/master/API/BEA_API.ipynb)
 * [IMF API Basic Call](https://github.com/bdecon/Python/blob/master/IMF_API/IMF_API_Simple_Example_UK_Import_Prices.ipynb)
 * [IMF API Find Series](https://github.com/bdecon/Python/blob/master/IMF_API/IMF_API_Series_Info.ipynb)
