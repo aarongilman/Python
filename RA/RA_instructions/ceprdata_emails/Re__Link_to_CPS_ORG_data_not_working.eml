@@ -1,0 +1,281 @@
+Return-Path: <jwickslim@gmail.com>
+Received: from compute4.internal (compute4.nyi.internal [10.202.2.44])
+	 by sloti28t08 (Cyrus fastmail-fmwheezy42319-13869-git-fastmail-13869) with LMTPA;
+	 Thu, 13 Oct 2016 12:04:08 -0400
+X-Cyrus-Session-Id: sloti28t08-2530892-1476374648-2-15717892633202218002
+X-Sieve: CMU Sieve 2.4
+X-Spam-known-sender: yes ("Address wickslim@peri.umass.edu in From header is in addressbook"),
+  in-addressbook
+X-Spam-score: 0.0
+X-Spam-hits: BAYES_00 -1.9, FREEMAIL_FROM 0.001, HTML_MESSAGE 0.001,
+  RCVD_IN_DNSWL_LOW -0.7, RCVD_IN_SORBS_SPAM 0.5, SPF_PASS -0.001,
+  LANGUAGES en, BAYES_USED global, SA_VERSION 3.3.2
+X-Spam-source: IP='209.85.215.54', Host='mail-lf0-f54.google.com', Country='US',
+  FromHeader='edu', MailFrom='com'
+X-Spam-charsets: plain='UTF-8', html='UTF-8'
+X-Resolved-to: bucknor@cepr.net
+X-Delivered-to: bucknor@cepr.net
+X-Mail-from: jwickslim@gmail.com
+Received: from mx6 ([10.202.2.205])
+  by compute4.internal (LMTPProxy); Thu, 13 Oct 2016 12:04:08 -0400
+Received: from mx6.messagingengine.com (localhost [127.0.0.1])
+	by mailmx.nyi.internal (Postfix) with ESMTP id 479505A1C1
+	for <bucknor@cepr.net>; Thu, 13 Oct 2016 12:04:06 -0400 (EDT)
+Received: from mx6.messagingengine.com (localhost [127.0.0.1])
+    by mx6.messagingengine.com (Authentication Milter) with ESMTP
+    id ACF1D9778C3;
+    Thu, 13 Oct 2016 12:04:06 -0400
+Authentication-Results: mx6.messagingengine.com;
+    dkim=pass (2048-bit rsa key) header.d=gmail.com header.i=@gmail.com header.b=jkkERoP2;
+    dmarc=none (p=none) header.from=peri.umass.edu;
+    spf=pass smtp.mailfrom=jwickslim@gmail.com smtp.helo=mail-lf0-f54.google.com;
+    x-google-dkim=pass (2048-bit rsa key) header.d=1e100.net header.i=@1e100.net header.b=EHr++t4e
+Received-SPF: pass
+    (gmail.com ... _spf.google.com: Sender is authorized to use 'jwickslim@gmail.com' in 'mfrom' identity (mechanism 'include:_netblocks.google.com' matched))
+    receiver=mx6.messagingengine.com;
+    identity=mailfrom;
+    envelope-from="jwickslim@gmail.com";
+    helo=mail-lf0-f54.google.com;
+    client-ip=209.85.215.54
+Received: from mail-lf0-f54.google.com (mail-lf0-f54.google.com [209.85.215.54])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by mx6.messagingengine.com (Postfix) with ESMTPS
+	for <bucknor@cepr.net>; Thu, 13 Oct 2016 12:04:05 -0400 (EDT)
+Received: by mail-lf0-f54.google.com with SMTP id x79so147031359lff.0
+        for <bucknor@cepr.net>; Thu, 13 Oct 2016 09:04:05 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to;
+        bh=m2Vr+979oXJiJL9x8Vs+tTQHzn9STnEnocSZXUimWE0=;
+        b=jkkERoP2uPhzfs2XxyExaoVvE0hmuXIgseMjdGHTWF/saSw8QJn6wpM19mgYubLDeD
+         bDlFEMkHgObxtNdG/ic0aLvdm2n7+4W0R985zCB4Ci0O46qAFmWz0ycEHB3L6vvi+VOT
+         NLe0npu2H4xHMsLqhCAiV/I2kpxmhxnaCFH5JkbcqzoYZMb5Y3hd8RZAQ/pmcTX9jiAM
+         ZN6MuSL6XQPq+RpVQoaU5Ftc5RaQe3mT3isgZCHBFW3n4tfAPfu8yfkRPmEKYpDse1vj
+         rOBN718wPDDdSlLxJbZhM7FmN1BVHSM7Gcjcma5gx8Cpj8Co2BE5deXeCWUWzXVYzBq1
+         CiFA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:sender:in-reply-to:references:from
+         :date:message-id:subject:to;
+        bh=m2Vr+979oXJiJL9x8Vs+tTQHzn9STnEnocSZXUimWE0=;
+        b=EHr++t4eIDEUCAGG8mTCFA1IV9zOVH3SDao+VZ0yqgUAV3+wybZfjVgDUt7kAyBot9
+         BbrMhorqfV9QqLsEAPu+I7X3j3kkjr4DAkqvcruJ5n+Pt2V1lsuvS6SRM3QnilPoq3mt
+         V/zCofeZgWPC0GL2n8N5xZdOY9t3vpyBJvXOXeE12BOkQkmua7EiSL8IOT5RB7i57Byd
+         V/WttIF69TxA6yMBDMcQVXnaPo6AKYlprCGyP9MWawwh4Krvrzf71x4gHrjKQT754Zd7
+         kXNNTj+0uyuuW9r6+zsqMr4DpUsd5o9j2HwS+gsVDbyzjnHtU2c6/cniFHVtu1U4CVBO
+         3IRw==
+X-Gm-Message-State: AA6/9RntVNDUt4lrG2S5eyg0WZ4qi+mYe4j8RHwhkP+ppxrNrLuL7yEj9DO4tQYaqrNEZNrvT30FES/R8DsQPw==
+X-Received: by 10.25.210.5 with SMTP id j5mr10070308lfg.14.1476374643389; Thu,
+ 13 Oct 2016 09:04:03 -0700 (PDT)
+MIME-Version: 1.0
+Sender: jwickslim@gmail.com
+Received: by 10.114.91.165 with HTTP; Thu, 13 Oct 2016 09:04:02 -0700 (PDT)
+In-Reply-To: <27570_1476372990_57FFA9FE_27570_15951_1_1476372989.1671846.754939753.02FED411@webmail.messagingengine.com>
+References: <CAPns5_tD+PeparkYtFC778kPQ_29fwpmhEnfXQ0u75GAVdf5tA@mail.gmail.com>
+ <CAPns5_tD+PeparkYtFC778kPQ_29fwpmhEnfXQ0u75GAVdf5tA.2719607255@mail.gmail.com>
+ <27570_1476372990_57FFA9FE_27570_15951_1_1476372989.1671846.754939753.02FED411@webmail.messagingengine.com>
+From: Jeannette Wicks-Lim <wickslim@peri.umass.edu>
+Date: Thu, 13 Oct 2016 12:04:02 -0400
+X-Google-Sender-Auth: cpt8y5z9-0-b3SXAVQ_FJIRnLy4
+Message-ID: <CAPns5_tp2f0BwYEjj+zkBtinDH32w5kEqjcY6J6-Ynbrp4gFmA@mail.gmail.com>
+Subject: Re: Link to CPS ORG data not working
+To: Cherrie Bucknor <bucknor@cepr.net>
+Content-Type: multipart/alternative; boundary=001a11412f6e2cd695053ec14201
+
+--001a11412f6e2cd695053ec14201
+Content-Type: text/plain; charset=UTF-8
+
+Hi Cherrie,
+Thanks! It is working now.
+Take care,Jeannette
+
+*Jeannette Wicks-Lim, Assistant Research Professor *| Political Economy
+Research Institute | University of Massachusetts, Amherst |
+www.peri.umass.edu | email: wickslim@peri.umass.edu
+
+On Thu, Oct 13, 2016 at 11:36 AM, Cherrie Bucknor <bucknor@cepr.net> wrote:
+
+> Hi Jeannette,
+>
+> Sorry about that. It should work now.
+>
+> Best,
+> Cherrie
+>
+> --
+> Cherrie Bucknor
+> Center for Economic and Policy Research
+> 1611 Connecticut Ave NW, Suite 400
+> Washington, DC 20009
+> 202-293-5380 x105
+> bucknor@cepr.net
+> @CherrieBucknor
+>
+>
+> On Thu, Oct 13, 2016, at 10:39 AM, Jeannette Wicks-Lim wrote:
+>
+> Hi,
+>
+> First thanks for providing this resource -- I love it.
+>
+> There seems to be problem with the link on your site however. I clicked on
+> the link for the 2015 ORG data but an error msg (see png file attached).
+> Can you please take a look to see what's going on ?
+>
+> Thanks much, Jeannette
+>
+> *Jeannette Wicks-Lim, Assistant Research Professor *| Political Economy
+> Research Institute | University of Massachusetts, Amherst |
+> www.peri.umass.edu | email: wickslim@peri.umass.edu
+>
+> Email had 1 attachment:
+>
+>    - Screen Shot 2016-10-13 at 10.35.18 AM.png
+>      36k (image/png)
+>
+>
+>
+
+--001a11412f6e2cd695053ec14201
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>Hi Cherrie,=C2=A0</div>Thanks! It is working now.=C2=
+=A0<div>Take care,Jeannette</div></div><div class=3D"gmail_extra"><br clear=
+=3D"all"><div><div class=3D"gmail_signature" data-smartmail=3D"gmail_signat=
+ure"><div dir=3D"ltr"><div><div dir=3D"ltr"><font size=3D"2"><b style=3D"co=
+lor:rgb(0,0,0);font-family:Helvetica;text-align:-webkit-auto">Jeannette Wic=
+ks-Lim, Assistant Research Professor=C2=A0</b><span style=3D"color:rgb(0,0,=
+0);font-family:Helvetica;text-align:-webkit-auto">| Political Economy Resea=
+rch Institute | University of Massachusetts, Amherst |</span>=C2=A0<span st=
+yle=3D"font-family:Helvetica;text-align:-webkit-auto;color:blue"><a href=3D=
+"http://www.peri.umass.edu/" target=3D"_blank"><span style=3D"color:blue">w=
+ww.peri.umass.edu</span></a>=C2=A0</span><span style=3D"color:rgb(0,0,0);fo=
+nt-family:Helvetica;text-align:-webkit-auto">| email:</span>=C2=A0<span sty=
+le=3D"font-family:Helvetica;text-align:-webkit-auto;color:blue"><a href=3D"=
+mailto:wickslim@peri.umass.edu" target=3D"_blank"><span style=3D"color:blue=
+">wickslim@peri.umass.edu</span></a></span></font><br></div></div></div></d=
+iv></div>
+<br><div class=3D"gmail_quote">On Thu, Oct 13, 2016 at 11:36 AM, Cherrie Bu=
+cknor <span dir=3D"ltr">&lt;<a href=3D"mailto:bucknor@cepr.net" target=3D"_=
+blank">bucknor@cepr.net</a>&gt;</span> wrote:<br><blockquote class=3D"gmail=
+_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:=
+1ex"><u></u>
+
+
+
+
+<div><div style=3D"font-family:&#39;Times New Roman&#39;,times,serif;font-s=
+ize:16px">Hi Jeannette,<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">Sorry about that. It should work now.<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">Best,<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">Cherrie<br></div>
+<div style=3D"font-family:&#39;Times New Roman&#39;,times,serif;font-size:1=
+6px"><br></div>
+<div id=3D"m_3654181579827919651sig21904465"><div class=3D"m_36541815798279=
+19651signature"><span class=3D"m_3654181579827919651size" style=3D"font-siz=
+e:16px"><span class=3D"m_3654181579827919651font" style=3D"font-family:&quo=
+t;Times New Roman&quot;,times,serif,sans-serif">--</span></span><br></div>
+<div class=3D"m_3654181579827919651signature"><span class=3D"m_365418157982=
+7919651size" style=3D"font-size:16px"><span class=3D"m_3654181579827919651f=
+ont" style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-seri=
+f">Cherrie Bucknor</span></span><br></div>
+<div class=3D"m_3654181579827919651signature"><span class=3D"m_365418157982=
+7919651size" style=3D"font-size:16px"><span class=3D"m_3654181579827919651f=
+ont" style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-seri=
+f">Center for Economic and Policy Research</span><span class=3D"m_365418157=
+9827919651font" style=3D"font-family:&quot;Times New Roman&quot;,times,seri=
+f,sans-serif"></span></span><br></div>
+<div class=3D"m_3654181579827919651signature"><span class=3D"m_365418157982=
+7919651size" style=3D"font-size:16px"><span class=3D"m_3654181579827919651f=
+ont" style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-seri=
+f">1611 Connecticut Ave NW, Suite 400</span><span class=3D"m_36541815798279=
+19651font" style=3D"font-family:&quot;Times New Roman&quot;,times,serif,san=
+s-serif"></span></span><br></div>
+<div class=3D"m_3654181579827919651signature"><span class=3D"m_365418157982=
+7919651size" style=3D"font-size:16px"><span class=3D"m_3654181579827919651f=
+ont" style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-seri=
+f">Washington, DC 20009</span><span class=3D"m_3654181579827919651font" sty=
+le=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif"></spa=
+n></span><br></div>
+<div class=3D"m_3654181579827919651signature"><span class=3D"m_365418157982=
+7919651size" style=3D"font-size:16px"><span class=3D"m_3654181579827919651f=
+ont" style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-seri=
+f"><a href=3D"tel:202-293-5380%20x105" value=3D"+12022935380" target=3D"_bl=
+ank">202-293-5380 x105</a></span><span class=3D"m_3654181579827919651font" =
+style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif"></=
+span></span><br></div>
+<div class=3D"m_3654181579827919651signature"><a href=3D"mailto:bucknor@cep=
+r.net" target=3D"_blank"><span class=3D"m_3654181579827919651size" style=3D=
+"font-size:16px"><span class=3D"m_3654181579827919651font" style=3D"font-fa=
+mily:&quot;Times New Roman&quot;,times,serif,sans-serif">bucknor@cepr.net</=
+span></span></a><span class=3D"m_3654181579827919651size" style=3D"font-siz=
+e:16px"><span class=3D"m_3654181579827919651font" style=3D"font-family:&quo=
+t;Times New Roman&quot;,times,serif,sans-serif"></span></span><br></div>
+<div class=3D"m_3654181579827919651signature"><a><span class=3D"m_365418157=
+9827919651size" style=3D"font-size:16px"><span class=3D"m_36541815798279196=
+51font" style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-s=
+erif">@CherrieBucknor</span></span></a><br></div>
+</div>
+<div><br></div>
+<div><br></div>
+<div>On Thu, Oct 13, 2016, at 10:39 AM, Jeannette Wicks-Lim wrote:<br></div=
+>
+<blockquote type=3D"cite"><div dir=3D"ltr"><div style=3D"font-family:&quot;=
+Times New Roman&quot;,times,serif;font-size:16px">Hi,=C2=A0<br></div>
+<div><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font=
+-size:16px"><br></div>
+<div>First thanks for providing this resource -- I love it.=C2=A0<br></div>
+<div><br></div>
+<div>There seems to be problem with the link on your site however. I clicke=
+d on the link for the 2015 ORG data but an error msg (see png file attached=
+). Can you please take a look to see what&#39;s going on ?<br></div>
+<div><br></div>
+<div>Thanks much, Jeannette<br></div>
+</div>
+<div><br></div>
+<div><div><div dir=3D"ltr"><div><div dir=3D"ltr"><span class=3D"m_365418157=
+9827919651size" style=3D"font-size:small"><b style=3D"color:rgb(0,0,0);font=
+-family:helvetica">Jeannette Wicks-Lim, Assistant Research Professor=C2=A0<=
+/b><span class=3D"m_3654181579827919651colour" style=3D"color:rgb(0,0,0)"><=
+span class=3D"m_3654181579827919651font" style=3D"font-family:helvetica">| =
+Political Economy Research Institute | University of Massachusetts, Amherst=
+ |</span></span>=C2=A0<span class=3D"m_3654181579827919651colour" style=3D"=
+color:blue"><span class=3D"m_3654181579827919651font" style=3D"font-family:=
+helvetica"><a href=3D"http://www.peri.umass.edu/" target=3D"_blank"><span c=
+lass=3D"m_3654181579827919651colour" style=3D"color:blue">www.peri.umass.ed=
+u</span></a>=C2=A0</span></span><span class=3D"m_3654181579827919651colour"=
+ style=3D"color:rgb(0,0,0)"><span class=3D"m_3654181579827919651font" style=
+=3D"font-family:helvetica">| email:</span></span>=C2=A0<span class=3D"m_365=
+4181579827919651colour" style=3D"color:blue"><span class=3D"m_3654181579827=
+919651font" style=3D"font-family:helvetica"><a href=3D"mailto:wickslim@peri=
+.umass.edu" target=3D"_blank"><span class=3D"m_3654181579827919651colour" s=
+tyle=3D"color:blue">wickslim@peri.umass.edu</span></a></span></span></span>=
+<br></div>
+</div>
+</div>
+</div>
+</div>
+<div dir=3D"ltr"><br></div>
+</div>
+<p>Email had 1 attachment:<br></p><ul><li><div style=3D"font-family:&quot;T=
+imes New Roman&quot;,times,serif;font-size:16px"><code>Screen Shot 2016-10-=
+13 at 10.35.18 AM.png</code><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">=C2=A0 36k (image/png)<br></div>
+</li></ul></blockquote><div style=3D"font-family:&quot;Times New Roman&quot=
+;,times,serif;font-size:16px"><br></div>
+</div>
+
+</blockquote></div><br></div>
+
+--001a11412f6e2cd695053ec14201--

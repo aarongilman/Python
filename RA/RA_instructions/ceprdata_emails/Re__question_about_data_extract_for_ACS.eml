@@ -1,0 +1,155 @@
+Return-Path: <averetts@lafayette.edu>
+Received: from compute4.internal (compute4.nyi.internal [10.202.2.44])
+	 by sloti28t08 (Cyrus fastmail-fmwheezy42417-13919-git-fastmail-13919) with LMTPA;
+	 Sun, 23 Oct 2016 15:07:32 -0400
+X-Cyrus-Session-Id: sloti28t08-2601979-1477249652-2-16189704569884738334
+X-Sieve: CMU Sieve 2.4
+X-Spam-known-sender: yes ("Address averetts@lafayette.edu in From header is in addressbook"),
+  in-addressbook
+X-Spam-score: 0.0
+X-Spam-hits: BAYES_00 -1.9, RCVD_IN_DNSWL_MED -2.3, RP_MATCHES_RCVD -0.001,
+  SPF_PASS -0.001, LANGUAGES en, BAYES_USED global, SA_VERSION 3.3.2
+X-Spam-source: IP='139.147.11.151', Host='mta4.lafayette.edu', Country='US',
+  FromHeader='edu', MailFrom='edu', XOriginatingCountry='US'
+X-Spam-charsets: plain='utf-8'
+X-Resolved-to: bucknor@cepr.net
+X-Delivered-to: bucknor@cepr.net
+X-Mail-from: averetts@lafayette.edu
+Received: from mx4 ([10.202.2.203])
+  by compute4.internal (LMTPProxy); Sun, 23 Oct 2016 15:07:32 -0400
+Received: from mx4.messagingengine.com (localhost [127.0.0.1])
+	by mailmx.nyi.internal (Postfix) with ESMTP id 77B68F607C
+	for <bucknor@cepr.net>; Sun, 23 Oct 2016 15:07:31 -0400 (EDT)
+Received: from mx4.messagingengine.com (localhost [127.0.0.1])
+    by mx4.messagingengine.com (Authentication Milter) with ESMTP
+    id 5C3E0108035;
+    Sun, 23 Oct 2016 15:07:31 -0400
+Authentication-Results: mx4.messagingengine.com;
+    dkim=none (no signatures found);
+    dmarc=none (p=none) header.from=lafayette.edu;
+    spf=pass smtp.mailfrom=averetts@lafayette.edu smtp.helo=mta4.lafayette.edu
+Received-SPF: pass
+    (lafayette.edu: 139.147.11.151 is authorized to use 'averetts@lafayette.edu' in 'mfrom' identity (mechanism 'mx' matched))
+    receiver=mx4.messagingengine.com;
+    identity=mailfrom;
+    envelope-from="averetts@lafayette.edu";
+    helo=mta4.lafayette.edu;
+    client-ip=139.147.11.151
+Received: from mta4.lafayette.edu (mta4.lafayette.edu [139.147.11.151])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by mx4.messagingengine.com (Postfix) with ESMTPS
+	for <bucknor@cepr.net>; Sun, 23 Oct 2016 15:07:31 -0400 (EDT)
+Received: from pps.filterd (mta4.lafayette.edu [127.0.0.1])
+	by mta4.lafayette.edu (8.15.0.59/8.15.0.59) with SMTP id u9NJ3YDh018437
+	for <bucknor@cepr.net>; Sun, 23 Oct 2016 15:07:29 -0400
+Received: from zsmtp2.zprd.lafayette.edu (zsmtp2.zprd.lafayette.edu [139.147.11.153])
+	by mta4.lafayette.edu with ESMTP id 2684m2jycd-1
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT)
+	for <bucknor@cepr.net>; Sun, 23 Oct 2016 15:07:28 -0400
+Received: from zsmtp2.zprd.lafayette.edu (localhost.localdomain [127.0.0.1])
+	by zsmtp2.zprd.lafayette.edu (Postfix) with ESMTPS id B6FEF61DA3
+	for <bucknor@cepr.net>; Sun, 23 Oct 2016 15:07:28 -0400 (EDT)
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by zsmtp2.zprd.lafayette.edu (Postfix) with ESMTP id A5E8561DAC
+	for <bucknor@cepr.net>; Sun, 23 Oct 2016 15:07:28 -0400 (EDT)
+Received: from zsmtp2.zprd.lafayette.edu ([127.0.0.1])
+	by localhost (zsmtp2.zprd.lafayette.edu [127.0.0.1]) (amavisd-new, port 10026)
+	with ESMTP id O7upJoh7L3_s for <bucknor@cepr.net>;
+	Sun, 23 Oct 2016 15:07:28 -0400 (EDT)
+Received: from zstore04.zprd.lafayette.edu (zstore04.zprd.lafayette.edu [139.147.11.136])
+	by zsmtp2.zprd.lafayette.edu (Postfix) with ESMTP id 8E71D61DA3
+	for <bucknor@cepr.net>; Sun, 23 Oct 2016 15:07:28 -0400 (EDT)
+Date: Sun, 23 Oct 2016 15:07:28 -0400 (EDT)
+From: "Averett, Susan L" <averetts@lafayette.edu>
+To: Cherrie Bucknor <bucknor@cepr.net>
+Message-ID: <1598561652.4633190.1477249648478.JavaMail.zimbra@lafayette.edu>
+In-Reply-To: <1477059341.1357098.763143353.2DD639BC@webmail.messagingengine.com>
+References: <873269745.3516863.1476386959645.JavaMail.zimbra.2719607255@lafayette.edu> <873269745.3516863.1476386959645.JavaMail.zimbra@lafayette.edu> <1477059341.1357098.763143353.2DD639BC@webmail.messagingengine.com>
+Subject: Re: question about data extract for ACS
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+X-Originating-IP: [139.147.15.201]
+X-Mailer: Zimbra 8.6.0_GA_1178 (ZimbraWebClient - GC49 (Win)/8.6.0_GA_1178)
+Thread-Topic: question about data extract for ACS
+Thread-Index: dVVO5dvU6lndbo/HUEnQ8MYsoyOG9g==
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10432:,, definitions=2016-10-23_08:,,
+ signatures=0
+X-Proofpoint-Spam-Details: rule=outbound_notspam policy=outbound score=0 spamscore=0 suspectscore=0
+ malwarescore=0 phishscore=0 adultscore=0 bulkscore=0 classifier=spam
+ adjust=0 reason=mlx scancount=1 engine=8.0.1-1609300000
+ definitions=main-1610230346
+x-laf-outbound-scanned: 1
+
+Hi Cherrie, thank you for this very helpful answer. 
+Sincerely,
+Susan
+
+----- Original Message -----
+From: "Cherrie Bucknor" <bucknor@cepr.net>
+To: "averetts" <averetts@lafayette.edu>
+Sent: Friday, October 21, 2016 10:15:41 AM
+Subject: Re: question about data extract for ACS
+
+Hi Susan,
+
+Sorry for the late response.
+
+From 2008-present, the ACS does not have a continuous weeks worked
+variable so it's not possible to have an exact measure of hourly wages.
+Our hourly wage variables are only available from 2005-2007 when the ACS
+had a continuous weeks worked variable.
+
+However, if you want an inexact measure, you can assign the middle value
+of the weeks worked variable categories and use the formula in
+cepr_acs_income.do[1] as a guide to creating an hourly wage variable.
+You can find the coding for the weeks worked variable (wkslyr) in
+cepr_acs_empstat.do.[2]
+
+Also, make sure you're using the most updated version of our ACS data
+(version 1.1.1 was released 19 Sep 2016).
+I'm currently working on our next update which will include the 2015
+data that was released yesterday.
+
+Best,
+Cherrie
+
+--
+Cherrie Bucknor
+Center for Economic and Policy Research
+1611 Connecticut Ave NW, Suite 400
+Washington, DC 20009
+202-293-5380 x105
+bucknor@cepr.net
+@CherrieBucknor[3]
+
+
+On Thu, Oct 13, 2016, at 03:29 PM, Averett, Susan L wrote:
+>
+> Hi, I love that you have these data extracts but I have a
+> question about
+> the wage data for the 2014 ACS.
+> I am interested in the variables: rhrwage05 and rhrwage05_adj
+> rhrearn05_adj
+> which are missing for all respondents.
+>
+> What do you recommend using for an hourly wage?
+> Sincerely
+>
+>
+> Susan Averett
+> Charles A. Dana Professor of Economics
+> Lafayette College
+> and  Research Fellow, IZA
+> Easton, PA 18042
+> phone: 610-330-5307
+> fax: 610-330-5715
+> http://sites.lafayette.edu/averetts/
+
+
+Links:
+
+  1. http://ceprdata.org/wp-content/acs/programs/cepr_acs_income.do
+  2. http://ceprdata.org/wp-content/acs/programs/cepr_acs_empstat.do
+  3. tps://twitter.com/cherriebucknor

@@ -1,0 +1,876 @@
+Return-Path: <mccormack@tcf.org>
+Received: from compute4.internal (compute4.nyi.internal [10.202.2.44])
+	 by sloti30t08 (Cyrus 3.0.0-beta3-git-fastmail-13648) with LMTPA;
+	 Mon, 01 Aug 2016 13:50:08 -0400
+X-Cyrus-Session-Id: sloti30t08-3998151-1470073808-2-17609894585595325183
+X-Sieve: CMU Sieve 2.4
+X-Spam-known-sender: yes ("Address mccormack@tcf.org in From header is in addressbook"),
+  in-addressbook
+X-Spam-score: 0.0
+X-Spam-hits: BAYES_00 -1.9, HTML_MESSAGE 0.001, RCVD_IN_DNSWL_NONE -0.0001,
+  SPF_PASS -0.001, LANGUAGES en, BAYES_USED global, SA_VERSION 3.3.2
+X-Spam-source: IP='209.85.161.169', Host='mail-yw0-f169.google.com', Country='US',
+  FromHeader='org', MailFrom='org'
+X-Spam-charsets: plain='UTF-8', html='UTF-8'
+X-Resolved-to: bucknor@cepr.net
+X-Delivered-to: bucknor@cepr.net
+X-Mail-from: mccormack@tcf.org
+Received: from mx1 ([10.202.2.200])
+  by compute4.internal (LMTPProxy); Mon, 01 Aug 2016 13:50:08 -0400
+Received: from mx1.messagingengine.com (localhost [127.0.0.1])
+	by mailmx.nyi.internal (Postfix) with ESMTP id 8B142DC4B1
+	for <bucknor@cepr.net>; Mon,  1 Aug 2016 13:50:06 -0400 (EDT)
+Received: from mx1.messagingengine.com (localhost [127.0.0.1])
+    by mx1.messagingengine.com (Authentication Milter) with ESMTP
+    id CC113B0753B;
+    Mon, 1 Aug 2016 13:50:06 -0400
+Authentication-Results: mx1.messagingengine.com;
+    dkim=pass (2048-bit rsa key) header.d=tcf.org header.i=@tcf.org header.b=LbIauHr2;
+    dmarc=none (p=none) header.from=tcf.org;
+    spf=pass smtp.mailfrom=mccormack@tcf.org smtp.helo=mail-yw0-f169.google.com;
+    x-google-dkim=pass (2048-bit rsa key) header.d=1e100.net header.i=@1e100.net header.b=LsXbC7hP
+Received-SPF: pass
+    (tcf.org: Sender is authorized to use 'mccormack@tcf.org' in 'mfrom' identity (mechanism 'include:_spf.google.com' matched))
+    receiver=mx1.messagingengine.com;
+    identity=mailfrom;
+    envelope-from="mccormack@tcf.org";
+    helo=mail-yw0-f169.google.com;
+    client-ip=209.85.161.169
+Received: from mail-yw0-f169.google.com (mail-yw0-f169.google.com [209.85.161.169])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by mx1.messagingengine.com (Postfix) with ESMTPS
+	for <bucknor@cepr.net>; Mon,  1 Aug 2016 13:50:06 -0400 (EDT)
+Received: by mail-yw0-f169.google.com with SMTP id r9so179579381ywg.0
+        for <bucknor@cepr.net>; Mon, 01 Aug 2016 10:50:06 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=tcf.org; s=google;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=O/FdaliN5HK70DWB0l/lYfkRdxvDHp2KI7e291MrDRQ=;
+        b=LbIauHr2mHd5EN25YS0aC8FuCdSPzMZlWO0GakDIayylQJQujmqPrIdYtEdoD4dt2b
+         raoDJ0QnUdKahTKJIAon4Ya7QzIlrWulewjKeGX0nu46cq/1FGG+/lcHDcGm+xEExzqU
+         02jBcvbgoPhK1kbDw8w+YqnVMb3KmoO4x3xjIL56QQvyKqZci5yA0ehyf/UsGMs6YjKE
+         wwAhZ4OOwIrN+UK0j40psL3gletvXK5ggAeXZHvO+nENVZO4JTpmwoktPcPeyrvYF5ZV
+         nXOqNiTScZG5RsMLyrfqLlvCA2IgI3ki4Uf61l/QPrrFkQEJVN1aRnHox9PZsoDYdNPl
+         oNPQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=O/FdaliN5HK70DWB0l/lYfkRdxvDHp2KI7e291MrDRQ=;
+        b=LsXbC7hPE5Q9VerdNSYlJB2VbiwLwOxcIR4Pjkouk9ArLxoqmqiaGzEQ1OW2jNY8BN
+         oh8NqsaLvl3Ol8qDZqTLRCRAhdnIAKSDHw7wRU7LTp2xfxCTH6Pt2P1XQ8iJDR6MmP7S
+         fYr7SMZk6YekvGpdZp4u5xK2HR8pze2gsbIqfWmp+eyrqwfx0EgZBuRbNPq1d1nFcVBK
+         w90d6WjcARnnjqUqqby75Iu7Q2YeJQAp1Q89Vl37SInxjCsMTE0Z4TGA+MW7F0O36Iuv
+         GaMOVAEwPLJbCbOUif8/vfVo+c2fbtT0Vf1FJ8wpELRYe0ckR86zJGD00Ys9Fw3y8U/o
+         92Ig==
+X-Gm-Message-State: AEkoousgEahIEhBDoNzH96pLO15emmlPHlLGzeEUXx7Ahd5Pt6HDwNQRdCdAqo3z//w0Qa5Fvk6+X/jMZ5sVyP+l
+X-Received: by 10.13.255.69 with SMTP id p66mr35164156ywf.173.1470073804653;
+ Mon, 01 Aug 2016 10:50:04 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.37.61.4 with HTTP; Mon, 1 Aug 2016 10:50:03 -0700 (PDT)
+In-Reply-To: <1470073382.1731806.682770153.60AEFBB8@webmail.messagingengine.com>
+References: <CALeMKd9rsmv6xrjxVFc_G+9bYOYJYN=pT50Ni4g09GZdcRqhOg@mail.gmail.com>
+ <CALeMKd9rsmv6xrjxVFc_G+9bYOYJYN=pT50Ni4g09GZdcRqhOg.2719607255@mail.gmail.com>
+ <1469638762.3360548.678444473.78344F5E@webmail.messagingengine.com>
+ <CALeMKd_-x+qzOAVdHHroDhHSsKjWmR5nLdxU4Xtft-N1mKMPNA@mail.gmail.com>
+ <1469719637.436628.679373625.09E28D11@webmail.messagingengine.com>
+ <CALeMKd-32_iTr2wq1Ka6=YqHj3UjjzjiqfU5_wMe28SbkGnpBQ@mail.gmail.com> <1470073382.1731806.682770153.60AEFBB8@webmail.messagingengine.com>
+From: Michael McCormack <mccormack@tcf.org>
+Date: Mon, 1 Aug 2016 13:50:03 -0400
+Message-ID: <CALeMKd9zvT63KFRUw36YPfR-Qk013iJwOZovepr5LLkvMaA-+w@mail.gmail.com>
+Subject: Re: Question on CPS Monthly ORG weights
+To: Cherrie Bucknor <bucknor@cepr.net>
+Content-Type: multipart/alternative; boundary=94eb2c054182ebb8140539063aad
+
+--94eb2c054182ebb8140539063aad
+Content-Type: text/plain; charset=UTF-8
+
+Great, thank you very much for the help Cherrie. I will go forward using
+the pwcmpwgt variable from the basic CPS.
+
+-Mike
+
+On Mon, Aug 1, 2016 at 1:43 PM, Cherrie Bucknor <bucknor@cepr.net> wrote:
+
+> Hi Mike,
+>
+> I found a raw CPS Basic 2014 file on my computer, and went ahead and did a
+> rough comparison of the options that you have. I only did annual averages
+> for the whole U.S. But, basically, if you want to get as close to the BLS
+> estimates as possible, you'll want to use the Basic CPS and the composite
+> weight variable. The aggregate numbers are exactly the same or within a few
+> thousand when you do it this way. You'll be more off if you use our CPS ORG
+> extract as is (using the orgwgt variable), or if you use the Basic CPS's
+> fnlwgt variable. Keep in mind that these differences will get even larger
+> as you try to disaggregate the data.
+>
+> To review, here are your options:
+>
+>
+>    1. Use the Basic CPS and the composite weight variable (pwcmpwgt)
+>    2. Use the Basic CPS and the final weight variable (fnlwgt)
+>    3. Use the CPS ORG and the orgwgt variable
+>
+>
+> The excel file that's attached has the results for each method as well as
+> the difference from BLS's numbers.
+> I used the BLS numbers from the following series (again only annual
+> averages for 2014).
+>
+> LNU03008396
+> LNU03008756
+> LNU03008876
+> LNU03008636
+>
+> Best,
+> Cherrie
+> --
+> Cherrie Bucknor
+> Research Assistant
+> Center for Economic and Policy Research
+> 1611 Connecticut Ave NW, Suite 400
+> Washington, DC 20009
+> 202-293-5380 x105
+> bucknor@cepr.net
+> Twitter: @CherrieBucknor
+>
+>
+> On Thu, Jul 28, 2016, at 11:40 AM, Michael McCormack wrote:
+>
+> Hi Cherrie,
+>
+> This is very helpful, many thanks. I'll try the method of adding the
+> variable myself. I only have one other question. If I were to use the final
+> weight already included in the CEPR ORG extracts instead of the weight
+> designed to replicate the BLS numbers, how far off would those estimates
+> be, relative to each other? Would I notice much of a difference if I am
+> collapsing the the number of people unemployed 5 weeks or less by state and
+> year?
+>
+> Again, thank you for the assistance!
+> -Mike
+>
+> On Thu, Jul 28, 2016 at 11:27 AM, Cherrie Bucknor <bucknor@cepr.net>
+> wrote:
+>
+>
+> Hi Mike,
+>
+> So I was right.
+>
+> Here's what my colleague had to say:
+>
+> The reason to use the PWCMPWGT (CPS Basic "Composite Weight") is to
+> replicate published BLS numbers from the full (basic) CPS. The NBER raw
+> data for 1994 to the present includes the variable, but we don't include it
+> in our extract. It would be easy enough for McCormack to go back and add it
+> in and reretrieve the data. But, one point to keep in mind is that it only
+> makes sense to do so if he also wants to use the full (Basic) CPS, that is,
+> only if he wants to add both the additional variable and the additional
+> observations (the other three quarters of the Basic CPS that are not in the
+> CPS ORG extract).
+>
+> If you want to use the NBER raw data, you can find the data here
+> <http://www.nber.org/data/cps_basic.html> and the Stata programs to read
+> the data here <http://www.nber.org/data/cps_basic_progs.html>.
+>
+> If you want to continue using our extract, you'll have to add this
+> variable yourself. Here are some instructions:
+>
+>
+>    - Download all of the CPS Basic
+>    <http://ceprdata.org/cps-uniform-data-extracts/cps-basic-programs/cps-basic-monthly-programs/>
+>    and CPS ORG
+>    <http://ceprdata.org/cps-uniform-data-extracts/cps-outgoing-rotation-group/cps-org-programs/>
+>    programs from ceprDATA.
+>    - Download the raw CPS data
+>    <http://thedataweb.rm.census.gov/ftp/cps_ftp.html> from the Census,
+>    and rename the files to match what is in cepr_basic_read_all.do
+>    <http://ceprdata.org/wp-content/cps/programs/basic/cepr_basic_read_all.do>
+>    .
+>    - In the cepr_basic_idvar.do
+>    <http://ceprdata.org/wp-content/cps/programs/basic/cepr_basic_idvar.do>
+>    program, you'll need to add the new weight variable.
+>    - In the cepr_org_keepord.do
+>    <http://ceprdata.org/wp-content/cps/programs/org/cepr_org_keepord.do>
+>    program, add the new variable name to both the "keep" and "order" command
+>    statements.
+>    - In the cepr_org_master.do
+>    <http://ceprdata.org/wp-content/cps/programs/org/cepr_org_master.do>
+>    program, go to Part 2.C. and delete the line "keep if hrmis==4 | hrmis==8".
+>    - Make sure that in the master file you change the directory structure
+>    at the beginning, and at the end, *only run the program for the years
+>    that you need*.
+>    - Run the master program.
+>
+>
+> I hope you find this useful. Please let me know if you have any other
+> questions.
+>
+>
+> Best,
+> Cherrie
+> --
+> Cherrie Bucknor
+> Research Assistant
+> Center for Economic and Policy Research
+> 1611 Connecticut Ave NW, Suite 400
+> Washington, DC 20009
+> 202-293-5380 x105
+> bucknor@cepr.net
+> Twitter: @CherrieBucknor
+>
+>
+>
+> On Wed, Jul 27, 2016, at 01:40 PM, Michael McCormack wrote:
+>
+> Okay, thank you for the help.
+>
+> -Mike
+>
+> On Wed, Jul 27, 2016 at 12:59 PM, Cherrie Bucknor <bucknor@cepr.net>
+> wrote:
+>
+>
+> Hi Mike,
+>
+> I have a feeling you'll need to use the full Basic CPS file for this. But
+> I want to be sure, so I'm going to check with a colleague and get back to
+> you as soon as I can.
+>
+> Best,
+> Cherrie
+>
+> --
+> Cherrie Bucknor
+> Research Assistant
+> Center for Economic and Policy Research
+> 1611 Connecticut Ave NW, Suite 400
+> Washington, DC 20009
+> 202-293-5380 x105
+> bucknor@cepr.net
+> Twitter: @CherrieBucknor
+>
+>
+> On Mon, Jul 25, 2016, at 05:53 PM, Michael McCormack wrote:
+>
+> Hello,
+> I am trying to calculate the total number of unemployed for less than five
+> weeks per year by state from 1996-2015 for a paper The Century Foundation
+> is writing on unemployment claims by state.
+>
+> Is there a way to  merge the PWCMPWGT weight that is used for BLS CPS
+> estimates onto your CPS ORG extracts? Can it be done through NBER's files?
+> I noticed this weight is not included in the extracts. How different will
+> the estimates be from BLS estimates if I use the final weight provided in
+> the CEPR extracts (especially since I am collapsing by state and year)?
+>
+> Thanks for the help,
+> Mike McCormack
+> --
+>
+> Michael McCormack
+> Economic Policy Associate
+>
+> *The Century Foundation*
+> One Whitehall Street, 15th Floor, New York, New York 10004
+> *P*:212.452.7790 *C*:508.801.8205 @mickormack620
+> <https://twitter.com/mickormack620>
+> tcf.org | Facebook <http://www.facebook.com/TheCenturyFoundation> |
+> Twitter <http://www.twitter.com/tcfdotorg> | Sign up for Email Updates
+> <http://tcf.org/newsletter>
+>
+>
+>
+>
+>
+>
+> --
+> Michael McCormack
+> Economic Policy Associate
+>
+> *The Century Foundation*
+> One Whitehall Street, 15th Floor, New York, New York 10004
+> *P*:212.452.7790 *C*:508.801.8205 @mickormack620
+> <https://twitter.com/mickormack620>
+> tcf.org | Facebook <http://www.facebook.com/TheCenturyFoundation> |
+> Twitter <http://www.twitter.com/tcfdotorg> | Sign up for Email Updates
+> <http://tcf.org/newsletter>
+>
+>
+>
+>
+>
+> --
+> Michael McCormack
+> Economic Policy Associate
+>
+> *The Century Foundation*
+> One Whitehall Street, 15th Floor, New York, New York 10004
+> *P*:212.452.7790 *C*:508.801.8205 @mickormack620
+> <https://twitter.com/mickormack620>
+> tcf.org | Facebook <http://www.facebook.com/TheCenturyFoundation> |
+> Twitter <http://www.twitter.com/tcfdotorg> | Sign up for Email Updates
+> <http://tcf.org/newsletter>
+>
+>
+>
+
+
+-- 
+Michael McCormack
+Economic Policy Associate
+*The Century Foundation*
+One Whitehall Street, 15th Floor, New York, New York 10004
+*P*:212.452.7790 *C*:508.801.8205 @mickormack620
+<https://twitter.com/mickormack620>
+tcf.org | Facebook <http://www.facebook.com/TheCenturyFoundation> | Twitter
+<http://www.twitter.com/tcfdotorg> | Sign up for Email Updates
+<http://tcf.org/newsletter>
+
+--94eb2c054182ebb8140539063aad
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Great, thank you very much for the help Cherrie. I will go=
+ forward using the pwcmpwgt variable from the basic CPS.<div><br></div><div=
+>-Mike</div></div><div class=3D"gmail_extra"><br><div class=3D"gmail_quote"=
+>On Mon, Aug 1, 2016 at 1:43 PM, Cherrie Bucknor <span dir=3D"ltr">&lt;<a h=
+ref=3D"mailto:bucknor@cepr.net" target=3D"_blank">bucknor@cepr.net</a>&gt;<=
+/span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8=
+ex;border-left:1px #ccc solid;padding-left:1ex"><u></u>
+
+
+
+
+<div><div style=3D"font-family:&#39;Times New Roman&#39;,times,serif;font-s=
+ize:16px">Hi Mike,<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">I found a raw CPS Basic 2014 file on my computer, and went ahead and=
+ did a rough comparison of the options that you have. I only did annual ave=
+rages for the whole U.S. But, basically, if you want to get as close to the=
+ BLS estimates as possible, you&#39;ll want to use the Basic CPS and the co=
+mposite weight variable. The aggregate numbers are exactly the same or with=
+in a few thousand when you do it this way. You&#39;ll be more off if you us=
+e our CPS ORG extract as is (using the orgwgt variable), or if you use the =
+Basic CPS&#39;s fnlwgt variable. Keep in mind that these differences will g=
+et even larger as you try to disaggregate the data.<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">To review, here are your options:<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><br></div>
+<ol><li><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;f=
+ont-size:16px">Use the Basic CPS and the composite weight variable (pwcmpwg=
+t)<br></div>
+</li><li><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;=
+font-size:16px">Use the Basic CPS and the final weight variable (fnlwgt)<br=
+></div>
+</li><li><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;=
+font-size:16px">Use the CPS ORG and the orgwgt variable<br></div>
+</li></ol><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif=
+;font-size:16px"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">The excel file that&#39;s attached has the results for each method a=
+s well as the difference from BLS&#39;s numbers.<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">I used the BLS numbers from the following series (again only annual =
+averages for 2014).<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">LNU03008396<br></div>
+<div style=3D"font-family:&#39;Times New Roman&#39;,times,serif;font-size:1=
+6px">LNU03008756<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">LNU03008876<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">LNU03008636<br></div><span class=3D"">
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">Best,<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">Cherrie<br></div>
+<div><div><span style=3D"font-size:16px"><span style=3D"font-family:&quot;T=
+imes New Roman&quot;,times,serif,sans-serif">--</span><span style=3D"font-f=
+amily:&quot;Times New Roman&quot;,times,serif,sans-serif"></span></span><br=
+></div>
+<div><span style=3D"font-size:16px"><span style=3D"font-family:&quot;Times =
+New Roman&quot;,times,serif,sans-serif">Cherrie Bucknor</span><span style=
+=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif"></span>=
+</span><br></div>
+<div><span style=3D"font-size:16px"><span style=3D"font-family:&quot;Times =
+New Roman&quot;,times,serif,sans-serif">Research Assistant</span><span styl=
+e=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif"></span=
+></span><br></div>
+<div><span style=3D"font-size:16px"><span style=3D"font-family:&quot;Times =
+New Roman&quot;,times,serif,sans-serif">Center for Economic and Policy Rese=
+arch</span><span style=3D"font-family:&quot;Times New Roman&quot;,times,ser=
+if,sans-serif"></span></span><br></div>
+<div><span style=3D"font-size:16px"><span style=3D"font-family:&quot;Times =
+New Roman&quot;,times,serif,sans-serif">1611 Connecticut Ave NW, Suite 400<=
+/span><span style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sa=
+ns-serif"></span></span><br></div>
+<div><span style=3D"font-size:16px"><span style=3D"font-family:&quot;Times =
+New Roman&quot;,times,serif,sans-serif">Washington, DC 20009</span><span st=
+yle=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif"></sp=
+an></span><br></div>
+<div><span style=3D"font-size:16px"><span style=3D"font-family:&quot;Times =
+New Roman&quot;,times,serif,sans-serif"><a href=3D"tel:202-293-5380%20x105"=
+ value=3D"+12022935380" target=3D"_blank">202-293-5380 x105</a></span><span=
+ style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif"><=
+/span></span><br></div>
+<div><a href=3D"mailto:bucknor@cepr.net" target=3D"_blank"><span style=3D"f=
+ont-size:16px"><span style=3D"font-family:&quot;Times New Roman&quot;,times=
+,serif,sans-serif">bucknor@cepr.net</span></span></a><span style=3D"font-si=
+ze:16px"><span style=3D"font-family:&quot;Times New Roman&quot;,times,serif=
+,sans-serif"></span></span><br></div>
+<div><span style=3D"font-size:16px"><span style=3D"font-family:&quot;Times =
+New Roman&quot;,times,serif,sans-serif">Twitter: </span></span><a><span sty=
+le=3D"font-size:16px"><span style=3D"font-family:&quot;Times New Roman&quot=
+;,times,serif,sans-serif">@CherrieBucknor</span></span></a><br></div>
+</div>
+<div><br></div>
+<div><br></div>
+</span><div><div class=3D"h5"><div>On Thu, Jul 28, 2016, at 11:40 AM, Micha=
+el McCormack wrote:<br></div>
+<blockquote type=3D"cite"><div dir=3D"ltr"><div style=3D"font-family:&quot;=
+Times New Roman&quot;,times,serif;font-size:16px">Hi Cherrie,<br></div>
+<div><br></div>
+<div>This is very helpful, many thanks. I&#39;ll try the method of adding t=
+he variable myself. I only have one other question. If I were to use the fi=
+nal weight already included in the CEPR ORG extracts instead of the weight =
+designed to replicate the BLS numbers, how far off would those estimates be=
+, relative to each other? Would I notice much of a difference if I am colla=
+psing the the number of people unemployed 5 weeks or less by state and year=
+?<br></div>
+<div><br></div>
+<div>Again, thank you for the assistance!<br></div>
+<div>-Mike<br></div>
+</div>
+<div><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font=
+-size:16px"><br></div>
+<div><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font=
+-size:16px">On Thu, Jul 28, 2016 at 11:27 AM, Cherrie Bucknor <span dir=3D"=
+ltr">&lt;<a href=3D"mailto:bucknor@cepr.net" target=3D"_blank">bucknor@cepr=
+.net</a>&gt;</span> wrote:<br></div>
+<blockquote style=3D"margin-top:0px;margin-right:0px;margin-bottom:0px;marg=
+in-left:0.8ex;border-left-width:1px;border-left-style:solid;border-left-col=
+or:rgb(204,204,204);padding-left:1ex"><div style=3D"font-family:&quot;Times=
+ New Roman&quot;,times,serif;font-size:16px"><u></u><br></div>
+<div><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font=
+-size:16px">Hi Mike,<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">So I was right.<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">Here&#39;s what my colleague had to say:<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><span style=3D"color:rgb(0,0,128)">The reason to use the PWCMPWGT (C=
+PS Basic &quot;Composite Weight&quot;)
+ is to replicate published BLS numbers from the full (basic) CPS. The=20
+NBER raw data for 1994 to the present includes the variable, but we=20
+don&#39;t include it in our extract. It would be easy enough for McCormack=
+=20
+to go back and add it in and reretrieve the data. But, one point to keep
+ in mind is that it only makes sense to do so if he also wants to use=20
+the full (Basic) CPS, that is, only if he wants to add both the=20
+additional variable and the additional observations (the other three=20
+quarters of the Basic CPS that are not in the CPS ORG extract).</span><br><=
+/div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">If you want to use the NBER raw data, you can find the data <a href=
+=3D"http://www.nber.org/data/cps_basic.html" target=3D"_blank">here</a> and=
+ the Stata programs to read the data <a href=3D"http://www.nber.org/data/cp=
+s_basic_progs.html" target=3D"_blank">here</a>.<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">If you want to continue using our extract, you&#39;ll have to add th=
+is variable yourself. Here are some instructions:<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><br></div>
+<ul><li><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;f=
+ont-size:16px">Download all of the <a href=3D"http://ceprdata.org/cps-unifo=
+rm-data-extracts/cps-basic-programs/cps-basic-monthly-programs/" target=3D"=
+_blank">CPS Basic</a> and <a href=3D"http://ceprdata.org/cps-uniform-data-e=
+xtracts/cps-outgoing-rotation-group/cps-org-programs/" target=3D"_blank">CP=
+S ORG</a> programs from ceprDATA.<br></div>
+</li><li><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;=
+font-size:16px">Download the raw CPS <a href=3D"http://thedataweb.rm.census=
+.gov/ftp/cps_ftp.html" target=3D"_blank">data</a> from the Census, and rena=
+me the files to match what is in <a href=3D"http://ceprdata.org/wp-content/=
+cps/programs/basic/cepr_basic_read_all.do" target=3D"_blank">cepr_basic_rea=
+d_all.do</a>.<br></div>
+</li><li><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;=
+font-size:16px">In the <a href=3D"http://ceprdata.org/wp-content/cps/progra=
+ms/basic/cepr_basic_idvar.do" target=3D"_blank">cepr_basic_idvar.do</a> pro=
+gram, you&#39;ll need to add the new weight variable.<br></div>
+</li><li><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;=
+font-size:16px">In the <a href=3D"http://ceprdata.org/wp-content/cps/progra=
+ms/org/cepr_org_keepord.do" target=3D"_blank">cepr_org_keepord.do</a> progr=
+am, add the new variable name to both the &quot;keep&quot; and &quot;order&=
+quot; command statements.<br></div>
+</li><li><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;=
+font-size:16px">In the <a href=3D"http://ceprdata.org/wp-content/cps/progra=
+ms/org/cepr_org_master.do" target=3D"_blank">cepr_org_master.do</a> program=
+, go to Part 2.C. and delete the line &quot;keep if hrmis=3D=3D4 | hrmis=3D=
+=3D8&quot;.<br></div>
+</li><li><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;=
+font-size:16px">Make sure that in the master file you change the directory =
+structure at the beginning, and at the end, <i>only run the program for the=
+ years that you need</i>.<br></div>
+</li><li><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;=
+font-size:16px">Run the master program.<br></div>
+</li></ul><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif=
+;font-size:16px"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">I hope you find this useful. Please let me know if you have any othe=
+r questions.<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><span></span><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><span></span><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><span>Best,</span><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><span>Cherrie</span><br></div>
+<div><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font=
+-size:16px"><span><span style=3D"font-size:16px"><span style=3D"font-family=
+:&quot;Times New Roman&quot;,times,serif,sans-serif">--</span></span></span=
+><br></div>
+<div><span><span style=3D"font-size:16px"><span style=3D"font-family:&quot;=
+Times New Roman&quot;,times,serif,sans-serif">Cherrie Bucknor</span></span>=
+</span><br></div>
+<div><span><span style=3D"font-size:16px"><span style=3D"font-family:&quot;=
+Times New Roman&quot;,times,serif,sans-serif">Research Assistant</span></sp=
+an></span><br></div>
+<div><span><span style=3D"font-size:16px"><span style=3D"font-family:&quot;=
+Times New Roman&quot;,times,serif,sans-serif">Center for Economic and Polic=
+y Research</span></span></span><br></div>
+<div><span><span style=3D"font-size:16px"><span style=3D"font-family:&quot;=
+Times New Roman&quot;,times,serif,sans-serif">1611 Connecticut Ave NW, Suit=
+e 400</span></span></span><br></div>
+<div><span><span style=3D"font-size:16px"><span style=3D"font-family:&quot;=
+Times New Roman&quot;,times,serif,sans-serif">Washington, DC 20009</span></=
+span></span><br></div>
+<div><span><span style=3D"font-size:16px"><span style=3D"font-family:&quot;=
+Times New Roman&quot;,times,serif,sans-serif"><a href=3D"tel:202-293-5380%2=
+0x105" target=3D"_blank">202-293-5380 x105</a></span></span></span><br></di=
+v>
+<div><span><a href=3D"mailto:bucknor@cepr.net" target=3D"_blank"><span styl=
+e=3D"font-size:16px"><span style=3D"font-family:&quot;Times New Roman&quot;=
+,times,serif,sans-serif">bucknor@cepr.net</span></span></a><span style=3D"f=
+ont-size:16px"><span style=3D"font-family:&quot;Times New Roman&quot;,times=
+,serif,sans-serif"></span></span></span><br></div>
+<div><span><span style=3D"font-size:16px"><span style=3D"font-family:&quot;=
+Times New Roman&quot;,times,serif,sans-serif">Twitter: </span></span><a><sp=
+an style=3D"font-size:16px"><span style=3D"font-family:&quot;Times New Roma=
+n&quot;,times,serif,sans-serif">@CherrieBucknor</span></span></a></span><br=
+></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><span></span><br></div>
+</div>
+<div><span></span><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><span></span><br></div>
+<div><div><div>On Wed, Jul 27, 2016, at 01:40 PM, Michael McCormack wrote:<=
+br></div>
+<blockquote type=3D"cite"><div dir=3D"ltr"><div style=3D"font-family:&quot;=
+Times New Roman&quot;,times,serif;font-size:16px">Okay, thank you for the h=
+elp.<br></div>
+<div><br></div>
+<div>-Mike<br></div>
+</div>
+<div><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font=
+-size:16px"><br></div>
+<div><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font=
+-size:16px">On Wed, Jul 27, 2016 at 12:59 PM, Cherrie Bucknor <span dir=3D"=
+ltr">&lt;<a href=3D"mailto:bucknor@cepr.net" target=3D"_blank">bucknor@cepr=
+.net</a>&gt;</span> wrote:<br></div>
+<blockquote style=3D"margin-top:0px;margin-right:0px;margin-bottom:0px;marg=
+in-left:0.8ex;border-left-width:1px;border-left-style:solid;border-left-col=
+or:rgb(204,204,204);padding-left:1ex"><div style=3D"font-family:&quot;Times=
+ New Roman&quot;,times,serif;font-size:16px"><u></u><br></div>
+<div><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font=
+-size:16px">Hi Mike,<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">=C2=A0<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">I have a feeling you&#39;ll need to use the full Basic CPS file for =
+this. But I want to be sure, so I&#39;m going to check with a colleague and=
+ get back to you as soon as I can.<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">=C2=A0<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">Best,<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">Cherrie<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">=C2=A0<br></div>
+<div><div><span style=3D"font-size:16px"><span style=3D"font-family:&quot;T=
+imes New Roman&quot;,times,serif,sans-serif">--</span></span><br></div>
+<div><span style=3D"font-size:16px"><span style=3D"font-family:&quot;Times =
+New Roman&quot;,times,serif,sans-serif">Cherrie Bucknor</span></span><br></=
+div>
+<div><span style=3D"font-size:16px"><span style=3D"font-family:&quot;Times =
+New Roman&quot;,times,serif,sans-serif">Research Assistant</span></span><br=
+></div>
+<div><span style=3D"font-size:16px"><span style=3D"font-family:&quot;Times =
+New Roman&quot;,times,serif,sans-serif">Center for Economic and Policy Rese=
+arch</span></span><br></div>
+<div><span style=3D"font-size:16px"><span style=3D"font-family:&quot;Times =
+New Roman&quot;,times,serif,sans-serif">1611 Connecticut Ave NW, Suite 400<=
+/span></span><br></div>
+<div><span style=3D"font-size:16px"><span style=3D"font-family:&quot;Times =
+New Roman&quot;,times,serif,sans-serif">Washington, DC 20009</span></span><=
+br></div>
+<div><span style=3D"font-size:16px"><span style=3D"font-family:&quot;Times =
+New Roman&quot;,times,serif,sans-serif"><a href=3D"tel:202-293-5380%20x105"=
+ target=3D"_blank">202-293-5380 x105</a></span></span><br></div>
+<div><a href=3D"mailto:bucknor@cepr.net" target=3D"_blank"><span style=3D"f=
+ont-size:16px"><span style=3D"font-family:&quot;Times New Roman&quot;,times=
+,serif,sans-serif">bucknor@cepr.net</span></span></a><span style=3D"font-si=
+ze:16px"><span style=3D"font-family:&quot;Times New Roman&quot;,times,serif=
+,sans-serif"></span></span><br></div>
+<div><span style=3D"font-size:16px"><span style=3D"font-family:&quot;Times =
+New Roman&quot;,times,serif,sans-serif">Twitter: </span></span><a><span sty=
+le=3D"font-size:16px"><span style=3D"font-family:&quot;Times New Roman&quot=
+;,times,serif,sans-serif">@CherrieBucknor</span></span></a><br></div>
+</div>
+<div>=C2=A0<br></div>
+<div>=C2=A0<br></div>
+<div>On Mon, Jul 25, 2016, at 05:53 PM, Michael McCormack wrote:<br></div>
+<blockquote type=3D"cite"><div dir=3D"ltr"><div style=3D"font-family:&quot;=
+Times New Roman&quot;,times,serif;font-size:16px">Hello,<br></div>
+<div>I am trying to calculate the total number of unemployed for less than =
+five weeks per year by state from 1996-2015 for a paper The Century Foundat=
+ion is writing on unemployment claims by state.=C2=A0<br></div>
+<div>=C2=A0<br></div>
+<div>Is there a way to =C2=A0merge the=C2=A0<span style=3D"color:rgb(0,0,0)=
+"><span style=3D"font-family:Verdana,sans-serif"><span style=3D"font-size:1=
+3px">PWCMPWGT weight that is used for BLS CPS estimates onto your CPS ORG e=
+xtracts? Can it be done through NBER&#39;s files? I noticed this weight is =
+not included in the extracts. How different will the estimates be from BLS =
+estimates if I use the final weight provided in the CEPR extracts (especial=
+ly since I am collapsing by state and year)?</span></span></span><br></div>
+<div>=C2=A0<br></div>
+<div><span style=3D"color:rgb(0,0,0)"><span style=3D"font-family:Verdana,sa=
+ns-serif"><span style=3D"font-size:13px">Thanks for the help,</span></span>=
+</span><br></div>
+<div><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font=
+-size:16px"><span style=3D"color:rgb(0,0,0)"><span style=3D"font-family:Ver=
+dana,sans-serif"><span style=3D"font-size:13px">Mike McCormack<span><span s=
+tyle=3D"color:rgb(136,136,136)"><br></span></span></span></span></span><spa=
+n><span style=3D"color:rgb(136,136,136)">--</span></span></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><span><span style=3D"color:rgb(136,136,136)"></span></span><br></div=
+>
+<div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div><div><div style=3D"co=
+lor:rgb(136,136,136)"><span><span style=3D"color:rgb(136,136,136)"><span st=
+yle=3D"font-family:&quot;Arial Unicode MS&quot;,&quot; Arial&quot;,&quot; s=
+ans-serif&quot;"><span style=3D"font-size:small">Michael McCormack</span></=
+span></span></span><br></div>
+<div style=3D"color:rgb(136,136,136)"><span><span style=3D"color:rgb(136,13=
+6,136)"><span style=3D"font-family:&quot;Arial Unicode MS&quot;,&quot; Aria=
+l&quot;,&quot; sans-serif&quot;"><span style=3D"font-size:small">Economic P=
+olicy Associate</span></span></span></span><br></div>
+<div style=3D"color:rgb(136,136,136);font-size:12.8px"><span><span style=3D=
+"color:rgb(136,136,136)"><img src=3D"http://tcf.org/assets/downloads/Logo.j=
+pg" height=3D"55" width=3D"125"></span></span><br></div>
+<div style=3D"color:rgb(136,136,136);font-size:12.8px"><span><span style=3D=
+"color:rgb(136,136,136)"><b>The Century Foundation</b></span></span><br></d=
+iv>
+<div style=3D"color:rgb(136,136,136);font-size:12.8px"><span><span style=3D=
+"color:rgb(136,136,136)"><span style=3D"font-family:&quot;Arial Unicode MS&=
+quot;,&quot; Arial&quot;,&quot; sans-serif&quot;"><span style=3D"font-size:=
+small">One Whitehall Street, 15th Floor, New York, New York 10004</span></s=
+pan></span></span><br></div>
+<div style=3D"color:rgb(136,136,136);font-size:12.8px"><span><span style=3D=
+"color:rgb(136,136,136)"><span style=3D"font-family:&quot;Arial Unicode MS&=
+quot;,&quot; Arial&quot;,&quot; sans-serif&quot;"><span style=3D"font-size:=
+small"><b>P</b>:<a href=3D"tel:212.452.7790" target=3D"_blank">212.452.7790=
+</a>=C2=A0<b>C</b>:<a href=3D"tel:508.801.8205" target=3D"_blank">508.801.8=
+205</a>=C2=A0</span></span><a style=3D"font-size:12.8px;color:rgb(17,85,204=
+)" href=3D"https://twitter.com/mickormack620" target=3D"_blank">@mickormack=
+620</a></span></span><br></div>
+<div style=3D"color:rgb(136,136,136);font-size:12.8px"><span><span style=3D=
+"color:rgb(136,136,136)"><a style=3D"color:rgb(17,85,204);font-size:12.8px"=
+ href=3D"http://tcf.org/" target=3D"_blank">tcf.org</a><span style=3D"color=
+:rgb(80,0,80)"><span style=3D"font-size:12.8px">=C2=A0|=C2=A0</span></span>=
+<a style=3D"color:rgb(17,85,204);font-size:12.8px" href=3D"http://www.faceb=
+ook.com/TheCenturyFoundation" target=3D"_blank">Facebook</a><span style=3D"=
+color:rgb(80,0,80)"><span style=3D"font-size:12.8px">=C2=A0|=C2=A0</span></=
+span><a style=3D"color:rgb(17,85,204);font-size:12.8px" href=3D"http://www.=
+twitter.com/tcfdotorg" target=3D"_blank">Twitter</a><span style=3D"color:rg=
+b(80,0,80)"><span style=3D"font-size:12.8px">=C2=A0|=C2=A0</span></span><a =
+style=3D"color:rgb(17,85,204);font-size:12.8px" href=3D"http://tcf.org/news=
+letter" target=3D"_blank">Sign up for Email Updates</a></span></span><br></=
+div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><span><span style=3D"color:rgb(136,136,136)"></span></span><br></div=
+>
+</div>
+</div>
+</blockquote><div style=3D"font-family:&quot;Times New Roman&quot;,times,se=
+rif;font-size:16px">=C2=A0<br></div>
+</div>
+</blockquote></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><br></div>
+<div><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">-- <br></div>
+<div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div><div><div style=3D"co=
+lor:rgb(136,136,136)"><span style=3D"font-family:&quot;Arial Unicode MS&quo=
+t;,&quot; Arial&quot;,&quot; sans-serif&quot;"><span style=3D"font-size:sma=
+ll">Michael McCormack</span></span><br></div>
+<div style=3D"color:rgb(136,136,136)"><span style=3D"font-family:&quot;Aria=
+l Unicode MS&quot;,&quot; Arial&quot;,&quot; sans-serif&quot;"><span style=
+=3D"font-size:small">Economic Policy Associate</span></span><br></div>
+<div style=3D"color:rgb(136,136,136);font-size:12.8px"><img src=3D"http://t=
+cf.org/assets/downloads/Logo.jpg" height=3D"55" width=3D"125"><br></div>
+<div style=3D"color:rgb(136,136,136);font-size:12.8px"><b>The Century Found=
+ation</b><br></div>
+<div style=3D"color:rgb(136,136,136);font-size:12.8px"><span style=3D"font-=
+family:&quot;Arial Unicode MS&quot;,&quot; Arial&quot;,&quot; sans-serif&qu=
+ot;"><span style=3D"font-size:small">One Whitehall Street, 15th Floor, New =
+York, New York 10004</span></span><br></div>
+<div style=3D"color:rgb(136,136,136);font-size:12.8px"><span style=3D"font-=
+family:&quot;Arial Unicode MS&quot;,&quot; Arial&quot;,&quot; sans-serif&qu=
+ot;"><span style=3D"font-size:small"><b>P</b>:<a href=3D"tel:212.452.7790" =
+target=3D"_blank">212.452.7790</a>=C2=A0<b>C</b>:<a href=3D"tel:508.801.820=
+5" target=3D"_blank">508.801.8205</a>=C2=A0</span></span><a href=3D"https:/=
+/twitter.com/mickormack620" style=3D"font-size:12.8px;color:rgb(17,85,204)"=
+ target=3D"_blank">@mickormack620</a><br></div>
+<div style=3D"color:rgb(136,136,136);font-size:12.8px"><a href=3D"http://tc=
+f.org/" style=3D"color:rgb(17,85,204);font-size:12.8px" target=3D"_blank">t=
+cf.org</a><span style=3D"color:rgb(80,0,80)"><span style=3D"font-size:12.8p=
+x">=C2=A0|=C2=A0</span></span><a href=3D"http://www.facebook.com/TheCentury=
+Foundation" style=3D"color:rgb(17,85,204);font-size:12.8px" target=3D"_blan=
+k">Facebook</a><span style=3D"color:rgb(80,0,80)"><span style=3D"font-size:=
+12.8px">=C2=A0|=C2=A0</span></span><a href=3D"http://www.twitter.com/tcfdot=
+org" style=3D"color:rgb(17,85,204);font-size:12.8px" target=3D"_blank">Twit=
+ter</a><span style=3D"color:rgb(80,0,80)"><span style=3D"font-size:12.8px">=
+=C2=A0|=C2=A0</span></span><a href=3D"http://tcf.org/newsletter" style=3D"c=
+olor:rgb(17,85,204);font-size:12.8px" target=3D"_blank">Sign up for Email U=
+pdates</a><br></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote><div style=3D"font-family:&quot;Times New Roman&quot;,times,se=
+rif;font-size:16px"><br></div>
+</div>
+</div>
+</div>
+</blockquote></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px"><br></div>
+<div><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px">-- <br></div>
+<div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div><div><div style=3D"co=
+lor:rgb(136,136,136)"><span style=3D"font-family:&quot;Arial Unicode MS&quo=
+t;,&quot; Arial&quot;,&quot; sans-serif&quot;"><span style=3D"font-size:sma=
+ll">Michael McCormack</span></span><br></div>
+<div style=3D"color:rgb(136,136,136)"><span style=3D"font-family:&quot;Aria=
+l Unicode MS&quot;,&quot; Arial&quot;,&quot; sans-serif&quot;"><span style=
+=3D"font-size:small">Economic Policy Associate</span></span><br></div>
+<div style=3D"color:rgb(136,136,136);font-size:12.8px"><img src=3D"http://t=
+cf.org/assets/downloads/Logo.jpg" height=3D"55" width=3D"125"><br></div>
+<div style=3D"color:rgb(136,136,136);font-size:12.8px"><b>The Century Found=
+ation</b><br></div>
+<div style=3D"color:rgb(136,136,136);font-size:12.8px"><span style=3D"font-=
+family:&quot;Arial Unicode MS&quot;,&quot; Arial&quot;,&quot; sans-serif&qu=
+ot;"><span style=3D"font-size:small">One Whitehall Street, 15th Floor, New =
+York, New York 10004</span></span><br></div>
+<div style=3D"color:rgb(136,136,136);font-size:12.8px"><span style=3D"font-=
+family:&quot;Arial Unicode MS&quot;,&quot; Arial&quot;,&quot; sans-serif&qu=
+ot;"><span style=3D"font-size:small"><b>P</b>:<a href=3D"tel:212.452.7790" =
+value=3D"+12124527790" target=3D"_blank">212.452.7790</a>=C2=A0<b>C</b>:<a =
+href=3D"tel:508.801.8205" value=3D"+15088018205" target=3D"_blank">508.801.=
+8205</a>=C2=A0</span></span><a style=3D"font-size:12.8px;color:rgb(17,85,20=
+4)" href=3D"https://twitter.com/mickormack620" target=3D"_blank">@mickormac=
+k620</a><br></div>
+<div style=3D"color:rgb(136,136,136);font-size:12.8px"><a style=3D"color:rg=
+b(17,85,204);font-size:12.8px" href=3D"http://tcf.org/" target=3D"_blank">t=
+cf.org</a><span style=3D"color:rgb(80,0,80)"><span style=3D"font-size:12.8p=
+x">=C2=A0|=C2=A0</span></span><a style=3D"color:rgb(17,85,204);font-size:12=
+.8px" href=3D"http://www.facebook.com/TheCenturyFoundation" target=3D"_blan=
+k">Facebook</a><span style=3D"color:rgb(80,0,80)"><span style=3D"font-size:=
+12.8px">=C2=A0|=C2=A0</span></span><a style=3D"color:rgb(17,85,204);font-si=
+ze:12.8px" href=3D"http://www.twitter.com/tcfdotorg" target=3D"_blank">Twit=
+ter</a><span style=3D"color:rgb(80,0,80)"><span style=3D"font-size:12.8px">=
+=C2=A0|=C2=A0</span></span><a style=3D"color:rgb(17,85,204);font-size:12.8p=
+x" href=3D"http://tcf.org/newsletter" target=3D"_blank">Sign up for Email U=
+pdates</a><br></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote><div style=3D"font-family:&quot;Times New Roman&quot;,times,se=
+rif;font-size:16px"><br></div>
+</div></div></div>
+
+</blockquote></div><br><br clear=3D"all"><div><br></div>-- <br><div class=
+=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><d=
+iv><div dir=3D"ltr"><div><div><div><div style=3D"color:rgb(136,136,136)"><f=
+ont face=3D"Arial Unicode MS, Arial, sans-serif" size=3D"2">Michael McCorma=
+ck</font></div><div style=3D"color:rgb(136,136,136)"><font face=3D"Arial Un=
+icode MS, Arial, sans-serif" size=3D"2">Economic Policy Associate</font></d=
+iv><div style=3D"color:rgb(136,136,136);font-size:12.8px"><img src=3D"http:=
+//tcf.org/assets/downloads/Logo.jpg" width=3D"125" height=3D"55"></div><div=
+ style=3D"color:rgb(136,136,136);font-size:12.8px"><b>The Century Foundatio=
+n</b></div><div style=3D"color:rgb(136,136,136);font-size:12.8px"><font fac=
+e=3D"Arial Unicode MS, Arial, sans-serif" size=3D"2">One Whitehall Street, =
+15th Floor, New York, New York 10004</font></div><div style=3D"color:rgb(13=
+6,136,136);font-size:12.8px"><font face=3D"Arial Unicode MS, Arial, sans-se=
+rif" size=3D"2"><b>P</b>:212.452.7790=C2=A0<b>C</b>:508.801.8205=C2=A0</fon=
+t><a href=3D"https://twitter.com/mickormack620" style=3D"font-size:12.8px;c=
+olor:rgb(17,85,204)" target=3D"_blank">@mickormack620</a></div><div style=
+=3D"color:rgb(136,136,136);font-size:12.8px"><a href=3D"http://tcf.org/" st=
+yle=3D"color:rgb(17,85,204);font-size:12.8px" target=3D"_blank">tcf.org</a>=
+<span style=3D"color:rgb(80,0,80);font-size:12.8px">=C2=A0|=C2=A0</span><a =
+href=3D"http://www.facebook.com/TheCenturyFoundation" style=3D"color:rgb(17=
+,85,204);font-size:12.8px" target=3D"_blank">Facebook</a><span style=3D"col=
+or:rgb(80,0,80);font-size:12.8px">=C2=A0|=C2=A0</span><a href=3D"http://www=
+.twitter.com/tcfdotorg" style=3D"color:rgb(17,85,204);font-size:12.8px" tar=
+get=3D"_blank">Twitter</a><span style=3D"color:rgb(80,0,80);font-size:12.8p=
+x">=C2=A0|=C2=A0</span><a href=3D"http://tcf.org/newsletter" style=3D"color=
+:rgb(17,85,204);font-size:12.8px" target=3D"_blank">Sign up for Email Updat=
+es</a></div></div></div></div></div></div></div></div>
+</div>
+
+--94eb2c054182ebb8140539063aad--

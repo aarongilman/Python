@@ -1,0 +1,354 @@
+Message-Id: <1468945604.3879327.670740825.7ECCC6E8@webmail.messagingengine.com>
+X-Sasl-Enc: cH24NOr7KocimvaidbWxnOfg083BICNLY/jpXGL8xanw 1468945604
+From: Cherrie Bucknor <bucknor@cepr.net>
+To: "Ramezani, Rasoul" <Rasoul.Ramezani@utdallas.edu>
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Type: multipart/alternative; boundary="_----------=_1468945604387932710";
+ charset="utf-8"
+X-Mailer: MessagingEngine.com Webmail Interface - ajax-6fae4dd4
+X-Personalityid: 21904465
+In-Reply-To: <BY2PR01MB234699F913F9DC38DF648B8C4370.2719607255@BY2PR01MB234.prod.exchangelabs.com>
+References: <BY2PR01MB234699F913F9DC38DF648B8C4370.2719607255@BY2PR01MB234.prod.exchangelabs.com>
+ <BY2PR01MB234699F913F9DC38DF648B8C4370@BY2PR01MB234.prod.exchangelabs.com>
+Subject: Re: Tax variables for years 1988 and 2013 are missing
+Date: Tue, 19 Jul 2016 12:26:44 -0400
+
+This is a multi-part message in MIME format.
+
+--_----------=_1468945604387932710
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="ISO-8859-1"
+
+Hi Rasoul,
+=20
+The Census suppresses the tax and benefit data for the first release of
+the March CPS every year. A few months later, they release an updated
+file that includes these variables.
+=20
+From 1980-2013 we used Unicon's extract for the underlying source for
+our data. I know for a fact that I was unable to locate the updated
+version of Unicon's extract for 2013, and I'm guessing that was what
+happened for 1988 as well (I wasn't here at CEPR when that year was
+added to the extract).
+=20
+It is my intention to go back in time and use the raw March CPS data
+from the Census as the source of our extract for all years (the versions
+with benefit and tax data), but I haven't had the time to do so yet. I
+hope to at least get the 2013 tax and benefit data added during our next
+release in the fall.
+=20
+For the time being, to get the tax data yourself, you would have to
+adapt our Stata programs to use the raw data from Census. You can use
+our read[1] and dictionary[2] programs from 2014 as a guide, but you'll
+have to check the CPS documentation to see if there were any changes in
+the variables. You'll also need to add a section for 2013 to the
+cepr_march_read_all.do[3] program. After you adapt the read programs,
+you'll have to adapt all the other ones that contain variables that
+changed from 2013 to 2014, and then make the necessary changes to the
+cepr_march_master.do[4] file that actually creates the extract.
+=20
+Specifically, you'll want to:
+=20
+ In Part 2.b. - add m2013 to the "program switches".
+=20
+In Part 4.a - change from 2013 to 2012.
+=20
+In Part 4e - in the "program switches" section, delete 2013 from
+marunicon  (the subsection that processes UNICON files), and add 2013 to
+marcensus (the subsection that processes CPS March data from Census)
+=20
+I hope you find this useful.
+=20
+Best,
+Cherrie
+--
+Cherrie Bucknor
+Research Assistant
+Center for Economic and Policy Research
+1611 Connecticut Ave NW, Suite 400
+Washington, DC 20009
+202-293-5380 x105
+bucknor@cepr.net
+Twitter: @CherrieBucknor[5]
+=20
+=20
+On Tue, Jul 19, 2016, at 11:48 AM, Ramezani, Rasoul wrote:
+> Hello
+>
+> Dear Sir/ Madam,
+>
+>
+>
+> I am a Ph.D student of economics at the University of Texas at Dallas
+> (UTD). I am using the March CPS Data  (for 1985-2014) available at
+> http://ceprdata.org/cps-uniform-data-extracts/march-cps-supplement/march-=
+cps-data/.
+> Unfortunately, the filling status variable (*filestat*) along with
+> other tax variables including  *agi*, *fedret*, *fica*, *fedtaxbc*,
+> *sttaxbc*, *prptax* etc. are missing for years* 1988* and *2013*.
+>
+> Is that possible to update these two datasets including tax
+> variables? Or, could you please help me to calculate them for these
+> two datasets ?
+>  In advance, I appreciate you for your help.
+>
+> Best,
+> Rasoul Ramezani
+> Ph.D student of Economics
+> The University of Texas at Dallas
+>
+>
+=A0
+
+Links:
+
+  1. http://ceprdata.org/wp-content/cps/programs/march/cps_march_read_2014.=
+do
+  2. http://ceprdata.org/wp-content/cps/programs/march/cps_march_read_2014.=
+dct
+  3. http://ceprdata.org/wp-content/cps/programs/march/cepr_march_read_all.=
+do
+  4. http://ceprdata.org/wp-content/cps/programs/march/cepr_march_master.do
+  5. tps://twitter.com/cherriebucknor
+
+--_----------=_1468945604387932710
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="ISO-8859-1"
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body><div style=3D"font-family:'Times New Roman', times, serif;font-size:1=
+6px;">Hi Rasoul,<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">&nbsp;</div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">The Census suppresses the tax and benefit data for the first rele=
+ase of the March CPS every year. A few months later, they release an update=
+d file that includes these variables. <br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">&nbsp;</div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">From 1980-2013 we used Unicon's extract for the underlying source=
+ for our data. I know for a fact that I was unable to locate the updated ve=
+rsion of Unicon's extract for 2013, and I'm guessing that was what happened=
+ for 1988 as well (I wasn't here at CEPR when that year was added to the ex=
+tract).<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">&nbsp;</div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">It is my intention to go back in time and use the raw March CPS d=
+ata from the Census as the source of our extract for all years (the version=
+s with benefit and tax data), but I haven't had the time to do so yet. I ho=
+pe to at least get the 2013 tax and benefit data added during our next rele=
+ase in the fall.<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">&nbsp;</div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">For the time being, to get the tax data yourself, you would have =
+to adapt our Stata programs to use the raw data from Census. You can use ou=
+r <a href=3D"http://ceprdata.org/wp-content/cps/programs/march/cps_march_re=
+ad_2014.do">read</a> and <a href=3D"http://ceprdata.org/wp-content/cps/prog=
+rams/march/cps_march_read_2014.dct">dictionary</a> programs from 2014 as a =
+guide, but you'll have to check the CPS documentation to see if there were =
+any changes in the variables. You'll also need to add a section for 2013 to=
+ the <a href=3D"http://ceprdata.org/wp-content/cps/programs/march/cepr_marc=
+h_read_all.do">cepr_march_read_all.do</a> program. After you adapt the read=
+ programs, you'll have to adapt all the other ones that contain variables t=
+hat changed from 2013 to 2014, and then make the necessary changes to the <=
+a href=3D"http://ceprdata.org/wp-content/cps/programs/march/cepr_march_mast=
+er.do">cepr_march_master.do</a> file that actually creates the extract.<br>=
+</div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">&nbsp;</div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">Specifically, you'll want to:<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">&nbsp;</div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;"> In Part 2.b. - add m2013 to the "program switches".<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">&nbsp;</div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">In Part 4.a - change from 2013 to 2012.<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">&nbsp;</div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">In Part 4e - in the "program switches" section, delete 2013 from =
+marunicon&nbsp; (the subsection that processes UNICON files), and add 2013 =
+to marcensus (the subsection that processes CPS March data from Census)<br>=
+</div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">&nbsp;</div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">I hope you find this useful.<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">&nbsp;</div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">Best,<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">Cherrie<br></div>
+<div id=3D"sig21904465"><div class=3D"signature"><span style=3D"font-size:1=
+6px" class=3D"size"><span style=3D"font-family:&quot;Times New Roman&quot;,=
+times,serif,sans-serif" class=3D"font">--</span><span style=3D"font-family:=
+&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font"></span><=
+/span><br></div>
+<div class=3D"signature"><span style=3D"font-size:16px" class=3D"size"><spa=
+n style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif" =
+class=3D"font">Cherrie Bucknor</span><span style=3D"font-family:&quot;Times=
+ New Roman&quot;,times,serif,sans-serif" class=3D"font"></span></span><br><=
+/div>
+<div class=3D"signature"><span style=3D"font-size:16px" class=3D"size"><spa=
+n style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif" =
+class=3D"font">Research Assistant</span><span style=3D"font-family:&quot;Ti=
+mes New Roman&quot;,times,serif,sans-serif" class=3D"font"></span></span><b=
+r></div>
+<div class=3D"signature"><span style=3D"font-size:16px" class=3D"size"><spa=
+n style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif" =
+class=3D"font">Center for Economic and Policy Research</span><span style=3D=
+"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"f=
+ont"></span></span><br></div>
+<div class=3D"signature"><span style=3D"font-size:16px" class=3D"size"><spa=
+n style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif" =
+class=3D"font">1611 Connecticut Ave NW, Suite 400</span><span style=3D"font=
+-family:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">=
+</span></span><br></div>
+<div class=3D"signature"><span style=3D"font-size:16px" class=3D"size"><spa=
+n style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif" =
+class=3D"font">Washington, DC 20009</span><span style=3D"font-family:&quot;=
+Times New Roman&quot;,times,serif,sans-serif" class=3D"font"></span></span>=
+<br></div>
+<div class=3D"signature"><span style=3D"font-size:16px" class=3D"size"><spa=
+n style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif" =
+class=3D"font">202-293-5380 x105</span><span style=3D"font-family:&quot;Tim=
+es New Roman&quot;,times,serif,sans-serif" class=3D"font"></span></span><br=
+></div>
+<div class=3D"signature"><a href=3D"mailto:bucknor@cepr.net"><span style=3D=
+"font-size:16px" class=3D"size"><span style=3D"font-family:&quot;Times New =
+Roman&quot;,times,serif,sans-serif" class=3D"font">bucknor@cepr.net</span><=
+/span></a><span style=3D"font-size:16px" class=3D"size"><span style=3D"font=
+-family:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">=
+</span></span><br></div>
+<div class=3D"signature"><span style=3D"font-size:16px" class=3D"size"><spa=
+n style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif" =
+class=3D"font">Twitter: </span></span><a href=3D"tps://twitter.com/cherrieb=
+ucknor"><span style=3D"font-size:16px" class=3D"size"><span style=3D"font-f=
+amily:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">@C=
+herrieBucknor</span></span></a><br></div>
+</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>On Tue, Jul 19, 2016, at 11:48 AM, Ramezani, Rasoul wrote:<br></div>
+<blockquote type=3D"cite"><div style=3D"background-color:rgb(255, 255, 255)=
+;"><p style=3D"margin-bottom: 0px; margin-top: 0px;"><span style=3D"font-fa=
+mily:Calibri,Arial,Helvetica,sans-serif" class=3D"font"><span style=3D"font=
+-size:12pt" class=3D"size">Hello</span></span><br></p><div style=3D"font-fa=
+mily:&quot;Times New Roman&quot;, times, serif;font-size:16px;">&nbsp;</div>
+<p style=3D"margin-bottom: 0px; margin-top: 0px;"><span style=3D"font-famil=
+y:Calibri,Arial,Helvetica,sans-serif" class=3D"font"><span style=3D"font-si=
+ze:12pt" class=3D"size">Dear Sir/ Madam,</span></span><br></p><p style=3D"m=
+argin-bottom: 0px; margin-top: 0px;"><br></p><p style=3D"margin-bottom: 0px=
+; margin-top: 0px;"><span style=3D"font-size:12pt" class=3D"size"></span><b=
+r></p><div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;f=
+ont-size:16px;">&nbsp;</div>
+<p style=3D"margin-bottom: 0px; margin-top: 0px;"><span style=3D"color:rgb(=
+33, 33, 33)" class=3D"colour"><span style=3D"font-family:Calibri,Arial,Helv=
+etica,sans-serif" class=3D"font"><span style=3D"font-size:13.3333px" class=
+=3D"size"><span style=3D"font-size:12pt" class=3D"size">I am a Ph.D student=
+ of economics at the University of Texas at Dallas (UTD). I am using the Ma=
+rch CPS Data &nbsp;(for&nbsp;</span><span style=3D"font-size:12pt" class=3D=
+"size">1985-2014)&nbsp;available
+ at&nbsp;</span><a href=3D"http://ceprdata.org/cps-uniform-data-extracts/ma=
+rch-cps-supplement/march-cps-data/"><span style=3D"font-size:12pt" class=3D=
+"size">http://ceprdata.org/cps-uniform-data-extracts/march-cps-supplement/m=
+arch-cps-data/</span></a><span style=3D"font-size:12pt" class=3D"size">. </=
+span><span style=3D"font-size:12pt" class=3D"size">U</span><span style=3D"f=
+ont-size:12pt" class=3D"size">nfortunately,&nbsp;the&nbsp;</span><span styl=
+e=3D"color:rgb(33, 33, 33)" class=3D"colour"><span style=3D"font-family:Cal=
+ibri,Arial,Helvetica,sans-serif" class=3D"font"><span style=3D"font-size:12=
+pt" class=3D"size">filling&nbsp;status&nbsp;variable&nbsp;(<b>filestat</b>)=
+&nbsp;along&nbsp;with&nbsp;other&nbsp;t<span style=3D"color:rgb(33, 33, 33)=
+" class=3D"colour"><span style=3D"font-family:Calibri,Arial,Helvetica,sans-=
+serif" class=3D"font"><span style=3D"font-size:13.3333px" class=3D"size"><s=
+pan style=3D"font-size:12pt" class=3D"size">ax&nbsp;</span><span style=3D"f=
+ont-size:12pt" class=3D"size">variables&nbsp;including&nbsp;</span></span><=
+/span></span><span style=3D"color:rgb(33, 33, 33)" class=3D"colour"><span s=
+tyle=3D"font-family:Calibri,Arial,Helvetica,sans-serif" class=3D"font"><spa=
+n style=3D"font-size:12pt" class=3D"size">&nbsp;</span></span></span><span =
+style=3D"color:rgb(33, 33, 33)" class=3D"colour"><span style=3D"font-family=
+:Calibri,Arial,Helvetica,sans-serif" class=3D"font"><span style=3D"font-siz=
+e:12pt" class=3D"size"><b>agi</b>,&nbsp;</span></span></span><span style=3D=
+"color:rgb(33, 33, 33)" class=3D"colour"><span style=3D"font-family:Calibri=
+,Arial,Helvetica,sans-serif" class=3D"font"><span style=3D"font-size:12pt" =
+class=3D"size"><b>fedret</b>,&nbsp;</span></span></span><span style=3D"colo=
+r:rgb(33, 33, 33)" class=3D"colour"><span style=3D"font-family:Calibri,Aria=
+l,Helvetica,sans-serif" class=3D"font"><span style=3D"font-size:12pt" class=
+=3D"size"><b>fica</b>,&nbsp;</span></span></span><span style=3D"color:rgb(3=
+3, 33, 33)" class=3D"colour"><span style=3D"font-family:Calibri,Arial,Helve=
+tica,sans-serif" class=3D"font"><span style=3D"font-size:12pt" class=3D"siz=
+e"><b>fedtaxbc</b>,&nbsp;</span></span></span><span style=3D"color:rgb(33, =
+33, 33)" class=3D"colour"><span style=3D"font-family:Calibri,Arial,Helvetic=
+a,sans-serif" class=3D"font"><span style=3D"font-size:12pt" class=3D"size">=
+<b>sttaxbc</b>,&nbsp;</span></span></span><span style=3D"color:rgb(33, 33, =
+33)" class=3D"colour"><span style=3D"font-family:Calibri,Arial,Helvetica,sa=
+ns-serif" class=3D"font"><span style=3D"font-size:12pt" class=3D"size"><b>p=
+rptax</b> etc.&nbsp;are missing for years<b> 1988</b> and <b>2013</b>.&nbsp=
+;</span></span></span></span></span></span></span></span></span><br></p><p =
+style=3D"margin-bottom: 0px; margin-top: 0px;"><div style=3D"font-family:&q=
+uot;Times New Roman&quot;, times, serif;font-size:16px;"><span style=3D"col=
+or:rgb(33, 33, 33)" class=3D"colour"><span style=3D"font-family:Calibri,Ari=
+al,Helvetica,sans-serif" class=3D"font"><span style=3D"font-size:13.3333px"=
+ class=3D"size"><span style=3D"color:rgb(33, 33, 33)" class=3D"colour"><spa=
+n style=3D"font-family:Calibri,Arial,Helvetica,sans-serif" class=3D"font"><=
+span style=3D"font-size:12pt" class=3D"size"><span style=3D"color:rgb(33, 3=
+3, 33)" class=3D"colour"><span style=3D"font-family:Calibri,Arial,Helvetica=
+,sans-serif" class=3D"font"><span style=3D"font-size:12pt" class=3D"size"><=
+/span></span></span></span></span></span></span></span></span><span style=
+=3D"color:rgb(33, 33, 33)" class=3D"colour"><span style=3D"font-family:Cali=
+bri,Arial,Helvetica,sans-serif" class=3D"font"><span style=3D"font-size:12p=
+t" class=3D"size"><br></span></span></span><span style=3D"color:rgb(33, 33,=
+ 33)" class=3D"colour"><span style=3D"font-family:Calibri,Arial,Helvetica,s=
+ans-serif" class=3D"font"><span style=3D"font-size:12pt" class=3D"size">Is =
+that possible to update these <span style=3D"font-family:Calibri,Arial,Helv=
+etica,sans-serif" class=3D"font">two datasets</span> including tax&nbsp;var=
+iables? </span></span></span><span style=3D"color:rgb(33, 33, 33)" class=3D=
+"colour"><span style=3D"font-family:Calibri,Arial,Helvetica,sans-serif" cla=
+ss=3D"font"><span style=3D"font-size:12pt" class=3D"size">O</span></span></=
+span><span style=3D"color:rgb(33, 33, 33)" class=3D"colour"><span style=3D"=
+font-family:Calibri,Arial,Helvetica,sans-serif" class=3D"font"><span style=
+=3D"font-size:12pt" class=3D"size">r, could you please&nbsp;help me
+ to</span></span></span><span style=3D"color:rgb(33, 33, 33)" class=3D"colo=
+ur"><span style=3D"font-family:Calibri,Arial,Helvetica,sans-serif" class=3D=
+"font"><span style=3D"font-size:12pt" class=3D"size">&nbsp;calculate them f=
+or&nbsp;these two&nbsp;</span></span></span><span style=3D"color:rgb(33, 33=
+, 33)" class=3D"colour"><span style=3D"font-family:Calibri,&quot; Arial&quo=
+t;,&quot; Helvetica&quot;,&quot; sans-serif&quot;" class=3D"font">datasets<=
+span style=3D"font-size:12pt" class=3D"size">&nbsp;?</span></span></span></=
+div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;"> In advance, I appreciate you for your help.<br></div>
+</p><p style=3D"margin-bottom: 0px; margin-top: 0px;"><br></p><div style=3D=
+"color:rgb(0, 0, 0);font-family:Calibri,Arial,Helvetica,sans-serif;font-siz=
+e:12pt;"><div style=3D"font-size:12pt;color:rgb(0, 0, 0);background-color:r=
+gb(255, 255, 255);font-family:Calibri,Arial,Helvetica,sans-serif;"><div>Bes=
+t,<br></div>
+<div>Rasoul Ramezani<br></div>
+<div>Ph.D student of Economics<br></div>
+<div>The University of Texas at Dallas<br></div>
+<div><div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;fo=
+nt-size:16px;">&nbsp;</div>
+<div>&nbsp;</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote><div style=3D"font-family:&quot;Times New Roman&quot;, times, =
+serif;font-size:16px;">&nbsp;</div>
+</body>
+</html>
+
+--_----------=_1468945604387932710--
+

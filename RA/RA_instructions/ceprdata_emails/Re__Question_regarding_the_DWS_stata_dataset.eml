@@ -1,0 +1,554 @@
+Message-Id: <1471449822.2879142.698142313.01F9698D@webmail.messagingengine.com>
+X-Sasl-Enc: BX8fn1MJvRrv8dprcwevGBvaCWlOvYAm4Omxt7wCQf/t 1471449822
+From: Cherrie Bucknor <bucknor@cepr.net>
+To: Nayha Mansoor <nm68@st-andrews.ac.uk>
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Type: multipart/alternative; boundary="_----------=_147144982228791426";
+ charset="utf-8"
+X-Mailer: MessagingEngine.com Webmail Interface - ajax-71d1d584
+X-Personalityid: 21904465
+In-Reply-To: <CALPkwLzpuadPOyXVSCugk-MXD3EaR-p-VU8JLmDSr-TSE8bhaA@mail.gmail.com>
+References: <CALPkwLwYvW8iwqq_6ZLahNZxDeY58zg+yq+5Lp-97NVLo4Gytg@mail.gmail.com>
+ <CALPkwLwYvW8iwqq_6ZLahNZxDeY58zg+yq+5Lp-97NVLo4Gytg.2719607255@mail.gmail.com>
+ <1469560502.3052502.677505889.37443C21@webmail.messagingengine.com>
+ <CALPkwLzUbnuvxQqQcm-bN+-2qcDLDnOj7rMyU67Q8hEWc6PXxQ@mail.gmail.com>
+ <1470062971.1687844.682637249.36C2FF17@webmail.messagingengine.com>
+ <CALPkwLzpuadPOyXVSCugk-MXD3EaR-p-VU8JLmDSr-TSE8bhaA@mail.gmail.com>
+Subject: Re: Question regarding the DWS stata dataset
+Date: Wed, 17 Aug 2016 12:03:42 -0400
+
+This is a multi-part message in MIME format.
+
+--_----------=_147144982228791426
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+Hey Nayha,
+
+No, the data in our CPS extract isn't seasonally adjusted.
+
+Best,
+Cherrie
+
+--
+Cherrie Bucknor
+Research Assistant
+Center for Economic and Policy Research
+1611 Connecticut Ave NW, Suite 400
+Washington, DC 20009
+202-293-5380 x105
+bucknor@cepr.net
+Twitter: @CherrieBucknor[1]
+
+
+On Wed, Aug 17, 2016, at 04:22 AM, Nayha Mansoor wrote:
+> Dear Cherrie,
+>
+> I hope you are doing good. I just have one question regarding the CPS
+> extracts on CEPR website.
+> Is the data used in the extracts seasonally adjusted?
+>
+> Thanks,
+>
+> Best,
+> Nayha
+>
+> On Monday, 1 August 2016, Cherrie Bucknor <bucknor@cepr.net> wrote:
+>> __
+>> Hi Nayha,
+>>
+>> The cepr_dws_wagehour.do[2] program has the coding for the DWS wage
+>> variables. Only two (cjpayr and ljpayr) are in 2009 dollars. All of
+>> the rest are nominal wages.
+>>
+>> Best,
+>> Cherrie
+>> --
+>> Cherrie Bucknor
+>> Research Assistant
+>> Center for Economic and Policy Research
+>> 1611 Connecticut Ave NW, Suite 400
+>> Washington, DC 20009
+>> 202-293-5380 x105
+>> bucknor@cepr.net
+>> Twitter: @CherrieBucknor
+>>
+>>
+>> On Thu, Jul 28, 2016, at 03:52 AM, Nayha Mansoor wrote:
+>>> Dear Cherrie,
+>>>
+>>> Thank you for your email. I have one more question. So the wages in
+>>> DWS extract datasets, are those nominal wages or real wages?
+>>>
+>>> Thanks,
+>>>
+>>> Best,
+>>> Nayha
+>>>
+>>> On 26 July 2016 at 20:15, Cherrie Bucknor <bucknor@cepr.net> wrote:
+>>>> __
+>>>> Hi Nayha,
+>>>>
+>>>> Our Stata programs are the major source for information on our
+>>>> extracts.
+>>>>
+>>>> For the DWS, the programs can be found here[3]. Our Stata code show
+>>>> the changes we made to the original raw DWS and Basic CPS variables
+>>>> in order to create our extract.
+>>>>
+>>>> Best,
+>>>> Cherrie
+>>>>
+>>>>
+>>>> --
+>>>> Cherrie Bucknor
+>>>> Research Assistant
+>>>> Center for Economic and Policy Research
+>>>> 1611 Connecticut Ave NW, Suite 400
+>>>> Washington, DC 20009
+>>>> 202-293-5380 x105
+>>>> bucknor@cepr.net
+>>>> Twitter: @CherrieBucknor
+>>>>
+>>>>
+>>>> On Tue, Jul 26, 2016, at 03:18 AM, Nayha Mansoor wrote:
+>>>>> To whom it may concern,
+>>>>>
+>>>>> I was wondering if you could help me out regarding the Displaced
+>>>>> workers survey stata dataset on cepr website.
+>>>>>
+>>>>> The variable names on stata dataset and in the documentation are
+>>>>> different to each other so it is difficult to find out that what
+>>>>> does the numeric value (1 or 2) of a variable mean.
+>>>>> So is there any file that matches the variables on the data set.
+>>>>>
+>>>>> Thanks,
+>>>>>
+>>>>> Best,
+>>>>> Nayha Mansoor
+>>>>>
+>>>>>
+>>>>>
+>>>>> --
+>>>>>
+>>>>>
+>>>>> Nayha Mansoor
+>>>>> School of Economics and Finance University of St Andrews
+>>>>> Castlecliffe, The Scores St Andrews, Fife KY16 9AR
+>>>>>
+>>>>> The University of St Andrews is a charity registered in Scotland:
+>>>>> =E2=84=96SC013532
+>>>>>
+>>>>
+>>>
+>>>
+>>>
+>>> --
+>>> Nayha Mansoor
+>>> School of Economics and Finance University of St Andrews
+>>> Castlecliffe, The Scores St Andrews, Fife KY16 9AR
+>>>
+>>> The University of St Andrews is a charity registered in Scotland:
+>>> =E2=84=96SC013532
+>>
+>
+>
+> --
+> Nayha Mansoor
+> School of Economics and Finance University of St Andrews Castlecliffe,
+> The Scores St Andrews, Fife KY16 9AR
+>
+> The University of St Andrews is a charity registered in Scotland:
+> =E2=84=96SC013532
+
+
+Links:
+
+  1. tps://twitter.com/cherriebucknor
+  2. http://ceprdata.org/wp-content/cps/programs/dws/cepr_dws_wagehour.do
+  3. http://ceprdata.org/cps-uniform-data-extracts/cps-displaced-worker-sur=
+vey/cps-dws-programs/
+
+--_----------=_147144982228791426
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body><div style=3D"font-family:'Times New Roman', times, serif;font-size:1=
+6px;">Hey Nayha,<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">No, the data in our CPS extract isn't seasonally adjusted.<br></d=
+iv>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">Best,<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">Cherrie<br></div>
+<div style=3D"font-family:'Times New Roman', times, serif;font-size:16px;">=
+<br></div>
+<div id=3D"sig21904465"><div class=3D"signature"><span style=3D"font-size:1=
+6px" class=3D"size"><span style=3D"font-family:&quot;Times New Roman&quot;,=
+times,serif,sans-serif" class=3D"font">--</span><span style=3D"font-family:=
+&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font"></span><=
+/span><br></div>
+<div class=3D"signature"><span style=3D"font-size:16px" class=3D"size"><spa=
+n style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif" =
+class=3D"font">Cherrie Bucknor</span><span style=3D"font-family:&quot;Times=
+ New Roman&quot;,times,serif,sans-serif" class=3D"font"></span></span><br><=
+/div>
+<div class=3D"signature"><span style=3D"font-size:16px" class=3D"size"><spa=
+n style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif" =
+class=3D"font">Research Assistant</span><span style=3D"font-family:&quot;Ti=
+mes New Roman&quot;,times,serif,sans-serif" class=3D"font"></span></span><b=
+r></div>
+<div class=3D"signature"><span style=3D"font-size:16px" class=3D"size"><spa=
+n style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif" =
+class=3D"font">Center for Economic and Policy Research</span><span style=3D=
+"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"f=
+ont"></span></span><br></div>
+<div class=3D"signature"><span style=3D"font-size:16px" class=3D"size"><spa=
+n style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif" =
+class=3D"font">1611 Connecticut Ave NW, Suite 400</span><span style=3D"font=
+-family:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">=
+</span></span><br></div>
+<div class=3D"signature"><span style=3D"font-size:16px" class=3D"size"><spa=
+n style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif" =
+class=3D"font">Washington, DC 20009</span><span style=3D"font-family:&quot;=
+Times New Roman&quot;,times,serif,sans-serif" class=3D"font"></span></span>=
+<br></div>
+<div class=3D"signature"><span style=3D"font-size:16px" class=3D"size"><spa=
+n style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif" =
+class=3D"font">202-293-5380 x105</span><span style=3D"font-family:&quot;Tim=
+es New Roman&quot;,times,serif,sans-serif" class=3D"font"></span></span><br=
+></div>
+<div class=3D"signature"><a href=3D"mailto:bucknor@cepr.net"><span style=3D=
+"font-size:16px" class=3D"size"><span style=3D"font-family:&quot;Times New =
+Roman&quot;,times,serif,sans-serif" class=3D"font">bucknor@cepr.net</span><=
+/span></a><span style=3D"font-size:16px" class=3D"size"><span style=3D"font=
+-family:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">=
+</span></span><br></div>
+<div class=3D"signature"><span style=3D"font-size:16px" class=3D"size"><spa=
+n style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif" =
+class=3D"font">Twitter: </span></span><a href=3D"tps://twitter.com/cherrieb=
+ucknor"><span style=3D"font-size:16px" class=3D"size"><span style=3D"font-f=
+amily:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">@C=
+herrieBucknor</span></span></a><br></div>
+</div>
+<div><br></div>
+<div><br></div>
+<div>On Wed, Aug 17, 2016, at 04:22 AM, Nayha Mansoor wrote:<br></div>
+<blockquote type=3D"cite"><div style=3D"font-family:&quot;Times New Roman&q=
+uot;, times, serif;font-size:16px;">Dear Cherrie,<br></div>
+<div><br></div>
+<div>I hope you are doing good. I just have one question regarding the CPS =
+extracts on CEPR website.<br></div>
+<div>Is the data used in the extracts seasonally adjusted?<br></div>
+<div><br></div>
+<div>Thanks,<br></div>
+<div><br></div>
+<div>Best,<br></div>
+<div><div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;fo=
+nt-size:16px;">Nayha&nbsp;<br></div>
+<div><div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;fo=
+nt-size:16px;"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">On Monday, 1 August 2016, Cherrie Bucknor &lt;<a href=3D"mailto:b=
+ucknor@cepr.net">bucknor@cepr.net</a>&gt; wrote:<br></div>
+<blockquote style=3D"margin-top:0px;margin-right:0px;margin-bottom:0px;marg=
+in-left:0.8ex;border-left-width:1px;border-left-style:solid;border-left-col=
+or:rgb(204, 204, 204);padding-left:1ex;" defang_data-gmailquote=3D"yes"><di=
+v style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-size:=
+16px;"><u></u><br></div>
+<div><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font=
+-size:16px;">Hi Nayha,<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;">The <a href=3D"http://ceprdata.org/wp-content/cps/programs/dws/cepr=
+_dws_wagehour.do">cepr_dws_wagehour.do</a> program has the coding for the D=
+WS wage variables. Only two (cjpayr and ljpayr) are in 2009 dollars. All of=
+ the rest are nominal wages.<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;">Best,<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;">Cherrie<br></div>
+<div><div><span style=3D"font-size:16px" class=3D"size"><span style=3D"font=
+-family:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">=
+--</span><span style=3D"font-family:&quot;Times New Roman&quot;,times,serif=
+,sans-serif" class=3D"font"></span></span><br></div>
+<div><span style=3D"font-size:16px" class=3D"size"><span style=3D"font-fami=
+ly:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">Cherr=
+ie Bucknor</span><span style=3D"font-family:&quot;Times New Roman&quot;,tim=
+es,serif,sans-serif" class=3D"font"></span></span><br></div>
+<div><span style=3D"font-size:16px" class=3D"size"><span style=3D"font-fami=
+ly:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">Resea=
+rch Assistant</span><span style=3D"font-family:&quot;Times New Roman&quot;,=
+times,serif,sans-serif" class=3D"font"></span></span><br></div>
+<div><span style=3D"font-size:16px" class=3D"size"><span style=3D"font-fami=
+ly:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">Cente=
+r for Economic and Policy Research</span><span style=3D"font-family:&quot;T=
+imes New Roman&quot;,times,serif,sans-serif" class=3D"font"></span></span><=
+br></div>
+<div><span style=3D"font-size:16px" class=3D"size"><span style=3D"font-fami=
+ly:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">1611 =
+Connecticut Ave NW, Suite 400</span><span style=3D"font-family:&quot;Times =
+New Roman&quot;,times,serif,sans-serif" class=3D"font"></span></span><br></=
+div>
+<div><span style=3D"font-size:16px" class=3D"size"><span style=3D"font-fami=
+ly:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">Washi=
+ngton, DC 20009</span><span style=3D"font-family:&quot;Times New Roman&quot=
+;,times,serif,sans-serif" class=3D"font"></span></span><br></div>
+<div><span style=3D"font-size:16px" class=3D"size"><span style=3D"font-fami=
+ly:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">202-2=
+93-5380 x105</span><span style=3D"font-family:&quot;Times New Roman&quot;,t=
+imes,serif,sans-serif" class=3D"font"></span></span><br></div>
+<div><a><span style=3D"font-size:16px" class=3D"size"><span style=3D"font-f=
+amily:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">bu=
+cknor@cepr.net</span></span></a><span style=3D"font-size:16px" class=3D"siz=
+e"><span style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-=
+serif" class=3D"font"></span></span><br></div>
+<div><span style=3D"font-size:16px" class=3D"size"><span style=3D"font-fami=
+ly:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">Twitt=
+er: </span></span><a><span style=3D"font-size:16px" class=3D"size"><span st=
+yle=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif" clas=
+s=3D"font">@CherrieBucknor</span></span></a><br></div>
+</div>
+<div><br></div>
+<div><br></div>
+<div>On Thu, Jul 28, 2016, at 03:52 AM, Nayha Mansoor wrote:<br></div>
+<blockquote type=3D"cite"><div dir=3D"ltr"><div>Dear Cherrie,<br></div>
+<div><br></div>
+<div>Thank you for your email. I have one more question. So the wages in DW=
+S extract datasets, are those nominal wages or real wages?<br></div>
+<div><br></div>
+<div>Thanks,<br></div>
+<div><br></div>
+<div>Best,<br></div>
+<div>Nayha<br></div>
+</div>
+<div><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font=
+-size:16px;"><br></div>
+<div><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font=
+-size:16px;">On 26 July 2016 at 20:15, Cherrie Bucknor <span dir=3D"ltr">&l=
+t;<a>bucknor@cepr.net</a>&gt;</span> wrote:<br></div>
+<blockquote style=3D"margin-top:0px;margin-right:0px;margin-bottom:0px;marg=
+in-left:0.8ex;border-left-width:1px;border-left-style:solid;border-left-col=
+or:rgb(204, 204, 204);padding-left:1ex;"><div style=3D"font-family:&quot;Ti=
+mes New Roman&quot;,times,serif;font-size:16px;"><u></u><br></div>
+<div><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font=
+-size:16px;">Hi Nayha,<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;">&nbsp;<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;">Our Stata programs are the major source for information on our extr=
+acts.<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;">&nbsp;<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;">For the DWS, the programs can be found <a href=3D"http://ceprdata.o=
+rg/cps-uniform-data-extracts/cps-displaced-worker-survey/cps-dws-programs/"=
+>here</a>. Our Stata code show the changes we made to the original raw DWS =
+and Basic CPS variables in order to create our extract.<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;">&nbsp;<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;">Best,<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;">Cherrie<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;">&nbsp;<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;">&nbsp;<br></div>
+<div><div><span style=3D"font-size:16px" class=3D"size"><span style=3D"font=
+-family:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">=
+--</span><span style=3D"font-family:&quot;Times New Roman&quot;,times,serif=
+,sans-serif" class=3D"font"></span></span><br></div>
+<div><span style=3D"font-size:16px" class=3D"size"><span style=3D"font-fami=
+ly:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">Cherr=
+ie Bucknor</span><span style=3D"font-family:&quot;Times New Roman&quot;,tim=
+es,serif,sans-serif" class=3D"font"></span></span><br></div>
+<div><span style=3D"font-size:16px" class=3D"size"><span style=3D"font-fami=
+ly:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">Resea=
+rch Assistant</span><span style=3D"font-family:&quot;Times New Roman&quot;,=
+times,serif,sans-serif" class=3D"font"></span></span><br></div>
+<div><span style=3D"font-size:16px" class=3D"size"><span style=3D"font-fami=
+ly:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">Cente=
+r for Economic and Policy Research</span><span style=3D"font-family:&quot;T=
+imes New Roman&quot;,times,serif,sans-serif" class=3D"font"></span></span><=
+br></div>
+<div><span style=3D"font-size:16px" class=3D"size"><span style=3D"font-fami=
+ly:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">1611 =
+Connecticut Ave NW, Suite 400</span><span style=3D"font-family:&quot;Times =
+New Roman&quot;,times,serif,sans-serif" class=3D"font"></span></span><br></=
+div>
+<div><span style=3D"font-size:16px" class=3D"size"><span style=3D"font-fami=
+ly:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">Washi=
+ngton, DC 20009</span><span style=3D"font-family:&quot;Times New Roman&quot=
+;,times,serif,sans-serif" class=3D"font"></span></span><br></div>
+<div><span style=3D"font-size:16px" class=3D"size"><span style=3D"font-fami=
+ly:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">202-2=
+93-5380 x105</span><span style=3D"font-family:&quot;Times New Roman&quot;,t=
+imes,serif,sans-serif" class=3D"font"></span></span><br></div>
+<div><a><span style=3D"font-size:16px" class=3D"size"><span style=3D"font-f=
+amily:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">bu=
+cknor@cepr.net</span></span></a><span style=3D"font-size:16px" class=3D"siz=
+e"><span style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-=
+serif" class=3D"font"></span></span><br></div>
+<div><span style=3D"font-size:16px" class=3D"size"><span style=3D"font-fami=
+ly:&quot;Times New Roman&quot;,times,serif,sans-serif" class=3D"font">Twitt=
+er: </span></span><a><span style=3D"font-size:16px" class=3D"size"><span st=
+yle=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif" clas=
+s=3D"font">@CherrieBucknor</span></span></a><br></div>
+</div>
+<div>&nbsp;<br></div>
+<div>&nbsp;<br></div>
+<div>On Tue, Jul 26, 2016, at 03:18 AM, Nayha Mansoor wrote:<br></div>
+<blockquote type=3D"cite"><div dir=3D"ltr"><div>To whom it may concern,<br>=
+</div>
+<div>&nbsp;<br></div>
+<div>I was wondering if you could help me out regarding the Displaced worke=
+rs survey stata dataset on cepr website.<br></div>
+<div>&nbsp;<br></div>
+<div>The variable names on stata dataset and in the documentation are diffe=
+rent to each other so it is difficult to find out that what does the numeri=
+c value (1 or 2) of a variable mean.<br></div>
+<div>So is there any file that matches the variables on the data set.<br></=
+div>
+<div>&nbsp;<br></div>
+<div>Thanks,<br></div>
+<div>&nbsp;<br></div>
+<div>Best,<br></div>
+<div>Nayha Mansoor<br></div>
+<div><div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font=
+-size:16px;">&nbsp;<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;">&nbsp;<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;"><span><span style=3D"color:rgb(136, 136, 136)" class=3D"colour"></s=
+pan></span><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;"><span><span style=3D"color:rgb(136, 136, 136)" class=3D"colour">-- =
+</span></span><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;"><span><span style=3D"color:rgb(136, 136, 136)" class=3D"colour"></s=
+pan></span><br></div>
+</div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;"><span><span style=3D"color:rgb(136, 136, 136)" class=3D"colour"></s=
+pan></span><br></div>
+<div><div dir=3D"ltr"><div><div dir=3D"ltr"><div style=3D"font-family:&quot=
+;Times New Roman&quot;,times,serif;font-size:16px;"><span><span style=3D"co=
+lor:rgb(136, 136, 136)" class=3D"colour"><span style=3D"font-size:12.8px" c=
+lass=3D"size"><span style=3D"color:rgb(116, 27, 71)" class=3D"colour">Nayha=
+ Mansoor</span></span></span></span><br></div>
+<div><span><span style=3D"color:rgb(136, 136, 136)" class=3D"colour"><span =
+style=3D"color:rgb(116, 27, 71)" class=3D"colour"><span style=3D"font-size:=
+12.8px" class=3D"size">School of Economics and Finance</span><br style=3D"f=
+ont-size:12.8px;"><span style=3D"font-size:12.8px" class=3D"size">Universit=
+y of St Andrews</span><br style=3D"font-size:12.8px;"><span style=3D"font-s=
+ize:12.8px" class=3D"size">Castlecliffe, The Scores</span><br style=3D"font=
+-size:12.8px;"><span style=3D"font-size:12.8px" class=3D"size">St Andrews, =
+Fife</span><br style=3D"font-size:12.8px;"><span style=3D"font-size:12.8px"=
+ class=3D"size">KY16 9AR</span></span></span></span></div>
+<div><span><span style=3D"color:rgb(136, 136, 136)" class=3D"colour"><span =
+style=3D"color:rgb(116, 27, 71)" class=3D"colour"><img src=3D"https://docs.=
+google.com/uc?export=3Ddownload&amp;id=3D0B7gSjVSIepTrcFdUdkRybGt2aWM&amp;r=
+evid=3D0B7gSjVSIepTrc2lEYlhEblZQbFlmdlRzMGM1bVB1RjRMbmFZPQ"><br style=3D"fo=
+nt-size:12.8px;"><span style=3D"font-size:12.8px" class=3D"size">The Univer=
+sity of St Andrews is a charity registered in Scotland:</span><br style=3D"=
+font-size:12.8px;"><span style=3D"font-size:12.8px" class=3D"size">=E2=84=
+=96SC013532</span></span></span></span></div>
+</div>
+</div>
+</div>
+</div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;"><span><span style=3D"color:rgb(136, 136, 136)" class=3D"colour"></s=
+pan></span><br></div>
+</div>
+</blockquote><div style=3D"font-family:&quot;Times New Roman&quot;,times,se=
+rif;font-size:16px;">&nbsp;<br></div>
+</div>
+</blockquote></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif;font-size=
+:16px;">-- <br></div>
+<div><div dir=3D"ltr"><div><div dir=3D"ltr"><div style=3D"font-family:&quot=
+;Times New Roman&quot;,times,serif;font-size:16px;"><span style=3D"font-siz=
+e:12.8px" class=3D"size"><span style=3D"color:rgb(116, 27, 71)" class=3D"co=
+lour">Nayha Mansoor</span></span><br></div>
+<div><span style=3D"color:rgb(116, 27, 71)" class=3D"colour"><span style=3D=
+"font-size:12.8px" class=3D"size">School of Economics and Finance</span><br=
+ style=3D"font-size:12.8px;"><span style=3D"font-size:12.8px" class=3D"size=
+">University of St Andrews</span><br style=3D"font-size:12.8px;"><span styl=
+e=3D"font-size:12.8px" class=3D"size">Castlecliffe, The Scores</span><br st=
+yle=3D"font-size:12.8px;"><span style=3D"font-size:12.8px" class=3D"size">S=
+t Andrews, Fife</span><br style=3D"font-size:12.8px;"><span style=3D"font-s=
+ize:12.8px" class=3D"size">KY16 9AR</span></span></div>
+<div><span style=3D"color:rgb(116, 27, 71)" class=3D"colour"><img src=3D"ht=
+tps://docs.google.com/uc?export=3Ddownload&amp;id=3D0B7gSjVSIepTrcFdUdkRybG=
+t2aWM&amp;revid=3D0B7gSjVSIepTrc2lEYlhEblZQbFlmdlRzMGM1bVB1RjRMbmFZPQ"><br =
+style=3D"font-size:12.8px;"><span style=3D"font-size:12.8px" class=3D"size"=
+>The University of St Andrews is a charity registered in Scotland:</span><b=
+r style=3D"font-size:12.8px;"><span style=3D"font-size:12.8px" class=3D"siz=
+e">=E2=84=96SC013532</span></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote><div style=3D"font-family:&quot;Times New Roman&quot;,times,se=
+rif;font-size:16px;"><br></div>
+</div>
+</blockquote></div>
+</div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;"><br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;, times, serif;font-si=
+ze:16px;">-- <br></div>
+<div dir=3D"ltr"><div><div dir=3D"ltr"><div style=3D"font-family:&quot;Time=
+s New Roman&quot;, times, serif;font-size:16px;"><span style=3D"font-size:1=
+2.8px" class=3D"size"><span style=3D"color:rgb(116, 27, 71)" class=3D"colou=
+r">Nayha Mansoor</span></span><br></div>
+<div><span style=3D"color:rgb(116, 27, 71)" class=3D"colour"><span style=3D=
+"font-size:12.8px" class=3D"size">School of Economics and Finance</span><br=
+ style=3D"font-size:12.8px;"><span style=3D"font-size:12.8px" class=3D"size=
+">University of St Andrews</span><br style=3D"font-size:12.8px;"><span styl=
+e=3D"font-size:12.8px" class=3D"size">Castlecliffe, The Scores</span><br st=
+yle=3D"font-size:12.8px;"><span style=3D"font-size:12.8px" class=3D"size">S=
+t Andrews, Fife</span><br style=3D"font-size:12.8px;"><span style=3D"font-s=
+ize:12.8px" class=3D"size">KY16 9AR</span></span></div>
+<div><span style=3D"color:rgb(116, 27, 71)" class=3D"colour"><img src=3D"ht=
+tps://docs.google.com/uc?export=3Ddownload&amp;id=3D0B7gSjVSIepTrcFdUdkRybG=
+t2aWM&amp;revid=3D0B7gSjVSIepTrc2lEYlhEblZQbFlmdlRzMGM1bVB1RjRMbmFZPQ"><br =
+style=3D"font-size:12.8px;"><span style=3D"font-size:12.8px" class=3D"size"=
+>The University of St Andrews is a charity registered in Scotland:</span><b=
+r style=3D"font-size:12.8px;"><span style=3D"font-size:12.8px" class=3D"siz=
+e">=E2=84=96SC013532</span></span></div>
+</div>
+</div>
+</div>
+</blockquote><div style=3D"font-family:&quot;Times New Roman&quot;, times, =
+serif;font-size:16px;"><br></div>
+</body>
+</html>
+
+--_----------=_147144982228791426--
+

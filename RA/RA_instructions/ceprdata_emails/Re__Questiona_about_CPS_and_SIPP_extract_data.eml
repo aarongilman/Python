@@ -1,0 +1,134 @@
+Message-Id: <1454521752.115476.510949186.2842CB9F@webmail.messagingengine.com>
+X-Sasl-Enc: Y3/Cy7GEYa3WXf1JdGtEUbb3MxRJxDQF/J6GmyDX35E2 1454521752
+From: Cherrie Bucknor <bucknor@cepr.net>
+To: Yiqing Huang <yiqing_huang@college.harvard.edu>
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Type: multipart/alternative; boundary="_----------=_14545217521154761";
+ charset="utf-8"
+X-Mailer: MessagingEngine.com Webmail Interface - ajax-9c016a65
+X-Personalityid: 21904465
+Subject: Re: Questiona about CPS and SIPP extract data
+Date: Wed, 03 Feb 2016 12:49:12 -0500
+Bcc: John Schmitt <jschmitt@gmail.com>
+In-Reply-To: <CAOM2LQw4gV73QpgrHnFrG=7Mv7_BQknTk=80NGfkK+92jqxtew.2719607255@mail.gmail.com>
+References: <CAOM2LQw4gV73QpgrHnFrG=7Mv7_BQknTk=80NGfkK+92jqxtew.2719607255@mail.gmail.com>
+ <CAOM2LQw4gV73QpgrHnFrG=7Mv7_BQknTk=80NGfkK+92jqxtew@mail.gmail.com>
+
+This is a multi-part message in MIME format.
+
+--_----------=_14545217521154761
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="ISO-8859-1"
+
+Hi Maggie,
+
+Our Stata programs are the major source for information on our extracts.
+
+For the CPS, there are two sets of programs. From 1979-1993, we use the
+merged outgoing rotation group (MORG) files from the National Bureau of
+Economic Research as the underlying data source. The programs for these
+years can be found here[1]. From 1994-2014, we use the raw CPS basic
+files from the Census Bureau. The programs for these years can be found
+here[2]. We hope to upload 2015 CPS data within the next couple weeks.
+
+Our SIPP program files cover the 1990-2008 panels and can be found
+here[3]. Some additional information for our SIPP files are
+available here[4].
+
+Unfortunately, the two researchers who created the SIPP extracts for
+CEPR no longer work here, and none of us who work here have experience
+with the SIPP. So, for the time being, we will not be updating our
+SIPP extracts.
+
+I hope this is helpful. Please let me know if you have any other
+questions.
+
+Best, Cherrie
+
+--
+Cherrie Bucknor
+Research Assistant
+Center for Economic and Policy Research
+1611 Connecticut Ave NW, Suite 400
+Washington, DC 20009
+202-293-5380 x105
+bucknor@cepr.net
+Twitter: @CherrieBucknor[5]
+=20
+=20
+On Wed, Feb 3, 2016, at 11:57 AM, Yiqing Huang wrote:
+> To whom it may concern,
+> =A0 =A0 Hi! I am Maggie Huang, a current Junior student at Harvard workin=
+g for Professor Christopher Jencks on the CPS and SIPP datasets. Thanks for=
+ your effort on the data extracts.=A0
+> =A0 =A0 =A0May I know if there is a documentation with description of wha=
+t is on the CPS & SIPP extracts and also what years they cover?
+>=20=20
+> Best,
+> Maggie
+=20
+
+
+Links:
+
+  1. http://ceprdata.org/cps-uniform-data-extracts/cps-outgoing-rotation-gr=
+oup/cps-org-programs/
+  2. http://ceprdata.org/cps-uniform-data-extracts/cps-basic-programs/cps-b=
+asic-monthly-programs/
+  3. http://ceprdata.org/sipp-uniform-data-extracts/sipp-programs/
+  4. http://ceprdata.org/sipp-uniform-data-extracts/sipp-documentation/
+  5. https://twitter.com/CherrieBucknor
+
+--_----------=_14545217521154761
+Content-Transfer-Encoding: 7bit
+Content-Type: text/html; charset="ISO-8859-1"
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body><div>Hi Maggie,<br></div>
+<div>&nbsp;</div>
+<div>Our Stata programs are the major source for information on our extracts.<br></div>
+<div>&nbsp;</div>
+<div>For the CPS, there are two sets of programs. From 1979-1993, we use the merged outgoing rotation group (MORG) files from the National Bureau of Economic Research as the underlying data source. The programs for these years can be found <a href="http://ceprdata.org/cps-uniform-data-extracts/cps-outgoing-rotation-group/cps-org-programs/">here</a>. From 1994-2014, we use the raw CPS basic files from the Census Bureau. The programs for these years can be found <a href="http://ceprdata.org/cps-uniform-data-extracts/cps-basic-programs/cps-basic-monthly-programs/">here</a>. We hope to upload 2015 CPS data within the next couple weeks.<br></div>
+<div>&nbsp;</div>
+<div>Our SIPP program files cover the 1990-2008 panels and can be found <a href="http://ceprdata.org/sipp-uniform-data-extracts/sipp-programs/">here</a>. Some additional information for our SIPP files are available <a href="http://ceprdata.org/sipp-uniform-data-extracts/sipp-documentation/">here</a>.<br></div>
+<div>&nbsp;</div>
+<div>Unfortunately, the two researchers who created the SIPP extracts for 
+CEPR no longer work here, and none of us who work here have experience 
+with the SIPP. So, for the time being, we will not be updating our SIPP 
+extracts.<br></div>
+<div><br>I hope this is helpful. Please let me know if you have any other questions.</div>
+<div>&nbsp;</div>
+<div>Best,<br></div>
+<div>Cherrie<br></div>
+<div>&nbsp;</div>
+<div id="sig21904465"><div class="signature">--<br></div>
+<div class="signature">Cherrie Bucknor<br></div>
+<div class="signature">Research Assistant<br></div>
+<div class="signature">Center for Economic and Policy Research<br></div>
+<div class="signature">1611 Connecticut Ave NW, Suite 400<br></div>
+<div class="signature">Washington, DC 20009<br></div>
+<div class="signature">202-293-5380 x105<br></div>
+<div class="signature"><a href="mailto:bucknor@cepr.net">bucknor@cepr.net</a><br></div>
+<div class="signature">Twitter: <a href="https://twitter.com/CherrieBucknor">@CherrieBucknor</a><br></div>
+</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>On Wed, Feb 3, 2016, at 11:57 AM, Yiqing Huang wrote:<br></div>
+<blockquote type="cite"><div dir="ltr"><div>To whom it may concern,<br></div>
+<div>&nbsp; &nbsp; Hi! I am Maggie Huang, a current Junior student at Harvard working for Professor Christopher Jencks on the CPS and SIPP datasets. Thanks for your effort on the data extracts.&nbsp;<br></div>
+<div>&nbsp; &nbsp; &nbsp;May I know if there is a documentation with description of what is on the CPS &amp; SIPP extracts and also what years they cover?<br></div>
+<div>&nbsp;</div>
+<div>Best,<br></div>
+<div>Maggie<br></div>
+</div>
+</blockquote><div>&nbsp;</div>
+</body>
+</html>
+
+--_----------=_14545217521154761--
+

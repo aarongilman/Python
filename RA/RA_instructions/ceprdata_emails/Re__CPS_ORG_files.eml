@@ -1,0 +1,135 @@
+Return-Path: <mattingly@econs.umass.edu>
+Received: from compute5.internal (compute5.nyi.internal [10.202.2.45])
+	 by sloti28t08 (Cyrus fastmail-fmjessie43568-14698-git-fastmail-14698) with LMTPA;
+	 Mon, 06 Mar 2017 13:42:35 -0500
+X-Cyrus-Session-Id: sloti28t08-2069531-1488825755-2-4413177575368827014
+X-Sieve: CMU Sieve 3.0
+X-Spam-known-sender: yes ("Address mattingly@econs.umass.edu in From header is in addressbook"),
+  in-addressbook
+X-Spam-score: 0.0
+X-Spam-hits: BAYES_00 -1.9, ME_NOAUTH 0.01, RCVD_IN_DNSWL_MED -2.3,
+  RCVD_IN_UNSUBSCOREBL 1, RP_MATCHES_RCVD -0.001, LANGUAGES en,
+  BAYES_USED global, SA_VERSION 3.4.0
+X-Spam-source: IP='128.119.103.53', Host='mailhub1.oit.umass.edu', Country='US',
+  FromHeader='edu', MailFrom='edu'
+X-Spam-charsets: plain='US-ASCII'
+X-Resolved-to: bucknor@cepr.net
+X-Delivered-to: bucknor@cepr.net
+X-Mail-from: mattingly@econs.umass.edu
+Received: from mx2 ([10.202.2.201])
+  by compute5.internal (LMTPProxy); Mon, 06 Mar 2017 13:42:35 -0500
+Received: from mx2.messagingengine.com (localhost [127.0.0.1])
+	by mailmx.nyi.internal (Postfix) with ESMTP id B39A8D85F0
+	for <bucknor@cepr.net>; Mon,  6 Mar 2017 13:42:34 -0500 (EST)
+Received: from mx2.messagingengine.com (localhost [127.0.0.1])
+    by mx2.messagingengine.com (Authentication Milter) with ESMTP
+    id 78676CB122C;
+    Mon, 6 Mar 2017 13:42:34 -0500
+Authentication-Results: mx2.messagingengine.com;
+    dkim=none (no signatures found);
+    dmarc=none (p=none) header.from=econs.umass.edu;
+    spf=none smtp.mailfrom=mattingly@econs.umass.edu smtp.helo=mailhub1.oit.umass.edu
+Received-SPF: none
+    (econs.umass.edu: No applicable sender policy available)
+    receiver=mx2.messagingengine.com;
+    identity=mailfrom;
+    envelope-from="mattingly@econs.umass.edu";
+    helo=mailhub1.oit.umass.edu;
+    client-ip=128.119.103.53
+Received: from mailhub1.oit.umass.edu (mailhub1.oit.umass.edu [128.119.103.53])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by mx2.messagingengine.com (Postfix) with ESMTPS
+	for <bucknor@cepr.net>; Mon,  6 Mar 2017 13:42:34 -0500 (EST)
+Received: from mailhub1.oit.umass.edu (localhost.localdomain [127.0.0.1])
+	by localhost (Postfix) with SMTP id 6F04E3274D7
+	for <bucknor@cepr.net>; Mon,  6 Mar 2017 13:42:33 -0500 (EST)
+Received: from umail.it.umass.edu (roundcube-03.prod.umail.umass.edu [128.119.229.54])
+	by mailhub1.oit.umass.edu (Postfix) with ESMTP id 5739E140B07
+	for <bucknor@cepr.net>; Mon,  6 Mar 2017 13:42:33 -0500 (EST)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII;
+ format=flowed
+Content-Transfer-Encoding: 7bit
+Date: Mon, 06 Mar 2017 13:42:33 -0500
+From: Michele Mattingly <mattingly@econs.umass.edu>
+To: Cherrie Bucknor <bucknor@cepr.net>
+Subject: Re: CPS ORG files
+In-Reply-To: <1488812551.3830058.901983176.32CD013F@webmail.messagingengine.com>
+References: <ca8e9d4e2ce753c2022fc7e4e47678b7.2719607255@umail.it.umass.edu>
+ <ca8e9d4e2ce753c2022fc7e4e47678b7@umail.it.umass.edu>
+ <1488812551.3830058.901983176.32CD013F@webmail.messagingengine.com>
+Message-ID: <2e99ec8f99a196364504a7bf3776740b@umail.it.umass.edu>
+X-Sender: mattingly@econs.umass.edu
+User-Agent: Roundcube Webmail/1.1.5
+X-PMX-Version: 6.2.1.2478543, Antispam-Engine: 2.7.2.2107409, Antispam-Data: 2017.3.6.183618
+X-PMX-Spam: Gauge=IIIIIIII, Probability=8%, Report='
+ HTML_00_01 0.05, HTML_00_10 0.05, BODYTEXTP_SIZE_3000_LESS 0, BODY_SIZE_1600_1699 0, BODY_SIZE_2000_LESS 0, BODY_SIZE_5000_LESS 0, BODY_SIZE_7000_LESS 0, DATE_TZ_NA 0, FROM_EDU_TLD 0, IN_REP_TO 0, MSG_THREAD 0, NO_URI_HTTPS 0, REFERENCES 0, WEBMAIL_SOURCE 0, WEBMAIL_USER_AGENT 0, __ANY_URI 0, __BOUNCE_CHALLENGE_SUBJ 0, __BOUNCE_NDR_SUBJ_EXEMPT 0, __C230066_P5 0, __CT 0, __CTE 0, __CT_TEXT_PLAIN 0, __FORWARDED_MSG 0, __HAS_FROM 0, __HAS_MSGID 0, __IN_REP_TO 0, __MIME_TEXT_ONLY 0, __MIME_TEXT_P 0, __MIME_TEXT_P1 0, __MIME_VERSION 0, __MSGID_32HEX 0, __NO_HTML_TAG_RAW 0, __PHISH_SPEAR_STRUCTURE_1 0, __REFERENCES 0, __SANE_MSGID 0, __SUBJ_ALPHA_END 0, __SUBJ_ALPHA_NEGATE 0, __TO_MALFORMED_2 0, __TO_NAME 0, __TO_NAME_DIFF_FROM_ACC 0, __TO_REAL_NAMES 0, __URI_NO_WWW 0, __USER_AGENT 0'
+
+Hi Cherrie,
+
+Thanks very much for your message.  Since I wrote the previous message, 
+someone from Stat/Transfer said upgrading would fix the problem, so I'll 
+go that route.
+
+Best,
+Michele
+
+On 2017-03-06 10:02, Cherrie Bucknor wrote:
+> Hi Michele,
+> 
+> I'm sorry, but we do not have our ORG files in SAS format. Before my
+> time here, I believe we had an old version of Stat/Transfer, but I do
+> not have access to it, and judging by your experience, I'm not sure it
+> would work anyway. I can create .csv files if that's helpful. However,
+> all of the value labels will be lost in the process, so you would have
+> to check out our Stata programs to see how variables are coded.
+> 
+> Best,
+> 
+> Cherrie
+> 
+> --
+> 
+> Cherrie Bucknor
+> 
+> Center for Economic and Policy Research
+> 
+> 1611 Connecticut Ave NW, Suite 400
+> 
+> Washington, DC 20009
+> 
+> 202-293-5380 x105
+> 
+> bucknor@cepr.net
+> 
+> @CherrieBucknor
+> 
+> On Thu, Mar 2, 2017, at 10:30 PM, Michele Mattingly wrote:
+> 
+>> Hello.
+>> 
+>> Are your CPS ORG files available in SAS format?  Your web page
+>> invites
+>> 
+>> users to inquire about this.
+>> 
+>> Previously, before you uploaded the 2.2 versions, I used
+>> Stat/Transfer
+>> 
+>> to convert the files for SAS use.  I now get an error message saying
+>> the
+>> 
+>> "new" version of Stata isn't supported.  I'm in the process of
+>> checking
+>> 
+>> with Stat/Transfer to see if upgrading their program will resolve
+>> this
+>> 
+>> issue, but in the meantime I wanted to see if you do have SAS format
+>> 
+>> files (1990-2007).
+>> 
+>> Thanks very much.
+>> 
+>> Michele Mattingly

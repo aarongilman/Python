@@ -1,0 +1,198 @@
+Message-Id: <1460132759.2225016.573046097.13D96A47@webmail.messagingengine.com>
+X-Sasl-Enc: BIqU9mgm+jK/Yi/UAclXFQ9Xvuc2mBcxKVjPxl+eA7r3 1460132759
+From: Cherrie Bucknor <bucknor@cepr.net>
+To: Wenbo Li <wli11@nd.edu>
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Type: multipart/alternative; boundary="_----------=_146013275922250163";
+ charset="utf-8"
+X-Mailer: MessagingEngine.com Webmail Interface - ajax-eadf0bcf
+X-Personalityid: 21904465
+In-Reply-To: <591A928C-F2C3-4F2C-B93C-7ECA266370E0@nd.edu>
+References: <5FB39F88-2C9E-4C97-A22C-4FBAD66B1A27.2719607255@nd.edu>
+ <5FB39F88-2C9E-4C97-A22C-4FBAD66B1A27@nd.edu>
+ <1460124489.2190242.572906201.4D389D1E@webmail.messagingengine.com>
+ <591A928C-F2C3-4F2C-B93C-7ECA266370E0@nd.edu>
+Subject: Re: question regarding CPS March
+Date: Fri, 08 Apr 2016 12:25:59 -0400
+
+This is a multi-part message in MIME format.
+
+--_----------=_146013275922250163
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain
+
+Hi Wenbo,
+ 
+The income variables are adjusted to 2014$ using the CPI-U-RS. You can
+see how we did this in our cepr_march_real.do[1] program.
+ 
+Our cepr_march_income_real.do[2] program lists the inflation-adjusted
+variable names.
+ 
+Generally these variables add an "r" to the nominal variable name. So
+for instance, our nominal variable measuring person's total income is
+"incp_all", and our inflation-adjusted version is "rincp_all".
+ 
+Best,
+Cherrie
+ 
+--
+Cherrie Bucknor
+Research Assistant
+Center for Economic and Policy Research
+1611 Connecticut Ave NW, Suite 400
+Washington, DC 20009
+202-293-5380 x105
+bucknor@cepr.net
+Twitter: @CherrieBucknor[3]
+ 
+ 
+On Fri, Apr 8, 2016, at 12:05 PM, Wenbo Li wrote:
+> Dear Cherrie,
+>
+> Thank you for your response. I have a follow-up question. Are the
+> income variables adjusted for inflation, and if not, how can I adjust
+> it using the CPS March data? Thank you again, and I am looking forward
+> to hearing back from you.
+>
+> Best regards,
+> Wenbo
+> On Apr 8, 2016, at 10:08 AM, Cherrie Bucknor wrote:
+>
+>> Hi Wenbo,
+>>
+>> Sometimes the Census will make changes to the March CPS, but our
+>> extract keeps the variables consistent across years, so that's what
+>> we mean by "uniform".
+>>
+>> Our Stata programs serve as the main source for how we recode
+>> variables, and you can find them here[4].
+>>
+>> Best,
+>> Cherrie
+>>
+>> --
+>> Cherrie Bucknor
+>> Research Assistant
+>> Center for Economic and Policy Research
+>> 1611 Connecticut Ave NW, Suite 400
+>> Washington, DC 20009
+>> 202-293-5380 x105
+>> bucknor@cepr.net
+>> Twitter: @CherrieBucknor[https://twitter.com/CherrieBucknor]
+>>
+>> On Thu, Apr 7, 2016, at 08:06 PM, Wenbo Li wrote:
+>> > Dear Sir/Madam,
+>> >
+>> > I am a PhD student at the University of Notre Dame. I have a
+>> > question
+>> > regarding the CPS March data and wonder if you can provide me
+>> > with some
+>> > help. In particular, CEPR provides CPS Uniform Data Extracts. I
+>> > wonder
+>> > what "uniform" means here. Does it affect any analysis done on the
+>> > data,
+>> > e.g. calculating weighted means compared to the CPS March data
+>> >      downloaded
+>> > form NBER? Thank you, and I am looking forward to hearing back
+>> > from you.
+>> >
+>> > Best regards,
+>> > Wenbo Li
+>> > Department of Economics
+>> > University of Notre Dame
+>>
+ 
+
+Links:
+
+  1. http://ceprdata.org/wp-content/cps/programs/march/cepr_march_real.do
+  2. http://ceprdata.org/wp-content/cps/programs/march/cepr_march_income_real.do
+  3. https://twitter.com/CherrieBucknor
+  4. http://ceprdata.org/cps-uniform-data-extracts/march-cps-supplement/march-cps-programs/
+
+--_----------=_146013275922250163
+Content-Transfer-Encoding: 7bit
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body><div style="font-family:Arial;">Hi Wenbo,<br></div>
+<div style="font-family:Arial;">&nbsp;</div>
+<div style="font-family:Arial;">The income variables are adjusted to 2014$ using the CPI-U-RS. You can see how we did this in our <a href="http://ceprdata.org/wp-content/cps/programs/march/cepr_march_real.do">cepr_march_real.do</a> program.<br></div>
+<div style="font-family:Arial;">&nbsp;</div>
+<div style="font-family:Arial;">Our <a href="http://ceprdata.org/wp-content/cps/programs/march/cepr_march_income_real.do">cepr_march_income_real.do</a> program lists the inflation-adjusted variable names.<br></div>
+<div style="font-family:Arial;">&nbsp;</div>
+<div style="font-family:Arial;">Generally these variables add an "r" to the nominal variable name. So for instance, our nominal variable measuring person's total income is "incp_all", and our inflation-adjusted version is "rincp_all".<br></div>
+<div style="font-family:Arial;">&nbsp;</div>
+<div style="font-family:Arial;">Best,<br></div>
+<div style="font-family:Arial;">Cherrie<br></div>
+<div style="font-family:Arial;">&nbsp;</div>
+<div id="sig21904465"><div class="signature">--<br></div>
+<div class="signature">Cherrie Bucknor<br></div>
+<div class="signature">Research Assistant<br></div>
+<div class="signature">Center for Economic and Policy Research<br></div>
+<div class="signature">1611 Connecticut Ave NW, Suite 400<br></div>
+<div class="signature">Washington, DC 20009<br></div>
+<div class="signature">202-293-5380 x105<br></div>
+<div class="signature"><a href="mailto:bucknor@cepr.net">bucknor@cepr.net</a><br></div>
+<div class="signature">Twitter: <a href="https://twitter.com/CherrieBucknor">@CherrieBucknor</a><br></div>
+</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>On Fri, Apr 8, 2016, at 12:05 PM, Wenbo Li wrote:<br></div>
+<blockquote type="cite"><div style="font-family:Arial;">Dear Cherrie,<br></div>
+<div>&nbsp;</div>
+<div>Thank you for your response. I have a follow-up question. Are the income variables adjusted for inflation, and if not, how can I adjust it using the CPS March data? Thank you again, and I am looking forward to hearing back from you.<br></div>
+<div>&nbsp;</div>
+<div>Best regards,<br></div>
+<div><div style="font-family:Arial;">Wenbo<br></div>
+<div><div>On Apr 8, 2016, at 10:08 AM, Cherrie Bucknor wrote:<br></div>
+<div style="font-family:Arial;">&nbsp;</div>
+<blockquote type="cite"><div><div>Hi Wenbo,<br></div>
+<div>&nbsp;<br></div>
+<div>Sometimes the Census will make changes to the March CPS, but our extract keeps the variables consistent across years, so that's what we mean by "uniform".<br></div>
+<div>&nbsp;<br></div>
+<div>Our Stata programs serve as the main source for how we recode variables, and you can find them <a href="http://ceprdata.org/cps-uniform-data-extracts/march-cps-supplement/march-cps-programs/">here</a>.<br></div>
+<div style="font-family:Arial;">&nbsp;<br></div>
+<div style="font-family:Arial;">Best,<br></div>
+<div style="font-family:Arial;">Cherrie<br></div>
+<div>&nbsp;<br></div>
+<div>--<br></div>
+<div>Cherrie Bucknor<br></div>
+<div>Research Assistant<br></div>
+<div>Center for Economic and Policy Research<br></div>
+<div>1611 Connecticut Ave NW, Suite 400<br></div>
+<div>Washington, DC 20009<br></div>
+<div>202-293-5380 x105<br></div>
+<div><a href="mailto:bucknor@cepr.net">bucknor@cepr.net</a><br></div>
+<div>Twitter: @CherrieBucknor[https://twitter.com/CherrieBucknor]<br></div>
+<div>&nbsp;<br></div>
+<div>On Thu, Apr 7, 2016, at 08:06 PM, Wenbo Li wrote:<br></div>
+<div>&gt; Dear Sir/Madam,<br></div>
+<div>&gt;<br></div>
+<div>&gt; I am a PhD student at the University of Notre Dame. I have a question<br></div>
+<div>&gt; regarding the CPS March data and wonder if you can provide me with some<br></div>
+<div>&gt; help. In particular, CEPR provides CPS Uniform Data Extracts. I wonder<br></div>
+<div>&gt; what "uniform" means here. Does it affect any analysis done on the data,<br></div>
+<div>&gt; e.g. calculating weighted means compared to the CPS March data downloaded<br></div>
+<div>&gt; form NBER? Thank you, and I am looking forward to hearing back from you.<br></div>
+<div>&gt;<br></div>
+<div>&gt; Best regards,<br></div>
+<div>&gt; Wenbo Li<br></div>
+<div>&gt; Department of Economics<br></div>
+<div>&gt; University of Notre Dame<br></div>
+<div>&nbsp;<br></div>
+</div>
+</blockquote></div>
+</div>
+</blockquote><div style="font-family:Arial;">&nbsp;</div>
+</body>
+</html>
+
+--_----------=_146013275922250163--
+

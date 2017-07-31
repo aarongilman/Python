@@ -1,0 +1,195 @@
+Message-Id: <1456774219.860429.535360954.1E120014@webmail.messagingengine.com>
+X-Sasl-Enc: hBRgunMR0SivliOt+HIVuAH8+MxF/Y51DZkPhjkbuSEQ 1456774219
+From: Cherrie Bucknor <bucknor@cepr.net>
+To: Kathryn Zickuhr <kz55@georgetown.edu>
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Type: multipart/alternative; boundary="_----------=_14567742208604291";
+ charset="utf-8"
+X-Mailer: MessagingEngine.com Webmail Interface - ajax-aeec9b65
+X-Personalityid: 21904465
+Subject: Re: CPS ORG Extract question
+Date: Mon, 29 Feb 2016 14:30:19 -0500
+In-Reply-To: <CAHRj9e5-RwOXm9VEkW0BbiJaAfaZAiEE3D1ufUwkfA-3Fvx95Q.2719607255@mail.gmail.com>
+References: <CAHRj9e7B27C5p0a3_QcztJ+qnj2iXX+N46=57kGiEe2jXmC+rQ@mail.gmail.com>
+ <CAHRj9e5-RwOXm9VEkW0BbiJaAfaZAiEE3D1ufUwkfA-3Fvx95Q.2719607255@mail.gmail.com>
+ <CAHRj9e5-RwOXm9VEkW0BbiJaAfaZAiEE3D1ufUwkfA-3Fvx95Q@mail.gmail.com>
+
+This is a multi-part message in MIME format.
+
+--_----------=_14567742208604291
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+Hi Kathryn,
+
+So sorry for the late response. I was on vacation.
+
+To do analysis at the individual level, you should use the orgwgt
+variable. If you use frequency weights, divide  orgwgt by 12 and round
+to the nearest whole number [ex: gen weight=3Dround(orgwgt,12,1).
+
+We have a family relationship variable (famrel94) that should help you
+to determine the relationship to the reference person.
+
+I hope this is helpful.
+
+Let me know if you have any other questions.
+
+Best, Cherrie
+
+--
+Cherrie Bucknor
+Research Assistant
+Center for Economic and Policy Research
+1611 Connecticut Ave NW, Suite 400
+Washington, DC 20009
+202-293-5380 x105
+bucknor@cepr.net
+Twitter: @CherrieBucknor[1]
+=20
+=20
+On Tue, Feb 23, 2016, at 04:49 PM, Kathryn Zickuhr wrote:
+> Good afternoon! Just wanted to check on this.
+> Thanks,
+> Kathryn
+>=20=20
+> -----
+
+
+> *Kathryn Zickuhr*
+> Master of Public Policy Candidate, 2016
+> McCourt School of Public Policy
+> kz55@georgetown.edu | kathrynzickuhr.com
+
+>=20
+
+
+>=20=20
+> On Tue, Feb 16, 2016 at 5:24 PM, Kathryn Zickuhr <kz55@georgetown.edu> wr=
+ote:
+>> Good afternoon,
+>>=20=20
+>> I'm just starting to work with your post-1993 ORG extracts in Stata=E2=
+=80=94thank you for the great resource! How should I set up an analysis at =
+the individual level (versus the household or family level), in terms of we=
+ights and the relationship to reference person?
+>>=20=20
+>> Best,
+>> Kathryn
+>> -----
+
+
+>> *Kathryn Zickuhr*
+>> Master of Public Policy Candidate, 2016
+>> Georgetown McCourt School of Public Policy
+>> kz55@georgetown.edu
+
+=20
+
+
+Links:
+
+  1. https://twitter.com/CherrieBucknor
+
+--_----------=_14567742208604291
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body><div>Hi Kathryn,<br></div>
+<div>&nbsp;</div>
+<div>So sorry for the late response. I was on vacation.<br></div>
+<div>&nbsp;</div>
+<div>To do analysis at the individual level, you should use the orgwgt vari=
+able. If you use frequency weights, divide
+ orgwgt by 12 and round to the nearest whole number [ex: gen=20
+weight=3Dround(orgwgt,12,1).<br></div>
+<div>&nbsp;</div>
+<div>We have a family relationship variable (famrel94) that should help you=
+ to determine the relationship to the reference person.<br></div>
+<div>&nbsp;</div>
+<div>I hope this is helpful.<br></div>
+<div>&nbsp;</div>
+<div>Let me know if you have any other questions.<br></div>
+<div>&nbsp;</div>
+<div>Best,<br></div>
+<div>Cherrie<br></div>
+<div>&nbsp;</div>
+<div id=3D"sig21904465"><div class=3D"signature">--<br></div>
+<div class=3D"signature">Cherrie Bucknor<br></div>
+<div class=3D"signature">Research Assistant<br></div>
+<div class=3D"signature">Center for Economic and Policy Research<br></div>
+<div class=3D"signature">1611 Connecticut Ave NW, Suite 400<br></div>
+<div class=3D"signature">Washington, DC 20009<br></div>
+<div class=3D"signature">202-293-5380 x105<br></div>
+<div class=3D"signature"><a href=3D"mailto:bucknor@cepr.net">bucknor@cepr.n=
+et</a><br></div>
+<div class=3D"signature">Twitter: <a href=3D"https://twitter.com/CherrieBuc=
+knor">@CherrieBucknor</a><br></div>
+</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>On Tue, Feb 23, 2016, at 04:49 PM, Kathryn Zickuhr wrote:<br></div>
+<blockquote type=3D"cite"><div dir=3D"ltr"><div>Good afternoon! Just wanted=
+ to check on this.<br></div>
+<div>Thanks,<br></div>
+<div>Kathryn<br></div>
+</div>
+<div><div>&nbsp;</div>
+<div><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div dir=3D"ltr"><p><span>=
+-----</span><br></p><p><b>Kathryn Zickuhr</b><span style=3D"font-size:12.8p=
+x" class=3D"size"><br></span><span style=3D"font-size:12.8px" class=3D"size=
+">Master of Public Policy Candidate, 2016<br></span><span style=3D"font-siz=
+e:12.8px" class=3D"size">McCourt School of Public Policy<br></span><a style=
+=3D"font-size:12.8px;" href=3D"mailto:kz55@georgetown.edu">kz55@georgetown.=
+edu</a><span style=3D"font-size:12.8px" class=3D"size"> | </span><a style=
+=3D"font-size:12.8px;" href=3D"http://kathrynzickuhr.com">kathrynzickuhr.co=
+m</a><span style=3D"font-size:12.8px" class=3D"size"></span></p><p><br></p>=
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>&nbsp;</div>
+<div><div>On Tue, Feb 16, 2016 at 5:24 PM, Kathryn Zickuhr <span dir=3D"ltr=
+">&lt;<a href=3D"mailto:kz55@georgetown.edu">kz55@georgetown.edu</a>&gt;</s=
+pan> wrote:<br></div>
+<blockquote style=3D"margin-top:0px;margin-right:0px;margin-bottom:0px;marg=
+in-left:0.8ex;border-left-width:1px;border-left-style:solid;border-left-col=
+or:rgb(204, 204, 204);padding-left:1ex;"><div dir=3D"ltr"><div>Good afterno=
+on,<br></div>
+<div>&nbsp;</div>
+<div>I'm just starting to work with your post-1993 ORG extracts in Stata=E2=
+=80=94thank you for the great resource! How should I set up an analysis at =
+the individual level (versus the household or family level), in terms of we=
+ights and the relationship to reference person?<br></div>
+<div>&nbsp;</div>
+<div>Best,<br></div>
+<div><div>Kathryn<br></div>
+<div><div><div dir=3D"ltr"><div><div dir=3D"ltr"><p><span>-----</span><br><=
+/p><p><b>Kathryn Zickuhr</b><span style=3D"font-size:12.8px" class=3D"size"=
+><br></span><span style=3D"font-size:12.8px" class=3D"size">Master of Publi=
+c Policy Candidate, 2016<br></span><span style=3D"font-size:12.8px" class=
+=3D"size">Georgetown McCourt School of Public Policy<br></span><span style=
+=3D"font-size:12.8px" class=3D"size"><a href=3D"mailto:kz55@georgetown.edu"=
+>kz55@georgetown.edu</a></span></p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote></div>
+</div>
+</blockquote><div>&nbsp;</div>
+</body>
+</html>
+
+--_----------=_14567742208604291--
+

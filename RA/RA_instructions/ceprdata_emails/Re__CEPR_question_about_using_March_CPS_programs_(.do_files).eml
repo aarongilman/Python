@@ -1,0 +1,294 @@
+Return-Path: <ruckerj@berkeley.edu>
+Received: from compute5.internal (compute5.nyi.internal [10.202.2.45])
+	 by sloti28t08 (Cyrus fastmail-fmjessie43971-14966-git-fastmail-14966) with LMTPA;
+	 Fri, 28 Apr 2017 11:06:30 -0400
+X-Cyrus-Session-Id: sloti28t08-155038-1493391990-2-12082806792950841962
+X-Sieve: CMU Sieve 3.0
+X-Spam-known-sender: yes ("Address ruckerj@berkeley.edu in From header is in addressbook"),
+  in-addressbook
+X-Spam-score: 0.0
+X-Spam-hits: BAYES_00 -1.9, HTML_MESSAGE 0.001, RCVD_IN_DNSWL_NONE -0.0001,
+  RCVD_IN_MSPIKE_H3 -0.01, RCVD_IN_MSPIKE_WL -0.01, SPF_PASS -0.001,
+  LANGUAGES en, BAYES_USED global, SA_VERSION 3.4.0
+X-Spam-source: IP='209.85.213.177', Host='mail-yb0-f177.google.com', Country='US',
+  FromHeader='edu', MailFrom='edu'
+X-Spam-charsets: plain='UTF-8', html='UTF-8'
+X-Resolved-to: bucknor@cepr.net
+X-Delivered-to: bucknor@cepr.net
+X-Mail-from: ruckerj@berkeley.edu
+Received: from mx1 ([10.202.2.200])
+  by compute5.internal (LMTPProxy); Fri, 28 Apr 2017 11:06:30 -0400
+Received: from mx1.messagingengine.com (localhost [127.0.0.1])
+	by mailmx.nyi.internal (Postfix) with ESMTP id 7A7582C877
+	for <bucknor@cepr.net>; Fri, 28 Apr 2017 11:06:28 -0400 (EDT)
+Received: from mx1.messagingengine.com (localhost [127.0.0.1])
+    by mx1.messagingengine.com (Authentication Milter) with ESMTP
+    id B297F4897B5;
+    Fri, 28 Apr 2017 11:06:28 -0400
+Authentication-Results: mx1.messagingengine.com;
+    dkim=pass (2048-bit rsa key) header.d=berkeley-edu.20150623.gappssmtp.com header.i=@berkeley-edu.20150623.gappssmtp.com header.b=tLulDwez;
+    dmarc=none (p=none) header.from=berkeley.edu;
+    spf=pass smtp.mailfrom=ruckerj@berkeley.edu smtp.helo=mail-yb0-f177.google.com;
+    x-google-dkim=pass (2048-bit rsa key) header.d=1e100.net header.i=@1e100.net header.b=mJUEIui4
+Received-SPF: pass
+    (berkeley.edu: Sender is authorized to use 'ruckerj@berkeley.edu' in 'mfrom' identity (mechanism 'include:_spf.google.com' matched))
+    receiver=mx1.messagingengine.com;
+    identity=mailfrom;
+    envelope-from="ruckerj@berkeley.edu";
+    helo=mail-yb0-f177.google.com;
+    client-ip=209.85.213.177
+Received: from mail-yb0-f177.google.com (mail-yb0-f177.google.com [209.85.213.177])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by mx1.messagingengine.com (Postfix) with ESMTPS
+	for <bucknor@cepr.net>; Fri, 28 Apr 2017 11:06:28 -0400 (EDT)
+Received: by mail-yb0-f177.google.com with SMTP id 11so16115707yby.0
+        for <bucknor@cepr.net>; Fri, 28 Apr 2017 08:06:28 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=berkeley-edu.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:in-reply-to:references:date:message-id:subject:to;
+        bh=NrG5RLM15cFsXhUdqAK5RSyTYoF3zA8Jzk42xwiDchU=;
+        b=tLulDwezM5vOu7tlVmlPHDJ5vl8d5Qh9+03wpQoq8SujNDMI7uurrgq0RmjIfC8OHh
+         6r8O4KWMhlTa05xN+s1ysc1agqM0r3k33JQqWY1OLa4ML40rGOmj6DSZ6ZRBwK8Wk3TO
+         gyapy2Afc7Hxbw4bGY6xRpRQk4iVNxE6F+5ikh83y2nssVNOn2EPArQXJgLAnl90Bwr+
+         vmFf37usEItiig9sSAcPZHtHKkZUSgqWrtDGn1kI+nzPyD+0zzaRrkJQPvN/v3T9YEzA
+         afvfN8G+u03xPQaFHHE3yyQoHX6SaluZuLyLln/M8RJiw5IGTOtZKrLFB/80hhlEcCI1
+         o6FA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:in-reply-to:references:date
+         :message-id:subject:to;
+        bh=NrG5RLM15cFsXhUdqAK5RSyTYoF3zA8Jzk42xwiDchU=;
+        b=mJUEIui417mqb00HF4/fz5i453FoPAQA8EPGiwa6h1Q+rkpEM1hn/Bup5wO4b7P1fH
+         AX9akw3dzagxbjHVOmy75f0Keg2lcPpTNUs/Hu6FrGuReA0gXc5LNjbKEuMBcTfp2/yL
+         /o2bwjSQNvrUMlW65Xk7zVmZO8W0OOA1TRv6LZDy4OI/N0UtN1muoaLcccfy34Diajsn
+         rf9Alj2MXtRuePACX7Ei8ZotXDNRgICVJLF34gOQ6PmO8i6RBP8j1+Vurtl+LNjqlUqT
+         XvK49wqyRiV7Wj4os3eDa0K4FKHmfor0YoB2wiirocjAxnCRu8BusKX5JTpZk8MA5eh1
+         8cmQ==
+X-Gm-Message-State: AN3rC/59umuiRkCcRNN745crX/W3q5McpIUs6VKaVsEJ3QLcBb9lFARz
+	UccSHH/NY9lP1Bqox6hWtsFA5zru57oW
+X-Received: by 10.37.192.79 with SMTP id c76mr9635831ybf.69.1493391986375;
+ Fri, 28 Apr 2017 08:06:26 -0700 (PDT)
+Mime-Version: 1.0 (1.0)
+From: Rucker Johnson <ruckerj@berkeley.edu>
+In-Reply-To: <1493215264.106954.956921904.5B57FD6E@webmail.messagingengine.com>
+References: <CAM706wU0rcDg-9qZ1+XFBd34Hx+RyhQ=ZPkps0W5B+0=j1HLUQ.2719607255@mail.gmail.com>
+ <CAM706wU0rcDg-9qZ1+XFBd34Hx+RyhQ=ZPkps0W5B+0=j1HLUQ@mail.gmail.com> <1493215264.106954.956921904.5B57FD6E@webmail.messagingengine.com>
+Date: Fri, 28 Apr 2017 08:06:25 -0700
+Message-ID: <-5120706072151334441@unknownmsgid>
+Subject: Re: CEPR question about using March CPS programs (.do files)
+To: Cherrie Bucknor <bucknor@cepr.net>
+Content-Type: multipart/alternative; boundary=001a11393ceadbdb5b054e3b6ace
+
+--001a11393ceadbdb5b054e3b6ace
+Content-Type: text/plain; charset=UTF-8
+
+Dear Cherrie:
+Thank you very much for the prompt response.  That's very helpful and
+exactly the information I needed.  Thanks!
+Best,
+Rucker
+-------------------------
+Rucker Johnson
+Associate Professor & NBER
+University of California, Berkeley
+Goldman School of Public Policy
+Email: ruckerj@berkeley.edu
+http://socrates.berkeley.edu/~ruckerj
+-------------------------
+
+
+On Apr 26, 2017, at 7:01 AM, Cherrie Bucknor <bucknor@cepr.net> wrote:
+
+Hi Rucker,
+
+Unicon is no longer in business, but through a collaboration with
+IPUMS-CPS, Unicon has transfered their data and documentation to IPUMS-CPS.
+You can find out more here
+<https://cps.ipums.org/cps/collaboration_announce.shtml> and here
+<https://cps.ipums.org/cps/collaboration.shtml>.
+
+Best,
+Cherrie
+
+--
+Cherrie Bucknor
+Center for Economic and Policy Research
+1611 Connecticut Ave NW, Suite 400
+Washington, DC 20009
+202-293-5380 x105
+bucknor@cepr.net
+@CherrieBucknor
+
+
+On Tue, Apr 25, 2017, at 10:46 AM, Rucker Johnson wrote:
+
+Dear CEPR staff:
+
+I am working with the March CPS
+<http://ceprdata.org/cps-uniform-data-extracts/march-cps-supplement/> data
+<http://ceprdata.org/cps-uniform-data-extracts/march-cps-supplement/march-cps-data/>
+ and programs
+<http://ceprdata.org/cps-uniform-data-extracts/march-cps-supplement/march-cps-programs/>.
+The March CPS Programs page states, "To run the CEPR March CPS programs,
+you first need to purchase the March CPS extract created by the Unicon
+Research Corporation <http://www.unicon.com/>, which are the underlying
+source of the CEPR March extracts from 1980-2013". I am unable to locate
+the Unicon March CPS extract. The link to the Unicon Research Corporation
+appears to be dead. How can acquire the Unicon March CPS extract and the
+associated documentation?
+
+Thank you in advance for your assistance!
+Best,
+Rucker
+
+
+_______________________
+Rucker Johnson
+Associate Professor & NBER
+University of California, Berkeley
+Goldman School of Public Policy
+
+Email: ruckerj@berkeley.edu
+Web:http://socrates.berkeley.edu/~ruckerj
+_________________________
+
+--001a11393ceadbdb5b054e3b6ace
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"content-type" content=3D"text/html; charset=
+=3Dutf-8"></head><body dir=3D"auto"><div><span></span></div><div><meta http=
+-equiv=3D"content-type" content=3D"text/html; charset=3Dutf-8"><div>Dear Ch=
+errie:</div><div id=3D"AppleMailSignature">Thank you very much for the prom=
+pt response.=C2=A0 That&#39;s very helpful and exactly the information I ne=
+eded.=C2=A0 Thanks!</div><div id=3D"AppleMailSignature">Best,</div><div id=
+=3D"AppleMailSignature">Rucker=C2=A0</div><div id=3D"AppleMailSignature"><d=
+iv style=3D"direction:inherit"><div><span style=3D"background-color:rgba(25=
+5,255,255,0)">-------------------------</span></div><div><span style=3D"bac=
+kground-color:rgba(255,255,255,0)">Rucker Johnson</span></div><div><span st=
+yle=3D"background-color:rgba(255,255,255,0)">Associate Professor &amp; NBER=
+</span></div><div><span style=3D"background-color:rgba(255,255,255,0)">Univ=
+ersity of California, Berkeley</span></div><div><span style=3D"background-c=
+olor:rgba(255,255,255,0)">Goldman School of Public Policy</span></div><div>=
+<span style=3D"background-color:rgba(255,255,255,0)">Email:=C2=A0<a target=
+=3D"_blank">ruckerj@berkeley.edu</a></span></div><div><a href=3D"http://soc=
+rates.berkeley.edu/~ruckerj" target=3D"_blank" style=3D"text-decoration:non=
+e;background-color:rgba(255,255,255,0)"><font color=3D"#000000">http://socr=
+ates.berkeley.edu/~<wbr>ruckerj</font></a></div><div><span style=3D"backgro=
+und-color:rgba(255,255,255,0)">-------------------------</span></div><div><=
+div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><p style=3D"direction:inh=
+erit"><span style=3D"background-color:rgba(255,255,255,0)"><img src=3D"http=
+s://docs.google.com/uc?export=3Ddownload&amp;id=3D0BzbDa36q6_Mtc01hM3Z6Sy0z=
+Zzg&amp;revid=3D0BzbDa36q6_MtTjc0UEg5MlNvTmNBb3VJY3h4bWxFUFN3NnJRPQ" width=
+=3D"96" height=3D"64" style=3D"border: none;"></span></p></div></div></div>=
+</div></div></div><div><br>On Apr 26, 2017, at 7:01 AM, Cherrie Bucknor &lt=
+;<a href=3D"mailto:bucknor@cepr.net">bucknor@cepr.net</a>&gt; wrote:<br><br=
+></div><blockquote type=3D"cite"><div>
+
+
+<title></title>
+
+<div style=3D"font-family:&#39;Times New Roman&#39;,times,serif">Hi Rucker,=
+<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif"><br></di=
+v>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif">Unicon i=
+s no longer in business, but through a collaboration with IPUMS-CPS, Unicon=
+ has transfered their data and documentation to IPUMS-CPS. You can find out=
+ more <a href=3D"https://cps.ipums.org/cps/collaboration_announce.shtml">he=
+re</a> and <a href=3D"https://cps.ipums.org/cps/collaboration.shtml">here</=
+a>.<br></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif"><br></di=
+v>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif">Best,<br=
+></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif">Cherrie<=
+br></div>
+<div style=3D"font-family:&#39;Times New Roman&#39;,times,serif"><br></div>
+<div id=3D"sig21904465"><div class=3D"signature"><span class=3D"size" style=
+=3D"font-size:16px"><span class=3D"font" style=3D"font-family:&quot;Times N=
+ew Roman&quot;,times,serif,sans-serif">--</span></span><br></div>
+<div class=3D"signature"><span class=3D"size" style=3D"font-size:16px"><spa=
+n class=3D"font" style=3D"font-family:&quot;Times New Roman&quot;,times,ser=
+if,sans-serif">Cherrie Bucknor</span></span><br></div>
+<div class=3D"signature"><span class=3D"size" style=3D"font-size:16px"><spa=
+n class=3D"font" style=3D"font-family:&quot;Times New Roman&quot;,times,ser=
+if,sans-serif">Center for Economic and Policy Research</span><span class=3D=
+"font" style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-se=
+rif"></span></span><br></div>
+<div class=3D"signature"><span class=3D"size" style=3D"font-size:16px"><spa=
+n class=3D"font" style=3D"font-family:&quot;Times New Roman&quot;,times,ser=
+if,sans-serif">1611 Connecticut Ave NW, Suite 400</span><span class=3D"font=
+" style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif">=
+</span></span><br></div>
+<div class=3D"signature"><span class=3D"size" style=3D"font-size:16px"><spa=
+n class=3D"font" style=3D"font-family:&quot;Times New Roman&quot;,times,ser=
+if,sans-serif">Washington, DC 20009</span><span class=3D"font" style=3D"fon=
+t-family:&quot;Times New Roman&quot;,times,serif,sans-serif"></span></span>=
+<br></div>
+<div class=3D"signature"><span class=3D"size" style=3D"font-size:16px"><spa=
+n class=3D"font" style=3D"font-family:&quot;Times New Roman&quot;,times,ser=
+if,sans-serif">202-293-5380 x105</span><span class=3D"font" style=3D"font-f=
+amily:&quot;Times New Roman&quot;,times,serif,sans-serif"></span></span><br=
+></div>
+<div class=3D"signature"><a href=3D"mailto:bucknor@cepr.net"><span class=3D=
+"size" style=3D"font-size:16px"><span class=3D"font" style=3D"font-family:&=
+quot;Times New Roman&quot;,times,serif,sans-serif">bucknor@cepr.net</span><=
+/span></a><span class=3D"size" style=3D"font-size:16px"><span class=3D"font=
+" style=3D"font-family:&quot;Times New Roman&quot;,times,serif,sans-serif">=
+</span></span><br></div>
+<div class=3D"signature"><a><span class=3D"size" style=3D"font-size:16px"><=
+span class=3D"font" style=3D"font-family:&quot;Times New Roman&quot;,times,=
+serif,sans-serif">@CherrieBucknor</span></span></a><br></div>
+</div>
+<div><br></div>
+<div><br></div>
+<div>On Tue, Apr 25, 2017, at 10:46 AM, Rucker Johnson wrote:<br></div>
+<blockquote type=3D"cite"><div dir=3D"ltr"><div style=3D"font-size:12.8px">=
+Dear CEPR staff:<br></div>
+<div style=3D"font-size:12.8px"><br></div>
+<div style=3D"font-size:12.8px">I am working with the=C2=A0<a href=3D"http:=
+//ceprdata.org/cps-uniform-data-extracts/march-cps-supplement/">March CPS</=
+a>=C2=A0<a href=3D"http://ceprdata.org/cps-uniform-data-extracts/march-cps-=
+supplement/march-cps-data/">data</a>=C2=A0and=C2=A0<a href=3D"http://ceprda=
+ta.org/cps-uniform-data-extracts/march-cps-supplement/march-cps-programs/">=
+programs</a>. The March CPS Programs=C2=A0page states, &quot;To run the CEP=
+R March CPS programs, you first need to purchase the March CPS extract crea=
+ted by the=C2=A0<a href=3D"http://www.unicon.com/">Unicon Research Corporat=
+ion</a>, which are the underlying source of the CEPR March extracts from 19=
+80-2013&quot;. I am unable to locate the Unicon March CPS extract. The link=
+ to the Unicon Research Corporation appears to be dead. How can acquire the=
+ Unicon March CPS extract and the associated documentation?<br></div>
+<div style=3D"font-size:12.8px"><br></div>
+<div style=3D"font-size:12.8px">Thank you in advance for your assistance!<b=
+r></div>
+<div style=3D"font-size:12.8px">Best,<br></div>
+<div style=3D"font-size:12.8px">Rucker<br></div>
+<div><div><p><br></p><p></p><div style=3D"font-family:&quot;Times New Roman=
+&quot;,times,serif"><span class=3D"font" style=3D"font-family:&quot;courier=
+ new&quot;"><span class=3D"size" style=3D"font-size:10pt">_________________=
+______<br> </span></span><span class=3D"font" style=3D"font-family:&quot;co=
+urier new&quot;"><span class=3D"size" style=3D"font-size:10pt"></span></spa=
+n></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif"> <span>R=
+ucker Johnson<br> Associate Professor &amp; NBER<br> University of Californ=
+ia, Berkeley<br> Goldman School<span>=C2=A0of Public Policy<br> </span>=C2=
+=A0<br> Email:<span>=C2=A0</span><a href=3D"mailto:ruckerj@berkeley.edu"><s=
+pan class=3D"colour" style=3D"color:rgb(17,85,204)">ruckerj@berkeley.edu</s=
+pan></a><br> Web:<a href=3D"http://socrates.berkeley.edu/~ruckerj"><span cl=
+ass=3D"colour" style=3D"color:rgb(17,85,204)">http://socrates.berkeley.edu/=
+~ruckerj</span></a></span></div>
+<div style=3D"font-family:&quot;Times New Roman&quot;,times,serif"> <span>_=
+________________________</span><span class=3D"font" style=3D"font-family:&q=
+uot;courier new&quot;"></span><br></div>
+<p></p><p><br></p></div>
+</div>
+</div>
+</blockquote><div style=3D"font-family:&quot;Times New Roman&quot;,times,se=
+rif"><br></div>
+
+
+</div></blockquote></div></body></html>
+
+--001a11393ceadbdb5b054e3b6ace--

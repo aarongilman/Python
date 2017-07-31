@@ -1,0 +1,280 @@
+Message-Id: <1455657410.2488883.523136498.6EDF55DE@webmail.messagingengine.com>
+X-Sasl-Enc: ZEnVNEKeP9uoy1NUXP7BUAn01KHF7T+byXeRN5hgjZev 1455657410
+From: Cherrie Bucknor <bucknor@cepr.net>
+To: Daniel J Galvin <galvin@northwestern.edu>
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Type: multipart/alternative; boundary="_----------=_145565741124888833";
+ charset="utf-8"
+X-Mailer: MessagingEngine.com Webmail Interface - ajax-aeec9b65
+X-Personalityid: 21904465
+In-Reply-To: <56C39058.5060908@northwestern.edu>
+References: <56BA5DC0.6080801.2719607255@northwestern.edu>
+ <56BA5DC0.6080801@northwestern.edu>
+ <1455643720.2435490.522889578.4D746ABC@webmail.messagingengine.com>
+ <56C39058.5060908@northwestern.edu>
+Subject: Re: CPS MORG question
+Date: Tue, 16 Feb 2016 16:16:51 -0500
+
+This is a multi-part message in MIME format.
+
+--_----------=_145565741124888833
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain
+
+No problem. I'm happy to help!
+
+--
+Cherrie Bucknor
+Research Assistant
+Center for Economic and Policy Research
+1611 Connecticut Ave NW, Suite 400
+Washington, DC 20009
+202-293-5380 x105
+bucknor@cepr.net
+Twitter: @CherrieBucknor[1]
+ 
+ 
+On Tue, Feb 16, 2016, at 04:10 PM, Daniel J Galvin wrote:
+> Dear Cherrie,
+>  
+> 
+      Thank you so much, this is extremely helpful information. I really
+      appreciate your taking the time to look this up and write back.
+      Many thanks! 
+>  
+> 
+      Best,
+> 
+      Dan Galvin
+> -- 
+Daniel Galvin
+Associate Professor of Political Science
+Director of Undergraduate Studies
+Faculty Fellow, Institute for Policy Research
+Northwestern University
+Department of Political Science
+601 University Place
+Evanston, IL 60208
+(847) 491-2641
+> http://www.polisci.northwestern.edu/people/core-faculty/daniel-galvin.html
+> On 2/16/16, 11:28 AM, Cherrie Bucknor wrote:
+>> Hi Daniel,
+>>  
+>> I'm sorry for the late response, but I was able to check this
+        out for you.
+>>  
+>> The peernuot variable in the raw CPS is asked of everyone in
+        the outgoing rotation group, so both hourly and non-hourly
+        workers will have valid entries.
+>>  
+>> However, since we are only able to determine the amount of
+        overtime, tips, and commision (otc) for hourly workers, we
+        restrict our otcrec and otcamt variables to hourly workers. (the
+        raw variable for amount of otc, "peern" is only asked if they
+        are hourly workers, "peernper"=1)
+>>  
+>> You can use the peernuot variable to find out if non-hourly
+        workers are receiving otc, but you cannot determine what amount
+        they are receiving.
+>>  
+>> I hope this is useful.
+>>  
+>> Please let me know if you have any other questions.
+>>  
+>> Best,
+>> Cherrie
+>>  
+>>  
+>> --
+>> Cherrie Bucknor
+>> Research Assistant
+>> Center for Economic and Policy Research
+>> 1611 Connecticut Ave NW, Suite 400
+>> Washington, DC 20009
+>> 202-293-5380 x105
+>> bucknor@cepr.net
+>> Twitter: @CherrieBucknor[2]
+>>  
+>>  
+>> On Tue, Feb 9, 2016, at 04:44 PM, Daniel J Galvin wrote:
+>>> Hello,
+>>>  
+>>> First let me say THANK YOU for your excellent work with the
+          CPS-MORG data. I have found it extraordinarily helpful and
+          have a forthcoming paper that uses (and cites!) your data in
+          the APSA journal
+          *Perspectives on Politics.*
+>>>  
+>>> I've begun examining overtime pay. May I ask a question
+          about the variable PEERNUOT in the CPS-MORG data? Is it a
+          reliable variable? I can't find much about where it comes
+          from.
+          
+>>>  
+>>> I understand that OTCREC and OTCAMT only apply to hourly
+          workers. So how is it that PEERNUOT contains values (1 or 2)
+          for non-hourly workers as well?
+          
+>>>  
+>>> I'm eager to use the variable, since it seems to suggest
+          that salaried workers, too, are reporting whether or not they
+          receive overtime pay. But I want to be sure that it's
+          reliable.
+          
+>>>  
+>>> I'd greatly appreciate any insight or advice!
+>>>  
+>>> Many thanks,
+>>> Dan
+>>> -- 
+Daniel Galvin
+Associate Professor of Political Science
+Director of Undergraduate Studies
+Faculty Fellow, Institute for Policy Research
+Northwestern University
+Department of Political Science
+601 University Place
+Evanston, IL 60208
+(847) 491-2641
+>>> http://www.polisci.northwestern.edu/people/core-faculty/daniel-galvin.html
+>>  
+
+
+Links:
+
+  1. https://twitter.com/CherrieBucknor
+  2. https://twitter.com/CherrieBucknor
+
+--_----------=_145565741124888833
+Content-Transfer-Encoding: 7bit
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body><div>No problem. I'm happy to help!<br></div>
+<div>&nbsp;</div>
+<div id="sig21904465"><div class="signature">--<br></div>
+<div class="signature">Cherrie Bucknor<br></div>
+<div class="signature">Research Assistant<br></div>
+<div class="signature">Center for Economic and Policy Research<br></div>
+<div class="signature">1611 Connecticut Ave NW, Suite 400<br></div>
+<div class="signature">Washington, DC 20009<br></div>
+<div class="signature">202-293-5380 x105<br></div>
+<div class="signature"><a href="mailto:bucknor@cepr.net">bucknor@cepr.net</a><br></div>
+<div class="signature">Twitter: <a href="https://twitter.com/CherrieBucknor">@CherrieBucknor</a><br></div>
+</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>On Tue, Feb 16, 2016, at 04:10 PM, Daniel J Galvin wrote:<br></div>
+<blockquote type="cite"><div><div>Dear Cherrie,<br></div>
+<div>&nbsp;</div>
+<div>
+      Thank you so much, this is extremely helpful information. I really
+      appreciate your taking the time to look this up and write back.
+      Many thanks! <br></div>
+<div>&nbsp;</div>
+<div>
+      Best,<br></div>
+<div>
+      Dan Galvin<br></div>
+<pre>-- 
+Daniel Galvin
+Associate Professor of Political Science
+Director of Undergraduate Studies
+Faculty Fellow, Institute for Policy Research
+Northwestern University
+Department of Political Science
+601 University Place
+Evanston, IL 60208
+(847) 491-2641
+<a href="http://www.polisci.northwestern.edu/people/core-faculty/daniel-galvin.html">http://www.polisci.northwestern.edu/people/core-faculty/daniel-galvin.html</a><br></pre><div>On 2/16/16, 11:28 AM, Cherrie Bucknor wrote:<br></div>
+</div>
+<blockquote type="cite" cite="mid:1455643720.2435490.522889578.4D746ABC@webmail.messagingengine.com"><div>Hi Daniel,<br></div>
+<div>&nbsp;</div>
+<div>I'm sorry for the late response, but I was able to check this
+        out for you.<br></div>
+<div>&nbsp;</div>
+<div>The peernuot variable in the raw CPS is asked of everyone in
+        the outgoing rotation group, so both hourly and non-hourly
+        workers will have valid entries.<br></div>
+<div>&nbsp;</div>
+<div>However, since we are only able to determine the amount of
+        overtime, tips, and commision (otc) for hourly workers, we
+        restrict our otcrec and otcamt variables to hourly workers. (the
+        raw variable for amount of otc, "peern" is only asked if they
+        are hourly workers, "peernper"=1)<br></div>
+<div>&nbsp;</div>
+<div>You can use the peernuot variable to find out if non-hourly
+        workers are receiving otc, but you cannot determine what amount
+        they are receiving.<br></div>
+<div>&nbsp;</div>
+<div>I hope this is useful.<br></div>
+<div>&nbsp;</div>
+<div>Please let me know if you have any other questions.<br></div>
+<div>&nbsp;</div>
+<div>Best,<br></div>
+<div>Cherrie<br></div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div><div>--<br></div>
+<div>Cherrie Bucknor<br></div>
+<div>Research Assistant<br></div>
+<div>Center for Economic and Policy Research<br></div>
+<div>1611 Connecticut Ave NW, Suite 400<br></div>
+<div>Washington, DC 20009<br></div>
+<div>202-293-5380 x105<br></div>
+<div><a href="mailto:bucknor@cepr.net">bucknor@cepr.net</a><br></div>
+<div>Twitter: <a href="https://twitter.com/CherrieBucknor">@CherrieBucknor</a><br></div>
+</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>On Tue, Feb 9, 2016, at 04:44 PM, Daniel J Galvin wrote:<br></div>
+<blockquote type="cite"><div>Hello,<br></div>
+<div>&nbsp;</div>
+<div>First let me say THANK YOU for your excellent work with the
+          CPS-MORG data. I have found it extraordinarily helpful and
+          have a forthcoming paper that uses (and cites!) your data in
+          the APSA journal
+          <i>Perspectives on Politics.</i><br></div>
+<div>&nbsp;</div>
+<div>I've begun examining overtime pay. May I ask a question
+          about the variable PEERNUOT in the CPS-MORG data? Is it a
+          reliable variable? I can't find much about where it comes
+          from.
+          <br></div>
+<div>&nbsp;</div>
+<div>I understand that OTCREC and OTCAMT only apply to hourly
+          workers. So how is it that PEERNUOT contains values (1 or 2)
+          for non-hourly workers as well?
+          <br></div>
+<div>&nbsp;</div>
+<div>I'm eager to use the variable, since it seems to suggest
+          that salaried workers, too, are reporting whether or not they
+          receive overtime pay. But I want to be sure that it's
+          reliable.
+          <br></div>
+<div>&nbsp;</div>
+<div>I'd greatly appreciate any insight or advice!<br></div>
+<div>&nbsp;</div>
+<div>Many thanks,<br></div>
+<div>Dan<br></div>
+<pre>-- 
+Daniel Galvin
+Associate Professor of Political Science
+Director of Undergraduate Studies
+Faculty Fellow, Institute for Policy Research
+Northwestern University
+Department of Political Science
+601 University Place
+Evanston, IL 60208
+(847) 491-2641
+<a href="http://www.polisci.northwestern.edu/people/core-faculty/daniel-galvin.html">http://www.polisci.northwestern.edu/people/core-faculty/daniel-galvin.html</a><br></pre></blockquote><div>&nbsp;</div>
+</blockquote></blockquote></body>
+</html>
+
+--_----------=_145565741124888833--
+

@@ -1,0 +1,220 @@
+Return-Path: <tybyu.d.burch@gmail.com>
+Received: from compute3.internal (compute3.nyi.internal [10.202.2.43])
+	 by sloti30t08 (Cyrus 3.0.0-beta1-git-fastmail-12410) with LMTPA;
+	 Mon, 07 Mar 2016 13:38:06 -0500
+X-Sieve: CMU Sieve 2.4
+X-Spam-known-sender: yes
+X-Spam-score: 0.0
+X-Spam-hits: BAYES_40 -0.001, FREEMAIL_FROM 0.001, HTML_MESSAGE 0.001,
+  RCVD_IN_DNSWL_LOW -0.7, SPF_PASS -0.001, T_FILL_THIS_FORM_SHORT 0.01,
+  LANGUAGES en, BAYES_USED global, SA_VERSION 3.3.2
+X-Spam-source: IP='209.85.213.50', Host='mail-vk0-f50.google.com', Country='US',
+  FromHeader='com', MailFrom='com'
+X-Spam-charsets: plain='UTF-8', html='UTF-8'
+X-Resolved-to: bucknor@cepr.net
+X-Delivered-to: bucknor@cepr.net
+X-Mail-from: tybyu.d.burch@gmail.com
+Received: from mx1 ([10.202.2.200])
+  by compute3.internal (LMTPProxy); Mon, 07 Mar 2016 13:38:06 -0500
+Received: from mx1.messagingengine.com (localhost [127.0.0.1])
+	by mx1.nyi.internal (Postfix) with ESMTP id C4AB3F2000A
+	for <bucknor@cepr.net>; Mon,  7 Mar 2016 13:38:05 -0500 (EST)
+Received: from mx1.nyi.internal (localhost [127.0.0.1])
+    by mx1.messagingengine.com (Authentication Milter) with ESMTP
+    id 9BDA4300E65.9C1F0F20032;
+    Mon, 7 Mar 2016 13:38:05 -0500
+Authentication-Results: mx1.messagingengine.com;
+    dkim=pass (2048-bit rsa key) header.d=1e100.net header.i=@1e100.net header.b=PSoSsrXX;
+    dkim=pass (2048-bit rsa key) header.d=gmail.com header.i=@gmail.com header.b=M0YRNDyk;
+    dmarc=pass header.from=gmail.com;
+    spf=pass smtp.mailfrom=tybyu.d.burch@gmail.com smtp.helo=mail-vk0-f50.google.com
+Received-SPF: pass (gmail.com ... _spf.google.com: Sender is authorized to use 'tybyu.d.burch@gmail.com' in 'mfrom' identity (mechanism 'include:_netblocks.google.com' matched)) receiver=mx1.messagingengine.com; identity=mailfrom; envelope-from="tybyu.d.burch@gmail.com"; helo=mail-vk0-f50.google.com; client-ip=209.85.213.50
+Received: from mail-vk0-f50.google.com (mail-vk0-f50.google.com [209.85.213.50])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by mx1.messagingengine.com (Postfix) with ESMTPS id 9C1F0F20032
+	for <bucknor@cepr.net>; Mon,  7 Mar 2016 13:38:05 -0500 (EST)
+Received: by mail-vk0-f50.google.com with SMTP id e185so127450179vkb.1
+        for <bucknor@cepr.net>; Mon, 07 Mar 2016 10:38:05 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to;
+        bh=6HwJ3koX/NCUfX9AnHBo4cJjQDFnCV2kveon6kUCyZM=;
+        b=M0YRNDykoMX0IeBRNvpjOF5ymfPDvit3PwA6QGS5R7KIE3w4z/1+GiEMzB30lkbm10
+         L9KQUM5q8OZ3xdKDeH5f4oH0Yei35CJt7z/LHlS2PQ+c+2wfuKeNlbX5/ZAw7XfJU6QB
+         QPM6HI2sIsoyEJCx2y/Qntow5UMKGBmprDuIuNCpabdZiBUuHRYIkjJoDPFHk1rZJrc2
+         /5q43Y5j+soN2089uxUv3fIh4i1A3xON+1ALInXNW39ZA33nk+MdQXxGqt4NratiLdg2
+         t7xMqcs56B3r0D+HAVa/PF5gxUJZbXzuOTuGBxc/ELQ1vF1ObG/Zrr2POBvRuC+SH4an
+         VfNw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to;
+        bh=6HwJ3koX/NCUfX9AnHBo4cJjQDFnCV2kveon6kUCyZM=;
+        b=PSoSsrXXHaXNvGiCfWmyiWuyehcOrFQUruXqFNS2gbWRXyk150j+KJJuJ0BHmjtyW4
+         jjChUWmeF1vxOrW8ad2dbm43UQdEonBit/WvbAmbWwtSllusN/aKF9Owdzyl6vR9YJYE
+         45BwrX/y2m1BK8UrnIhQcs8aZhXJbcoQm8W4zFSjqEhj6paiX1Mb2r9kwCWv0MqZGAkl
+         QyUEMfwpHdP5/H2T6IQIU78IPxBNUbNCin1J3VSqhb0rcM+fGvcUImwg28TNRQYrqvrG
+         gQgWTAiQ8lPxHQppmgGGra5G342YLavu6TXnq4TX6vVWQmdXhMFK9p8Zw2J0vg+RqFb5
+         CmKw==
+X-Gm-Message-State: AD7BkJK2IJOewJgdjhzoKdkZ+TxSyQ1s1Zbvl9ihto1dzA4nNgz1brlaZ00Qj7iVcSZqchrimUIfVaZOawqcvA==
+MIME-Version: 1.0
+X-Received: by 10.31.141.2 with SMTP id p2mr22685674vkd.37.1457375884249; Mon,
+ 07 Mar 2016 10:38:04 -0800 (PST)
+Received: by 10.159.39.194 with HTTP; Mon, 7 Mar 2016 10:38:04 -0800 (PST)
+In-Reply-To: <1457359112.4114661.541804114.3E482ED0@webmail.messagingengine.com>
+References: <CABo+6ojtE6vmtptVF=_TF=n6=UvMr9VnmJRobDMsWrj8bdt4sg@mail.gmail.com>
+	<CABo+6ojtE6vmtptVF=_TF=n6=UvMr9VnmJRobDMsWrj8bdt4sg.2719607255@mail.gmail.com>
+	<1457359112.4114661.541804114.3E482ED0@webmail.messagingengine.com>
+Date: Mon, 7 Mar 2016 10:38:04 -0800
+Message-ID: <CABo+6oi2z-L5neA=+aM+paZt-twGig7wocTAAu7NcTeHZGzUtQ@mail.gmail.com>
+Subject: Re: Data for Unemployment Rate of Individuals by Race/Ethnicity
+From: Tybyu DaSean Burch <tybyu.d.burch@gmail.com>
+To: Cherrie Bucknor <bucknor@cepr.net>
+Content-Type: multipart/alternative; boundary=001a11426040e28d68052d79c3a0
+
+--001a11426040e28d68052d79c3a0
+Content-Type: text/plain; charset=UTF-8
+
+Dear Cherrie Bucknor,
+
+Thank you very much for your swift reply. I will definitely take heed to
+your recommendation on how to procure the data I am looking for. Take care
+in the interim and best of luck to you in your future endeavors...
+
+Cheers,
+
+Tybyu D. Burch
+
+
+
+On Mon, Mar 7, 2016 at 5:58 AM, Cherrie Bucknor <bucknor@cepr.net> wrote:
+
+> Hello Tybyu,
+>
+> ceprDATA only provides the raw data extracts of several government
+> surveys. You would have to do the analysis yourself using our extract of
+> the Current Population Survey ORG to figure out unemployment rates by
+> race/ethnicity. To do this, you would need to be able to use Stata or
+> another statistical software package.
+>
+> But, luckily, the data you need is widely available from government
+> sources. The easiest way would be to check out the Federal Reserve Economic
+> Data (FRED) website <https://research.stlouisfed.org/fred2/> . You can
+> search "unemployment", and there will be breakdowns by race.ethnicity,
+> gender, age, etc. When you click on a data series that you want, the next
+> page will take you to a customizable graph. Underneath, the graph there
+> will be a tab marked "Export" where you can choose to get the data in excel
+> format.
+>
+> Please let me know if you have any other questions.
+>
+> Best,
+> Cherrie
+>
+>
+> --
+> Cherrie Bucknor
+> Research Assistant
+> Center for Economic and Policy Research
+> 1611 Connecticut Ave NW, Suite 400
+> Washington, DC 20009
+> 202-293-5380 x105
+> bucknor@cepr.net
+> Twitter: @CherrieBucknor <https://twitter.com/CherrieBucknor>
+>
+>
+> On Sat, Mar 5, 2016, at 04:33 PM, Tybyu DaSean Burch wrote:
+>
+> To whom this may concern,
+>
+> I am a college student looking to obtain data as it relates to
+> "Unemployment Rate of Individuals by Race/Ethnicity". Is it possible for me
+> to get my hands on this type historical data in Excel format? Please
+> respond at your earliest convenience. Thank you in advance.
+>
+> Cheers,
+>
+> Tybyu D. Burch
+>
+>
+>
+
+--001a11426040e28d68052d79c3a0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Dear Cherrie Bucknor,<div><br></div><div>Thank you very mu=
+ch for your swift reply. I will definitely take heed to your recommendation=
+ on how to procure the data I am looking for. Take care in the interim and =
+best of luck to you in your future endeavors...</div><div><br></div><div>Ch=
+eers,=C2=A0</div><div><br></div><div>Tybyu D. Burch</div><div><br></div><di=
+v><br></div></div><div class=3D"gmail_extra"><br><div class=3D"gmail_quote"=
+>On Mon, Mar 7, 2016 at 5:58 AM, Cherrie Bucknor <span dir=3D"ltr">&lt;<a h=
+ref=3D"mailto:bucknor@cepr.net" target=3D"_blank">bucknor@cepr.net</a>&gt;<=
+/span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8=
+ex;border-left:1px #ccc solid;padding-left:1ex"><u></u>
+
+
+
+
+<div><div style=3D"font-family:Arial">Hello Tybyu,<br></div>
+<div style=3D"font-family:Arial">=C2=A0</div>
+<div style=3D"font-family:Arial">ceprDATA only provides the raw data extrac=
+ts of several government surveys. You would have to do the analysis yoursel=
+f using our extract of the Current Population Survey ORG to figure out unem=
+ployment rates by race/ethnicity. To do this, you would need to be able to =
+use Stata or another statistical software package.<br></div>
+<div style=3D"font-family:Arial">=C2=A0</div>
+<div style=3D"font-family:Arial">But, luckily, the data you need is widely =
+available from government sources. The easiest way  would be to check out t=
+he Federal Reserve Economic=20
+Data (FRED) <a href=3D"https://research.stlouisfed.org/fred2/" target=3D"_b=
+lank">website</a> . You can search &quot;unemployment&quot;, and there will=
+ be=20
+breakdowns by race.ethnicity, gender, age, etc. When you click on a data se=
+ries that you want, the next page will take you to a customizable graph. Un=
+derneath, the graph there will be a tab marked &quot;Export&quot; where you=
+ can choose to get the data in excel format.<br></div>
+<div style=3D"font-family:Arial">=C2=A0</div>
+<div style=3D"font-family:Arial">Please let me know if you have any other q=
+uestions.<br></div>
+<div style=3D"font-family:Arial">=C2=A0</div>
+<div style=3D"font-family:Arial">Best,<br></div>
+<div style=3D"font-family:Arial">Cherrie<br></div>
+<div style=3D"font-family:Arial">=C2=A0</div>
+<div style=3D"font-family:Arial">=C2=A0</div>
+<div><div>--<br></div>
+<div>Cherrie Bucknor<br></div>
+<div>Research Assistant<br></div>
+<div>Center for Economic and Policy Research<br></div>
+<div>1611 Connecticut Ave NW, Suite 400<br></div>
+<div>Washington, DC 20009<br></div>
+<div><a href=3D"tel:202-293-5380%20x105" value=3D"+12022935380" target=3D"_=
+blank">202-293-5380 x105</a><br></div>
+<div><a href=3D"mailto:bucknor@cepr.net" target=3D"_blank">bucknor@cepr.net=
+</a><br></div>
+<div>Twitter: <a href=3D"https://twitter.com/CherrieBucknor" target=3D"_bla=
+nk">@CherrieBucknor</a><br></div>
+</div>
+<div>=C2=A0</div>
+<div>=C2=A0</div>
+<div>On Sat, Mar 5, 2016, at 04:33 PM, Tybyu DaSean Burch wrote:<br></div>
+<blockquote type=3D"cite"><div dir=3D"ltr"><div style=3D"font-family:Arial"=
+>To whom this may concern,<br></div>
+<div>=C2=A0</div>
+<div>I am a college student looking to obtain data as it relates to &quot;U=
+nemployment Rate of Individuals by Race/Ethnicity&quot;. Is it possible for=
+ me to get my hands on this type historical data in Excel format? Please re=
+spond at your earliest convenience. Thank you in advance.=C2=A0<br></div>
+<div>=C2=A0</div>
+<div>Cheers,=C2=A0<br></div>
+<div>=C2=A0</div>
+<div>Tybyu D. Burch<br></div>
+</div>
+</blockquote><div style=3D"font-family:Arial">=C2=A0</div>
+</div>
+
+</blockquote></div><br></div>
+
+--001a11426040e28d68052d79c3a0--

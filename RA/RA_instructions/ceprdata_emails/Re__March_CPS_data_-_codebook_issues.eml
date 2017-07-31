@@ -1,0 +1,118 @@
+Message-Id: <1455055462.3661138.516686138.10499C9D@webmail.messagingengine.com>
+X-Sasl-Enc: MoR2PklQwvzYZIGGxv3KNqieNeNSeo9U8l6AT5Dg3rbf 1455055462
+From: Cherrie Bucknor <bucknor@cepr.net>
+To: Mathis Duvot <mathis.duvot@gmail.com>
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Type: multipart/alternative; boundary="_----------=_145505546236611382";
+ charset="utf-8"
+X-Mailer: MessagingEngine.com Webmail Interface - ajax-57359b3d
+X-Personalityid: 21904465
+In-Reply-To: <CAHPeBw2n+AQcVV_WxHovOte8Ypf9FULsy6N2ZK7faDdmfD2tuw.2719607255@mail.gmail.com>
+References: <CAHPeBw2n+AQcVV_WxHovOte8Ypf9FULsy6N2ZK7faDdmfD2tuw.2719607255@mail.gmail.com>
+ <CAHPeBw2n+AQcVV_WxHovOte8Ypf9FULsy6N2ZK7faDdmfD2tuw@mail.gmail.com>
+Subject: Re: March CPS data - codebook issues
+Date: Tue, 09 Feb 2016 17:04:22 -0500
+
+This is a multi-part message in MIME format.
+
+--_----------=_145505546236611382
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="ISO-8859-1"
+
+Hi Mathis,
+
+Our Stata programs are the major source for information on our extracts.
+
+For the CPS March CPS, the programs can be found here[1]. Our Stata code
+show the changes we made to the original raw variables in order to
+create our extract.
+
+I hope this is helpful.
+
+Best, Cherrie
+
+--
+Cherrie Bucknor
+Research Assistant
+Center for Economic and Policy Research
+1611 Connecticut Ave NW, Suite 400
+Washington, DC 20009
+202-293-5380 x105
+bucknor@cepr.net
+Twitter: @CherrieBucknor[2]
+=20
+=20
+On Mon, Feb 8, 2016, at 08:56 AM, Mathis Duvot wrote:
+> To whom it may concern,
+>=20=20
+> Currently studying at the Paris School of Economics in France, I intend t=
+o use the "cepr_march_2014.zip" database=A0for my thesis this year. Unfortu=
+nately, I don't succeed in matching the data dictionary (at this page=A0htt=
+p://ceprdata.org/cps-uniform-data-extracts/march-cps-supplement/march-cps-d=
+ocumentation/) with this database. Variables name do not correspond. Please=
+, would you know where I can find the right codebook ?
+>=20=20
+> Thank you very much for your consideration.
+>=20=20
+> Regards,
+>=20=20
+> Mathis Duvot
+=20
+
+
+Links:
+
+  1. http://ceprdata.org/cps-uniform-data-extracts/march-cps-supplement/mar=
+ch-cps-programs/
+  2. https://twitter.com/CherrieBucknor
+
+--_----------=_145505546236611382
+Content-Transfer-Encoding: 7bit
+Content-Type: text/html; charset="ISO-8859-1"
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body><div>Hi Mathis,<br></div>
+<div>&nbsp;</div>
+<div>Our Stata programs are the major source for information on our extracts.<br></div>
+<div>&nbsp;</div>
+<div>For the CPS March CPS, the programs can be found <a href="http://ceprdata.org/cps-uniform-data-extracts/march-cps-supplement/march-cps-programs/">here</a>. Our Stata code show the changes we made to the original raw variables in order to create our extract.<br></div>
+<div>&nbsp;</div>
+<div>I hope this is helpful.<br></div>
+<div>&nbsp;</div>
+<div>Best,<br></div>
+<div>Cherrie<br></div>
+<div>&nbsp;</div>
+<div id="sig21904465"><div class="signature">--<br></div>
+<div class="signature">Cherrie Bucknor<br></div>
+<div class="signature">Research Assistant<br></div>
+<div class="signature">Center for Economic and Policy Research<br></div>
+<div class="signature">1611 Connecticut Ave NW, Suite 400<br></div>
+<div class="signature">Washington, DC 20009<br></div>
+<div class="signature">202-293-5380 x105<br></div>
+<div class="signature"><a href="mailto:bucknor@cepr.net">bucknor@cepr.net</a><br></div>
+<div class="signature">Twitter: <a href="https://twitter.com/CherrieBucknor">@CherrieBucknor</a><br></div>
+</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>On Mon, Feb 8, 2016, at 08:56 AM, Mathis Duvot wrote:<br></div>
+<blockquote type="cite"><div dir="ltr"><div><span style="font-size:13px" class="size">To whom it may concern,</span><br></div>
+<div style="font-size:13px;">&nbsp;</div>
+<div style="font-size:13px;">Currently studying at the Paris School of Economics in France, I intend to use the "<span style="color:rgb(68, 68, 68)" class="colour"><span style="font-family:Arial,Helvetica,sans-serif" class="font">cepr_march_2014.zip</span></span><span style="color:rgb(68, 68, 68)" class="colour"><span style="font-family:Arial,Helvetica,sans-serif" class="font">" database&nbsp;</span></span>for my thesis this year. Unfortunately, I don't succeed in matching the data dictionary (at this page&nbsp;<a href="http://ceprdata.org/cps-uniform-data-extracts/march-cps-supplement/march-cps-documentation/">http://ceprdata.org/cps-uniform-data-extracts/march-cps-supplement/march-cps-documentation/</a>) with this database. Variables name do not correspond. Please, would you know where I can find the right codebook ?<br></div>
+<div style="font-size:13px;">&nbsp;</div>
+<div style="font-size:13px;">Thank you very much for your consideration.<br></div>
+<div style="font-size:13px;">&nbsp;</div>
+<div style="font-size:13px;">Regards,<br></div>
+<div style="font-size:13px;">&nbsp;</div>
+<div style="font-size:13px;">Mathis Duvot<br></div>
+</div>
+</blockquote><div>&nbsp;</div>
+</body>
+</html>
+
+--_----------=_145505546236611382--
+

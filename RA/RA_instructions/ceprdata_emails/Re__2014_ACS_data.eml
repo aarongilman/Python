@@ -1,0 +1,238 @@
+Return-Path: <guptac@wharton.upenn.edu>
+Received: from compute3.internal (compute3.nyi.internal [10.202.2.43])
+	 by sloti30t08 (Cyrus 3.0.0-beta1-git-fastmail-11882) with LMTPA;
+	 Mon, 02 Nov 2015 12:04:36 -0500
+X-Sieve: CMU Sieve 2.4
+X-Spam-score: 0.0
+X-Spam-hits: BAYES_20 -0.001, HTML_MESSAGE 0.001, RCVD_IN_DNSWL_MED -2.3,
+  SPF_PASS -0.001, T_RP_MATCHES_RCVD -0.01, LANGUAGES en,
+  BAYES_USED global, SA_VERSION 3.3.2
+X-Spam-source: IP='128.91.89.191', Host='smtp-relay-212.wharton.upenn.edu', Country='US',
+  FromHeader='edu', MailFrom='edu', XOriginatingCountry='US'
+X-Spam-charsets: plain='Windows-1252', html='Windows-1252'
+X-Resolved-to: bucknor@cepr.net
+X-Delivered-to: bucknor@cepr.net
+X-Mail-from: guptac@wharton.upenn.edu
+Received: from mx6 ([10.202.2.205])
+  by compute3.internal (LMTPProxy); Mon, 02 Nov 2015 12:04:36 -0500
+Received: from mx6.messagingengine.com (localhost [127.0.0.1])
+	by mx6.nyi.internal (Postfix) with ESMTP id 0373A9001C9
+	for <bucknor@cepr.net>; Mon,  2 Nov 2015 12:04:36 -0500 (EST)
+Received: from mx6.nyi.internal (localhost [127.0.0.1])
+    by mx6.messagingengine.com (Authentication Milter) with ESMTP
+    id B5C13FA48E6.BBB559001B8;
+    Mon, 2 Nov 2015 12:04:36 -0500
+Authentication-Results: mx6.messagingengine.com;
+    dkim=pass (1024-bit rsa key) header.d=wharton.upenn.edu header.i=@wharton.upenn.edu header.b=Xh/QtoH3;
+    dmarc=fail (p=none) header.from=wharton.upenn.edu;
+    spf=pass smtp.mailfrom=guptac@wharton.upenn.edu smtp.helo=smtp-relay-212.wharton.upenn.edu
+Received-SPF: pass (wharton.upenn.edu: 128.91.89.191 is authorized to use 'guptac@wharton.upenn.edu' in 'mfrom' identity (mechanism 'ip4:128.91.89.191' matched)) receiver=mx6.messagingengine.com; identity=mailfrom; envelope-from="guptac@wharton.upenn.edu"; helo=smtp-relay-212.wharton.upenn.edu; client-ip=128.91.89.191
+Received: from smtp-relay-212.wharton.upenn.edu (smtp-relay-212.wharton.upenn.edu [128.91.89.191])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by mx6.messagingengine.com (Postfix) with ESMTPS id BBB559001B8
+	for <bucknor@cepr.net>; Mon,  2 Nov 2015 12:04:35 -0500 (EST)
+Received: from JIM3.wharton.upenn.edu (jim3.wharton.upenn.edu [128.91.90.13])
+	by smtp-relay-212.wharton.upenn.edu (8.14.4/8.14.4) with ESMTP id tA2H4Y9M010701
+	for <bucknor@cepr.net>; Mon, 2 Nov 2015 12:04:34 -0500
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=wharton.upenn.edu;
+	s=smtp-relay; t=1446483874;
+	bh=WZ1U6DTCcwxcO0aZ95RaZZL8L1AThz/v1W7ttG8fgrA=;
+	h=From:To:Subject:Date:Message-ID:References:In-Reply-To:
+	 Content-Type:MIME-Version;
+	b=Xh/QtoH3BIvvlvfcw9cZcXLK/694SIdGp1HjjpQCNsjJNpu7/EvzXVbClkJo24QMY
+	 sDTQiyJKCnEMjTWerKNGeXLhibVg4s4bDxqEOgiwIzYIHJm+4RQ01PGYLVqSQuFoMH
+	 U9tJQ7yz38iDU5fB6ZgA2fEN7rsjmZloZgXy63uk=
+Received: from ABNER3.wharton.upenn.edu (172.16.1.139) by
+ JIM3.wharton.upenn.edu (172.16.1.137) with Microsoft SMTP Server (TLS) id
+ 14.3.224.2; Mon, 2 Nov 2015 12:04:41 -0500
+Received: from GENO4.wharton.upenn.edu ([169.254.3.180]) by
+ ABNER3.wharton.upenn.edu ([172.16.1.136]) with mapi id 14.03.0224.002; Mon, 2
+ Nov 2015 12:04:34 -0500
+From: "Gupta, Charu" <guptac@wharton.upenn.edu>
+To: Cherrie Bucknor <bucknor@cepr.net>
+Subject: Re: 2014 ACS data
+Thread-Topic: 2014 ACS data
+Thread-Index: AQHRFXrXlDdPaYOAckKugPylxCVS356JQCoAgAAJyIA=
+Date: Mon, 2 Nov 2015 17:04:33 +0000
+Message-ID: <0638642F-E880-47DF-AD83-738386116A43@wharton.upenn.edu>
+References: <6DEDBF26-AB76-418B-A16A-0109B8260184@wharton.upenn.edu>
+ <CAPadmOP+LYZMhJny_QUs=J+EAjpnT8kjqohNFfaLFTEs4-7xog@mail.gmail.com>
+In-Reply-To: <CAPadmOP+LYZMhJny_QUs=J+EAjpnT8kjqohNFfaLFTEs4-7xog@mail.gmail.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [158.130.220.242]
+Content-Type: multipart/alternative;
+	boundary="_000_0638642FE88047DFAD83738386116A43whartonupennedu_"
+MIME-Version: 1.0
+X-Remote-Spam-Score:  (-0.01) T_RP_MATCHES_RCVD
+X-Scanned-By: MIMEDefang 2.78 on 128.91.89.191
+
+--_000_0638642FE88047DFAD83738386116A43whartonupennedu_
+Content-Type: text/plain; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+Thanks, Cherrie. That=92s great news =97 I have previously worked with your=
+ CPS data, and find your extracts to be very helpful and easy to use.
+
+Best,
+Charu
+
+On Nov 2, 2015, at 11:29 AM, Cherrie Bucknor <bucknor@cepr.net<mailto:buckn=
+or@cepr.net>> wrote:
+
+Hi Charu,
+
+Thank you for your email. We're currently working on updating our ACS extra=
+ct and hope to release the new data by late this week, or early next week a=
+t the latest.
+
+Best,
+Cherrie
+
+-------------------------------------------------------------
+Cherrie Bucknor
+Research Assistant
+Center for Economic and Policy Research
+1611 Connecticut Ave NW, Suite 400
+Washington, DC 20009
+202-293-5380 x105
+bucknor@cepr.net<mailto:bucknor@cepr.net>
+Twitter: @CherrieBucknor<https://twitter.com/CherrieBucknor>
+
+On Mon, Nov 2, 2015 at 9:29 AM, Gupta, Charu <guptac@wharton.upenn.edu<mail=
+to:guptac@wharton.upenn.edu>> wrote:
+Dear ceprDATA:
+
+I am a researcher at the Wharton School of Business and interested in using=
+ the ACS data you provide. Do you plan to release the 2014 ACS data, and if=
+ so, have an anticipated release date?
+
+Many thanks,
+
+Charu Gupta
+
+
+Charu Gupta
+The Wharton School
+University of Pennsylvania
+Colonial Penn Center
+3641 Locust Walk
+Philadelphia, PA 19104
+
+
+
+
+
+
+--_000_0638642FE88047DFAD83738386116A43whartonupennedu_
+Content-Type: text/html; charset="Windows-1252"
+Content-ID: <1AB9DCD2B9E9D34D8A993B3820E6529E@wharton.upenn.edu>
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DWindows-1=
+252">
+</head>
+<body style=3D"word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-lin=
+e-break: after-white-space;">
+Thanks, Cherrie. That=92s great news =97 I have previously worked with your=
+ CPS data, and find your extracts to be very helpful and easy to use.
+<div><br>
+</div>
+<div>Best,</div>
+<div>Charu&nbsp;
+<div><br>
+</div>
+<div>
+<div>
+<div>On Nov 2, 2015, at 11:29 AM, Cherrie Bucknor &lt;<a href=3D"mailto:buc=
+knor@cepr.net">bucknor@cepr.net</a>&gt; wrote:</div>
+<br class=3D"Apple-interchange-newline">
+<blockquote type=3D"cite">
+<div dir=3D"ltr">
+<div>
+<div>
+<div>Hi Charu,<br>
+<br>
+</div>
+Thank you for your email. We're currently working on updating our ACS extra=
+ct and hope to release the new data by late this week, or early next week a=
+t the latest.<br>
+<br>
+</div>
+Best,<br>
+</div>
+Cherrie<br>
+</div>
+<div class=3D"gmail_extra"><br clear=3D"all">
+<div>
+<div class=3D"gmail_signature">
+<div dir=3D"ltr">
+<div dir=3D"ltr">
+<div dir=3D"ltr">
+<div dir=3D"ltr">
+<div dir=3D"ltr">
+<div>------------------------------------------------------------- <br>
+Cherrie Bucknor<br>
+Research Assistant<br>
+Center for Economic and Policy Research<br>
+1611 Connecticut Ave NW, Suite 400<br>
+Washington, DC 20009<br>
+202-293-5380 x105<br>
+<a href=3D"mailto:bucknor@cepr.net" target=3D"_blank">bucknor@cepr.net</a><=
+br>
+</div>
+<div>Twitter: <a href=3D"https://twitter.com/CherrieBucknor" target=3D"_bla=
+nk">@CherrieBucknor</a><br>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br>
+<div class=3D"gmail_quote">On Mon, Nov 2, 2015 at 9:29 AM, Gupta, Charu <sp=
+an dir=3D"ltr">
+&lt;<a href=3D"mailto:guptac@wharton.upenn.edu" target=3D"_blank">guptac@wh=
+arton.upenn.edu</a>&gt;</span> wrote:<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">
+Dear ceprDATA:<br>
+<br>
+I am a researcher at the Wharton School of Business and interested in using=
+ the ACS data you provide. Do you plan to release the 2014 ACS data, and if=
+ so, have an anticipated release date?<br>
+<br>
+Many thanks,<br>
+<br>
+Charu Gupta<br>
+<span class=3D"HOEnZb"><font color=3D"#888888"><br>
+<br>
+Charu Gupta<br>
+The Wharton School<br>
+University of Pennsylvania<br>
+Colonial Penn Center<br>
+3641 Locust Walk<br>
+Philadelphia, PA 19104<br>
+<br>
+<br>
+<br>
+</font></span></blockquote>
+</div>
+<br>
+</div>
+</blockquote>
+</div>
+<br>
+</div>
+</div>
+</body>
+</html>
+
+--_000_0638642FE88047DFAD83738386116A43whartonupennedu_--
