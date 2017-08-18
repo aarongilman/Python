@@ -77,7 +77,7 @@
 %  BEGIN DOCUMENT
 \begin{document}
 \thispagestyle{main}
-\noindent \small First quarter U.S. economic growth slowed from lower consumption spending growth, despite an improvement in exports. The unemployment rate is gradually nearing its long-run full-capacity level. Inflation is below two percent in both the core CPI and the full index, with no expected acceleration. Elevated consumer confidence and P/E ratios, with near long-term low equity market volatility, show an extraordinary level of optimism. The yield curve for government debt has flattened while the dollar remains strong.
+\noindent \small Second quarter U.S. economic growth picked up, driven almost entirely by increased consumption. The labor market is gradually nearing full employment. Inflation is well below the Fed's two percent target in both the core CPI and the full index, with little expected acceleration. Elevated stock prices, with near long-term low equity market volatility, suggest an extraordinary level of optimism. The otherwise overvalued dollar has weakened recently against major trading partners.
 
 \section{Economic Growth and Employment}
 	% Title: GDP Growth	
@@ -109,7 +109,7 @@
 				fill=blue!40!green] table [y index = 4, x=DATE, y=PCECC96, col sep=comma]
 				{data/gdp_comp.csv};			
 			\addplot[thick, color=black] table [x=DATE, y=GDPC1, col sep=comma] {data/gdp_comp.csv}
-				node[pos=0.55,pin=80:{Real GDP Growth}] {};	
+				node[pos=0.54,pin=80:{Real GDP Growth}] {};	
 			\node[align=center, below, shift=({2.7cm,-0.25cm})] {
 				\input{data/gdp_comp.txt}};
 			\legend{Contributions to ,GDP growth, Government, Investment ,Net Exports, Consumption};			
