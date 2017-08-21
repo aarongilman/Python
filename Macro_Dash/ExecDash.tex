@@ -53,7 +53,7 @@
 			axis x line*=bottom, every tick/.style={black!20},  
 			every tick label/.append style={black!50,font=\sansmath\sffamily\footnotesize},
 			x axis line style={black!50}, axis y line=right, y axis line style={opacity=0},
-		    grid style={very thin, black!10}, height=6.8cm}
+		    grid style={very thin, black!10}, height=6.8cm, axis line style={draw=none}}
 		\tikzset{every node/.append style={font=\footnotesize}}
 	% Line plot settings
 		\newcommand{\lineplotsettings}{yticklabel style={text width=3em},
@@ -77,11 +77,11 @@
 %  BEGIN DOCUMENT
 \begin{document}
 \thispagestyle{main}
-\noindent \small Second quarter U.S. economic growth picked up, driven almost entirely by increased consumption. The labor market is gradually nearing full employment. Inflation is well below the Fed's two percent target in both the core CPI and the full index, with little expected acceleration. Elevated stock prices, with near long-term low equity market volatility, suggest an extraordinary level of optimism. The otherwise overvalued dollar has weakened recently against major trading partners.
+\noindent \small Second quarter U.S. economic growth picked up, driven almost entirely by increased consumption. The labor market is gradually nearing full employment. Inflation is well below the Fed's two percent target in both the core CPI and the full index, with little expected acceleration. Over the past month, stock prices have returned some of their 2017 gains, equity market volatility is up, U.S. borrowing costs are down, and the otherwise overvalued dollar has weakened against major trading partners.
 
 \section{Economic Growth and Employment}
 	% Title: GDP Growth	
-		\ct[Real Gross Domestic Product (GDP)
+		\ct[Real gross domestic product (GDP)
 		]{Civilian unemployment rate (percent)}\\
 	% GDP Growth by Component
 		\indent \begin{tikzpicture}
@@ -163,23 +163,28 @@
 	% CPI Components
 		\begin{tikzpicture}[trim axis right]
 		  	\begin{axis}[\xbarplotsettings 
-				yticklabel style={align=right, text width=3.3cm, style={black!70}, text height=1.4ex},  width=7cm, 
-		    	bar width=1.1ex, y=3.4ex, axis y line=left,
+				yticklabel style={align=right, text width=3.3cm, style={black!70}, 
+					text height=1.4ex},  width=7cm, 
+		    	bar width=1.3ex, y=3.8ex, axis y line=left,
+		    	xbar=0pt,
+		    	y axis line style = { opacity = 0 },   
+		    	x axis line style = { opacity = 0 }, 
+		    	yticklabel style={align=right, anchor=east},
+      			xmajorticks=false,
+      			xmajorgrids=false,
+				ymajorgrids=false,   
+		    	ytick=data,
+		    	tickwidth = 0pt,
 		    	enlarge y limits={abs=0.35cm},
 		    	every node near coord/.append style={style={black!70}, 
 		    		font=\scriptsize\sffamily\sansmath},
-		    \bbar{x}{0}, legend style={at={(0.77,0.32)}}, legend cell align=left,
+		    \bbar{x}{0}, legend style={fill=none, at={(0.85,0.22)}}, legend cell align=left, 
 				yticklabels from table={\cpi}{Item}]
 		  \addplot[nodes near coords, nodes near coords align={horizontal}, fill=cyan!40, 
 		  	draw=cyan,yshift=-0.5pt,] table [y expr=-\coordindex,x index=1] {\cpi};
 		  \addplot[nodes near coords, nodes near coords align={horizontal}, fill=blue!70, 
 		  	draw=blue] table [y expr=-\coordindex, x index=2] {\cpi};
-		  \addplot[scatter, only marks, mark=*, draw=black, fill=yellow, mark size=2,
-		  		scatter/@pre marker code/.style={},
-    			scatter/@post marker code/.style={}] table [
-			            y expr=-\coordindex, x index=3] {\cpi};
-		  \legend{\scriptsize \input{data/cpi_mo1.txt},\scriptsize \input{data/cpi_mo2.txt},
-		  	\scriptsize 10-year average}
+		  \legend{\scriptsize \input{data/cpi_mo1.txt},\scriptsize \input{data/cpi_mo2.txt}}
 		  \end{axis}
 		\end{tikzpicture} \\
 	% Footer: CPI 	
@@ -190,7 +195,7 @@
 \section{Markets, Interest Rates, and Other Indicators}
 
 	% Title: Earnings per share	
-		\ct[S\&P 500 Reported Earnings per Share by Industry
+		\ct[S\&P 500 reported earnings per share by industry
 		]{Recent market developments and other key indicators}\\
 	% Earnings per share
 		\hspace{-10mm}\begin{tikzpicture}
