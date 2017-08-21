@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.27)  18 AUG 2017 00:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.27)  20 AUG 2017 21:12
 entering extended mode
 **ExecDash.tex
 (ExecDash.tex
@@ -885,32 +885,32 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 
-Underfull \hbox (badness 7869) in paragraph at lines 183--183
+Underfull \hbox (badness 7869) in paragraph at lines 188--188
  [][][][]\OT1/qhv/m/n/8 Energy
  []
 
 
-Underfull \hbox (badness 6559) in paragraph at lines 183--183
+Underfull \hbox (badness 6559) in paragraph at lines 188--188
  [][][][]\OT1/qhv/m/n/8 Housing
  []
 
 
-Underfull \hbox (badness 4132) in paragraph at lines 183--183
+Underfull \hbox (badness 4132) in paragraph at lines 188--188
  [][][][]\OT1/qhv/m/n/8 Healthcare
  []
 
 
-Underfull \hbox (badness 4132) in paragraph at lines 183--183
+Underfull \hbox (badness 4132) in paragraph at lines 188--188
  [][][][]\OT1/qhv/m/n/8 Recreation
  []
 
 
-Underfull \hbox (badness 1917) in paragraph at lines 183--183
+Underfull \hbox (badness 1917) in paragraph at lines 188--188
  [][][][]\OT1/qhv/m/n/8 Transportation
  []
 
 
-Underfull \hbox (badness 7133) in paragraph at lines 183--183
+Underfull \hbox (badness 7133) in paragraph at lines 188--188
  [][][][]\OT1/qhv/m/n/8 Apparel
  []
 
@@ -918,58 +918,58 @@ Underfull \hbox (badness 7133) in paragraph at lines 183--183
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 
-Underfull \hbox (badness 2698) in paragraph at lines 237--237
+Underfull \hbox (badness 2698) in paragraph at lines 242--242
  [][][][]\OT1/qhv/m/n/8 Health Care
  []
 
 
-Underfull \hbox (badness 3977) in paragraph at lines 237--237
+Underfull \hbox (badness 3977) in paragraph at lines 242--242
  [][][][]\OT1/qhv/m/n/8 Industrials
  []
 
 
-Underfull \hbox (badness 4060) in paragraph at lines 237--237
+Underfull \hbox (badness 4060) in paragraph at lines 242--242
  [][][][]\OT1/qhv/m/n/8 Financials
  []
 
 
-Underfull \hbox (badness 4940) in paragraph at lines 237--237
+Underfull \hbox (badness 4940) in paragraph at lines 242--242
  [][][][]\OT1/qhv/m/n/8 Materials
  []
 
 
-Underfull \hbox (badness 6775) in paragraph at lines 237--237
+Underfull \hbox (badness 6775) in paragraph at lines 242--242
  [][][][]\OT1/qhv/m/n/8 Utilities
  []
 
 
-Underfull \hbox (badness 2951) in paragraph at lines 237--237
+Underfull \hbox (badness 2951) in paragraph at lines 242--242
  [][][][]\OT1/qhv/m/n/8 Real Es-tate
  []
 
 
-Underfull \hbox (badness 6927) in paragraph at lines 237--237
+Underfull \hbox (badness 6927) in paragraph at lines 242--242
  [][][][]\OT1/qhv/m/n/8 Energy
  []
 
 (data/eps.txt) (data/table1.txt)
-Overfull \hbox (14.83133pt too wide) in paragraph at lines 194--262
+Overfull \hbox (14.63133pt too wide) in paragraph at lines 199--267
 []  $[]$ 
  []
 
 LaTeX Font Info:    Font shape `OT1/qhv/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/qhv/b/n' tried instead on input line 262.
+(Font)              Font shape `OT1/qhv/b/n' tried instead on input line 267.
 LaTeX Font Info:    Font shape `OT1/qhv/bx/n' in size <8> not available
-(Font)              Font shape `OT1/qhv/b/n' tried instead on input line 262.
+(Font)              Font shape `OT1/qhv/b/n' tried instead on input line 267.
 LaTeX Font Info:    Font shape `OT1/qhv/bx/n' in size <9> not available
-(Font)              Font shape `OT1/qhv/b/n' tried instead on input line 262.
+(Font)              Font shape `OT1/qhv/b/n' tried instead on input line 267.
 LaTeX Font Info:    Try loading font information for U+fontawesometwo on input 
-line 262.
+line 267.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fontawesome\ufontawesometwo.fd"
 File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
 )
 LaTeX Font Info:    Try loading font information for U+fontawesomethree on inpu
-t line 262.
+t line 267.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fontawesome\ufontawesomethree.fd"
 File: ufontawesomethree.fd 2016/05/22 Font definitions for U/fontawesomethree.
@@ -977,24 +977,24 @@ File: ufontawesomethree.fd 2016/05/22 Font definitions for U/fontawesomethree.
 [1{C:/Users/BDew/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 262.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 262.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 267.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 267.
 
 (ExecDash.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 262.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 262.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 267.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 267.
 Package rerunfilecheck Info: File `ExecDash.out' has not changed.
 (rerunfilecheck)             Checksum: DE60ED1F8E2D66F4576B85F070F3A43A;209.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 262.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 267.
  ) 
 Here is how much of TeX's memory you used:
- 29845 strings out of 493671
- 722012 string characters out of 3143865
- 1048153 words of memory out of 3000000
- 32662 multiletter control sequences out of 15000+200000
+ 29832 strings out of 493671
+ 721743 string characters out of 3143865
+ 1044930 words of memory out of 3000000
+ 32649 multiletter control sequences out of 15000+200000
  45622 words of font info for 70 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 69i,18n,107p,2340b,2285s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,18n,107p,2335b,2294s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontawesome/fontawesomethree.enc
 }{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontawesome/fontawesometwo.enc}{C
 :/Program Files/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-rm.enc}<C:/Program Files/
@@ -1006,7 +1006,7 @@ amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
 symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/sym
 bols/msam7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/tex-gyre/qhvb.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/tex-gyre/qhvr.pfb>
-Output written on ExecDash.pdf (1 page, 142167 bytes).
+Output written on ExecDash.pdf (1 page, 140605 bytes).
 PDF statistics:
  89 PDF objects out of 1000 (max. 8388607)
  5 named destinations out of 1000 (max. 500000)
