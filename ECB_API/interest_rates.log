@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.27)  14 MAY 2017 18:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.27)  4 AUG 2017 19:33
 entering extended mode
 **interest_rates.tex
 (interest_rates.tex
@@ -867,7 +867,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 122.
 Here is how much of TeX's memory you used:
  29532 strings out of 493671
  715297 string characters out of 3143865
- 928402 words of memory out of 3000000
+ 928654 words of memory out of 3000000
  32378 multiletter control sequences out of 15000+200000
  42028 words of font info for 66 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -881,7 +881,7 @@ onts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
 ublic/tex-gyre/qhvb.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/tex-gyr
 e/qhvr.pfb>
-Output written on interest_rates.pdf (1 page, 91789 bytes).
+Output written on interest_rates.pdf (1 page, 91542 bytes).
 PDF statistics:
  47 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)
