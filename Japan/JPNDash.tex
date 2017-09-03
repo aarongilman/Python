@@ -92,7 +92,8 @@
 		]{Labor force participation and unemployment (percent)}\\
 	% GDP Growth by Component
 		\indent \begin{tikzpicture}
-			\begin{axis}[date coordinates in=x, xticklabel={\year}, stack negative=separate, date ZERO=2006-01-01,
+			\begin{axis}[date coordinates in=x, xticklabel={\year}, stack negative=separate, 
+				date ZERO=2006-01-01,
 				legend style={text=black!70, legend columns=2,draw=none, at={(1,1)},
 				/tikz/every even column/.append style={column sep=-0.25cm}},
 				legend cell align=left, 
@@ -114,8 +115,8 @@
 				fill=green!60!black] table [y index = 4, x=date, y=cons, col sep=comma]
 				{data/gdp.csv};			
 			\addplot[thick, color=black] table [x=date, y=gdp, col sep=comma] {data/gdp.csv}
-				node[pos=0.48,pin=270:{Real GDP Growth}] {};	
-			\node[align=center, below, shift=({3.4cm,-0.25cm})] {
+				node[pos=0.45,pin=270:{Real GDP Growth}] {};	
+			\node[align=center, below, shift=({3.5cm,-0.25cm})] {
 				\input{data/gdp.txt}};
 			\legend{Contributions to ,GDP growth, Government, Investment, Net Exports, Consumption};
 			\end{axis} 		
@@ -198,7 +199,7 @@
 				fill=blue!70!black] table [y index = 4, x=date, y=nondur_ch, col sep=comma]
 				{data/cons.csv};			
 			\addplot[thick, color=black] table [x=date, y=total_ch, col sep=comma] {data/cons.csv}
-				node[pos=0.26,pin=90:{Total change}] {};	
+				node[pos=0.24,pin=90:{Total change}] {};	
 			\node[align=left, below, shift=({3.0cm,0.1cm})] {
 				\input{data/cons.txt}};
     		\node[align=left] (source) at (axis cs:2013-01-01,40) {%
@@ -227,8 +228,8 @@
 				table [y index = 3, x=date, y=pub_ch, col sep=comma]
 				{data/inv.csv};		
 			\addplot[thick, color=black] table [x=date, y=total_ch, col sep=comma] {data/inv.csv}
-				node[pos=0.4,pin=90:{Total change}] {};	
-			\node[align=left, below, shift=({2.7cm,0cm})] {
+				node[pos=0.38,pin=90:{Total change}] {};	
+			\node[align=left, below, shift=({2.9cm,0cm})] {
 				\input{data/inv.txt}};
 			\legend{Business, Residential, Public};			
 			\end{axis}
@@ -429,7 +430,7 @@
     			nodes near coords, % Place nodes near each coordinate
     			every node near coord/.style={anchor=\alignment}, color=blue!60!black] 
 				table [x=number, y=curr, col sep=comma] {data/jgb.csv}
-				node[pos=0.7,pin=85:{\textbf{Most recent}}] {};		
+				node[pos=0.75,pin=90:{\textbf{Most recent}}] {};		
 			\node[below, shift=({1.26cm,-0.2cm})] { \input{data/jgb_curr.txt}};							 	
 			\end{axis}
 			\end{tikzpicture}\\
@@ -492,13 +493,13 @@
 				{2017-07-01},{2017-08-01},{2017-09-01},{2017-10-01},{2017-11-01},{2017-12-01}},  			
 				\bbar{y}{1}]
 			\addplot[thick, color=orange] table [x=Date, y=Rate, col sep=comma] 
-				{data/fx.csv} node[pos=0.93,pin=240:{USD-JPY}] {};	
+				{data/fx.csv} node[pos=0.93,pin=270:{USD-JPY}] {};	
 			\addplot[thick, color=black!50] table [x=Date, y=REER, col sep=comma] 
 				{data/fx.csv} node[pos=0.42,pin=90:{Real effective}] {};	 	
 			\addplot[ultra thick, dashed, color=blue!50!black] table [x=Date, y=NEER, col sep=comma] 
-				{data/fx.csv} node[pos=0.9,pin=90:{Nominal effective}] {};	 	
+				{data/fx.csv} node[right, pos=0.9, pin={[pin distance=1cm]90:{Nominal effective}}] {};
 			\node[below, shift=({2.7cm,-0.1cm})] {\color{black!80} \input{data/usdjpy.txt}};
-			\node[align=left, below, shift=({2.8cm,4.0cm})] {\color{black!80} Values indexed to 2014=1; \\ Effective rates are BIS broad-index rates.};
+			\node[align=left, below, shift=({2.6cm,4.0cm})] {\color{black!80} Values indexed to 2014=1; \\ Effective rates are BIS broad-index};
 			\end{axis}
 		
 			\end{tikzpicture}
