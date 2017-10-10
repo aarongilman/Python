@@ -1,10 +1,10 @@
 Item,one,two,ten
-Energy,2.4,3.4,0.9
-Housing,3.0,2.8,1.8
-Healthcare,2.7,2.6,3.2
-Other goods \& serv,2.4,2.5,2.7
-Recreation,0.8,1.3,0.6
-Transportation,0.5,1.2,1.2
-Food \& Beverage,0.9,1.1,2.2
-Apparel,-0.7,-0.4,0.5
-Education \& Comm.,-2.4,-2.4,1.5
+Energy,3.4,6.4,1.0
+Housing,2.8,2.9,1.8
+Transportation,1.2,2.7,1.2
+Other goods \& serv,2.5,2.2,2.7
+Healthcare,2.6,1.8,3.2
+Recreation,1.3,1.5,0.6
+Food \& Beverage,1.1,1.1,2.2
+Apparel,-0.4,-0.6,0.6
+Education \& Comm.,-2.4,-2.6,1.5

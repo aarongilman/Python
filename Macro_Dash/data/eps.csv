@@ -1,10 +1,10 @@
 A,mark,avg,max,min,neg
-Health Care,9.8,8.8525,4.87,5.48,.
-Information Technology,9.73,10.11,8.23,4.31,.
-Consumer Discretionary,8.11,7.5475,3.89,4.79,.
+Health Care,9.79,8.85,4.87,5.48,.
+Information Technology,9.72,10.1075,8.23,4.31,.
+Consumer Discretionary,8.13,7.5525,3.89,4.79,.
 Industrials,7.47,6.5325,5.48,2.55,.
 Financials,6.65,6.4025,3.08,3.72,.
-Consumer Staples,5.95,6.4525,3.7,4.81,.
+Consumer Staples,6.01,6.4675,3.7,4.81,.
 Materials,4.39,3.18,4.94,0.01,.
 Telecom Services,2.9,2.5525,5.06,.,-3.42
 Utilities,1.98,2.2325,4.27,.,-1.12
