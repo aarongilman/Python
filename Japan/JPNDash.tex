@@ -293,7 +293,7 @@
 			\addplot[ultra thick, color=red!50] table [x=date, y=Small, col sep=comma] 
 				{data/tankan_bc.csv} node[pos=0.55,pin=270:{Small firms}] {};	
 			\addplot[thin, color=black!60] table [x=date, y=Medium, col sep=comma] 
-				{data/tankan_bc.csv} node[pos=0.88,pin=90:{Medium firms}] {};	 	
+				{data/tankan_bc.csv} node[pos=0.84,pin=90:{Medium firms}] {};	 	
 			\addplot[thick, dashed, color=red!50!black] table [x=date, y=Large, col sep=comma] 
 				{data/tankan_bc.csv} node[pos=0.21,pin=60:{Large firms}] {};	 	
 			\node[below, shift=({1.5cm,-0.1cm})] {\color{black!80} \input{data/tankan_bc.txt}};
@@ -319,9 +319,9 @@
 		\indent \begin{tikzpicture}[trim axis right]
 			\begin{axis}[date coordinates in=x, xticklabel={\year}, \lineplotsettings \bbar{y}{0}]
 			\addplot[ultra thick, color=purple!80] table [x=date, y=All, col sep=comma] 
-				{data/cpi.csv} node[pos=0.252,pin=0:{All-items CPI}] {};	
+				{data/cpi.csv} node[pos=0.245,pin=0:{All-items CPI}] {};	
 			\addplot[thick, color=black!50] table [x=date, y=Core, col sep=comma] 
-				{data/cpi.csv} node[pos=0.755,pin=100:{Core CPI (excl. food and energy)}] {};	 		
+				{data/cpi.csv} node[pos=0.73,pin=100:{Core CPI (excl. food and energy)}] {};	 		
 			\node[below, shift=({2.9cm,-0.1cm})] {\color{black!80} \input{data/cpi.txt}};
 			\end{axis}
 		\end{tikzpicture} \hfill
