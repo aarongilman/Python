@@ -33,8 +33,7 @@
 				\lhead{\LARGE{\textcolor{cyan!30!blue}{\textbf{Macro and Markets Dashboard:}} 
 				United States}} 
 				\rhead{\footnotesize \textcolor{cyan!80!blue}{\textbf{Updated:}} \today}
-				\lfoot{\small{\textcolor{cyan!30!blue}{\textbf{Made by:}} Brian W Dew \ 
-					\href{https://www.linkedin.com/in/brian-dew-5788a386}{\fablueset{\faLinkedinSquare}} \
+				\lfoot{\small{\textcolor{cyan!30!blue}{\textbf{Made by:}} Brian Dew \ 
 					$\vert$  \ brianwdew@gmail.com \ \href{mailto:brianwdew@gmail.com}
 						{\fablueset{\faEnvelope}} \ 
 					$\vert$ \ @bd\_econ \href{https://twitter.com/bd_econ}{\fablueset{\faTwitter}}}}
@@ -58,7 +57,7 @@
 	% Line plot settings
 		\newcommand{\lineplotsettings}{yticklabel style={text width=3em},
 			ymajorgrids, width=9.5cm, xtick={
-			{2006-01-01},{2008-01-01},{2010-01-01},{2012-01-01},{2014-01-01},{2016-01-01}},
+			{2006-01-01},{2008-01-01},{2010-01-01},{2012-01-01},{2014-01-01},{2016-01-01},{2018-01-01}},
 			minor xtick={{2007-01-01},{2009-01-01},{2011-01-01},{2013-01-01},{2015-01-01}, {2017-01-01}},
 			enlarge y limits={0.24}, enlarge x limits={0.03},}
 	% X-Bar plot settings
@@ -77,7 +76,7 @@
 %  BEGIN DOCUMENT
 \begin{document}
 \thispagestyle{main}
-\noindent \small Third quarter U.S. economic growth remained strong, driven by consumption and to a lesser extent investment growth. The labor market is gradually nearing full employment and still adding jobs at a health pace. Inflation remains near or below the Fed's two percent target in both the core CPI and the full index, with little expected acceleration. Over the past month, there has been an increase in the price of oil. Short- and medium-term borrowing costs have increased as interest rate hikes are expected to continue.
+\noindent \small Third quarter U.S. economic growth, which remained strong, was driven by increased consumption and investment. The labor market is gradually nearing full employment and still adding jobs at a healthy pace. Inflation remains near the Fed's two percent target in both the core CPI and the full index, with little expected acceleration. Short- and medium-term borrowing costs have increased as Fed interest rate hikes are expected to continue or accelerate.
 
 \section{Economic Growth and Employment}
 	% Title: GDP Growth	
@@ -109,7 +108,7 @@
 				fill=blue!40!green] table [y index = 4, x=DATE, y=PCECC96, col sep=comma]
 				{data/gdp_comp.csv};			
 			\addplot[thick, color=black] table [x=DATE, y=GDPC1, col sep=comma] {data/gdp_comp.csv}
-				node[pos=0.54,pin=80:{Real GDP Growth}] {};	
+				node[pos=0.52,pin=80:{Real GDP Growth}] {};	
 			\node[align=center, below, shift=({2.7cm,-0.25cm})] {
 				\input{data/gdp_comp.txt}};
 			\legend{Contributions to ,GDP growth, Government, Investment ,Net Exports, Consumption};			
@@ -154,7 +153,7 @@
 				(FRED: \href{https://fred.stlouisfed.org/series/T5YIFR}
 					{T5YIFR})};			
 			\addplot[ultra thick, color=blue!70] table [x=DATE, y=CPIAUCSL, col sep=comma] 
-				{data/cpi.csv} node[pos=0.235,pin=10:{All-items CPI}] {};	
+				{data/cpi.csv} node[pos=0.23,pin=10:{All-items CPI}] {};	
 			\addplot[thick, color=black!50] table [x=DATE, y=CPILFESL, col sep=comma] 
 				{data/cpi.csv} node[pos=0.43,pin=275:{Core CPI (excl. food and energy)}] {};	 		
 			\node[below, shift=({2.9cm,-0.1cm})] {\color{black!80} \input{data/cpi.txt}};

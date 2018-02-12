@@ -1,0 +1,321 @@
+ % % % % % % % % % % % % % % 
+%
+%	U.S. Macro and Markets Dashboard
+%	Brian W. Dew (brianwdew@gmail.com)
+%	Updated: November 19, 2017
+%	TO DO: Prepare for 12 new charts and 2 new maps before the end of 2017!
+%		   I don't think I need all these packages...
+%		   Why does last page need special style?
+%          Make the indentation consistent
+%
+%
+% % % % % % % % % % % % % %
+	\PassOptionsToPackage{table}{xcolor}
+	\documentclass[final]{report}
+	\overfullrule=1mm
+%
+%%%%%% Packages %%%%%%%%%%%%%%%
+%
+	\usepackage[right=0.8in, left=0.5in, top=0.85in, bottom=1in]{geometry}
+	\usepackage{pgfplots, pgfplotstable}
+	\usepackage{caption}
+		\captionsetup{labelsep=space,justification=justified,singlelinecheck=off}
+	\usepackage{fancyhdr}
+	\usepackage{csvsimple}
+	\usepackage{longtable}
+	\usepackage{booktabs}
+	\usepackage[outline]{contour} %used for logo, potentially move
+	\usepackage[detect-all]{siunitx}
+	\usepackage[eulergreek]{sansmath}
+	\usepackage[english]{babel}
+	\usepackage{colortbl}
+	\usepackage{array}
+	\usepackage{xcolor}
+	\usepackage{titlesec}
+	\usepackage{color}
+	\usepackage{amssymb}
+	\usepackage{multicol}
+	\usepackage{microtype}
+	\usepackage{fontawesome}
+	\usepackage[us]{datetime}
+	\usepackage{dcolumn}
+	\usepackage[colorlinks,
+  		linkcolor=cyan!50!blue,
+  		filecolor=cyan!50!blue,
+ 		citecolor=cyan!50!blue,
+ 		urlcolor=cyan!50!blue,
+ 		linktoc=all, pdfencoding=auto]{hyperref}
+
+	%   TikZ externalize
+	\usetikzlibrary{pgfplots.external, backgrounds, shadows, pgfplots.dateplot, 
+		patterns, pgfplots.fillbetween, pgfplots.groupplots} 
+	\tikzexternalize[prefix=tikz/, up to date check=diff]
+		\tikzset{external/force remake}
+
+%
+%%%%% DOCUMENT SETTINGS %%%%%%%%%%
+%
+
+
+	% Paragraph spacing
+		\setlength{\parskip}{4pt}
+	% Sans serif font
+		\renewcommand*\sfdefault{cmss}
+		\renewcommand{\familydefault}{\sfdefault}
+	% Special font for title
+		\newcommand{\setfont}[2]{{\fontfamily{#1}\selectfont #2}}
+	% Custom chart titles
+		\newcommand{\ct}[2][]{\noindent \normalsize{
+			{ \textbf{{#1}}} \hfill { \textbf{{#2}}}}}
+	% Custom chart footer
+		\newcommand{\cf}[2][]{
+			\indent \color{black!90} \scriptsize{
+				{#1} \hfill {#2}}}
+	% Custom toc title
+		\titleformat{\chapter}{\Large \color{black!60}}{}{0cm}{}[\vspace{-12mm}]	
+	% Chapter spacing
+	\setcounter{secnumdepth}{-1}
+	% Remove TOC chapter numbers
+	%\renewcommand{\thesection}{}	
+	% Style for headers and footers, first page large header, no page number
+		% First page
+		\fancypagestyle{firststyle}{
+			\headheight = 40pt
+			\headsep = 12pt
+			\fancyhf{}
+			\renewcommand{\headrulewidth}{0pt}
+			\lhead{ %
+				  \hspace{5mm} \setfont{qhv}{\textcolor{cyan!70!blue}
+					{\huge{\textbf{Macro and Markets Dashboard:}}} 
+						\LARGE{United States}} \hspace{55mm}	
+					 \indent  \small{\textsl{\hspace{8mm} Updated: \today }}}
+			\rfoot{}
+			\cfoot{}
+			\lfoot{ \href{http://www.bd-econ.com/}{bd-econ.com} 
+						$\vert$ BD Economics
+		}}
+
+%%%%% GRAPH SETTINGS %%%%%%%%%%%
+%
+
+	% Table column settings
+		\newcolumntype{d}[1]{D{.}{.}{#1}}   
+		
+	% Style for line plots
+		\pgfplotsset{
+				compat=1.13, 
+				axis line style={black!20}, 
+				every tick/.style={black!20}, 
+				every tick label/.append style={black!50}, 
+				every tick label/.append style={font=\sansmath\sffamily\footnotesize}, 
+				date ZERO=2006-01-01,
+				yticklabel style={text width=3em,align=center, anchor=south},
+				xticklabel style={text width=2em,align=left},         
+				axis x line*=bottom,
+		        x axis line style={black!50},
+		        axis y line=left,
+		        y axis line style={opacity=0},
+		        ymajorgrids, grid style={very thin,black!10},	        
+		        width=11.65cm, height=7.1cm,
+		        }
+		        
+	% HFI settings
+		\newcommand{\lastpt}[1]{node[circle, minimum size=3pt, inner sep=0pt, draw, fill, pos=1]
+			(#1){};}
+		\newcommand{\hfititle}[1]{
+		\node [right, fill=white, inner sep=1pt, shift=({1.15cm,-0.1cm})] 
+			at (current bounding box.north west){\textbf{#1}};}
+		\newcommand{\hfititlet}[1]{
+		\node [right, fill=white, inner sep=1pt, shift=({1.15cm,-0.3cm})] 
+			at (current bounding box.north west){\textbf{#1}};}
+	    \newcommand{\hfiplot}[2]{
+		\addplot[ultra thick, no markers, color=#1] table [x=date, y=#2, col sep=comma]{hfitab.csv}}
+		\newcommand{\hfifplot}[1]{
+		\addplot[draw=none, no markers] table [x=date, y=#1, col sep=comma]{hfitab.csv};}
+	
+	% Key indicator mark
+		\newcommand{\keyind}{\normalsize{\color{green!50!teal}{\faAsterisk}}}
+	
+	% node text size
+		\tikzset{every node/.append style={font=\sansmath\sffamily\footnotesize}}
+	   	
+	% Style for bar plots
+		\pgfplotsset{
+		/pgfplots/xbar legend/.style={
+		/pgfplots/legend image code/.code={%
+		\draw[##1,/tikz/.cd, bar width=2.7pt,yshift=-0.1em,bar shift=0pt]
+		plot coordinates {(0.8em, 0cm) (0.6em, 1.7*\pgfplotbarwidth)};},
+		}}
+		
+	\pgfplotstableset{
+		col sep=comma, 
+		every even row/.style={before row={\rowcolor[gray]{0.92}}},
+		every head row/.style={after row=\hline},
+		every last row/.style={after row=\hline},
+	}		
+					
+								
+	% Bar Plot multiple colors tools
+		\pgfplotsset{
+		    discard if/.style 2 args={
+		        x filter/.code={
+		            \edef\tempa{\thisrow{#1}}
+		            \edef\tempb{#2}
+		            \ifx\tempa\tempb
+		                \def\pgfmathresult{inf}
+		            \fi}},
+		    discard if not/.style 2 args={
+		        x filter/.code={
+		            \edef\tempa{\thisrow{#1}}
+		            \edef\tempb{#2}
+		            \ifx\tempa\tempb
+		            \else
+		                \def\pgfmathresult{inf}
+		            \fi}}}
+		
+	% Date (X) Axis Tick Marks, one tick per year, every even year labeled
+		\newcommand{\dateaxisticks}{
+				axis line style={draw=none},
+				max space between ticks=38,	 
+				xmin={2007-01-01},
+				xtick={{2000-01-01},
+			   	 		{2002-01-01},
+			      		{2004-01-01},
+			    		{2006-01-01},
+			   	 		{2008-01-01},
+			      		{2010-01-01},
+			      		{2012-01-01},
+			      		{2014-01-01},
+			      		{2016-01-01},
+			      		{2018-01-01}},
+			    minor xtick={{2001-01-01},
+			    		{2003-01-01},
+			    		{2005-01-01},
+			    		{2007-01-01},
+			    		{2009-01-01},
+			    		{2011-01-01},
+			    		{2013-01-01},
+			    		{2015-01-01},
+			    		{2017-01-01}},
+			    enlarge y limits={0.14},
+			    enlarge x limits={0.12},}
+	
+	% Solid bars at significant x or y values
+		\newcommand{\bbar}[2]{extra #1 ticks = {{#2}},
+				extra #1 tick labels = ,
+			    extra #1 tick style  = {grid=major, grid style={thick,solid,black!25}},}
+			    
+	% Additional bar plot settings
+		\newcommand{\barplotnogrid}{
+			xbar=0pt,
+		    y axis line style = { opacity = 0 },   
+		    x axis line style = { opacity = 0 }, 
+		    yticklabel style={align=left, anchor=east},
+      		xmajorticks=false,
+			ymajorgrids=false,   
+		    ytick=data,
+		    tickwidth = 0pt,
+		    reverse legend,
+		    nodes near coords, nodes near coords align={horizontal},
+		    }
+						    		    	    
+% % % % % % % %
+%
+%
+%  BEGIN DOCUMENT
+%
+%
+% % % % % % % %		
+\begin{document}
+	
+	%
+	% Title: XXXX and XXXX	
+		\ct[
+		Contributions to real GDP growth
+		]{
+		.
+		}\vspace{-1mm}
+		
+\noindent \begin{tikzpicture}
+			\begin{axis}[date coordinates in=x, xticklabel={\year}, stack negative=separate, 
+				date ZERO=2006-01-01,
+				legend style={text=black!70, legend columns=2,draw=none, at={(0.9,0.4)},
+				/tikz/every even column/.append style={column sep=-0.25cm}},
+				legend cell align=left, 
+				\bbar{y}{0}, \dateaxisticks]
+					]	
+			\addlegendimage{empty legend}
+			\addlegendimage{empty legend}
+			\fill[color=black, opacity=0.03] 
+				(axis cs:2007-12-01, -10) rectangle (axis cs:2009-07-01, 8);
+			\node[align=left, below, shift=({4.25cm,4.95cm}), fill=white, inner sep=1pt] 
+				{(Quarterly percent change, seasonally-adjusted annual rate)};
+			\addplot[ybar stacked, bar width=3pt, draw opacity=0, 
+				fill=blue!60!black!90] table [y index = 1, x=DATE, y=A822RY, col sep=comma]
+				{T10102.csv};	
+			\addplot[ybar stacked, bar width=3pt, draw opacity=0, 
+				fill=yellow!80!orange] table [y index = 2, x=DATE, y=A006RY, col sep=comma]
+				{T10102.csv};	
+			\addplot[ybar stacked, bar width=3pt, draw opacity=0, fill=cyan!70] 
+				table [y index = 3, x=DATE, y=A019RY, col sep=comma]
+				{T10102.csv};	
+			\addplot[ybar stacked, bar width=3pt, draw opacity=0, 
+				fill=blue!40!green] table [y index = 4, x=DATE, y=DPCERY, col sep=comma]
+				{T10102.csv};
+			\addplot[thick, color=black] table [x=DATE, y=A191RL, col sep=comma] {T10102.csv}
+				\lastpt{value};	
+			\node[right, align=left, yshift=3.5mm] at (value){\input{T10102.txt}};	
+			%\node[align=center, below, shift=({2.7cm,-0.25cm})] {
+			%	\input{gdp_comp.txt}};
+			\legend{Contributions to ,GDP growth, Government, Investment ,Net Exports, Consumption};	
+			\end{axis} 		
+		\end{tikzpicture}\\
+		% Footer
+		\cf[Bureau of Economic Analysis NIPA Table 1.1.2. \hspace{30mm} {\color{cyan!75!blue}{\faTwitter} \color{black!70}@bd\_econ}]
+				{.}
+
+\vspace{8mm}
+
+	%
+	% Title: XXXX and XXXX	
+		\ct[
+		Private non-residential fixed investment
+		]{
+		.
+		}\vspace{-1mm}
+		
+\noindent \begin{tikzpicture}
+			\begin{axis}[date coordinates in=x, xticklabel={\year}, stack negative=separate, 
+				date ZERO=2006-01-01, xmin=2006-01-01, ymax=18,
+				legend style={text=black!70, legend columns=1,draw=none, at={(0.9,0.3)},
+				/tikz/every even column/.append style={column sep=-0.25cm}},
+				legend cell align=left, 
+				\bbar{y}{0}, \dateaxisticks]
+					]	
+			\fill[color=black, opacity=0.03] 
+				(axis cs:2007-12-01, -25) rectangle (axis cs:2009-07-01, 20);
+			\node[align=left, below, shift=({3.5cm,4.85cm}), fill=white, inner sep=1pt] 
+				{(Quarterly percent change, seasonally-adjusted annual rate)};
+			\addplot[ybar stacked, bar width=3pt, draw opacity=0, 
+				fill=blue!70] table [y index = 1, x=DATE, y=B009RZ, col sep=comma]
+				{T50302.csv};	
+			\addplot[ybar stacked, bar width=3pt, draw opacity=0, 
+				fill=cyan!50] table [y index = 2, x=DATE, y=Y033RZ, col sep=comma]
+				{T50302.csv};	
+			\addplot[ybar stacked, bar width=3pt, draw opacity=0, fill=green!60!black] 
+				table [y index = 3, x=DATE, y=Y001RZ, col sep=comma]
+				{T50302.csv};	
+			\addplot[thick, color=black] table [x=DATE, y=A008RZ, col sep=comma] {T50302.csv}
+				\lastpt{value};	
+			\node[right, align=left, yshift=3.5mm] at (value){\input{T50302.txt}};	
+			%\node[align=center, below, shift=({2.7cm,-0.25cm})] {
+			%	\input{gdp_comp.txt}};
+			\legend{Structures, Equipment, Intellectual Property Products};	
+			\end{axis} 		
+		\end{tikzpicture}\\
+		% Footer
+		\cf[Bureau of Economic Analysis NIPA Table 5.3.2. \hspace{30mm} {\color{cyan!75!blue}{\faTwitter} \color{black!70}@bd\_econ}]
+				{.}
+
+
+\end{document}

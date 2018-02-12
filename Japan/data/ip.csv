@@ -1,12 +1,12 @@
 industry,pre,lt,avg,min,max
-Machinery,,122.4,111.883333333,94.9,30.4
-Chemicals,,110.7,98.6883333333,92.7,18.0
-Transport equipment,,106.5,100.521666667,92.4,22.4
-Electrical parts \& devices,,105.8,97.3816666667,82.6,29.5
-Electrical machinery,,103.1,101.196666667,93.3,14.7
-Plastic products,,102.8,98.6016666667,93.4,9.4
-\textbf{All manufacturing and mining},,102.5,98.2433333333,93.4,10.4
-Foods and tobacco,,96.7,96.9966666667,92.0,9.2
-Other manufacturing,,92.2,94.855,91.4,8.9
-Fabricated metals,,89.1,95.8916666667,87.5,15.3
-Information \& communication eq.,,50.5,59.11,49.8,24.9
+Machinery,133.1,127.0,113.368333333,96.8,36.3
+Electrical parts \& devices,113.1,109.4,98.4733333333,82.6,30.5
+Transport equipment,114.2,107.4,101.341666667,96.1,18.7
+Chemicals,,106.9,99.1305084746,92.7,18.0
+Electrical machinery,107.3,106.7,101.755,96.4,11.6
+\textbf{All manufacturing and mining},106.3,103.5,98.75,94.0,12.3
+Plastic products,103.8,101.7,98.86,93.4,10.4
+Foods and tobacco,,95.3,96.8949152542,92.0,9.2
+Other manufacturing,94.3,93.3,94.71,91.4,8.9
+Fabricated metals,100.2,91.8,95.6483333333,87.5,14.8
+Information \& communication eq.,51.1,51.8,58.3783333333,49.8,24.9

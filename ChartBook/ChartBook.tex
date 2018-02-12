@@ -1,0 +1,287 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%	U.S. Economy Chartbook
+%	Brian W. Dew (brianwdew@gmail.com)
+%	Version: 0.1 (January 28, 2018)
+%	TO DO: Bare minimum for GDP contributions chart
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% PACKAGES AND PACKAGE SETTINGS %%%%%%%%%%
+\documentclass[final]{report}
+
+\usepackage[right=0.7in, left=0.7in, top=0.8in, bottom=0.8in]{geometry}
+\usepackage[eulergreek]{sansmath}
+\usepackage{amssymb}
+\usepackage{colortbl}
+\usepackage{pgfplots, pgfplotstable}
+	\pgfplotsset{compat=1.15,				
+		every tick label/.append style={font=\sansmath\sffamily\footnotesize}}
+	\tikzset{every node/.append style={font=\sansmath\sffamily\footnotesize}}
+	\usetikzlibrary{pgfplots.dateplot}
+\usepackage[colorlinks, linkcolor=cyan!50!blue,	filecolor=cyan!50!blue,	
+	citecolor=cyan!50!blue, urlcolor=cyan!50!blue, linktoc=all, pdfencoding=auto]{hyperref}
+%\usepackage{verbatim}
+%	\makeatletter
+%	\newcommand{\verbatimfont}[1]{\def\verbatim@font{#1}}%
+%	\makeatother
+%%%%%%%% DOCUMENT SETTINGS %%%%%%%%%%%%%%%%%
+
+% Sans serif font
+	\renewcommand*\sfdefault{cmss}
+	\renewcommand{\familydefault}{\sfdefault}
+	
+% Chart title and footer
+	\newcommand{\ct}[1]{\hspace{-6mm} {\color{black!80} \textbf{#1}}}
+	\newcommand{\cf}[1]{\noindent {\color{black!80} \footnotesize{#1}}}
+
+%%%%%%%% GRAPH TYPES AND FEATURES %%%%%%%%%%
+
+% CEPR Colors
+%\definecolor{ceprltblue}{RGB}{197,217,241}
+%\definecolor{ceprdkblue}{RGB}{31,73,125}
+\definecolor{ceprmdblue}{RGB}{83,141,213}
+%\definecolor{ceprlttan}{RGB}{196,187,151}
+
+% Standard date axis
+\newcommand{\dateaxis}{date ZERO=2000-01-01, enlarge y limits={0.08}, 
+	enlarge x limits={0.01}, clip=false, axis line style={draw=none}, axis y line*=left, 
+	axis x line*=bottom, ymajorgrids, grid style={very thin,black!10}, 
+	every tick/.style={black!20}, every tick label/.append style={black!50}, 
+	legend image post style={scale=0.75}, legend style={draw=none, fill=none, 
+	text=black!70, legend cell align=left, 
+	/tikz/every even column/.append style={column sep=2mm}},
+	xtick={{2000-01-01}, {2002-01-01}, {2004-01-01}, {2006-01-01}, {2008-01-01},
+		{2010-01-01}, {2012-01-01}, {2014-01-01}, {2016-01-01}, {2018-01-01}},
+	minor xtick={{2001-01-01}, {2003-01-01}, {2005-01-01}, {2007-01-01}, {2009-01-01},
+		{2011-01-01}, {2013-01-01}, {2015-01-01}, {2017-01-01}}, width=12.0cm, height=6.5cm,}
+
+% Recession bar
+\newcommand{\recbar}[2]{\fill[color=black, opacity=0.05] 
+	(axis cs:2007-12-01, #1) rectangle (axis cs:2009-07-01, #2);
+	\fill[color=black, opacity=0.04] 
+	(axis cs:2001-4-01, #1) rectangle (axis cs:2001-12-01, #2);}
+
+% Optional grid line at specified value
+\newcommand{\bbar}[2]{extra #1 ticks={{#2}}, extra #1 tick labels= , 
+	extra #1 tick style={grid=major, grid style={thick,solid,black!25}},}
+
+% Stacked bar, date axis
+\newcommand{\stackedbar}[3]{\addplot[ybar stacked, bar width=2.3pt, draw=#3, fill=#3] 
+	table [x=DATE, y=#2, col sep=comma]{#1.csv};}
+
+% Bar, date axis
+\newcommand{\barplot}[4]{\addplot[ybar, bar width=#4pt, draw=#3, fill=#3] table 
+	[x=DATE, y=#2, col sep=comma] {#1.csv} node[pos=1](#2){}; 
+	\node[right, align=left] at (#2){\input{#1.txt}};}
+
+% Line plot, final value in series gets circle and text with date and value
+\newcommand{\linept}[4]{\addplot[#4, color=#3] table [x=DATE, y=#2, col sep=comma] {#1.csv}
+	node[circle, minimum size=3pt, inner sep=0pt, draw, fill, pos=1](#2){};
+	\node[right, align=left, yshift=3.5mm] at (#2){\input{#1.txt}};}
+	
+% Subtitle to explain y axis
+\newcommand{\subtit}[1]{\node at (rel axis cs: -0.05,0.99) 
+	[text=black!70, scale=0.8, right] {#1};}
+	
+% Table settings used for exchange rates table
+\pgfplotstableset{col sep=comma, every even row/.style={before row={\rowcolor[gray]{0.92}}},
+	every head row/.style={after row=\hline}, every last row/.style={after row=\hline}}
+	
+\graphicspath{{C:/Working/USA/flags/}}		 	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\section*{National Accounts}
+
+Test, some text goes here.
+
+\vspace{3mm}
+
+% Real GDP Growth by Component
+	\begin{minipage}{0.65\textwidth}
+
+	\ct{Real GDP growth}
+
+	\begin{tikzpicture}[trim axis left] \begin{axis}
+		[date coordinates in=x, xticklabel={\year}, stack negative=separate, \dateaxis
+			legend style={at={(0.98,0.2)}, legend columns=2}, \bbar{y}{0}]	
+		\recbar{\pgfkeysvalueof{/pgfplots/ymin}}{\pgfkeysvalueof{/pgfplots/ymax}}
+		\stackedbar{T10102}{A822RY}{blue!60!black!90}
+		\stackedbar{T10102}{A006RY}{yellow!80!orange}
+		\stackedbar{T10102}{A019RY}{cyan!70}
+		\stackedbar{T10102}{DPCERY}{green!60!blue}
+		\linept{T10102}{A191RL}{black}{thick}
+		\node at (rel axis cs: 0.59,0.22) [text=black!65, scale=0.8, right] 
+			{Contribution from:};
+		\legend{Government, Investment, Net Exports, Consumption};	
+		\subtit{Percent, seasonally adjusted annual rate};
+	\end{axis} \end{tikzpicture}\vspace{-1mm}
+	
+	\cf{Bureau of Economic Analysis NIPA Table 1.1.2.}
+	\end{minipage}\hfill
+	\begin{minipage}{0.3\textwidth}
+		{\color{black!80}\small \textsl{}}
+	\end{minipage}
+
+\vspace{10mm}
+
+% Real Private Nonresidential investment growth
+	\begin{minipage}{0.65\textwidth}
+
+	\ct{Business investment growth}
+
+	\begin{tikzpicture}[trim axis left, font=\sffamily] \begin{axis}
+		[date coordinates in=x, xticklabel={\year}, stack negative=separate, \dateaxis
+			legend style={at={(0.98,0.31)}, legend columns=1}, \bbar{y}{0}]	
+		\recbar{\pgfkeysvalueof{/pgfplots/ymin}}{\pgfkeysvalueof{/pgfplots/ymax}}
+		\stackedbar{T50302}{B009RZ}{blue!70}
+		\stackedbar{T50302}{Y033RZ}{cyan!50}
+		\stackedbar{T50302}{Y001RZ}{green!60!black}
+		\linept{T50302}{A008RZ}{black}{thick}
+		\node at (rel axis cs: 0.58,0.33) [text=black!65, scale=0.8, right] {Investment in:};
+		\legend{Structures, Equipment, Intellectual Property Products};		
+		\subtit{Percent, seasonally adjusted annual rate};
+	\end{axis} \end{tikzpicture}\vspace{-1mm}
+	
+	\cf{Bureau of Economic Analysis NIPA Table 5.3.2.}
+	\end{minipage}\hfill
+	\begin{minipage}{0.3\textwidth}
+		{\color{black!80}\small \textsl{}}
+	\end{minipage}
+
+\vspace{10mm}
+
+% Real personal consumption expenditure growth
+	\begin{minipage}{0.65\textwidth}
+
+	\ct{Personal spending growth by major category}
+
+	\begin{tikzpicture}[trim axis left] \begin{axis}
+		[date coordinates in=x, xticklabel={\year}, stack negative=separate, \dateaxis
+			legend style={at={(0.98,0.31)}, legend columns=1}, \bbar{y}{0}]	
+		\recbar{\pgfkeysvalueof{/pgfplots/ymin}}{\pgfkeysvalueof{/pgfplots/ymax}}
+		\stackedbar{T20306}{DSEREXHUT}{orange!50!yellow}
+		\stackedbar{T20306}{DHUTRX}{magenta!70!orange}
+		\stackedbar{T20306}{DNDGRX}{teal!50!cyan!70}
+		\stackedbar{T20306}{DDURRX}{blue!50!lightgray}
+		\linept{T20306}{DPCERX}{black}{thick}
+		\node at (rel axis cs: 0.62,0.33) [text=black!65, scale=0.8, right] {Spending on:};
+		\legend{Services excluding housing, Housing and utilities, Non-durable goods, Durable goods};		
+		\subtit{Percent, seasonally adjusted annual rate};
+	\end{axis} \end{tikzpicture}\vspace{-1mm}
+	
+	\cf{Bureau of Economic Analysis NIPA Table 2.3.6.}
+	\end{minipage}\hfill
+	\begin{minipage}{0.3\textwidth}
+%		{\color{black!80}\small \textsl{}}
+%		\verbatimfont{\tt \footnotesize}
+%		\verbatiminput{T20306-lt.txt}}
+	\end{minipage}
+
+\newpage
+
+% Employment to population ratio
+	\begin{minipage}{0.68\textwidth}
+
+	\ct{Employment-population ratio}
+
+	\begin{tikzpicture}[trim axis left] \begin{axis}
+		[date coordinates in=x, xticklabel={\year}, \dateaxis]	
+		\recbar{\pgfkeysvalueof{/pgfplots/ymin}}{\pgfkeysvalueof{/pgfplots/ymax}}
+		\linept{LNS12300060}{LNS12300060}{red}{ultra thick}
+		\subtit{Percent of population with jobs, age 25-54};
+	\end{axis} \end{tikzpicture}\vspace{-1mm}
+	
+	\cf{Bureau of Labor Statistics, LNS12300060}
+	\end{minipage}\hfill
+	\begin{minipage}{0.28\textwidth}
+		{\color{black!80}\small \textsl{Brian, update this on Friday!}}
+	\end{minipage}
+
+\vspace{10mm}
+
+% Labor productivity growth
+	\begin{minipage}{0.68\textwidth}
+
+	\ct{Labor productivity growth, nonfarm business sector}
+
+	\begin{tikzpicture}[trim axis left] \begin{axis}
+		[date coordinates in=x, xticklabel={\year}, \dateaxis, \bbar{y}{0}, ymax=10]	
+		\recbar{\pgfkeysvalueof{/pgfplots/ymin}}{\pgfkeysvalueof{/pgfplots/ymax}}
+		\barplot{OPHNFB}{OPHNFB}{blue}{2.3}
+		\subtit{Percent, seasonally adjusted annual rate};
+	\end{axis} \end{tikzpicture}\vspace{-1mm}
+	
+	\cf{Bureau of Labor Statistics}
+	\end{minipage}\hfill
+	\begin{minipage}{0.28\textwidth}
+	{\color{black!80}\small \textsl{}}
+	\end{minipage}
+
+\vspace{10mm}
+
+% Payrolls change
+	\begin{minipage}{0.68\textwidth}
+
+	\ct{Job growth, nonfarm payrolls}
+
+	\begin{tikzpicture}[trim axis left] \begin{axis}
+		[date coordinates in=x, xticklabel={\year}, \dateaxis, \bbar{y}{0}]	
+		\recbar{\pgfkeysvalueof{/pgfplots/ymin}}{\pgfkeysvalueof{/pgfplots/ymax}}
+		\barplot{payroll}{payroll}{ceprmdblue}{1.3}
+		\subtit{Number of jobs, in thousands};
+	\end{axis} \end{tikzpicture}\vspace{-1mm}
+	
+	\cf{Bureau of Labor Statistics, CES0000001 (update)}
+	\end{minipage}\hfill
+	\begin{minipage}{0.28\textwidth}
+	{\color{black!80}\small \textsl{}}
+	\end{minipage}
+	
+\newpage
+
+% TABLE: Exchange Rates
+	
+\ct{Indirect exchange rates against the US Dollar 
+		( \includegraphics[width=.03\textwidth]{USD} \textbf{USD})}	\vspace{3mm}
+	
+\hspace{-5mm} {\footnotesize
+\renewcommand{\arraystretch}{1.85}
+\setlength{\tabcolsep}{10pt}
+\pgfplotstabletypeset[
+	header=has colnames, 
+	every head row/.style={
+	output empty row,
+	before row={
+		\textbf{Currency} & \textbf{Rate$^1$} & 
+		{\shortstack{\textbf{1 day} \tabularnewline \textbf{ \% ch.}}} & 
+		{\shortstack{\textbf{1 week} \tabularnewline \textbf{ \% ch.}}} & 
+		{\shortstack{\textbf{1 month} \tabularnewline \textbf{ \% ch.}}} & 
+		{\shortstack{\textbf{1 year} \tabularnewline \textbf{ \% ch.}}} & 
+		{\shortstack{\textbf{1 year} \tabularnewline \textbf{high}}} & 
+		{\shortstack{\textbf{1 year} \tabularnewline \textbf{low}}} & 
+		\textbf{Updated: } \tabularnewline},
+	},
+	display columns/0/.style={reset styles, string type, column name=, column type={l}},
+	display columns/1/.style={reset styles, string type, column name=, column type={r}},
+	display columns/2/.style={reset styles, string type, column name=, column type={r}},
+	display columns/3/.style={reset styles, string type, column name=, column type={r}},
+	display columns/4/.style={reset styles, string type, column name=, column type={r}},
+	display columns/5/.style={reset styles, string type, column name=, column type={r}},
+	display columns/6/.style={reset styles, string type, column name=, column type={r}},
+	display columns/7/.style={reset styles, string type, column name=, column type={r}},
+	display columns/8/.style={reset styles, string type, column name=, column type={l}}
+]{currencies2.csv} }
+	\vspace{2mm}
+			
+\hspace{-5mm} \indent \scriptsize{Quandl: \href{https://www.quandl.com/data/CURRFX}{CURRFX/USD(CUR)}}
+	\vspace{2mm}
+	
+\hspace{-5mm} \indent \footnotesize{$^1$} The number of units of foreign currency required to purchase one U.S. dollar. \color{green!80!black} $ \blacktriangle $\normalcolor: stronger dollar; \color{red} $\blacktriangledown $\normalcolor: weaker dollar.
+
+
+\end{document}

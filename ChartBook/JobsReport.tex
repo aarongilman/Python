@@ -1,0 +1,181 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%	U.S. Economy Chartbook
+%	Brian W. Dew (brianwdew@gmail.com)
+%	Version: 0.1 (January 28, 2018)
+%	TO DO: Bare minimum for GDP contributions chart
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% PACKAGES AND PACKAGE SETTINGS %%%%%%%%%%
+\documentclass[final]{report}
+
+\usepackage[right=0.7in, left=0.7in, top=1in, bottom=1in]{geometry}
+\usepackage[eulergreek]{sansmath}
+\usepackage{amssymb}
+\usepackage{colortbl}
+\usepackage{pgfplots, pgfplotstable}
+	\pgfplotsset{compat=1.15,				
+		every tick label/.append style={font=\sansmath\sffamily\footnotesize}}
+	\tikzset{every node/.append style={font=\sansmath\sffamily\footnotesize}}
+	\usetikzlibrary{pgfplots.dateplot}
+\usepackage[colorlinks,
+  	linkcolor=cyan!50!blue,
+  	filecolor=cyan!50!blue,
+ 	citecolor=cyan!50!blue,
+ 	urlcolor=cyan!50!blue,
+ 	linktoc=all, pdfencoding=auto]{hyperref}
+
+%%%%%%%% DOCUMENT SETTINGS %%%%%%%%%%%%%%%%%
+
+% Sans serif font
+	\renewcommand*\sfdefault{cmss}
+	\renewcommand{\familydefault}{\sfdefault}
+	
+% Chart title and footer
+	\newcommand{\ct}[1]{\hspace{-6mm} {\color{black!80} \textbf{#1}}}
+	\newcommand{\cf}[1]{\noindent {\color{black!80} \footnotesize{#1}}}
+
+%%%%%%%% GRAPH TYPES AND FEATURES %%%%%%%%%%
+
+% CEPR Colors
+\definecolor{ceprltblue}{RGB}{197,217,241}
+\definecolor{ceprdkblue}{RGB}{31,73,125}
+\definecolor{ceprmdblue}{RGB}{83,141,213}
+\definecolor{ceprlttan}{RGB}{196,187,151}
+
+% Standard date axis
+\newcommand{\dateaxis}{date ZERO=2000-01-01, enlarge y limits={0.08}, 
+	enlarge x limits={0.01}, clip=false, axis line style={draw=none}, axis y line*=left, 
+	axis x line*=bottom, ymajorgrids, grid style={very thin,black!10}, 
+	every tick/.style={black!20}, every tick label/.append style={black!50}, 
+	legend image post style={scale=0.75}, legend style={draw=none, fill=none, 
+	text=black!70, legend cell align=left, 
+	/tikz/every even column/.append style={column sep=2mm}},
+	xtick={{2000-01-01}, {2002-01-01}, {2004-01-01}, {2006-01-01}, {2008-01-01},
+		{2010-01-01}, {2012-01-01}, {2014-01-01}, {2016-01-01}, {2018-01-01}},
+	minor xtick={{2001-01-01}, {2003-01-01}, {2005-01-01}, {2007-01-01}, {2009-01-01},
+		{2011-01-01}, {2013-01-01}, {2015-01-01}, {2017-01-01}}, width=12.5cm, height=6.8cm,}
+
+% Recession bar
+\newcommand{\recbar}[2]{\fill[color=black, opacity=0.05] 
+	(axis cs:2007-12-01, #1) rectangle (axis cs:2009-07-01, #2);
+	\fill[color=black, opacity=0.04] 
+	(axis cs:2001-4-01, #1) rectangle (axis cs:2001-12-01, #2);}
+
+% Optional grid line at specified value
+\newcommand{\bbar}[2]{extra #1 ticks={{#2}}, extra #1 tick labels= , 
+	extra #1 tick style={grid=major, grid style={thick,solid,black!25}},}
+
+% Stacked bar, date axis
+\newcommand{\stackedbar}[3]{\addplot[ybar stacked, bar width=2.5pt, draw=#3, fill=#3] 
+	table [x=DATE, y=#2, col sep=comma]{#1.csv};}
+
+% Bar, date axis
+\newcommand{\barplot}[4]{\addplot[ybar, bar width=#4pt, draw=#3, fill=#3] table 
+	[x=DATE, y=#2, col sep=comma] {#1.csv} node[pos=1](#2){}; 
+	\node[right, align=left] at (#2){\input{#1.txt}};}
+
+% Line plot, final value in series gets circle and text with date and value
+\newcommand{\linept}[4]{\addplot[#4, color=#3] table [x=DATE, y=#2, col sep=comma] {#1.csv}
+	node[circle, minimum size=3pt, inner sep=0pt, draw, fill, pos=1](#2){};
+	\node[right, align=left, yshift=3.5mm] at (#2){\input{#1.txt}};}
+	
+% Subtitle to explain y axis
+\newcommand{\subtit}[1]{\node at (rel axis cs: -0.05,0.99) 
+	[text=black!70, scale=0.8, right] {#1};}
+	
+% Table settings used for exchange rates table
+\pgfplotstableset{col sep=comma, every even row/.style={before row={\rowcolor[gray]{0.92}}},
+	every head row/.style={after row=\hline}, every last row/.style={after row=\hline}}
+	
+\graphicspath{{C:/Working/USA/flags/}}		 	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\vspace*{5mm}
+
+% Payrolls change
+	\begin{minipage}{0.68\textwidth}
+
+	\ct{Job growth, nonfarm payrolls}
+
+	\begin{tikzpicture}[trim axis left] \begin{axis}
+		[date coordinates in=x, xticklabel={\year}, \dateaxis, \bbar{y}{0}]	
+		\recbar{\pgfkeysvalueof{/pgfplots/ymin}}{\pgfkeysvalueof{/pgfplots/ymax}}
+		\barplot{payroll}{payroll}{ceprmdblue}{1.4}
+		\subtit{Number of jobs, in thousands};
+	\end{axis} \end{tikzpicture}\vspace{-1mm}
+	
+	\cf{Bureau of Labor Statistics, CES0000001 (update)}
+	\end{minipage}\hfill
+	\begin{minipage}{0.28\textwidth}
+	{\color{black!80}\small \textsl{}}
+	\end{minipage}
+
+\vspace{10mm}
+
+% Employment to population ratio
+	\begin{minipage}{0.68\textwidth}
+
+	\ct{Employment-population ratio}
+
+	\begin{tikzpicture}[trim axis left] \begin{axis}
+		[date coordinates in=x, xticklabel={\year}, \dateaxis]	
+		\recbar{\pgfkeysvalueof{/pgfplots/ymin}}{\pgfkeysvalueof{/pgfplots/ymax}}
+		\linept{LNS12300060}{LNS12300060}{ceprdkblue}{ultra thick}
+		\subtit{Percent of population with jobs, age 25-54};
+	\end{axis} \end{tikzpicture}\vspace{-1mm}
+	
+	\cf{Bureau of Labor Statistics, LNS12300060}
+	\end{minipage}\hfill
+	\begin{minipage}{0.28\textwidth}
+		{\color{black!80}\small \textsl{Brian, update this on Friday!}}
+	\end{minipage}
+
+\vspace{10mm}
+
+% Employment to population ratio
+	\begin{minipage}{0.68\textwidth}
+
+	\ct{Average Hourly Earnings Growth}
+
+	\begin{tikzpicture}[trim axis left] \begin{axis}
+		[date coordinates in=x, xticklabel={\year}, \dateaxis]	
+		\recbar{\pgfkeysvalueof{/pgfplots/ymin}}{\pgfkeysvalueof{/pgfplots/ymax}}
+		\linept{ahe}{ahe}{ceprmdblue}{ultra thick}
+		\subtit{3-month moving average, production and nonsupervisory, total private};
+	\end{axis} \end{tikzpicture}\vspace{-1mm}
+	
+	\cf{Author's calculation from Bureau of Labor Statistics, CES0500000008}
+	\end{minipage}\hfill
+	\begin{minipage}{0.28\textwidth}
+		{\color{black!80}\small \textsl{Brian, update this on Friday!}}
+	\end{minipage}
+
+\newpage
+
+\vspace{10mm}
+
+% Employment to population ratio
+	\begin{minipage}{0.68\textwidth}
+
+	\ct{Average Hourly Earnings}
+
+	\begin{tikzpicture}[trim axis left] \begin{axis}
+		[date coordinates in=x, xticklabel={\year}, \dateaxis]	
+		\recbar{\pgfkeysvalueof{/pgfplots/ymin}}{\pgfkeysvalueof{/pgfplots/ymax}}
+		\linept{ahe2}{ahe2}{ceprmdblue}{ultra thick}
+		\subtit{12-month percent change, production and nonsupervisory, total private};
+	\end{axis} \end{tikzpicture}\vspace{-1mm}
+	
+	\cf{Author's calculation from Bureau of Labor Statistics, CES0500000008}
+	\end{minipage}\hfill
+	\begin{minipage}{0.28\textwidth}
+		{\color{black!80}\small \textsl{Brian, update this on Friday!}}
+	\end{minipage}
+
+\end{document}
