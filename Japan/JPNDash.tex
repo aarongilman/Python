@@ -115,7 +115,7 @@
 				fill=green!60!black] table [y index = 4, x=date, y=cons, col sep=comma]
 				{data/gdp.csv};			
 			\addplot[thick, color=black] table [x=date, y=gdp, col sep=comma] {data/gdp.csv}
-				node[pos=0.45,pin=270:{Real GDP Growth}] {};	
+				node[pos=0.43,pin=270:{Real GDP Growth}] {};	
 			\node[align=center, below, shift=({3.5cm,-0.25cm})] {
 				\input{data/gdp.txt}};
 			\legend{Contributions to ,GDP growth, Government, Investment, Net Exports, Consumption};
@@ -180,7 +180,8 @@
 	% Earnings per share
 		\indent \begin{tikzpicture}
 			\begin{axis}[date coordinates in=x, xticklabel={\year}, stack negative=separate,
-				legend style={text=black!70, fill=none, legend columns=1,draw=none, at={(0.4,0.48)},
+				legend style={text=black!70, fill=none, legend columns=1, 
+					draw=none, at={(0.4,0.48)},
 				/tikz/every even column/.append style={column sep=0cm}},
 				legend cell align=left, height=7.0cm,
 				\lineplotsettings
@@ -198,11 +199,12 @@
 			\addplot[ybar stacked, bar width=2.6pt, color=blue!70!black, 
 				fill=blue!70!black] table [y index = 4, x=date, y=nondur_ch, col sep=comma]
 				{data/cons.csv};			
-			\addplot[thick, color=black] table [x=date, y=total_ch, col sep=comma] {data/cons.csv}
-				node[pos=0.24,pin=90:{Total change}] {};	
+			\addplot[thick, color=black] table [x=date, y=total_ch, col sep=comma] 
+				{data/cons.csv}
+				node[pos=0.28,pin=90:{Total change}] {};	
 			\node[align=left, below, shift=({3.0cm,0.1cm})] {
 				\input{data/cons.txt}};
-    		\node[align=left] (source) at (axis cs:2013-01-01,40) {%
+    		\node[align=left] (source) at (axis cs:2014-06-01,12) {%
       			Consumption tax increase to 8\%};
     		\node (destination) at (axis cs:2014-04-01,0) {};
     		\draw[->] (source)--(destination);
@@ -228,7 +230,7 @@
 				table [y index = 3, x=date, y=pub_ch, col sep=comma]
 				{data/inv.csv};		
 			\addplot[thick, color=black] table [x=date, y=total_ch, col sep=comma] {data/inv.csv}
-				node[pos=0.38,pin=90:{Total change}] {};	
+				node[pos=0.32,pin=90:{Total change}] {};	
 			\node[align=left, below, shift=({2.9cm,0cm})] {
 				\input{data/inv.txt}};
 			\legend{Business, Residential, Public};			
@@ -293,9 +295,9 @@
 			\addplot[ultra thick, color=red!50] table [x=date, y=Small, col sep=comma] 
 				{data/tankan_bc.csv} node[pos=0.55,pin=270:{Small firms}] {};	
 			\addplot[thin, color=black!60] table [x=date, y=Medium, col sep=comma] 
-				{data/tankan_bc.csv} node[pos=0.84,pin=90:{Medium firms}] {};	 	
+				{data/tankan_bc.csv} node[pos=0.82,pin=90:{Medium firms}] {};	 	
 			\addplot[thick, dashed, color=red!50!black] table [x=date, y=Large, col sep=comma] 
-				{data/tankan_bc.csv} node[pos=0.21,pin=60:{Large firms}] {};	 	
+				{data/tankan_bc.csv} node[pos=0.20,pin=60:{Large firms}] {};	 	
 			\node[below, shift=({1.5cm,-0.1cm})] {\color{black!80} \input{data/tankan_bc.txt}};
 			\node[align=left, below, shift=({3.7cm,4.5cm})] {\color{black!80} Above zero signals perceived improvement and below \\ zero signals perceived deterioration in business conditions.};
 			\end{axis}
@@ -319,7 +321,7 @@
 		\indent \begin{tikzpicture}[trim axis right]
 			\begin{axis}[date coordinates in=x, xticklabel={\year}, \lineplotsettings \bbar{y}{0}]
 			\addplot[ultra thick, color=purple!80] table [x=date, y=All, col sep=comma] 
-				{data/cpi.csv} node[pos=0.245,pin=0:{All-items CPI}] {};	
+				{data/cpi.csv} node[pos=0.235,pin=0:{All-items CPI}] {};	
 			\addplot[thick, color=black!50] table [x=date, y=Core, col sep=comma] 
 				{data/cpi.csv} node[pos=0.73,pin=100:{Core CPI (excl. food and energy)}] {};	 		
 			\node[below, shift=({2.9cm,-0.1cm})] {\color{black!80} \input{data/cpi.txt}};
@@ -500,7 +502,7 @@
 			\addplot[ultra thick, dashed, color=blue!50!black] table [x=Date, y=NEER, col sep=comma] 
 				{data/fx.csv} node[right, pos=0.9, pin={[pin distance=1cm]90:{Nominal effective}}] {};
 			\node[below, shift=({2.7cm,-0.1cm})] {\color{black!80} \input{data/usdjpy.txt}};
-			\node[align=left, below, shift=({2.6cm,4.0cm})] {\color{black!80} Values indexed to 2014=1; \\ Effective rates are BIS broad-index};
+			\node[align=left, below, shift=({2.1cm,4.2cm})] {\color{black!80} Values indexed to 2014=1; \\ Effective rates are BIS broad-index};
 			\end{axis}
 		
 			\end{tikzpicture}

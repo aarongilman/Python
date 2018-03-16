@@ -76,7 +76,7 @@
 %  BEGIN DOCUMENT
 \begin{document}
 \thispagestyle{main}
-\noindent \small Third quarter U.S. economic growth, which remained strong, was driven by increased consumption and investment. The labor market is gradually nearing full employment and still adding jobs at a healthy pace. Inflation remains near the Fed's two percent target in both the core CPI and the full index, with little expected acceleration. Short- and medium-term borrowing costs have increased as Fed interest rate hikes are expected to continue or accelerate.
+\noindent \small Fourth quarter U.S. economic growth, which remained strong, was driven by increased consumption. The labor market is gradually nearing full employment and still adding jobs at a healthy pace. Inflation remains near the Fed's two percent target in both the core CPI and the full index, with little expected acceleration. Short- and medium-term borrowing costs have increased as Fed interest rate hikes are expected to continue or accelerate.
 
 \section{Economic Growth and Employment}
 	% Title: GDP Growth	
@@ -107,8 +107,8 @@
 			\addplot[ybar stacked, bar width=2.6pt, color=blue!40!green, 
 				fill=blue!40!green] table [y index = 4, x=DATE, y=PCECC96, col sep=comma]
 				{data/gdp_comp.csv};			
-			\addplot[thick, color=black] table [x=DATE, y=GDPC1, col sep=comma] {data/gdp_comp.csv}
-				node[pos=0.52,pin=80:{Real GDP Growth}] {};	
+			\addplot[thick, color=black] table [x=DATE, y=GDPC1, col sep=comma] 
+				{data/gdp_comp.csv} node[pos=0.51,pin=80:{Real GDP Growth}] {};	
 			\node[align=center, below, shift=({2.7cm,-0.25cm})] {
 				\input{data/gdp_comp.txt}};
 			\legend{Contributions to ,GDP growth, Government, Investment ,Net Exports, Consumption};			
@@ -153,9 +153,9 @@
 				(FRED: \href{https://fred.stlouisfed.org/series/T5YIFR}
 					{T5YIFR})};			
 			\addplot[ultra thick, color=blue!70] table [x=DATE, y=CPIAUCSL, col sep=comma] 
-				{data/cpi.csv} node[pos=0.23,pin=10:{All-items CPI}] {};	
+				{data/cpi.csv} node[pos=0.226,pin=10:{All-items CPI}] {};	
 			\addplot[thick, color=black!50] table [x=DATE, y=CPILFESL, col sep=comma] 
-				{data/cpi.csv} node[pos=0.43,pin=275:{Core CPI (excl. food and energy)}] {};	 		
+				{data/cpi.csv} node[pos=0.42,pin=275:{Core CPI (excl. food and energy)}] {};	 		
 			\node[below, shift=({2.9cm,-0.1cm})] {\color{black!80} \input{data/cpi.txt}};
 			\end{axis}
 		\end{tikzpicture} \hfill
@@ -204,7 +204,7 @@
 		  		width=6.9cm, \bbar{x}{0}, legend cell align = left,
 			    yticklabel style={
 			    	text width=3.2cm, align=right, style={black!70}, text height=1.4ex},
-			    axis y line=left, legend style={at={(0.28,0.9)}},
+			    axis y line=left, legend style={at={(0.26,0.7)}},
 			    bar width=1.4ex, y=2.7ex,
 		  		enlarge y limits={abs=0.3cm},
 		  		enlarge x limits={0.04},
@@ -221,22 +221,14 @@
 			  	({rel axis cs:0,0.02}-|{axis cs:0,0.02}) -- ({rel axis cs:0,1}-|{axis cs:0,0});
 			  \draw[very thin, black!10] 
 			  	({rel axis cs:5,0.02}-|{axis cs:5,0.02}) -- ({rel axis cs:5,1}-|{axis cs:5,0});
-			  \addplot[xbar stacked, bar shift=0pt, fill=orange!70!yellow, draw=orange!70!yellow] table [
-			            y expr=-\coordindex, 
-			            x index=3 
-			        ] {\eps};
-			  \addplot[xbar stacked, bar shift=0pt, fill=orange!70!yellow, draw=orange!70!yellow] table [
-			            y expr=-\coordindex, 
-			            x index=5 
-			        ] {\eps};
-			  \addplot[scatter, only marks, mark=square*, draw=orange!60!red, fill=white] table [
-			            y expr=-\coordindex, 
-			            x index=2 
-			        ] {\eps};			        
-			  \addplot[scatter, only marks, mark=diamond*, draw=red!60!black, fill=red!60!black] table [
-			            y expr=-\coordindex, 
-			            x index=1 
-			        ] {\eps};
+			  \addplot[xbar stacked, bar shift=0pt, fill=orange!70!yellow, draw=orange!70!yellow] 
+			  	table [y expr=-\coordindex, x index=3] {\eps};
+			  \addplot[xbar stacked, bar shift=0pt, fill=orange!70!yellow, draw=orange!70!yellow] 
+			 	table [y expr=-\coordindex, x index=5] {\eps};
+			  \addplot[scatter, only marks, mark=square*, draw=orange!60!red, fill=white] 
+			  	table [y expr=-\coordindex, x index=2] {\eps};			        
+			  \addplot[scatter, only marks, mark=diamond*, draw=red!60!black, fill=red!60!black] 
+			  	table [y expr=-\coordindex, x index=1] {\eps};
 		  \legend{\scriptsize 5-year range, \scriptsize 1-year average, \scriptsize \input{data/eps.txt}}
 			  \end{axis}
 			\end{tikzpicture}\hspace{8mm}
