@@ -1,5 +1,5 @@
 # Python
-Set of Python 2.7 examples for gathering and analyzing economic data.
+Set of Python 3.6 examples for gathering and analyzing economic data.
 
 ## Best Notebooks
 Most used/useful jupyter notebooks with python examples by Brian Dew.
