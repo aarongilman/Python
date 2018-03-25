@@ -11,7 +11,7 @@ Most used/useful jupyter notebooks with python examples by Brian Dew.
  API notebooks have been moved to the [econ_data](https://github.com/bdecon/econ_data) repository
 
 #### Analysis and Visualizations
-* [Unemployment Map by MSA](https://github.com/bdecon/Python/blob/master/Unemp_Map/Plotly_MSA_Map.ipynb)
+* [Unemployment Map by MSA](https://github.com/bdecon/Python/blob/master/Bokeh/Bokeh_Map.ipynb)
 * [Oil Price with Quandl](https://github.com/bdecon/Python/blob/master/Oil_Price/oil_price.ipynb)
 * [Macro and Market Data for Japan](https://github.com/bdecon/Python/blob/master/Japan/Japan_Data.ipynb)
 * [Network Analysis of Trade](https://github.com/bdecon/Python/blob/master/NetworkAnalysis/Website_example.ipynb)
