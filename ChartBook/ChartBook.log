@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.11)  11 FEB 2018 20:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.24)  31 MAR 2018 11:44
 entering extended mode
 **./ChartBook.tex
 (ChartBook.tex
 LaTeX2e <2017-04-15>
-Babel <3.17> and hyphenation patterns for 72 language(s) loaded.
+Babel <3.18> and hyphenation patterns for 72 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
@@ -995,13 +995,13 @@ Package rerunfilecheck Info: File `ChartBook.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 287.
  ) 
 Here is how much of TeX's memory you used:
- 30623 strings out of 493337
- 720143 string characters out of 3139573
- 1071883 words of memory out of 90000000
- 33661 multiletter control sequences out of 15000+200000
+ 30623 strings out of 493339
+ 720143 string characters out of 3139591
+ 1071906 words of memory out of 90000000
+ 33659 multiletter control sequences out of 15000+200000
  15317 words of font info for 56 fonts, out of 3000000 for 9000
  1127 hyphenation exceptions out of 8191
- 70i,19n,119p,876b,3059s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 70i,19n,119p,876b,3063s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX 
@@ -1009,7 +1009,7 @@ s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX
 nts/type1/public/amsfonts/cm/cmssi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 amsfonts/symbols/msam10.pfb>
-Output written on ChartBook.pdf (3 pages, 146966 bytes).
+Output written on ChartBook.pdf (3 pages, 146616 bytes).
 PDF statistics:
  111 PDF objects out of 1000 (max. 8388607)
  5 named destinations out of 1000 (max. 500000)
